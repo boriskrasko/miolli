@@ -1,0 +1,41 @@
+@import url("https://use.typekit.net/hmo8aaq.css");
+
+@font-face {
+  font-family: BasierCircle-Bold;
+  src: url(../fonts/BasierCircle-Bold.otf);
+}
+
+@font-face {
+  font-family: BasierCircle-BoldItalic;
+  src: url(../fonts/BasierCircle-BoldItalic.otf);
+}
+
+@font-face {
+  font-family: BasierCircle-Medium;
+  src: url(../fonts/BasierCircle-Medium.otf);
+}
+
+@font-face {
+  font-family: BasierCircle-MediumItalic;
+  src: url(../fonts/BasierCircle-MediumItalic.otf);
+}
+
+@font-face {
+  font-family: BasierCircle-Regular;
+  src: url(../fonts/BasierCircle-Regular.otf);
+}
+
+@font-face {
+  font-family: BasierCircle-RegularItalic;
+  src: url(../fonts/BasierCircle-RegularItalic.otf);
+}
+
+@font-face {
+  font-family: BasierCircle-SemiBold;
+  src: url(../fonts/BasierCircle-SemiBold.otf);
+}
+
+@font-face {
+  font-family: BasierCircle-SemiBoldItalic;
+  src: url(../fonts/BasierCircle-SemiBoldItalic.otf);
+}
