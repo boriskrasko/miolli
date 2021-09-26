@@ -1,0 +1,21 @@
+:root {
+  /* https://color-name-generator.com/ */
+  --victoriana: #D6B5AC;
+  --shisha-coal: #3C3C3C;
+  --bauhaus: #404040;
+  --pastel-pink: #dda5a5;
+  --echoes-of-love: #eedede;
+  --pig-iron: #484848;
+  --white-bean-hummus: #e8cfb1;
+  --blooming-perfect: #d89898;
+    
+  --nav-menu-fill: var( --victoriana);
+  --nav-menu-text: var(--shisha-coal);
+  --nav-menu-side-fill: var(--bauhaus);
+  --title: var(--pastel-pink);
+  --title-hr: var(--echoes-of-love);
+  --subtitle: var(--pig-iron);
+  --filter-fill: var(--white-bean-hummus);
+  --slider-arrow: var(--blooming-perfect);
+  --button: var(--blooming-perfect);
+}

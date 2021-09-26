@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Components</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='colors.css'>
+    <style>
+      body {
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      }
+      input[type="color"]::-webkit-color-swatch-wrapper {
+      padding: 0;
+      }
+      input[type="color"]::-webkit-color-swatch {
+      border: none;
+      }
+      input[type="color"] {
+      --size: 4em;
+      --aspect-ratio: 1.92;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: var(--size, 1em);
+      height: calc(var(--size, 1em) / var(--aspect-ratio, 1.92));
+      padding: 0;
+      border: none;
+      }
+    </style>
+  </head>
+  <body>
+    Colors:
+    <p>
+      <input type="color" id="victoriana" value="#D6B5AC">
+      <label for="victoriana">Victoriana</label><br>
+      <input type="color" id="shisha-coal" value="#3C3C3C">
+      <label for="shisha-coal">Shisha coal</label><br>
+      <input type="color" id="bauhaus" value="#404040">
+      <label for="bauhaus">Bauhaus</label><br>
+      <input type="color" id="pastel-pink" value="#dda5a5">
+      <label for="pastel-pink">Pastel pink</label><br>
+      <input type="color" id="echoes-of-love" value="#eedede">
+      <label for="echoes-of-love">Echoes of love</label><br>
+      <input type="color" id="pig-iron" value="#484848">
+      <label for="pig-iron">Pig iron</label><br>
+      <input type="color" id="white-bean-hummus" value="#e8cfb1">
+      <label for="white-bean-hummus">White bean hummus</label><br>
+      <input type="color" id="blooming-perfect" value="#d89898">
+      <label for="blooming-perfect">Blooming-perfect</label><br>
+    </p>
+  </body>
+</html>
