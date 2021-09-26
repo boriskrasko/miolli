@@ -1,0 +1,51 @@
+@import url("https://use.typekit.net/hmo8aaq.css");
+
+@import url("fonts/MonumentGrotesk/stylesheet.css");
+
+@font-face {
+  font-family: BasierCircle-Bold;
+  src: url(fonts/BasierCircle/BasierCircle-Bold.otf);
+}
+
+@font-face {
+  font-family: BasierCircle-BoldItalic;
+  src: url(fonts/BasierCircle/BasierCircle-BoldItalic.otf);
+}
+
+@font-face {
+  font-family: BasierCircle-Medium;
+  src: url(fonts/BasierCircle/BasierCircle-Medium.otf);
+}
+
+@font-face {
+  font-family: BasierCircle-MediumItalic;
+  src: url(fonts/BasierCircle/BasierCircle-MediumItalic.otf);
+}
+
+@font-face {
+  font-family: BasierCircle-Regular;
+  src: url(fonts/BasierCircle/BasierCircle-Regular.otf);
+}
+
+@font-face {
+  font-family: BasierCircle-RegularItalic;
+  src: url(fonts/BasierCircle/BasierCircle-RegularItalic.otf);
+}
+
+@font-face {
+  font-family: BasierCircle-SemiBold;
+  src: url(fonts/BasierCircle/BasierCircle-SemiBold.otf);
+}
+
+@font-face {
+  font-family: BasierCircle-SemiBoldItalic;
+  src: url(fonts/BasierCircle/BasierCircle-SemiBoldItalic.otf);
+}
+
+:root {
+  --contentFont: "BasierCircle-Regular", sans-serif;
+  --contentFontBold: "BasierCircle-SemiBold", sans-serif;
+  --contentFontMedium: "BasierCircle-Medium", sans-serif;
+  --titleFont: "freight-big-pro", serif;
+  --basicFont: "Roboto", sans-serif;
+}
