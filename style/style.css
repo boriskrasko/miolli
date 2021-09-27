@@ -89,6 +89,7 @@
   opacity: 1;
 }
 
+/* Topnav */
 .topnav {
   display: none;
 }
@@ -139,6 +140,7 @@
   color: #FFFFFF;
 }
 
+/* Sidenav */
 .sidenav {
   position: absolute;
   top: 78px;
@@ -147,7 +149,7 @@
   background-color: var(--nav-menu-side-fill);
 }
 
-.switch:checked ~ .sidenav{
+.switch:checked ~ .sidenav {
   display: flex;
   width: calc(78px * 3);
   height: calc(100vh - 78px);
@@ -162,4 +164,29 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #FFFFFF;
+}
+
+/* Oferta dla biznesu */
+.business-offer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 178px;
+  height: 78px;
+  display: none;
+  align-items: center;
+  padding: 8px 8px 16px 24px;
+  font: normal 14px/18px'Monument Grotesk', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--nav-menu-text);
+  background-color: var(--nav-menu-fill);
+}
+
+.business-offer img {
+  align-self: flex-start;
+}
+
+.switch:checked ~ .business-offer {
+  display: flex;
 }
