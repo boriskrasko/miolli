@@ -23,6 +23,11 @@ h2 {
   margin: 10px 0;
 }
 
+button {
+  outline: none;
+  border: none;
+}
+
 /*Logo Start Screen*/
 
 .logo-container {
@@ -233,6 +238,53 @@ h2 {
   border: 3px solid var(--dark-vanilla);
   border-radius: 100%;
   background: transparent;
+}
+
+/*Chat button*/
+
+.chat-btn {
+  position: relative;
+  display: flex;
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  background: var(--black-olive);
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-icon {
+  display: flex;
+  flex-direction: column;
+  width: 18px;
+  height: 14px;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-icon:after {
+  position: absolute;
+  z-index: 1;
+  top: 28px;
+  right: 12px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-right: 6px solid #fff;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.chat-icon span {
+  position: relative;
+  width: 10px;
+  height: 1px;
+  background: var(--black-olive);
+}
+
+.chat-icon span:not(:first-child) {
+  margin-top: 3px;
 }
 
 @media screen and (max-width: 800px) {
