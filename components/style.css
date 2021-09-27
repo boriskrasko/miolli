@@ -19,6 +19,15 @@ body {
   margin: 0 auto;
 }
 
+h2 {
+  margin: 10px 0;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
 /*Logo Start Screen*/
 
 .logo-container {
@@ -50,6 +59,7 @@ body {
   z-index: 1;
   display: flex;
   width: 100%;
+  height: 100vh;
   justify-content: flex-end;
 }
 
@@ -113,7 +123,7 @@ body {
   position: absolute;
   top: 78px;
   width: 234px;
-  height: 100vh;
+  height: calc(100vh - 78px);
   padding: 26px 60px 0;
   list-style-type: none;
   transition: opacity .4s cubic-bezier(.77, .2, .05, 1);
@@ -185,8 +195,96 @@ body {
   opacity: 1;
 }
 
+#menuToggle input:checked~.business-link {
+  opacity: 1;
+}
+
 .mobile {
   display: none;
+}
+
+.business-link {
+  font-size: .875em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 172px;
+  height: 78px;
+  padding: 24px;
+  text-transform: uppercase;
+  opacity: 0;
+  color: var(--black-olive);
+  background: var(--dark-vanilla);
+}
+
+.business-link img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  transform: rotate(225deg);
+}
+
+/*Nav slide (dots)*/
+
+.dot {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 4px;
+  /*border: 3px solid rgba(255, 255, 255, .8);*/
+  border: 3px solid var(--dark-vanilla);
+  border-radius: 100%;
+  background: transparent;
+}
+
+/*Chat button*/
+
+.chat-btn {
+  position: relative;
+  display: flex;
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  background: var(--black-olive);
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-icon {
+  display: flex;
+  flex-direction: column;
+  width: 18px;
+  height: 14px;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-icon:after {
+  position: absolute;
+  z-index: 1;
+  top: 28px;
+  right: 12px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-right: 6px solid #fff;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.chat-icon span {
+  position: relative;
+  width: 10px;
+  height: 1px;
+  background: var(--black-olive);
+}
+
+.chat-icon span:not(:first-child) {
+  margin-top: 3px;
 }
 
 @media screen and (max-width: 800px) {
@@ -210,6 +308,9 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+  .business-link {
+    display: none;
   }
 }
 
