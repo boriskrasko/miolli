@@ -67,12 +67,40 @@
     </div>
     Menu toggle:
     <div>
-      <input class="switch" type="checkbox">
-      <div>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <header class="header">
+        <input id="switch" class="switch" type="checkbox">
+        <label for="switch">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="topnav">
+          <ul class="topnav__list">
+            <li class="topnav__item">
+              <a class="topnav__link" href="">twoja kompozycja</a>
+            </li>
+            <li class="topnav__item">
+              <a class="topnav__link" href="">gotowe sety makaroników</a>
+            </li>
+            <li class="topnav__item">
+              <a class="topnav__link" href="">makaronik z nadrukiem
+                <img src="icons/arrow-down.svg" alt="arrow">
+              </a>
+            </li>
+            <li class="topnav__item like-button">
+              <a class="topnav__link" href="">
+                <img src="icons/user.svg" alt="user">
+              </a>
+            </li>
+            <li class="topnav__item like-button">
+              <a class="topnav__link" href="">
+                <img src="icons/cart.svg" alt="cart">
+              </a>
+              <span class="cart-count">24</span>
+            </li>
+          </ul>
+        </nav>
+      </header>
     </div>
   </body>
 </html>
