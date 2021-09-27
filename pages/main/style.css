@@ -26,12 +26,14 @@ h2 {
 button {
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 .header {
   position: fixed;
   max-width: 1366px;
   width: 100%;
+  z-index: 1;
 }
 
 #menuToggle {
@@ -39,7 +41,6 @@ button {
   z-index: 1;
   display: flex;
   width: 100%;
-  height: 100vh;
   justify-content: flex-end;
 }
 
@@ -104,13 +105,14 @@ button {
   top: 78px;
   width: 234px;
   height: calc(100vh - 78px);
-  padding: 26px 60px 0;
+  padding: 26px 60px;
   list-style-type: none;
-  transition: opacity .4s cubic-bezier(.77, .2, .05, 1);
+  transition: opacity .4s cubic-bezier(.77, .2, .05, 1), visibility 0.5s ease;
   opacity: 0;
   background: var(--black-olive);
   box-shadow: 0 -.4px .4px var(--dark-vanilla);
   -webkit-font-smoothing: antialiased;
+  visibility: hidden;
 }
 
 .column-menu li {
@@ -134,10 +136,12 @@ button {
   display: flex;
   max-width: 740px;
   list-style: none;
-  transition: opacity .4s cubic-bezier(.77, .2, .05, 1);
+  transition: opacity .4s cubic-bezier(.77, .2, .05, 1), visibility 0.5s ease;
   opacity: 0;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
   justify-content: flex-end;
+  background: rgba(255, 255, 255, 0.86);
+  visibility: hidden;
 }
 
 .topnav-item {
@@ -172,10 +176,12 @@ button {
 }
 
 #menuToggle input:checked~ul {
+  visibility: visible;
   opacity: 1;
 }
 
 #menuToggle input:checked~.business-link {
+  visibility: visible;
   opacity: 1;
 }
 
@@ -186,7 +192,7 @@ button {
 .business-link {
   font-size: .875em;
   position: absolute;
-  bottom: 0;
+  top: calc(100vh - 80px);
   left: 0;
   display: block;
   width: 172px;
@@ -195,7 +201,9 @@ button {
   text-transform: uppercase;
   opacity: 0;
   color: var(--black-olive);
+  transition: opacity .4s cubic-bezier(.77, .2, .05, 1), visibility 0.5s ease;
   background: var(--dark-vanilla);
+  visibility: hidden;
 }
 
 .business-link img {
@@ -204,4 +212,142 @@ button {
   right: 10px;
   display: block;
   transform: rotate(225deg);
+}
+
+.start-screen {
+  position: relative;
+  width: 100%;
+  max-width: 1366px;
+  height: 100vh;
+  background: url(../../assets/images/diana-polekhina-startscreen.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.logo-container {
+  position: relative;
+  max-width: 540px;
+  max-height: 320px;
+}
+
+.logo {
+  width: 100%;
+}
+
+.tagline {
+  font-family: 'BasierCircle', sans-serif;
+  font-size: 1.5625em;
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.nav-slide {
+  position: absolute;
+  bottom: 40px;
+}
+
+.dot {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 4px;
+  border: 3px solid rgba(255, 255, 255, .8);
+  border-radius: 100%;
+  background: transparent;
+}
+
+/*Chat button*/
+
+.chat-btn {
+  position: fixed;
+  bottom: 15px;
+  margin-right: 15px;
+  display: flex;
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  background: var(--black-olive);
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.chat-icon {
+  display: flex;
+  flex-direction: column;
+  width: 18px;
+  height: 14px;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-icon:after {
+  position: absolute;
+  z-index: 1;
+  top: 28px;
+  right: 12px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-right: 6px solid #fff;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.chat-icon span {
+  position: relative;
+  width: 10px;
+  height: 1px;
+  background: var(--black-olive);
+}
+
+.chat-icon span:not(:first-child) {
+  margin-top: 3px;
+}
+
+@media screen and (max-width: 800px) {
+  .topnav-item {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 12px;
+  }
+  .column-menu {
+    width: 100%;
+    overflow: scroll;
+  }
+  .column-menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .business-link {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 10px;
+  }
 }
