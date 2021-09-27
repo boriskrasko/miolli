@@ -138,3 +138,28 @@
   font: normal 12px/14px'Monument Grotesk', sans-serif;
   color: #FFFFFF;
 }
+
+.sidenav {
+  position: absolute;
+  top: 78px;
+  right: 0;
+  display: none;
+  background-color: var(--nav-menu-side-fill);
+}
+
+.switch:checked ~ .sidenav{
+  display: flex;
+  width: calc(78px * 3);
+  height: calc(100vh - 78px);
+}
+
+.sidenav__item {
+  margin: 42px 60px;
+}
+
+.sidenav__link {
+  font: normal 14px/18px'Monument Grotesk', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
