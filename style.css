@@ -1,0 +1,26 @@
+/* brand tagline */
+.brand {
+  max-width: 540px;
+  max-height: 320px;
+  margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+  .brand {
+    font-size: 10px;
+  }
+}
+
+.brand__name {
+  width: 100%;
+}
+
+.brand__tagline {
+  position: relative;
+  font-family: var(--contentFont);
+  font-size: 1.5em;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
+  margin-left: 15%;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
