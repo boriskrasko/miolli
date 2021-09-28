@@ -315,7 +315,7 @@ button {
   color: var(--quter-space);
 }
 
-/*Choice of Flover*/
+/*Choice of Flaver*/
 
 .center {
   display: flex;
@@ -323,7 +323,7 @@ button {
   align-items: center;
 }
 
-.flover-box {
+.flaver-box {
   width: 200px;
   height: 260px;
   display: flex;
@@ -334,13 +334,13 @@ button {
   margin: 4%;
 }
 
-.flover-image {
+.flaver-image {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flover-box .underline {
+.flaver-box .underline {
   width: 60px;
 }
 
@@ -348,7 +348,7 @@ button {
   width: 100%;
 }
 
-.flover-name {
+.flaver-name {
   display: block;
   width: 100px;
   text-align: center;

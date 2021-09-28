@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /*border: 1px solid gray;*/
 }
 
 a {
@@ -23,14 +24,11 @@ body {
   margin: 0 auto;
 }
 
-h2 {
-  margin: 10px 0;
-}
-
 button {
   outline: none;
   border: none;
   cursor: pointer;
+  background: transparent;
 }
 
 .header {
@@ -320,6 +318,126 @@ button {
 
 .chat-icon span:not(:first-child) {
   margin-top: 3px;
+}
+
+/*Choice of flaver*/
+
+.choice-of-flavor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 700px;
+  padding-top: 104px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.choice-of-flavor .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: freight-big-pro, serif;
+  font-size: 4.5625em;
+  display: block;
+  max-width: 540px;
+  text-align: center;
+  color: var(--pastel-pink);
+}
+
+.underline {
+  display: block;
+  width: 200px;
+  height: 2px;
+  margin: 20px;
+  background: var(--white-chocolate);
+}
+
+.subtitle {
+  font-family: 'BasierCircle-Regular', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: var(--quter-space);
+}
+
+.choice-of-flavor .content {
+  width: 100%;
+}
+
+.choice-of-flavor .content,
+.choice-of-flavor .choice-list {
+  display: flex;
+  align-items: center;
+}
+
+.choice-of-flavor .choice-list {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/*Choice of Flaver*/
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flaver-box {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  min-height: 260px;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flaver-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flaver-box .underline {
+  width: 60px;
+}
+
+.cookie-image {
+  width: 100%;
+}
+
+.flaver-name {
+  display: block;
+  width: 100px;
+  text-align: center;
+}
+
+.arrow-btn {
+  display: flex;
+  width: 80px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  font-family: 'BasierCircle-Regular', sans-serif;
+  font-size: 1em;
+  display: flex;
+  min-width: 187px;
+  min-height: 60px;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  color: var(--parrot-pink);
+  border: 1px solid var(--parrot-pink);
+  background: #fff;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 800px) {
