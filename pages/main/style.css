@@ -561,6 +561,19 @@ button {
   align-self: center;
 }
 
+.film {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 700px;
+  background: url(../../assets/images/film.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+}
+
 @media screen and (max-width: 800px) {
   .topnav-item {
     display: none;
