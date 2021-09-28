@@ -131,6 +131,7 @@ button {
   background: var(--black-olive);
   box-shadow: 0 -.4px .4px var(--dark-vanilla);
   -webkit-font-smoothing: antialiased;
+  overflow: scroll;
 }
 
 .column-menu li {
@@ -285,6 +286,31 @@ button {
 
 .chat-icon span:not(:first-child) {
   margin-top: 3px;
+}
+
+/*Title Subtitle*/
+
+.title {
+  font-family: freight-big-pro, serif;
+  font-size: 4.5625em;
+  display: block;
+  max-width: 540px;
+  text-align: center;
+  color: var(--pastel-pink);
+}
+
+.underline {
+  display: block;
+  width: 200px;
+  height: 2px;
+  background: var(--white-chocolate);
+}
+
+.subtitle {
+  font-family: 'BasierCircle-Regular', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: var(--quter-space);
 }
 
 @media screen and (max-width: 800px) {
