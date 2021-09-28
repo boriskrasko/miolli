@@ -192,14 +192,106 @@
   display: flex;
 }
 
+/* Topnav offer submenu */ 
+.topnav__dropdown {
+  position: absolute;
+  display: none;
+  width: 618px;
+  height: 312px;
+  right: 0;
+  top: 78px;
+  background-color: #FFFFFF;
+  z-index: 99;
+  box-shadow: 0 0 0.5px 0.2px #777;
+}
+
+.hasChild:hover .topnav__dropdown {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 46px;
+}
+
+.topnav__dropdown > div {
+  width: 50%;
+  height: 100%;
+}
+
+.topnav__dropdown > div:first-child {
+  border-right: 1px solid var(--victoriana);
+}
+
+.template {
+  font: normal 14px/18px'Monument Grotesk', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--nav-menu-text);
+}
+
+.template__list {
+  padding: 8px 10px;
+}
+
+.template__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.template__item::before {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  width: 1.5em;
+  left: 0;
+  top: 0.2em;
+  content: '\2022';
+  color: var(--victoriana);
+}
+
+.template__link {
+  display: flex;
+  font: normal 14px/18px'Monument Grotesk', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--nav-menu-text);
+  margin: 16px 0;
+}
+
+.template__link.underline span {
+  border-bottom: 1px solid var(--victoriana);
+}
+
+.template__link img {
+  margin: 4px 8px;
+}
+
+.template__item .template__link {
+  margin: 8px 0;
+}
+
+.template__preview {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.temppate__image {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
 /* Hero */
 .hero {
-position: relative;
-top: -78px;
-display: flex;
-height: 100vh;
-background-color: rgb(210, 218, 220);
-background-image: url(../images/diana-polekhina-startscreen.png);
-background-repeat: no-repeat;
-background-size: cover;
+  position: relative;
+  top: -78px;
+  display: flex;
+  height: 100vh;
+  background-color: rgb(210, 218, 220);
+  background-image: url(../images/diana-polekhina-startscreen.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
