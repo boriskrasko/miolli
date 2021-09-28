@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /*border: 1px solid gray;*/
 }
 
 a {
@@ -41,7 +42,7 @@ button {
 }
 
 .tagline {
-  font-family: 'BasierCircle', sans-serif;
+  font-family: 'BasierCircle-Regular', sans-serif;
   font-size: 1.5625em;
   position: absolute;
   bottom: 0;
@@ -311,6 +312,45 @@ button {
   font-size: 1em;
   text-transform: uppercase;
   color: var(--quter-space);
+}
+
+/*Choice of Flover*/
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flover-box {
+  width: 200px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  margin: 4%;
+}
+
+.flover-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flover-box .underline {
+  width: 60px;
+}
+
+.cookie-image {
+  width: 100%;
+}
+
+.flover-name {
+  display: block;
+  width: 100px;
+  text-align: center;
 }
 
 @media screen and (max-width: 800px) {
