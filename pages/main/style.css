@@ -322,7 +322,7 @@ button {
 
 /*Choice of flaver*/
 
-.choice-of-flavor {
+.choice-of-flavor, .composition, .box-composing {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -332,14 +332,15 @@ button {
   align-items: center;
 }
 
-.choice-of-flavor .heading {
+.choice-of-flavor .heading,
+.composition .heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.title {
+.title, .like-title {
   font-family: freight-big-pro, serif;
   font-size: 4.5625em;
   display: block;
@@ -356,7 +357,11 @@ button {
   background: var(--white-chocolate);
 }
 
-.subtitle {
+.subtitle, .like-subtitle {
+  display: block;
+  max-width: 810px;
+  text-align: center;
+  letter-spacing: 0.1em;
   font-family: 'BasierCircle-Regular', sans-serif;
   font-size: 1em;
   text-transform: uppercase;
@@ -368,8 +373,9 @@ button {
 }
 
 .choice-of-flavor .content,
-.choice-of-flavor .choice-list {
+.choice-of-flavor .choice-list{
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -377,7 +383,6 @@ button {
   justify-content: center;
   flex-wrap: wrap;
 }
-
 
 /*Choice of Flaver*/
 
@@ -438,6 +443,155 @@ button {
   background: #fff;
   justify-content: center;
   align-items: center;
+}
+
+/*Composition*/
+
+.composition .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.composition-image {
+  width: 80%;
+}
+
+.composition .composition-image-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.composition-description-container .like-title {
+  color: var(--black-olive);
+  text-transform: uppercase;
+}
+
+.composition-description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.composition-description-container h2 {
+  margin: 0 0 20px;
+}
+
+/*Box Composing*/
+
+.box-composing {
+  flex-direction: row;
+  background: url(../../assets/images/mask-box-composing.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  align-items: flex-start;
+}
+
+.box-composing .content {
+  width: 1000px;
+}
+
+.box-composing .like-title,
+.adding-uniqueness .like-title {
+  margin-left: 20px;
+  text-align: left;
+  color: var(--black-olive);
+}
+
+.box-composing .like-subtitle,
+.adding-uniqueness .like-subtitle {
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+
+.for-example {
+  text-transform: lowercase;
+}
+
+.point {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  margin: 20px;
+  border: 2px solid var(--black-olive);
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-composing h3 {
+  margin: 50px 20px;
+}
+
+.adding-uniqueness {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 700px;
+  padding-top: 104px;
+  padding-bottom: 80px;
+  background: url(../../assets/images/brooke-lark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+}
+
+.adding-uniqueness .like-subtitle {
+  max-width: 500px;
+  margin: 20px;
+}
+
+.adding-uniqueness .like-title {
+  max-width: 1000px;
+}
+
+.adding-uniqueness .underline {
+  background: #444;
+}
+
+.adding-uniqueness .nav-slide {
+  align-self: center;
+}
+
+.film {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 700px;
+  background: url(../../assets/images/film.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+}
+
+.footer {
+  width: 100%;
+  height: 80px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer ul a {
+  color: #fff;
 }
 
 @media screen and (max-width: 800px) {
