@@ -322,7 +322,7 @@ button {
 
 /*Choice of flaver*/
 
-.choice-of-flavor, .composition {
+.choice-of-flavor, .composition, .box-composing {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -383,7 +383,6 @@ button {
   justify-content: center;
   flex-wrap: wrap;
 }
-
 
 /*Choice of Flaver*/
 
@@ -480,6 +479,52 @@ button {
 
 .composition-description-container h2 {
   margin: 0 0 20px;
+}
+
+/*Box Composing*/
+
+.box-composing {
+  background: url(../../assets/images/mask-box-composing.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.box-composing .content {
+  width: 1000px
+}
+
+.box-composing .like-title {
+  color: var(--black-olive);
+  text-align: left;
+  margin-left: 20px;
+}
+
+.box-composing .like-subtitle {
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.for-example {
+  text-transform: lowercase;
+}
+
+.point {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  border: 2px solid var(--black-olive);
+  margin: 20px;
+}
+
+.box-composing h3 {
+  margin: 50px 20px;
 }
 
 @media screen and (max-width: 800px) {
