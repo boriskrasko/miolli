@@ -322,7 +322,7 @@ button {
 
 /*Choice of flaver*/
 
-.choice-of-flavor {
+.choice-of-flavor, .composition {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -332,14 +332,15 @@ button {
   align-items: center;
 }
 
-.choice-of-flavor .heading {
+.choice-of-flavor .heading,
+.composition .heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.title {
+.title, .like-title {
   font-family: freight-big-pro, serif;
   font-size: 4.5625em;
   display: block;
@@ -356,7 +357,11 @@ button {
   background: var(--white-chocolate);
 }
 
-.subtitle {
+.subtitle, .like-subtitle {
+  display: block;
+  max-width: 810px;
+  text-align: center;
+  letter-spacing: 0.1em;
   font-family: 'BasierCircle-Regular', sans-serif;
   font-size: 1em;
   text-transform: uppercase;
@@ -368,8 +373,9 @@ button {
 }
 
 .choice-of-flavor .content,
-.choice-of-flavor .choice-list {
+.choice-of-flavor .choice-list{
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -438,6 +444,42 @@ button {
   background: #fff;
   justify-content: center;
   align-items: center;
+}
+
+/*Composition*/
+
+.composition .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.composition-image {
+  width: 80%;
+}
+
+.composition .composition-image-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.composition-description-container .like-title {
+  color: var(--black-olive);
+  text-transform: uppercase;
+}
+
+.composition-description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.composition-description-container h2 {
+  margin: 0 0 20px;
 }
 
 @media screen and (max-width: 800px) {
