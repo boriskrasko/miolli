@@ -25,6 +25,7 @@ h2 {
 }
 
 button {
+  cursor: pointer;
   outline: none;
   border: none;
 }
@@ -351,6 +352,23 @@ button {
   display: block;
   width: 100px;
   text-align: center;
+}
+
+/*button*/
+
+.btn {
+  font-family: 'BasierCircle-Regular', sans-serif;
+  font-size: 1em;
+  display: flex;
+  min-width: 187px;
+  min-height: 60px;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  color: var(--parrot-pink);
+  border: 1px solid var(--parrot-pink);
+  background: #fff;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 800px) {
