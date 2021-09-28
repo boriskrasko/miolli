@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /*border: 1px solid gray;*/
 }
 
 a {
@@ -24,6 +25,7 @@ h2 {
 }
 
 button {
+  cursor: pointer;
   outline: none;
   border: none;
 }
@@ -41,7 +43,7 @@ button {
 }
 
 .tagline {
-  font-family: 'BasierCircle', sans-serif;
+  font-family: 'BasierCircle-Regular', sans-serif;
   font-size: 1.5625em;
   position: absolute;
   bottom: 0;
@@ -131,6 +133,7 @@ button {
   background: var(--black-olive);
   box-shadow: 0 -.4px .4px var(--dark-vanilla);
   -webkit-font-smoothing: antialiased;
+  overflow: scroll;
 }
 
 .column-menu li {
@@ -285,6 +288,87 @@ button {
 
 .chat-icon span:not(:first-child) {
   margin-top: 3px;
+}
+
+/*Title Subtitle*/
+
+.title {
+  font-family: freight-big-pro, serif;
+  font-size: 4.5625em;
+  display: block;
+  max-width: 540px;
+  text-align: center;
+  color: var(--pastel-pink);
+}
+
+.underline {
+  display: block;
+  width: 200px;
+  height: 2px;
+  background: var(--white-chocolate);
+}
+
+.subtitle {
+  font-family: 'BasierCircle-Regular', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: var(--quter-space);
+}
+
+/*Choice of Flaver*/
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flaver-box {
+  width: 200px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  margin: 4%;
+}
+
+.flaver-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flaver-box .underline {
+  width: 60px;
+}
+
+.cookie-image {
+  width: 100%;
+}
+
+.flaver-name {
+  display: block;
+  width: 100px;
+  text-align: center;
+}
+
+/*button*/
+
+.btn {
+  font-family: 'BasierCircle-Regular', sans-serif;
+  font-size: 1em;
+  display: flex;
+  min-width: 187px;
+  min-height: 60px;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  color: var(--parrot-pink);
+  border: 1px solid var(--parrot-pink);
+  background: #fff;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 800px) {
