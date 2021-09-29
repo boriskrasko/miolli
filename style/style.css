@@ -278,7 +278,7 @@
   justify-content: flex-end;
 }
 
-.temppate__image {
+.template__image {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
