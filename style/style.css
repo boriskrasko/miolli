@@ -112,13 +112,14 @@
 }
 
 .topnav__item {
-  max-width: 192px;
-  padding: 22px 25px;
+  max-width: 190px;
   background-color: #FFFFFF;
 }
 
 .topnav__link {
   display: flex;
+  align-items: flex-end;
+  padding: 14px 25px;
   font: normal 14px/18px'Monument Grotesk', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -133,12 +134,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 99;
 }
 
 .cart-count {
   position: absolute;
   font: normal 12px/14px'Monument Grotesk', sans-serif;
   color: #FFFFFF;
+  z-index: -1;
 }
 
 /* Sidenav */
@@ -228,7 +231,7 @@
 }
 
 .template__list {
-  padding: 8px 10px;
+  padding: 12px 10px;
 }
 
 .template__item {
