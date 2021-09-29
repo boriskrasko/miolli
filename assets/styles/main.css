@@ -1,0 +1,130 @@
+@import 'colors.css';
+@import 'fonts.css';
+
+:root {
+
+  /* Fonts */
+  --contentFont: 'BasierCircle-Regular', sans-serif;
+  --titleFont: 'freight-big-pro', serif;
+  --basicFont: 'Roboto', sans-serif;
+
+  /* Width, margins & paddings */
+  --max: 1366px;
+  --min: 320px;
+  --border: 1px solid #ddd;
+
+  --humburger: transform .5s cubic-bezier(.77, .2, .05, 1.0), background .5s cubic-bezier(.77, .2, .05, 1.0), opacity .55s ease;
+  --opacity: opacity .4s cubic-bezier(.77, .2, .05, 1) ,visibility 0.5s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: var(--max);
+  min-width: var(--min);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-l)
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+h1, .like-h1,
+h2, .like-h2, 
+h3, .like-h3 {
+  font-family: var(--titleFont);
+  color: var(--dark-s);
+}
+
+h2, .like-h2 {
+  font-size: 5.875em;
+}
+
+h3, .like-h3 {
+  font-size: 4.5625em;
+}
+
+h4, .like-h4,
+h5, .like-h5,
+p, .paragraph {
+  font-family: var(--contentFont);
+  color: var(--dark-s);
+  text-transform: uppercase;
+}
+
+h4, .like-h4,
+p, .paragraph {
+  font-size: 16px;
+}
+
+h5, .like-h5 {
+  font-size: 14px;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.pink {
+  color: var(--pastel-pink);
+}
+
+.border {
+  border: var(--border);
+}
+
+.center {
+  text-align: center;
+}
+
+.dark-l {
+  background: var(--dark-l);
+}
+
+.dark-vanilla {
+  background: var(--dark-vanilla);
+}
+
+/* Scroll */
+
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 2px;
+  background: var(--light-blue);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
+          box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: var(--blue);
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, .5);
+          box-shadow: inset 0 0 2px rgba(0, 0, 0, .5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #002e3b;
+}

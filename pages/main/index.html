@@ -6,171 +6,158 @@
   <title>Miolli</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+<style type="text/css">
+.start-screen {
+  background-color: #ccc;
+  background-image: url(../../assets/images/diana-polekhina-startscreen.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+</style>
 <body>
   <header class="header">
-    <nav>
-      <div id="menuToggle">
+    <div class="topbar">
+      <div class="logo-container">
+        <a class="back-to-home" href="#" title="Miolli">
+          <picture>
+            <source srcset="../../assets/icons/logo.svg" media="(min-width: 400px)">
+            <img src="../../assets/icons/logo-min.svg" alt="logo">
+          </picture>
+        </a>
+      </div>
+      <div class="topnav" id="menu">
         <input type="checkbox">
-        <ul class="topnav row-menu">
-          <li class="topnav-item"><a href="#">twoja kompozycja</a></li>
-          <li class="topnav-item"><a href="#">gotowe sety makaroników</a></li>
-          <li class="topnav-item"><a href="#">makaroniki z nadrukiem<img width="19" height="24" src="../../assets/icons/arrow-down.svg" alt="arrow"></a></li>
-          <li><a href="#" class="like-btn"><img width="19" height="34" src="../../assets/icons/user.svg" alt="user"></a></li>
-          <li><a href="#" class="like-btn"><img width="19" height="34" src="../../assets/icons/shopping-bag.svg" alt="shopping bag"></a></li>
-        </ul>
-        <div class="humburger-toggle">
+        <div class="topnav-button dark-l" id="menuToggle">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <ul class="sidenav column-menu">
-          <li><a href="#">o nas</a></li>
-          <li><a href="#">blog</a></li>
-          <li><a href="#">faq</a></li>
-          <li><a href="#">konfigurator on-line</a></li>
-          <li><a href="#">oferta dla kawiarni</a></li>
-          <li><a href="#">oferta eventowa</a></li>
-          <li class="hidden mobile"><a href="#">twoja kompozycja</a></li>
-          <li class="hidden mobile"><a href="#">gotowe sety makaroników</a></li>
-          <li class="hidden mobile"><a href="#">makaroniki z nadrukiem</a></li>
-        </ul>
-        <a class="business-link" href="#">miolli<br>dla biznesu<img width="19" height="24" src="../../assets/icons/arrow-down.svg" alt="arrow"></a>
+        <nav class="nav">
+          <ul id="navList">
+            <li><a href="#">o nas</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">faq</a></li>
+            <li><a href="#">konfigurator on-line</a></li>
+            <li><a href="#">oferta dla kawiarni</a></li>
+            <li><a href="#">oferta eventowa</a></li>
+            <li class="hidden"><a href="#">twoja kompozycja</a></li>
+            <li class="hidden "><a href="#">gotowe sety makaroników</a></li>
+            <li class="hidden"><a href="#">makaroniki z nadrukiem</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="topnav-button dark-vanilla">
+          <img width="19" height="34" src="../../assets/icons/user.svg" alt="user">
+        </a>
+        <a href="#" class="topnav-button dark-vanilla">
+          <img width="19" height="34" src="../../assets/icons/cart.svg" alt="cart">
+        </a>
+        <a href="#" class="topnav-item like-h5">twoja kompozycja
+         <img width="19" height="24" src="../../assets/icons/arrow-down.svg" alt="arrow down">
+       </a>
+        <a href="#" class="topnav-item like-h5">gotowe sety makaroników</a>
+        <a href="#" class="topnav-item like-h5">makaroniki&nbsp;z nadrukiem</a>
       </div>
-    </nav>
+    </div>
   </header>
   <main>
     <section class="start-screen">
-      <div class="logo-container">
-        <img class="logo" src="../../assets/icons/miolli-logo.svg" alt="miolli logo">
-        <span class="tagline">smak inspiracji</span>
+      <div class="brand-container">
+        <img class="brand-name" src="../../assets/icons/miolli.svg" alt="miolli">
+        <span class="brand-tagline uppercase">smak inspiracji</span>
       </div>
       <div class="nav-slide">
-        <label for="i1" class="dot" id="dot1"></label>
-        <label for="i2" class="dot" id="dot2"></label>
-        <label for="i3" class="dot" id="dot3"></label>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
-      <button class="chat-btn">
-        <div class="chat-icon">
-          <span></span>
-          <span></span>
-        </div>
-      </button>
     </section>
     <section class="choice-of-flavor">
       <div class="heading">
-        <h2 class="title">słodkie inspiracje</h2>
-        <span class="underline"></span>
-        <h3 class="subtitle">czyli jakie smaki dostępne są dziś w miolli</h3>
+        <h3 class="title pink">słodkie inspiracje</h3>
+        <span class="like-hr hr-title"></span>
+        <h4 class="subtitle center">czyli jakie smaki dostępne są dziś w miolli</h4>
       </div>
       <div class="content">
-        <button class="arrow-btn"><img  src="../../assets/icons/arrow-left.svg" align="arrow left"></button>
+        <button class="btn btn-arrow"><img  src="../../assets/icons/arrow-left.svg" align="arrow left"></button>
         <div class="choice-list">
-          <div class="flaver-box">
-            <div class="flaver-image">
+          <div class="card card-flavor">
+            <div class="flavor-image">
                <img class="cookie-image" src="../../assets/images/czekolada-wisnia.png" alt="cookie">
             </div>
-            <span class="underline"></span>
-            <h3 class="flaver-name subtitle">czekolada i wiśnia</h3>
+            <span class="like-hr"></span>
+            <h5 class="flavor-name">czekolada i wiśnia</h5>
           </div>
-          <div class="flaver-box">
-            <div class="flaver-image">
+          <div class="card card-flavor">
+            <div class="flavor-image">
                <img class="cookie-image" src="../../assets/images/czekolada-wisnia.png" alt="cookie">
             </div>
-            <span class="underline"></span>
-            <h3 class="flaver-name subtitle">czekolada i wiśnia</h3>
-          </div> 
-          <div class="flaver-box">
-            <div class="flaver-image">
+            <span class="like-hr"></span>
+            <h5 class="flavor-name">czekolada i wiśnia</h5>
+          </div>
+          <div class="card card-flavor">
+            <div class="flavor-image">
                <img class="cookie-image" src="../../assets/images/czekolada-wisnia.png" alt="cookie">
             </div>
-            <span class="underline"></span>
-            <h3 class="flaver-name subtitle">czekolada i wiśnia</h3>
-          </div> 
-          <div class="flaver-box">
-            <div class="flaver-image">
+            <span class="like-hr"></span>
+            <h5 class="flavor-name">czekolada i wiśnia</h5>
+          </div>
+          <div class="card card-flavor">
+            <div class="flavor-image">
+               <img class="cookie-image" src="../../assets/images/pistacja-z-limonka.png" alt="cookie">
+            </div>
+            <span class="like-hr"></span>
+            <h5 class="flavor-name">pistacja z limonką</h5>
+          </div>
+          <div class="card card-flavor">
+            <div class="flavor-image">
                <img class="cookie-image" src="../../assets/images/czekolada-wisnia.png" alt="cookie">
             </div>
-            <span class="underline"></span>
-            <h3 class="flaver-name subtitle">czekolada i wiśnia</h3>
-          </div> 
-          <div class="flaver-box">
-            <div class="flaver-image">
-               <img class="cookie-image" src="../../assets/images/czekolada-wisnia.png" alt="cookie">
-            </div>
-            <span class="underline"></span>
-            <h3 class="flaver-name subtitle">czekolada i wiśnia</h3>
-          </div> 
+            <span class="like-hr"></span>
+            <h5 class="flavor-name">czekolada i wiśnia</h5>
+          </div>
         </div>
-        <button class="arrow-btn"><img  src="../../assets/icons/arrow-right.svg" align="arrow right"></button>
+        <button class="btn btn-arrow"><img  src="../../assets/icons/arrow-right.svg" align="arrow right"></button>
       </div>
-        <button class="btn">stwórz swoją kompozycję</button>
+        <button class="btn btn-primary btn-outline-pink">stwórz swoją kompozycję</button>
     </section>
     <section class="composition">
       <div class="heading">
-        <h2 class="title">spróbuj czegoś nowego!</h2>
-        <span class="underline"></span>
-        <h3 class="subtitle">mamy dla Ciebie 5 kompozycji smakowych, <br>możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk</h3>
+        <h2 class="title">spróbuj <br>czegoś nowego!</h2>
+        <span class="like-hr hr-title"></span>
+        <h4 class="subtitle center">mamy dla Ciebie 5 kompozycji smakowych, <br>możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk</h4>
       </div>
       <div class="content">
-        <div class="composition-image-container">
-          <button class="arrow-btn"><img  src="../../assets/icons/arrow-left.svg" align="arrow left"></button>
-          <img class="composition-image" src="../../assets/images/composition.png" alt="composition of cookies">
-          <button class="arrow-btn"><img  src="../../assets/icons/arrow-right.svg" align="arrow right"></button>
-        </div>
-        <div class="composition-description-container">
-          <div class="counter">
-            <span>1</span>
-            <span>/</span>
-            <span>5</span>
+        <div class="set">
+          <div class="set-header">
+            <button class="btn btn-arrow"><img  src="../../assets/icons/arrow-left.svg" align="arrow left"></button>
+            <div class="set-image">
+               <img src="../../assets/images/composition.png" alt="composition">
+            </div>
+            <button class="btn btn-arrow"><img  src="../../assets/icons/arrow-right.svg" align="arrow right"></button>
           </div>
-          <h2 class="like-title">set na lato</h2>
-          <p class="like-subtitle">a w nim makaroniki różane, truskawkowe, jagodowe i pomarańczowe idealne do porannej mimozy<p>
-             <h2 class="like-title cena">34,-</h2>
-          <button class="btn">zamów set</button>
+          <div class="set-body">
+            <div class="set-counter like-h5">
+              <span class="current-number-set">1</span>
+              <span class="сounter-delimiter">/</span>
+              <span class="total-count-sets">5</span>
+            </div>
+            <h3 class="set-name uppercase">set na lato</h3>
+            <p class="set-description like-h5">a w nim makaroniki różane, truskawkowe, jagodowe i pomarańczowe idealne do porannej mimozy</p>
+            <p class="price set-price like-h3">34,-</p>
+            <button class="btn btn-primary btn-outline-pink">zamów set</button>
+          </div>
         </div>
       </div>
     </section>
-    <section class="box-composing">
-      <div class="content">
-        <h2 class="like-title">skomponuj swoje pudełko</h2>
-        <ul>
-          <li class="like-subtitle"><span class="point">1</span><span>wybierz rozmiar (6/12/24szt)</span></li>
-          <li class="like-subtitle"><span class="point">2</span><span>wybierz ulubione smaki</span></li>
-          <li class="like-subtitle"><span class="point">3</span><span>dodaj nadruk z naszej bazy<br> albo swój własny<br> <span class="for-example"> to może być napis lub pełnokolorowy<br> wydruk (np. Twoje logo)</span></span></li>
-        </ul>
-        <h3 class="like-subtitle">proste? To do dzieła!<br>macznego!</h3>
-      </div>
-      <div class="box-image-container">
-      </div>
-    </section>
-    <section class="adding-uniqueness">
-      <div class="content">
-        <h2 class="like-title">dodaj wyjątkowości swojemu wydarzeniu z Miolli</h2>
-        <span class="underline"></span>
-        <p class="like-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam, diam ut maximus suscipit, lectus enim interdum turpis, et scelerisque neque est in diam. Aliquam gravida dapibus urna sit amet bibendum. Pellentesque tristique massa dictum quam mattis, at laoreet augue gravida. Duis eget dapibus sem. Pellentesque non velit ultrices, ullamcorper libero quis, finibus erat. Ut augue mauris, placerat id varius quis, iaculis a mi. Ut interdum leo vitae augue tempus vulputate.</p>
-      </div>
-      <div class="nav-slide">
-        <label for="i1" class="dot" id="dot1"></label>
-        <label for="i2" class="dot" id="dot2"></label>
-        <label for="i3" class="dot" id="dot3"></label>
-      </div>
-    </section>
-    <section class="film">
-      <h2>Film</h2>
-    </section>
-    <section class="reasons">Reasons</section>
-    <section class="newsletter">Newsletter</section>
-    <section class="map">Map</section>
   </main>
-  <footer class="footer">
-    <ul>
-      <li><a href="">item</a></li>
-      <li><a href="">item</a></li>
-      <li><a href="">item</a></li>
-      <li><a href="">item</a></li>
-      <li><a href="">item</a></li>
-    </ul>
-  </footer>
-
+  <div class="chat-container">
+    <button class="chat-button">
+      <div class="chat-icon">
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+  </div>
 </body>
 </html>
