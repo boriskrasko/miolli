@@ -171,13 +171,21 @@
 }
 
 /* Oferta dla biznesu */
+
 .business-offer {
   position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: none;
+}
+
+.business-offer__link {
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 178px;
   height: 78px;
-  display: none;
+  display: inline-flex;
   align-items: center;
   padding: 8px 8px 16px 24px;
   font: normal 14px/18px'Monument Grotesk', sans-serif;
@@ -187,12 +195,12 @@
   background-color: var(--nav-menu-fill);
 }
 
-.business-offer img {
+.business-offer__link img {
   align-self: flex-start;
 }
 
 .switch:checked ~ .business-offer {
-  display: flex;
+  display: block;
 }
 
 /* Topnav offer submenu */ 
