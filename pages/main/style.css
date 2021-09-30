@@ -1,8 +1,12 @@
 @import '../../assets/styles/main.css';
 
-/** {
+/* {
   border: var(--border);
 }*/
+
+body {
+  overflow-x: hidden;
+}
 
 .header {
   width: 100%;
@@ -488,6 +492,99 @@ section .heading {
   margin: 20px 0 0;
 }
 
+.uniqueness {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 700px;
+  padding-top: 88px;
+  padding-bottom: 20px;
+  margin-top: 318px;
+  background-image: url(../../assets/images/mask-box-composing.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex-wrap: wrap;
+}
+
+.uniqueness * {
+  color: #000;
+}
+
+.uniqueness .content {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 0 10%;
+}
+
+.list {
+  margin: 57px 0 0 0;
+}
+
+.list-point {
+  display: flex;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  margin: 0 2.75em 0 0.9em;
+  border: 2px solid var(--dark-l);
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-item {
+  display: flex;
+  margin: 21px 0;
+}
+
+.list-item span:not(:first-child) {
+  display: flex;
+  font-size: 1.125em;
+  align-items: center;
+  max-width: 329px;
+}
+
+.list-item:last-child span:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.uniqueness h2 {
+  line-height: 94px;
+}
+
+.uniqueness p, .uniqueness li {
+  letter-spacing: 100%;
+  line-height: 25px;
+}
+
+.uniqueness img {
+  margin: 32px 0 0;
+}
+
+.call-to-action {
+  margin-top: 52px;
+}
+
+.button-container {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-width: var(--min);
+}
+
+.box-image {
+  left: calc(81.5% - 1366px/2);
+  top: -600px;
+  position: absolute;
+}
+
 @media screen and (max-width: 1365px) {
   .card-flavor:nth-last-child(1) {
     display: none;
@@ -502,6 +599,18 @@ section .heading {
 
 @media screen and (max-width: 905px) {
   .card-flavor:nth-last-child(3) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .uniqueness .content, .uniqueness .button-container {
+    width: 100%;
+  }
+  .button-container {
+    margin: 40px 0;
+  }
+  .box-image {
     display: none;
   }
 }
