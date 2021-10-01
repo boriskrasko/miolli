@@ -98,13 +98,17 @@
 
 .switch:checked ~ .topnav{
   display: flex;
+  justify-content: flex-end;
   width: 100%;
 }
 
 .topnav__list {
-  width: calc(100% - 78px);
+  position: relative;
+  right: 78px;
+  width: max-content;
   display: inline-flex;
   justify-content: flex-end;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.17);
 }
 
 @media (max-width: 868px) {
@@ -209,13 +213,13 @@
 .topnav__dropdown {
   position: absolute;
   display: none;
-  width: 618px;
+  width: 614px;
   height: 312px;
-  right: 0;
+  right: -78px;
   top: 78px;
   background-color: #FFFFFF;
   z-index: 99;
-  box-shadow: 0 0 0.5px 0.2px #777;
+  box-shadow: 0 0 0.5px 0.2px rgba(0, 0, 0, 0.17);
 }
 
 .hasChild:hover .topnav__dropdown {
