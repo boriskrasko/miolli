@@ -210,11 +210,9 @@
 }
 
 /* Topnav offer submenu */ 
-.template__dropdown {
+.topnav__dropdown {
   display: none;
   position: absolute;
-  width: 614px;
-  height: 312px;
   right: -78px;
   top: 78px;
   background-color: #FFFFFF;
@@ -222,22 +220,27 @@
   box-shadow: 0 0 0.5px 0.2px rgba(0, 0, 0, 0.17);
 }
 
-.hasChild:hover .template__dropdown {
+.hasChild:hover .topnav__dropdown {
   display: flex;
-  justify-content: space-between;
-  padding: 24px 46px;
 }
 
-.template__dropdown > div {
+.template {
+  width: 614px;
+  height: 312px;
+  padding: 24px 46px;
+  justify-content: space-between;
+}
+
+.template > div {
   width: 50%;
   height: 100%;
 }
 
-.template__dropdown > div:first-child {
+.template > div:first-child {
   border-right: 1px solid var(--victoriana);
 }
 
-.template {
+.template__block {
   font: normal 14px/18px'Monument Grotesk', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -302,20 +305,9 @@
 }
 
 /* Cart dropdown */
-.cart__dropdown {
-  display: none;
-  position: absolute;
+.topnav-cart {
   width: 400px;
   height: 600px;
-  right: -78px;
-  top: 78px;
-  background-color: #FFFFFF;
-  z-index: 99;
-  box-shadow: 0 0 0.5px 0.2px rgba(0, 0, 0, 0.17);
-}
-
-.hasChild:hover .cart__dropdown {
-  display: flex;
 }
 
 /* Hero */
