@@ -25,7 +25,8 @@
   font-size: 1.5em;
   letter-spacing: 0.2em;
   color: #FFFFFF;
-  margin-left: 15%;
+  left: 15%;
+  bottom: 40px;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -301,6 +302,8 @@
   position: relative;
   top: -78px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   background-color: rgb(210, 218, 220);
   background-image: url(../images/diana-polekhina-startscreen.png);
