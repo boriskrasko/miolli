@@ -8,6 +8,7 @@
   --pig-iron: #484848;
   --white-bean-hummus: #e8cfb1;
   --blooming-perfect: #d89898;
+  --shadowed-steel: #4b4b4b;
     
   --nav-menu-fill: var( --victoriana);
   --nav-menu-text: var(--shisha-coal);
@@ -18,4 +19,5 @@
   --filter-fill: var(--white-bean-hummus);
   --slider-arrow: var(--blooming-perfect);
   --button: var(--blooming-perfect);
+  --topnav-cart: var(--shadowed-steel);
 }

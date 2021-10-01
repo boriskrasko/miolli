@@ -308,6 +308,44 @@
 .topnav-cart {
   width: 400px;
   height: 600px;
+  padding: 0 48px;
+}
+
+.topnav-cart__list {
+  margin: 5px 0;
+}
+
+.topnav-cart__item {
+  margin: 21px 0;
+  display: flex;
+}
+
+.topnav-cart__item img {
+  width: 89px;
+  height: 133px;
+}
+
+.topnav-cart__set {
+  padding: 16px;
+}
+
+.topnav-cart__set h4 {
+  font: normal 30px/20px var(--titleFont);
+  max-width: 12.5em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 12px;
+  color: var(--topnav-cart);
+}
+
+.topnav-cart__set p {
+  font: normal 14px/18px var(--contentFont);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 6px 12px;
+  color: var(--topnav-cart);
 }
 
 /* Hero */
