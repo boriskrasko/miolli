@@ -348,6 +348,28 @@
   color: var(--topnav-cart);
 }
 
+.topnav-cart__link {
+  font: thin 16px/21px var(--contentFont);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  display: flex;
+  justify-content: center;
+  color: var(--pig-iron);
+  margin: 14px;
+}
+
+.topnav-cart__button {
+  font: thin 16px/27px var(--contentFont);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  padding: 16px 23px;
+  color: #FFFFFF;
+  background-color: var(--victoriana);
+}
+
 /* Hero */
 .hero {
   position: relative;
