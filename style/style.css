@@ -133,7 +133,6 @@
 }
 
 .like-button {
-  position: relative;
   min-width: 78px;
   max-height: 78px;
   background-color: var(--nav-menu-fill);
@@ -183,6 +182,7 @@
   width: 100%;
   bottom: 0;
   display: none;
+  z-index: 99999;
 }
 
 .business-offer__link {
@@ -210,9 +210,9 @@
 }
 
 /* Topnav offer submenu */ 
-.topnav__dropdown {
-  position: absolute;
+.template__dropdown {
   display: none;
+  position: absolute;
   width: 614px;
   height: 312px;
   right: -78px;
@@ -222,18 +222,18 @@
   box-shadow: 0 0 0.5px 0.2px rgba(0, 0, 0, 0.17);
 }
 
-.hasChild:hover .topnav__dropdown {
+.hasChild:hover .template__dropdown {
   display: flex;
   justify-content: space-between;
   padding: 24px 46px;
 }
 
-.topnav__dropdown > div {
+.template__dropdown > div {
   width: 50%;
   height: 100%;
 }
 
-.topnav__dropdown > div:first-child {
+.template__dropdown > div:first-child {
   border-right: 1px solid var(--victoriana);
 }
 
@@ -299,6 +299,23 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+/* Cart dropdown */
+.cart__dropdown {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  right: -78px;
+  top: 78px;
+  background-color: #FFFFFF;
+  z-index: 99;
+  box-shadow: 0 0 0.5px 0.2px rgba(0, 0, 0, 0.17);
+}
+
+.hasChild:hover .cart__dropdown {
+  display: flex;
 }
 
 /* Hero */
