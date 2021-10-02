@@ -495,5 +495,13 @@ section .subtitle {
 
 .section__slider {
   width: 100%;
+  height: 300px;
+  background-color: #eee;
   margin: 37px 0;
+}
+
+.swiper-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
