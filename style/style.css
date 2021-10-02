@@ -181,7 +181,7 @@
   position: fixed;
   width: 100%;
   bottom: 0;
-  /* display: none; */
+  display: none;
   z-index: 99;
 }
 
@@ -389,7 +389,7 @@
   position: fixed;
   width: 1366px;
   bottom: 0;
-  z-index: 99;
+  z-index: 79;
 }
 
 .chat input {
@@ -400,7 +400,7 @@
   height: 42px;
   cursor: pointer;
   opacity: 0;
-  z-index: 99;
+  z-index: 79;
 }
 
 .chat__icon::before {
