@@ -181,8 +181,8 @@
   position: fixed;
   width: 100%;
   bottom: 0;
-  display: none;
-  z-index: 99999;
+  /* display: none; */
+  z-index: 99;
 }
 
 .business-offer__link {
@@ -382,4 +382,67 @@
   background-image: url(../images/diana-polekhina-startscreen.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* Chat icon */
+.chat {
+  position: fixed;
+  width: 1366px;
+  bottom: 0;
+  z-index: 99;
+}
+
+.chat input {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 99;
+}
+
+.chat__icon::before {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  border-radius: 21px;
+  background-color: var(--bauhaus);
+  content: '';
+  z-index: -1;
+}
+
+.chat__icon {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  width: 18px;
+  height: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.chat__icon:after {
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  content: '';
+  border-right: 6px solid #ffffff;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.chat__icon span {
+  position: relative;
+  width: 10px;
+  height: 1px;
+  background-color: var(--bauhaus);
+}
+
+.chat__icon span:not(:first-child) {
+  margin-top: 3px;
 }
