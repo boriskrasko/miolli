@@ -17,14 +17,14 @@ body {
 
 ul {
   list-style: none;
-  height: 100%;
   margin: 0;
   padding: 0;
 }
 
-a {
-  text-decoration: none !important;
-  color: #000;
-  margin: 0;
-  padding: 0;
+a  {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: initial;
 }
