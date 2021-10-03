@@ -495,8 +495,7 @@ section .subtitle {
 
 .section__slider {
   width: 100%;
-  height: 300px;
-  background-color: #eee;
+  min-height: 290px;
   margin: 37px 0;
 }
 
@@ -504,4 +503,58 @@ section .subtitle {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.card hr {
+width: 59px;
+margin: 36px auto 18px;
+}
+
+.card_v h4 {
+  font: normal 16px/19px var(--contentFont);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #444;
+  max-width: 120px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.card_v {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_v img {
+  max-width: 220px;
+  max-height: 200px;
+}
+
+a[uk-slider-item] {
+  height: 100%;
+  width: 50px;
+  padding: 80px 0;
+}
+
+a[uk-slider-item]::before {
+  position: absolute;
+  content: '';
+  width: 100px;
+  top: 0;
+  bottom: 0;
+  display: inline-flex;
+  z-index: -1;
+}
+
+a.uk-position-center-left::before {
+  left: -20px;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+a.uk-position-center-right::before {
+  right: -20px;
+  background: linear-gradient(to right, transparent, #fff);
 }
