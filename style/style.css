@@ -461,6 +461,7 @@ section .title {
   color: var(--pastel-pink);
   text-align: center;
   margin-bottom: 20px;
+  max-width: 680px;
 }
 
 section .title ~ hr {
@@ -478,8 +479,10 @@ hr {
 section .subtitle {
   font: normal 16px/19px var(--contentFont);
   text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--pig-iron);
   text-align: center;
+  max-width: 820px;
 }
 
 .section__button {
@@ -506,8 +509,8 @@ section .subtitle {
 }
 
 .card hr {
-width: 59px;
-margin: 36px auto 18px;
+  width: 59px;
+  margin: 36px auto 18px;
 }
 
 .card_v h4 {
@@ -521,21 +524,15 @@ margin: 36px auto 18px;
   padding: 0;
 }
 
-.card_v {
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
-
-.card_v img {
-  max-width: 220px;
-  max-height: 200px;
+  justify-content: flex-end;
 }
 
 a[uk-slider-item] {
   height: 100%;
-  width: 50px;
   padding: 80px 0;
 }
 
@@ -549,12 +546,58 @@ a[uk-slider-item]::before {
   z-index: -1;
 }
 
-a.uk-position-center-left::before {
-  left: -20px;
-  background: linear-gradient(to right, #fff, transparent);
+.uk-slider-container {
+  width: calc(100% - 120px);
+  margin: 0 auto;
 }
 
-a.uk-position-center-right::before {
-  right: -20px;
-  background: linear-gradient(to right, transparent, #fff);
+.sets .uk-slider-container ul {
+  left: -20px;
+}
+
+.uk-slider-container li {
+  margin: 4px;
+}
+
+.card_s h4 {
+  font: normal 30px/20px var(--titleFont);
+  max-width: 12.5em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 12px;
+  color: var(--pig-iron);
+}
+
+.card_s .card__text {
+  width: 208px;
+  font: normal 14px/21px var(--contentFont);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px auto 0;
+  color: var(--pig-iron);
+}
+
+.card_s .card_cost {
+  font: normal 30px/20px var(--titleFont);
+  color: var(--pig-iron);
+}
+
+.card_s .card__button {
+  font: thin 16px/21px var(--contentFont);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+  padding: 9px 47px;
+  color: var(--blooming-perfect);
+  outline: 1px solid var(--blooming-perfect);
+}
+
+.sets a[uk-slider-item] {
+  height: 100%;
+  padding: 200px 0;
 }
