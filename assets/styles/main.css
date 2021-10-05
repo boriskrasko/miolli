@@ -61,11 +61,15 @@ h3, .like-h3 {
 }
 
 h4, .like-h4,
-h5, .like-h5,
-p, .paragraph {
+h5, .like-h5 {
   font-family: var(--contentFont);
   color: var(--dark-s);
   text-transform: uppercase;
+}
+
+p, .paragraph {
+  font-family: var(--contentFont);
+  color: var(--dark-s);
 }
 
 h4, .like-h4,
