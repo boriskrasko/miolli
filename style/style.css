@@ -605,6 +605,7 @@ a[uk-slider-item]::before {
 
 .box {
   margin-top: 15%;
+  padding-bottom: 48px;
   display: grid;
   grid-template-areas:
     'content content box'
@@ -715,4 +716,56 @@ a[uk-slider-item]::before {
   padding: 20px 17px;
   color: #000;
   outline: 1px solid #000;
+}
+
+.uno {
+  min-height: 920px;
+  display: grid;
+  grid-template-areas:
+    'content content   '
+    'content content   '
+    'content content   ';
+  grid-template-columns: 1fr 35% 35%;
+  background-color:#ffece6;
+  background-image: url('../images/brooke-lark.png');
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.uno__content {
+  grid-area: content;
+  max-width: 720px;
+  justify-self: flex-end;
+  padding: 74px 0 130px 0;
+}
+
+.uno__title {
+  font: normal 94px/94px var(--titleFont);
+  color: #000;
+}
+
+.uno__text {
+  font: thin 18px/25px var(--contentFont);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  max-width: 357px;
+  margin: 0 0 27px;
+  color: #000;
+}
+
+.uno__button {
+  font: thin 16px/27px var(--contentFont);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+  padding: 20px 17px;
+  color: #000;
+  outline: 1px solid #000;
+}
+
+.uno hr {
+  width: 197px;
+  margin: 35px 0 47px 0;
+  background-color: #000;
 }
