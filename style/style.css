@@ -769,3 +769,17 @@ a[uk-slider-item]::before {
   margin: 35px 0 47px 0;
   background-color: #000;
 }
+
+.film {
+  width: 100%;
+  min-height: 807px;
+  background-color:#ffece6;
+  background-image: url('../images/film.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: normal 201px/214px var(--titleFont);
+  color: #FFFFFF;
+}
