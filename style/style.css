@@ -856,3 +856,57 @@ a[uk-slider-item]::before {
   color: #000;
   outline: 1px solid #000;
 }
+
+.sub {
+  height: 800px;
+  background-color: #eeeeee;
+  background-image: url(../images/table.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  justify-content: flex-start;
+}
+
+.sub__title.title {
+  color: #000;
+}
+
+.sub__form input[type=text] {
+  font: 16px/25px var(--contentFont);
+  display: flex;
+  width: 100%;
+  min-width: 447px;
+  height: 67px;
+  padding-left: 64px;
+  padding-right: 32px;
+  letter-spacing: 0.1em;
+  border: 1px solid #1C1C1C;
+  outline: none;
+  background: transparent;
+  align-items: flex-end;
+}
+
+.sub__form p {
+  display: flex;
+  margin: 25px 0;
+}
+
+.sub__form input[type=text]::placeholder {
+  font: 18px/25px var(--contentFont);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.sub__form input[type=submit] {
+  font: 18px/25px var(--contentFont);
+  width: 100%;
+  min-width: 162px;
+  height: 67px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #222;
+  border: none;
+  cursor: pointer;
+}
