@@ -499,6 +499,35 @@ możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk
         minZoom: 6,
         maxZoom: 17,
         subdomains:['mt0','mt1','mt2','mt3']
-      }).addTo(map);</script>
+      }).addTo(map);
+
+      const point = L.divIcon({className: 'miolli-point', iconSize: [94, 94]});
+      const coffeehouse = L.divIcon({className: 'coffeehouse'});
+      L.marker([52.2550229,20.9418306,], {icon: point}).addTo(map);
+      L.marker([52.2312712,21.0050486], {icon: point}).addTo(map);
+      L.marker([52.2112700,21.170400], {icon: point}).addTo(map);
+      L.marker([52.267049, 20.847532], {icon: point}).addTo(map);
+      L.marker([52.237049, 21.047532], {icon: coffeehouse}).addTo(map);
+
+      const getLocation = () => {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          console.log("The Browser Does not Support Geolocation")
+        }
+      }
+
+      const showPosition = position => {
+        let location = position.coords.latitude + ', ' + position.coords.longitude;
+        changeMap(location.split(', '));
+        L.marker([...location.split(', ')]).addTo(map);
+      }
+
+      const showError = error => {
+        if(error.PERMISSION_DENIED){
+          console.log("The User have denied the request for Geolocation.");
+        }
+      }
+    </script>
   </body>
 </html>

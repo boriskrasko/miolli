@@ -916,3 +916,54 @@ a[uk-slider-item]::before {
   height: 400px;
   z-index: 1;
 }
+
+.miolli-point {
+  position: relative;
+  border-radius: 100px;
+  background-color: #ffffff;
+  background-image: url(../icons/miolli-logo-small.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+  transition: 0.2s background-color;
+}
+
+.miolli-point::before {
+  position: absolute;
+  bottom: -12px;
+  left: 24px;
+  width: 0;
+  height: 0;
+  content: '';
+  transition: 0.2s border;
+  border-top: 1.5rem solid #ffffff;
+  border-right: 1.5rem solid transparent;
+  border-left: 1.5rem solid transparent;
+}
+
+.miolli-point:hover {
+  background-color: var(--victoriana);
+}
+
+.miolli-point:hover::before {
+  border-top-color: var(--victoriana);
+}
+
+.coffeehouse {
+  display: flex;
+  overflow: hidden;
+  width: 94px !important;
+  height: 94px !important;
+  transition: 0.2s width;
+  border-radius: 100px;
+  background-color: #ffece6;
+  align-items: center;
+  background-image: url(../icons/coffeehouse-item.svg);
+  background-repeat: no-repeat;
+}
+
+.coffeehouse:hover {
+  width: 300px !important;
+  z-index: 999 !important;
+}
