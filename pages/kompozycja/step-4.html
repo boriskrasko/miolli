@@ -148,15 +148,19 @@
     <main>
       <div class="configurator">
         <div class="configurator__content">
-          <div class="configurator__heading">
-            <h2 class="configurator__title">skomponuj swoje pudełko</h2>
+          <div class="breadcrumbs">
+           <span class="material-icons">arrow_back</span>
+            <a href="step-3.html">wroć</a>
           </div>
-          <div class="progress-block like-h5">
-            <div class="set-counter">
-              <span class="current-number">1</span>
+          <div class="configurator__heading">
+            <h2 class="configurator__title">gotowe!</h2>
+          </div>
+          <div class="progress-block">
+            <div class="set-counter like-h5">
+              <span class="current-number">4</span>
               <span class="сounter-delimiter">/</span>
               <span class="total-count">4</span>
-              <p class="step-name">wybierz rozmiar</p>
+              <p class="step-name">dodaj do koszyka</p>
             </div>
             <ul class="steps-bar">
               <li class="step">
@@ -164,49 +168,48 @@
                 <span class="step-name">wybierz rozmiar</span>
               </li>
               <li class="step">
-                <span class="step-count"></span>
+                <span class="step-count active"></span>
                 <span class="step-name">wybierz smaki</span>
               </li>
               <li class="step">
-                <span class="step-count"></span>
+                <span class="step-count active"></span>
                 <span class="step-name">dodaj nadruk</span>
               </li>
               <li class="step">
-                <span class="step-count"></span>
-                <span class="step-name">dodaj do koszyka</span>
+                <span class="step-count active"></span>
+                <span class="step-name ">dodaj do koszyka</span>
               </li>
             </ul>
           </div>
-
-          <form>
-            <div class="select-box">
-              <form>
-              <label class="label like-h3">
-                <p>
-                  <input type="radio" checked="checked" name="radio" id="i6">
-                  <span class="checkmark"></span>
-                </p>
-              6 szt
-            </label>
-            <label class="label like-h3">
-              <p>
-                <input type="radio" checked="checked" name="radio">
-                <span class="checkmark"></span>
+          <div class="configurator__container-fx">
+            <div class="choosing-flavor">
+              <div class="choosing-flavor__heading">
+                <h4>Super!</h4>
+                <p>Skonfigurowałeś swoje pierwsze pudełko! Ile takich pudełek potrzebujesz?</p>
+                <div class="counter">
+                  <button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();">-</button>
+                  <input type="number" name="number" min="1" max="100" value="1"><span>szt</span>
+                  <button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();">+</button>
+                </div>
+                <p>Chcesz skonfigurować kolejne pudełko?</p>
+              </div>
+              
+              <p class="btn-wrapper">
+                <a href="index.html" class="btn">TAK!</a>
               </p>
-              12 szt
-            </label>
-            <label class="label like-h3">
-              <p>
-                <input type="radio" checked="checked" name="radio" id="i24">
-                <span class="checkmark"></span>
+              <p class="btn-wrapper">
+                <a href="koszyk/index.html" class="btn">NIE, IDĘ DO KOZSYKA</a>
               </p>
-             24 szt
-            </label>
             </div>
-          </form>
-          <p>
-            <a href="step-2.html" class="btn">GOTOWE! PRZEJDŹ DALEJ</a>
-          </p>
+            <div class="cookie-box-container">
+              <div class="cookie-box">
+                <div class="cookie-box__lid"></div>
+                <div class="cookie-box__head"></div>
+                <div class="cookie-box__body"></div>
+                <div class="cookie-box__shadow"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

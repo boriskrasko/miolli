@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Miolli Components</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
   <a class="like-btn btn-primary" href="menu/index.html">Menu Structure</a>
@@ -270,9 +271,7 @@
           <p class="call-to-action">proste? To do dzieła! <br>Smacznego!</p>
           <img src="../assets/icons/logo-min.svg" alt="logo">
         </div>
-        <div class="column">
-          <div class="content-image"></div>
-        </div>
+        <div class="column"></div>
       </div>
       <div class="container-for-smth">
         <button class="btn btn-primary">Hello</button>
@@ -280,6 +279,7 @@
     </div>
   </div>
 <br><br><br><br>
+
   <ul class="steps-bar">
     <li class="step">
       <span class="step-count"></span>
@@ -298,5 +298,62 @@
       <span class="step-name">hello Miolli</span>
     </li>
   </ul>
+
+
+<!-- scrolling box  -->
+
+  <div class="scrolling-box">
+    <button class="scrollbar-arrow up inactive">
+      <span class="material-icons">arrow_upward</span>
+    </button>
+    <button class="scrollbar-arrow down">
+      <span class="material-icons">arrow_downward</span>
+    </button>
+    <div class="scrolling-box__content">
+      <div class="test-content">content</div>
+    </div>
+  </div>
+
+  <div class="scrolling-box container">
+    <button class="scrollbar-arrow up inactive">
+      <span class="material-icons">arrow_upward</span>
+    </button>
+    <button class="scrollbar-arrow down">
+      <span class="material-icons">arrow_downward</span>
+    </button>
+    <div class="scrolling-box__content">
+      <div class="test-content">content</div>
+    </div>
+  </div>
+
+  <ul class="list-group flavor-list">
+    <li class="list-group-item box flavor-item">
+      <span class="item-image flavor-image">
+      <img  src="../assets/images/conf-2-modified.png" alt="flavor">
+      <span class="marker">+</span>
+      </span>
+      <span class="item-name flavor-image like-h4">name</span>
+    </li>
+    <li class="list-group-item box box_m print">
+      <span class="print-image-container">
+        <img class="print-image-bg" src="../assets/images/conf-1-modified.png" alt="flavor">
+        <!-- <img class="print-image" src="../../assets/images/print.png" alt="print"> -->
+        <span class="marker">+</span>
+      </span>
+    </li>
+  </ul>
+  <div style="width: 100%; height: 200px;"></div>
+
+  <div class="cookie-box">
+    <div class="cookie-box__lid"></div>
+    <div class="cookie-box__head"></div>
+    <div class="cookie-box__body"></div>
+    <div class="cookie-box__shadow"></div>
+  </div>
+  
+  <img style="float: right;" src="../assets/images/box.png">
+
+
+
 </body>
 </html>
