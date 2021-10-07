@@ -10,6 +10,8 @@
     <link rel='stylesheet' type='text/css' media='screen' href='style/common.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/style.css'>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.23/dist/js/uikit.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <style>
       body {
       font-family: Helvetica, Arial, sans-serif;
@@ -486,6 +488,17 @@ możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk
           </p>
         </form>
       </section>
+      <section class="map">
+        <div id="map"></div>
+      </section>
     </div>
+    <script>
+      const google = 'http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}';
+      const map = L.map('map').setView([52.237049, 21.017532], 12);
+      L.tileLayer(google,{
+        minZoom: 6,
+        maxZoom: 17,
+        subdomains:['mt0','mt1','mt2','mt3']
+      }).addTo(map);</script>
   </body>
 </html>
