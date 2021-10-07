@@ -1,12 +1,9 @@
 @import '../../assets/styles/main.css';
 
-/* {
+ * {
   border: var(--border);
-}*/
-
-body {
-  overflow-x: hidden;
 }
+
 
 .header {
   position: fixed;
@@ -157,11 +154,13 @@ body {
   display: flex;
   width: 100%;
   min-height: 78px;
-  padding: 0 60px;
   align-items: center;
 }
 
 .navbar nav ul li a {
+  width: 100%;
+  min-height: 100%;
+  padding: 0 60px;
   font-family: var(--contentFont);
   font-size: 14px;
   text-transform: uppercase;
@@ -484,8 +483,8 @@ body {
   .nav-menu .navbar {
     width: 100%;
   }
-  .navbar nav ul li {
-    align-items: center;
+  .navbar nav ul li a {
+    text-align: center;
   }
   .navbar ul li {
     padding: auto;
@@ -711,21 +710,24 @@ body {
   background: var(--desert-sand);
 }
 
-.btn-arrow {
+.btn-arrow span {
   display: flex;
-  width: 80px;
-  height: 100px;
+  width: 78px;
+  height: 78px;
+  font-size: 28px;
   justify-content: center;
   align-items: center;
+  border: var(--border);
 }
 
 .hr,
-.like-hr {
-  display: block;
+.like-hr,
+.underline {
   width: 59px;
   height: 2px;
   border: 1.5px solid var(--white-chocolate);
   background: var(--white-chocolate);
+  text-align: center;
 }
 
 .hr-title {
@@ -736,6 +738,12 @@ body {
 .hr-dark {
   border: 1.5px solid #000;
   background: #000;
+}
+
+/* card */
+
+.card * {
+  border: var(--border);
 }
 
 .card {
@@ -749,27 +757,29 @@ body {
 }
 
 .card-flavor {
-  width: 230px;
-  min-height: 300px;
-  margin: 5px;
+  width: 218px;
+  min-height: 298px;
+  margin: 9px;
 }
 
-.flavor-image {
+.card-body {
+  width: 100%;
+  min-height: 60px;
   display: flex;
-  height: 210px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-img-top {
+  display: flex;
+  width: 100%;
+  max-height: 210px;
   justify-content: center;
   align-items: flex-end;
 }
 
-.cookie-image {
-  width: 100%;
-}
-
-.card-flavor .like-hr {
-  margin-top: 34px;
-}
-
-.flavor-name {
+.card-title {
   line-height: 19px;
   display: block;
   width: 120px;
@@ -777,7 +787,7 @@ body {
   letter-spacing: .1em;
 }
 
-.lint-to-description-page {
+.card-link {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -785,6 +795,8 @@ body {
   bottom: 0;
   left: 0;
 }
+
+/***/
 
 .flex-container {
   display: flex;
@@ -817,65 +829,59 @@ section .heading {
   align-items: center;
 }
 
-.choice-of-flavor {
+section {
+  width: 100%; 
+}
+
+ .content{
+  width: 100%;
+  max-width: var(--content);
+  margin: 88px auto;
   display: flex;
   flex-direction: column;
-  width: 100%;
   min-height: 700px;
-  padding-top: 88px;
   justify-content: space-between;
   align-items: center;
 }
 
-.choice-of-flavor .content {
+.inspiration-section .container,
+.inspiration-section .card-list {
   width: 100%;
-}
-
-.choice-of-flavor .content,
-.choice-of-flavor .choice-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.choice-of-flavor .choice-list {
+.inspiration-section .card-list {
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.choice-of-flavor .btn-arrow {
+.inspiration-section .btn-arrow {
   height: 210px;
   align-self: flex-start;
 }
 
-.choice-of-flavor .arrow-btn img {
+.inspiration-section .arrow-btn img {
   margin-top: 100px;
 }
 
 .title,
 .like-title {
-  line-height: 1.2em;
   display: block;
-  max-width: 680px;
+  max-width: 743px;
   text-align: center;
   color: var(--pastel-pink);
+  word-wrap: break-word;
 }
 
 .subtitle {
   font-size: 1em;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
 }
 
-.composition {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 700px;
-  padding-top: 88px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.composition .content {
+.composition-section .container {
   width: 100%;
 }
 
@@ -915,17 +921,10 @@ section .heading {
 }
 
 .box-composing {
-  position: relative;
-  display: flex;
-  width: 100%;
-  min-height: 700px;
-  padding-top: 88px;
-  padding-bottom: 20px;
   background-image: url(../../assets/images/mask-box-composing.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  flex-wrap: wrap;
 }
 
 
@@ -1099,6 +1098,10 @@ section .heading {
   body {
     font-size: 12px;
   }
+  .btn-arrow span {
+    width: 25px;
+    line-height: 25px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -1106,3 +1109,4 @@ section .heading {
     font-size: 10px;
   }
 }
+
