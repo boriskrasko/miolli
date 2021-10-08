@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  outline: 1px solid #f00;
+  /* outline: 1px solid #f00; */
 }
 
 body {
@@ -17,16 +17,13 @@ body {
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 a  {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: initial;
-}
-
-a:hover {
+a:hover, a:hover::before, a:hover::after {
   filter: contrast(80%);
 }
