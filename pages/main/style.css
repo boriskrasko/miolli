@@ -1025,6 +1025,7 @@ input.set-viewer-toggle {
 
 .box-composing .content .image img {
   width: 420px;
+  height: 870px;
 }
 
 .box-composing .content .text-content {
@@ -1070,6 +1071,7 @@ input.set-viewer-toggle {
   }
   .box-composing .content .image img {
     width: 240px;
+    max-height: 470px;
   }
   .box-composing .content .text-content {
     width: 768px;
