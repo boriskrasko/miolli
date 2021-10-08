@@ -16,7 +16,6 @@ body {
 
 ul {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
@@ -26,4 +25,8 @@ a  {
 
 a:hover {
   text-decoration: initial;
+}
+
+a:hover {
+  filter: contrast(80%);
 }
