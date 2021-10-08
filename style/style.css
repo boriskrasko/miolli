@@ -972,7 +972,7 @@ a[uk-slider-item]::before {
   z-index: 999 !important;
 }
 
-.leaflet-control {
+.leaflet-right {
   opacity: 0;
 }
 
