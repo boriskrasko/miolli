@@ -1,4 +1,8 @@
 @import '../assets/styles/main.css';
+
+body > * {
+  margin: 20px;
+}
 .brand-container {
   position: relative;
   max-width: 540px;
@@ -225,33 +229,8 @@
   margin-top: 3px;
 }
 
-.btn,
-.like-btn {
-  font-family: var(--contentFont);
-  display: flex;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  background: transparent;
-  justify-content: center;
-  align-items: center;
-}
+/**/
 
-.btn-primary {
-  font-family: var(--contentFont);
-  font-size: 16px;
-  line-height: 270%;
-  min-width: 139px;
-  min-height: 62px;
-  padding: 0 17px;
-  color: #000;
-  border: 1px solid #000;
-  background: transparent;
-}
-
-.btn-outline-pink {
-  color: var(--parrot-pink);
-  border: 1px solid var(--parrot-pink);
-}
 
 .btn-round {
   font-size: 10px;
@@ -764,7 +743,7 @@
 
 @media screen and (max-width: 500px) {
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
   #navList li:last-child {
     margin-bottom: 142px;
@@ -773,6 +752,6 @@
 
 @media screen and (max-width: 400px) {
   body {
-    font-size: 10px;
+    font-size: 12px;
   }
 }

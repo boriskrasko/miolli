@@ -1256,6 +1256,7 @@ label p .checkmark:after {
 
 .box-empty {
   background: radial-gradient(#ce958b, #9e655b);
+   box-shadow: 0 0 20px 5px rgba(255, 255, 255, .7);
 }
 
 /***/
