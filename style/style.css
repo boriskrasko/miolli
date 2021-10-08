@@ -719,7 +719,7 @@ a[uk-slider-item]::before {
     'content content   '
     'content content   '
     'content content   ';
-  grid-template-columns: 1fr 35% 35%;
+  grid-template-columns: 1fr 36% 36%;
   min-height: 920px;
   background-color:var(--peach-breeze);
   background-image: url('../images/brooke-lark.png');
@@ -730,7 +730,7 @@ a[uk-slider-item]::before {
 .uno__content {
   justify-self: flex-end;
   max-width: 720px;
-  padding: 74px 0 130px 0;
+  padding: 74px 0 130px 20px;
   grid-area: content;
 }
 
