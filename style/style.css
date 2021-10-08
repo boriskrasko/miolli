@@ -911,6 +911,10 @@ a[uk-slider-item]::before {
   cursor: pointer;
 }
 
+.map {
+  background-color:#ffece6;
+}
+
 #map {
   position: relative;
   height: 400px;
@@ -966,4 +970,47 @@ a[uk-slider-item]::before {
 .coffeehouse:hover {
   width: 300px !important;
   z-index: 999 !important;
+}
+
+.leaflet-control {
+  opacity: 0;
+}
+
+.map__content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 16px;
+  column-gap: 16px;
+}
+
+.map__content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.map__content h3 {
+  font: normal 56px/64px var(--titleFont);
+}
+
+#location {
+  grid-area: select;
+}
+
+.map__button {
+  font: thin 16px/27px var(--contentFont);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+  padding: 13px 28px;
+  color: #000;
+  outline: 1px solid #000;
+  background-color: transparent;
+  border: none;
+  grid-area: button;
+  width: 280px;
 }
