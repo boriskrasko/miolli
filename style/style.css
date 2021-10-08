@@ -381,7 +381,6 @@
 /* Hero */
 .hero {
   position: static;
-  margin-top: -78px;
   display: flex;
   justify-content: center;
   align-items: center;
