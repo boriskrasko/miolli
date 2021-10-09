@@ -1,8 +1,8 @@
 @import '../../assets/styles/main.css';
 
-/* * {
+ * {
   border: var(--border);
-}*/
+}
 
 .header {
   position: fixed;
