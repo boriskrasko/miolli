@@ -1,6 +1,6 @@
 @import '../../assets/styles/main.css';
 * {
-  /*border: var(--border);*/
+  border: var(--border);
 }
 
 .header {
@@ -676,34 +676,6 @@
   flex-direction: column;
 }
 
-
-/*section .heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}*/
-
-
-/*section {
-  position: relative;
-  width: 100%;
-}*/
-
-
-/*.content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: var(--content);
-  min-height: 748px;
-  margin: 0 auto;
-  padding: 88px 0 0;
-  justify-content: space-between;
-  align-items: center;
-}*/
-
 .btn-arrow>span {
   display: flex;
   width: 78px;
@@ -1012,7 +984,280 @@ input.viewer-toggle {
   }
 }
 
-/**/
+.composition__content {
+  position: relative;
+  max-width: var(--content);
+  margin: 88px auto 0;
+}
+
+.composition__content.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.composition .block__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.composition .block__header>* {
+  margin: 7px;
+}
+
+.composition .block__title {
+  font: normal 73px/73px var(--titleFont);
+  text-align: center;
+  color: var(--pastel-pink);
+}
+
+.composition .block__underline {
+  width: 197px;
+  margin: 20px;
+}
+
+.composition .block__subtitle {
+  font: normal 16px/19px var(--contentFont);
+  width: 80%;
+  text-align: center;
+  letter-spacing: .1em;
+  color: var(--outer-space);
+}
+
+.composition .block__body {
+  position: relative;
+  display: flex;
+  margin: 66px 0 0;
+  justify-content: space-around;
+}
+
+.composition .btn-arrow {
+  display: flex;
+  height: 50%;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.composition .btn-arrow span {
+  font-size: 27px;
+}
+
+.composition .viewer-toggle {
+  position: absolute;
+  z-index: 0;
+  bottom: -111px;
+  left: 56px;
+  cursor: pointer;
+}
+
+.composition input:checked~.set-stack .stack {
+  display: none;
+}
+
+.composition input:checked~.set-stack .set-lg {
+  display: block;
+}
+
+.set-stack {
+  display: flex;
+  align-items: flex-start;
+}
+
+.composition .stack {
+  flex-wrap: wrap;
+}
+
+.composition .stack--horizontal {
+  overflow: hidden;
+  height: 700px;
+  justify-content: space-around;
+}
+
+.set.card {
+  width: 270px;
+  margin: 12px;
+}
+
+.set .card__figure {
+  overflow: hidden;
+}
+
+.set .card__image {
+  width: 100%;
+}
+
+.set .card__body {
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+  min-height: 150px;
+  margin: 32px auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.set .card__title {
+  font: normal 30px/20px var(--titleFont);
+  text-align: center;
+  color: var(--quartz);
+}
+
+.set .card__copy {
+  font: normal 14px/21px var(--contentFont);
+  text-align: center;
+  letter-spacing: .1em;
+  color: var(--outer-space);
+}
+
+.set .card__copy.price {
+  font: normal 30px/20px var(--titleFont);
+  color: var(--quartz);
+}
+
+.set .card__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.set .button {
+  font: normal 14px/14px var(--contentFont);
+  display: flex;
+  min-width: 137px;
+  min-height: 40px;
+  padding: 8px 16px;
+  text-align: center;
+  letter-spacing: .2em;
+  color: var(--parrot-pink);
+  border: 1px solid var(--parrot-pink);
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-control {
+  font: normal 16px/25px var(--contentFont);
+  display: flex;
+  width: 100px;
+  min-height: 20px;
+  margin: 10px auto;
+  justify-content: space-around;
+}
+
+.set .nav-control {
+  display: none;
+}
+
+.set-lg .nav-control .arrow {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .composition .stack--horizontal {
+    height: 720px;
+  }
+  .composition .btn-arrow {
+    display: none;
+  }
+  .set .nav-control {
+    display: flex;
+  }
+  .set-lg .nav-control .arrow {
+    display: block;
+  }
+}
+
+.set-lg.card {
+  display: none;
+  width: auto;
+}
+
+.set-lg .card__figure {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.set-lg .card__image {
+  width: 100%;
+}
+
+.set-lg .card__body {
+  display: flex;
+  flex-direction: column;
+  max-width: 554px;
+  min-height: 298px;
+  margin: 32px auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.set-lg .card__title {
+  font: normal 66px/74px var(--titleFont);
+  text-align: center;
+  color: var(--quartz);
+}
+
+.set-lg .card__copy {
+  font: normal 16px/25px var(--contentFont);
+  text-align: center;
+  letter-spacing: .1em;
+  color: var(--outer-space);
+}
+
+.set-lg .card__copy.price {
+  font: normal 66px/74px var(--titleFont);
+  color: var(--quartz);
+}
+
+.set-lg .card__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.set-lg .button {
+  font: normal 14px/14px var(--contentFont);
+  display: flex;
+  min-width: 187px;
+  min-height: 60px;
+  padding: 8px 16px;
+  text-align: center;
+  letter-spacing: .2em;
+  color: var(--parrot-pink);
+  border: 1px solid var(--parrot-pink);
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 576px) {
+  .set-lg.card {
+    min-width: 256px;
+    margin: 0 20px;
+  }
+  .set-lg .card__body {
+    min-height: 211px;
+    margin: 16px auto;
+  }
+  .set-lg .card__title {
+    font: normal 30px/74px var(--titleFont);
+  }
+  .set-lg .card__copy {
+    font: normal 14px/22px var(--contentFont);
+    min-width: 248px;
+  }
+  .set-lg .card__copy.price {
+    font: normal 30px/72px var(--titleFont);
+  }
+  .set-lg .nav-control .arrow {
+    display: block;
+  }
+}
+
+
+/***/
 
 @media screen and (max-width: 540px) {
   .brand-tagline {
