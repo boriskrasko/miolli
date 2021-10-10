@@ -642,7 +642,7 @@ a[uk-slider-item]::before {
 }
 
 .card_s .card_cost {
-  margin: 10px auto 12px;
+  margin: 0 auto 24px;
   font: normal 30px/20px var(--titleFont);
   color: var(--pig-iron);
 }
@@ -661,6 +661,26 @@ a[uk-slider-item]::before {
 .sets a[uk-slider-item] {
   height: 100%;
   padding: 200px 0;
+}
+
+.set__viewer {
+  position: absolute;
+  left: 92px;
+  bottom: -98px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 112px;
+  height: 112px;
+  padding: 29px 17px 17px;
+  font: 10px/15px var(--contentFont);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #D89898;
+  border-radius: 100px;
 }
 
 .box {
@@ -917,6 +937,7 @@ a[uk-slider-item]::before {
 }
 
 .sub {
+  z-index: -1;
   justify-content: flex-start;
   height: 800px;
   background-color: #eeeeee;
