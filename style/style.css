@@ -147,7 +147,7 @@
 .cart-count {
   position: absolute;
   z-index: -1;
-  font: normal 12px/14px'Monument Grotesk', sans-serif;
+  font: 12px/14px'Monument Grotesk', sans-serif;
   color: #FFFFFF;
 }
 
@@ -172,7 +172,7 @@
 }
 
 .sidenav__link {
-  font: normal 14px/18px'Monument Grotesk', sans-serif;
+  font: 14px/18px'Monument Grotesk', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #FFFFFF;
@@ -197,7 +197,7 @@
   display: inline-flex;
   align-items: center;
   padding: 8px 8px 16px 24px;
-  font: normal 14px/18px'Monument Grotesk', sans-serif;
+  font: 14px/18px'Monument Grotesk', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--nav-menu-text);
@@ -248,7 +248,7 @@
 }
 
 .template__block {
-  font: normal 14px/18px'Monument Grotesk', sans-serif;
+  font: 14px/18px'Monument Grotesk', sans-serif;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--nav-menu-text);
@@ -280,7 +280,7 @@
 .template__link {
   display: flex;
   margin: 16px 0;
-  font: normal 14px/18px'Monument Grotesk', sans-serif;
+  font: 14px/18px'Monument Grotesk', sans-serif;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--nav-menu-text);
@@ -339,7 +339,7 @@
 .topnav-cart__set h4 {
   max-width: 12.5em;
   margin-bottom: 12px;
-  font: normal 30px/20px var(--titleFont);
+  font: 30px/20px var(--titleFont);
   white-space: nowrap;
   text-transform: uppercase;
   text-overflow: ellipsis;
@@ -349,7 +349,7 @@
 
 .topnav-cart__set p {
   margin: 6px 12px;
-  font: normal 14px/18px var(--contentFont);
+  font: 14px/18px var(--contentFont);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--topnav-cart);
@@ -359,7 +359,7 @@
   display: flex;
   justify-content: center;
   margin: 14px;
-  font: thin 16px/21px var(--contentFont);
+  font: 16px/21px var(--contentFont);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: underline;
@@ -370,7 +370,7 @@
   display: flex;
   justify-content: center;
   padding: 16px 23px;
-  font: thin 16px/27px var(--contentFont);
+  font: 16px/27px var(--contentFont);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -498,7 +498,7 @@
 .section .title {
   max-width: 680px;
   margin-bottom: 20px;
-  font: normal 94px/100px var(--titleFont);
+  font: 94px/100px var(--titleFont);
   text-align: center;
   color: var(--pastel-pink);
 }
@@ -517,7 +517,7 @@ hr {
 
 .section .subtitle {
   max-width: 820px;
-  font: normal 16px/19px var(--contentFont);
+  font: 16px/19px var(--contentFont);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   text-align: center;
@@ -528,7 +528,7 @@ hr {
   display: inline-flex;
   justify-content: center;
   padding: 16px 23px;
-  font: thin 16px/27px var(--contentFont);
+  font: 16px/27px var(--contentFont);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--blooming-perfect);
@@ -557,7 +557,7 @@ hr {
   max-width: 120px;
   margin: 0 auto;
   padding: 0;
-  font: normal 16px/19px var(--contentFont);
+  font: 16px/19px var(--contentFont);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
@@ -622,7 +622,7 @@ a[uk-slider-item]::before {
 .card_s h4 {
   max-width: 12.5em;
   margin-bottom: 12px;
-  font: normal 30px/20px var(--titleFont);
+  font: 30px/20px var(--titleFont);
   white-space: nowrap;
   text-transform: uppercase;
   text-overflow: ellipsis;
@@ -634,7 +634,7 @@ a[uk-slider-item]::before {
 .card_s .card__text {
   width: 208px;
   margin: 10px auto 12px;
-  font: normal 14px/21px var(--contentFont);
+  font: 14px/21px var(--contentFont);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
@@ -643,7 +643,7 @@ a[uk-slider-item]::before {
 
 .card_s .card_cost {
   margin: 0 auto 24px;
-  font: normal 30px/20px var(--titleFont);
+  font: 30px/20px var(--titleFont);
   color: var(--pig-iron);
 }
 
@@ -651,7 +651,7 @@ a[uk-slider-item]::before {
   display: inline-flex;
   justify-content: center;
   padding: 9px 47px;
-  font: thin 16px/21px var(--contentFont);
+  font: 16px/21px var(--contentFont);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--blooming-perfect);
@@ -707,7 +707,7 @@ a[uk-slider-item]::before {
 }
 
 .box__title {
-  font: normal 94px/94px var(--titleFont);
+  font: 94px/94px var(--titleFont);
   color: #000;
 }
 
@@ -721,7 +721,7 @@ a[uk-slider-item]::before {
   position: relative;
   margin: 0 0 27px;
   padding-left: 70px;
-  font: thin 18px/25px var(--contentFont);
+  font: 18px/25px var(--contentFont);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #000;
@@ -736,7 +736,7 @@ a[uk-slider-item]::before {
   display: block;
   width: 36px;
   height: 36px;
-  font: normal 18px/36px var(--contentFont);
+  font: 18px/36px var(--contentFont);
   color: #000;
   text-align: center;
   border: 2px solid #222;
@@ -745,7 +745,7 @@ a[uk-slider-item]::before {
 
 .box__text {
   max-width: 260px;
-  font: thin 18px/25px var(--contentFont);
+  font: 18px/25px var(--contentFont);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #000;
@@ -780,7 +780,7 @@ a[uk-slider-item]::before {
   display: inline-flex;
   justify-content: center;
   padding: 20px 17px;
-  font: thin 16px/27px var(--contentFont);
+  font: 16px/27px var(--contentFont);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000;
@@ -809,14 +809,14 @@ a[uk-slider-item]::before {
 }
 
 .uno__title {
-  font: normal 94px/94px var(--titleFont);
+  font: 94px/94px var(--titleFont);
   color: #000;
 }
 
 .uno__text {
   max-width: 357px;
   margin: 0 0 27px;
-  font: thin 18px/25px var(--contentFont);
+  font: 18px/25px var(--contentFont);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #000;
@@ -826,7 +826,7 @@ a[uk-slider-item]::before {
   display: inline-flex;
   justify-content: center;
   padding: 20px 17px;
-  font: thin 16px/27px var(--contentFont);
+  font: 16px/27px var(--contentFont);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000;
@@ -845,7 +845,7 @@ a[uk-slider-item]::before {
   align-items: center;
   width: 100%;
   min-height: 807px;
-  font: normal 201px/214px var(--titleFont);
+  font: 201px/214px var(--titleFont);
   color: #FFFFFF;
   background-color:var(--peach-breeze);
   background-image: url('../images/film.png');
@@ -864,6 +864,7 @@ a[uk-slider-item]::before {
 
 .reason > img:nth-child(1) {
   position: absolute;
+  z-index: 79;
   left: 0;
   bottom: -100px;
   width: 25%;
@@ -871,6 +872,7 @@ a[uk-slider-item]::before {
 
 .reason > img:nth-child(2) {
   position: absolute;
+  z-index: 79;
   top: -100px;
   right: 0;
   width: 25%;
@@ -888,7 +890,7 @@ a[uk-slider-item]::before {
 .reason__content::before {
   content: '01';
   position: absolute;
-  font: normal 744px/744px var(--titleFont);
+  font: 744px/744px var(--titleFont);
   color: #86B6C7;
   opacity: 0.5;
 }
@@ -900,7 +902,7 @@ a[uk-slider-item]::before {
 
 .reason h3,
 .reason__slider h4 {
-  font: normal 16px/27px var(--contentFont);
+  font: 16px/27px var(--contentFont);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-align: center;
@@ -912,7 +914,7 @@ a[uk-slider-item]::before {
 }
 
 .reason__slider p {
-  font: thin 16px/22px var(--contentFont);
+  font: 16px/22px var(--contentFont);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
@@ -929,7 +931,7 @@ a[uk-slider-item]::before {
   display: inline-flex;
   justify-content: center;
   padding: 20px 17px;
-  font: thin 16px/27px var(--contentFont);
+  font: 16px/27px var(--contentFont);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000;
@@ -937,7 +939,6 @@ a[uk-slider-item]::before {
 }
 
 .sub {
-  z-index: -1;
   justify-content: flex-start;
   height: 800px;
   background-color: #eeeeee;
@@ -1071,7 +1072,7 @@ a[uk-slider-item]::before {
 }
 
 .map__content h3 {
-  font: normal 56px/64px var(--titleFont);
+  font: 56px/64px var(--titleFont);
 }
 
 .map__button {
@@ -1079,7 +1080,7 @@ a[uk-slider-item]::before {
   justify-content: center;
   width: 280px;
   padding: 13px 28px;
-  font: thin 16px/27px var(--contentFont);
+  font: 16px/27px var(--contentFont);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #000;
