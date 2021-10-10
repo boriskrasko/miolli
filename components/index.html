@@ -17,32 +17,33 @@
           </figure>
         </aside>
         <div class="block__content">
-        <header class="block__header">
-          <h2 class="block__title">block Title</h2>
-          <h3 class="block__subtitle">
-            block Subtitle
-          </h3>
-        </header>
-        <div class="block__body">
-          <p class="block__copy">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis
-            deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Repellendus sapiente harum soluta excepturi ut
-            temporibus, at amet corporis id asperiores.
-          </p>
-        </div>
-        <footer class="block__footer">
-          <div class="block__actions">
-            <a href="#" class="button">
-            <span class="button__prepend">
-            V
-            </span>
-            <span class="button__body">Click</span>
-            <span class="button__append">
-            X
-            </span>
-            </a>
-        </footer>
+          <header class="block__header">
+            <h2 class="block__title">block Title</h2>
+            <h3 class="block__subtitle">
+              block Subtitle
+            </h3>
+          </header>
+          <div class="block__body">
+            <p class="block__copy">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis
+              deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Repellendus sapiente harum soluta excepturi ut
+              temporibus, at amet corporis id asperiores.
+            </p>
+          </div>
+          <footer class="block__footer">
+            <div class="block__actions">
+              <a href="#" class="button">
+              <span class="button__prepend">
+              V
+              </span>
+              <span class="button__body">Click</span>
+              <span class="button__append">
+              X
+              </span>
+              </a>
+            </div>
+          </footer>
         </div>
       </article>
       <article class="block row-reverse">
@@ -324,7 +325,7 @@
       </form>
     </div>
     <div class="quantity">
-      <input name="number" type="text" readonly value="1" minlength="1">
+      <input name="number" type="text" readonly value="1">
       <p class="smth">szt.</p>
       <div class="quantity__btns">
         <button class="button" onclick="inc()">
@@ -337,7 +338,7 @@
     </div>
     <div class="quantity">
       <span class="box-size-label">S</span>
-      <input name="number" type="text" readonly value="1" minlength="1">
+      <input name="number" type="text" readonly value="1">
       <p class="smth">szt.</p>
       <div class="quantity__btns">
         <button class="button" onclick="inc()">
@@ -374,6 +375,99 @@
         za <span data-quantity>6</span> sztuk
       </p>
     </div>
+    <article class="block set-block">
+      <aside class="block__aside">
+        <figure class="block__figure">
+          <img src="../assets/images/set-large.png" alt="" class="block__image">
+        </figure>
+        <div class="nav-control">
+          <button class="button">
+          <span class="material-icons">
+          west
+          </span>
+          </button>
+          <div class="counter like-h5">
+            <span class="current-number">1</span>
+            <span class="сounter-delimiter">/</span>
+            <span class="total-count">5</span>
+          </div>
+          <button class="button ">
+          <span class="material-icons">
+          east
+          </span>
+          </button>
+        </div>
+      </aside>
+      <div class="block__content">
+        <header class="block__header">
+          <div class="block__heading">
+            <h2 class="block__title">zestaw<wbr> na lato</h2>
+            <div class="price-tag">
+              <p class="price-tag__copy price like-h2">
+                <span data-integer>34</span> ,-
+              </p>
+              <p class="price-tag__copy details">
+                cena<br>
+                za <span data-quantity>6</span> sztuk
+              </p>
+            </div>
+          </div>
+        </header>
+        <div class="block__body">
+          <p class="block__copy">
+            <b>Smaki:</b>
+          </p>
+          <ul class="list">
+            <li class="list__item">2x <span>limonka</span></li>
+            <li class="list__item">3x <span>cytryna i mięta</span> </li>
+            <li class="list__item">3x <span>cytryna i mięta</span></li>
+          </ul>
+          <p class="block__copy description">
+            <b>opis:</b> Donec tincidunt diam quis lectus feugiat, sed rutrum tortor elementum. 
+          </p>
+          <form>
+            <label for="boxSize">
+            <b>wybierz wielkość pudełka:</b> 
+            </label>
+            <div class="quantity box-size">
+              <span class="box-size-label">S</span>
+              <input id="boxSize" name="boxSize" type="text" readonly value="1">
+              <p class="smth">szt.</p>
+              <div class="quantity__btns">
+                <button class="button">
+                <span class="material-icons">arrow_drop_up</span>
+                </button>
+                <button class="button">
+                <span class="material-icons">arrow_drop_down</span>
+                </button> 
+              </div>
+            </div>
+            <label for="boxCount">
+            <b> wybierz ilość pudełek:</b> 
+            </label>
+            <div class="quantity box-count">
+              <input id="boxCount" name="boxCount" type="text" readonly value="2">
+              <p class="smth">szt.</p>
+              <div class="quantity__btns">
+                <button class="button">
+                <span class="material-icons">arrow_drop_up</span>
+                </button>
+                <button class="button">
+                <span class="material-icons">arrow_drop_down</span>
+                </button> 
+              </div>
+            </div>
+          </form>
+        </div>
+        <footer class="block__footer">
+          <p class="block__actions">
+            <a href="#" class="button">
+            <span class="button__body">kup teraz</span>
+            </a>
+          </p>
+        </footer>
+      </div>
+    </article>
     <!-- <footer>Footer</footer> -->
     <script>
       // function inc() {
