@@ -334,7 +334,6 @@ b {
 }
 
 .flavor .card__header {
-  /*height: 210px;*/
   display: flex;
   align-items: flex-end;
   justify-content: center;

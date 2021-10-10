@@ -7,16 +7,33 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<style type="text/css">
-.start-screen {
-  background-color: #ccc;
-  background-image: url(../../assets/images/diana-polekhina-startscreen.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-</style>
 <body>
+  <div class="chat-container">
+    <input type="checkbox">
+    <button class="chat-button">
+      <div class="chat-icon">
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+    <div class="chat-window">
+      <div class="chat-heading">
+        <img class="chat-logo" src="../../assets/icons/logo-min.svg" alt="logo">
+        <h5>porozmawiaj z miolli</h5>
+      </div>
+      <div class="chat-history">
+        <p>Obecnie nie jesteśmy dostępni on-line<br>Zostaw nam wiadomość lub zadzwoń pod numer XXX XXX XXX</p>
+      </div>
+      <div class="chat-message">
+        <form action="" class="form-container">
+          <textarea placeholder="Wpisz swoją wiadomość" name="message"></textarea>
+          <button type="submit" class="send-btn">
+            <img class="chat-btn" src="../../assets/icons/send.svg" alt="send">
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
   <header class="header">
       <div id="mainMenu">
         <div id="menuToggle">
@@ -165,7 +182,148 @@
         <span class="dot"></span>
       </div>
     </section>
-    <section class="inspiration-section">
+    <div class="inspiration">
+      <section class="block inspiration__content">
+        <header class="block__header">
+          <h3 class="block__title">słodkie inspiracje</h3>
+          <hr class="block__underline underline">
+          <h4 class="block__subtitle subtitle uppercase">
+           czyli jakie smaki dostępne są dziś w miolli
+          </h4>
+        </header>
+        <div class="block__body">
+          <button class="btn btn-rounded desert-sand-fill viewer-toggle">
+            <span>filtruj po smakach sezonowych</span>
+          </button>
+          <input class="viewer-toggle" type="checkbox">
+          <div class="flavor-stack">
+            <button class="btn-arrow">
+              <span class="material-icons parrot-pink">west</span>
+            </button>
+            <div class="stack stack--horizontal">
+
+              <article class="card flavor">
+                <div class="card__header">
+                  <div class="card__figure">
+                    <img src="../../assets/images/czekolada-wisnia.png" alt="" class="card__image">
+                  </div>
+                </div>
+                <div class="card__body">
+                  <hr class="card__underline">
+                  <h4 class="card__title uppercase">czekolada i wiśnia</h4>
+                </div>
+                <a class="card__link" href="../nasze-smaki/index.html"></a>
+              </article>
+
+               <article class="card flavor">
+                <div class="card__header">
+                  <div class="card__figure">
+                    <img src="../../assets/images/whisky-wanilia.png" alt="" class="card__image">
+                  </div>
+                </div>
+                <div class="card__body">
+                  <hr class="card__underline">
+                  <h4 class="card__title uppercase">whisky wanilia</h4>
+                </div>
+                <a class="card__link" href="../nasze-smaki/index.html"></a>
+              </article>
+
+               <article class="card flavor">
+                <div class="card__header">
+                  <div class="card__figure">
+                    <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="card__image">
+                  </div>
+                </div>
+                <div class="card__body">
+                  <hr class="card__underline">
+                  <h4 class="card__title uppercase">pistacja z limonką</h4>
+                </div>
+                <a class="card__link" href="../nasze-smaki/index.html"></a>
+              </article>
+
+               <article class="card flavor">
+                <div class="card__header">
+                  <div class="card__figure">
+                    <img src="../../assets/images/rozowa-roza.png" alt="" class="card__image">
+                  </div>
+                </div>
+                <div class="card__body">
+                  <hr class="card__underline">
+                  <h4 class="card__title uppercase">różowa róża</h4>
+                </div>
+                <a class="card__link" href="../nasze-smaki/index.html"></a>
+              </article>
+
+               <article class="card flavor">
+                <div class="card__header">
+                  <div class="card__figure">
+                    <img src="../../assets/images/slony-karmel.png" alt="" class="card__image">
+                  </div>
+                </div>
+                <div class="card__body">
+                  <hr class="card__underline">
+                  <h4 class="card__title uppercase">słony karmel</h4>
+                </div>
+                <a class="card__link" href="../nasze-smaki/index.html"></a>
+              </article>
+
+              <article class="card flavor">
+                <div class="card__header">
+                  <div class="card__figure">
+                    <img src="../../assets/images/whisky-wanilia.png" alt="" class="card__image">
+                  </div>
+                </div>
+                <div class="card__body">
+                  <hr class="card__underline">
+                  <h4 class="card__title uppercase">whisky wanilia</h4>
+                </div>
+                <a class="card__link" href="../nasze-smaki/index.html"></a>
+              </article>
+
+               <article class="card flavor">
+                <div class="card__header">
+                  <div class="card__figure">
+                    <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="card__image">
+                  </div>
+                </div>
+                <div class="card__body">
+                  <hr class="card__underline">
+                  <h4 class="card__title uppercase">pistacja z limonką</h4>
+                </div>
+                <a class="card__link" href="../nasze-smaki/index.html"></a>
+              </article>
+
+               <article class="card flavor">
+                <div class="card__header">
+                  <div class="card__figure">
+                    <img src="../../assets/images/rozowa-roza.png" alt="" class="card__image">
+                  </div>
+                </div>
+                <div class="card__body">
+                  <hr class="card__underline">
+                  <h4 class="card__title uppercase">różowa róża</h4>
+                </div>
+                <a class="card__link" href="../nasze-smaki/index.html"></a>
+              </article>
+            </div>
+            <button class="btn-arrow">
+              <span class="material-icons parrot-pink">east</span>
+            </button>
+          </div>
+        </div>
+        <footer class="block__footer">
+          <div class="block__actions">
+            <a href="../kompozycja/index.html" class="button">
+              stwórz swoją kompozycję
+            </a>
+          </div>
+        </footer>
+      </section>
+    </div>
+    
+
+
+    <!-- <section class="inspiration-section">
       <div class="content">
         <div class="heading">
         <h3 class="title pink">słodkie inspiracje</h3>
@@ -423,34 +581,8 @@
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
-  <div class="chat-container">
-    <input type="checkbox">
-    <button class="chat-button">
-      <div class="chat-icon">
-        <span></span>
-        <span></span>
-      </div>
-    </button>
-    <div class="chat-window">
-      <div class="chat-heading">
-        <img class="chat-logo" src="../../assets/icons/logo-min.svg" alt="logo">
-        <h5>porozmawiaj z miolli</h5>
-      </div>
-      <div class="chat-history">
-        <p>Obecnie nie jesteśmy dostępni on-line<br>Zostaw nam wiadomość lub zadzwoń pod numer XXX XXX XXX</p>
-      </div>
-      <div class="chat-message">
-        <form action="" class="form-container">
-          <textarea placeholder="Wpisz swoją wiadomość" name="message"></textarea>
-          <button type="submit" class="send-btn">
-            <img class="chat-btn" src="../../assets/icons/send.svg" alt="send">
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
   <script>
     const cartContainer = document.querySelector('.cart-container');
     const imprintContainer = document.querySelector('.imprint-container');
