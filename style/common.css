@@ -26,5 +26,5 @@ a  {
 }
 
 a:hover, a:hover::before, a:hover::after {
-  filter: contrast(80%);
+  filter: contrast(90%)
 }

@@ -379,7 +379,7 @@
 
 /* Hero */
 .hero {
-  position: static;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -388,6 +388,38 @@
   background-image: url(../images/diana-polekhina-startscreen.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.label {
+  position: absolute;
+  right: 50px;
+  bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  padding: 20px 15px 10px;
+  background-color: #CE5445;
+  border-radius: 100px;
+}
+
+.label h3 {
+  margin: 10px 0 0;
+  font: 13px/17px var(--contentFont);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.label p {
+  font: 10px/20px var(--contentFont);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: #FFFFFF;
 }
 
 /* Chat icon */
@@ -538,9 +570,9 @@ hr {
   align-items: center;
 }
 
-a[uk-slider-item] {
+.flavors a[uk-slider-item] {
   height: 100%;
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 a[uk-slider-item]::before {
@@ -580,7 +612,7 @@ a[uk-slider-item]::before {
 
 .card_s .card__text {
   width: 208px;
-  margin: 10px auto 0;
+  margin: 10px auto 12px;
   font: normal 14px/21px var(--contentFont);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -589,6 +621,7 @@ a[uk-slider-item]::before {
 }
 
 .card_s .card_cost {
+  margin: 10px auto 12px;
   font: normal 30px/20px var(--titleFont);
   color: var(--pig-iron);
 }
