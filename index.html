@@ -211,6 +211,26 @@ teraz:
           <span></span>
           <span></span>
         </label>
+        <div class="chat__popup" id="chatForm">
+          <div class="chat__heading">
+            <img class="chat__logo" src="icons/miolli-logo-small.svg" alt="miolli">
+            <h5 class="chat__title">porozmawiaj z miolli</h5>
+            <span class="chat__close" onclick="document.querySelector('.chat input').checked = false"><img width="16" height="16" src="icons/close.svg" alt="close"></span>
+          </div>
+          <div class="chat__history">
+            <p>
+              <span>Obecnie nie jesteśmy dostępni on-line</span>
+              <br>
+              <span>Zostaw nam wiadomość lub zadzwoń pod numer <a class="chat__phone" href="tel:+48788100108">788 100 108</a></span>
+            </p>
+          </div>
+          <form action="/" class="chat__form">
+            <textarea spellcheck="false" class="chat__textarea" placeholder="Wpisz swoją wiadomość" name="message"></textarea>
+            <button type="button" class="chat__submit" onclick="sendMessage()">
+              <img src="icons/send.svg" alt="send">
+            </button>
+          </form>
+        </div>
       </div>
       <div class="hero">
         <div class="brand">
@@ -502,7 +522,7 @@ możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk
       <section class="section sub">
         <h2 class="sub__title title">NEWSLETTER</h2>
         <p class="sub__subtitle subtitle">DOŁĄCZ, ŻEBY NIE PRZEGAPIĆ ŻADNEJ PREMIERY!</p>
-        <form class="sub__form" action="#">
+        <form class="sub__form" action="/">
           <p>
             <input type="text" placeholder="podaj swój e-mail">
             <input type="submit" value="zapisz się">
@@ -597,6 +617,123 @@ możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk
           console.log("The User have denied the request for Geolocation.");
         }
       }
+
+      // Chat
+      const chat = document.querySelector('.chat__history');
+      const message = document.querySelector('.chat__textarea');
+      const chatGreeting = document.querySelector('.chat__history p:not(.message)');
+      const sendBtn = document.querySelector('.chat__submit');
+
+      const messageIsNotEmpty  = message => message.value !== '' && message.value.length > 0;
+
+      const clear = message => message.value = '';
+
+      const currentTime = () => {
+        const data = new Date();
+        const currentHours = data.getHours();
+        const currentMinutes = data.getMinutes() > 9 ? data.getMinutes() : '0' + data.getMinutes();
+        return `${currentHours}:${currentMinutes}`;
+      }
+
+      const addCurrentTime = () => {
+        const time = document.createElement('span');
+        time.classList.add('time');
+        time.textContent = currentTime();
+        chat.append(time);
+      }
+
+      const createMessage = message => {
+        const userMessage = document.createElement('p');
+        userMessage.classList.add('message')
+        userMessage.textContent = message;
+        chat.append(userMessage);
+        chat.scrollTop = chat.scrollHeight;
+        addCurrentTime();
+      }
+
+      const createAnswer = (message, preload, delay) => {
+        setTimeout(() => {
+          const answerMessage = document.createElement('p');
+          answerMessage.classList.add('pre-answer');
+          answerMessage.textContent = '...';
+          chat.append(answerMessage);
+          chat.scrollTop = chat.scrollHeight;
+          setTimeout(() => {
+            answerMessage.classList.remove('pre-answer');
+            answerMessage.classList.add('answer');
+            answerMessage.textContent = message;
+            chat.scrollTop = chat.scrollHeight;
+          }, preload)   
+        }, delay)
+      }
+
+      const createYesOrNo = () => {
+        sendBtn.setAttribute('disabled', true);
+        setTimeout(() => {
+          const select = document.createElement('span');
+          select.classList.add('select');
+          const yes = document.createElement('i');
+          yes.textContent = 'Tak'
+          yes.classList.add('chat-btn');
+          const no = document.createElement('i');
+          no.textContent = 'Nie';
+          no.classList.add('chat-btn');
+          select.append(yes);
+          select.append(no);
+          chat.append(select);
+          chat.scrollTop = chat.scrollHeight;
+          no.addEventListener('click', () => {
+            createMessage('Nie');
+            chat.removeChild(select);
+            createAnswer('Zostaw swój numer telefonu lub e-mail, abyśmy mogli się z Tobą skontaktować', 1000, 500)
+        })
+          yes.addEventListener('click', () => {
+            createMessage('Tak');
+            chat.removeChild(select);
+            createAnswer('Świetnie!', 1000, 500);
+            createAnswer('Wkrótce z Tobą skontaktujemy się', 1000, 500);
+        })
+        sendBtn.removeAttribute('disabled');
+        }, 1500)
+      }
+
+      const checkEmail = message => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(message);
+
+      const checkPhoneNumber = message => /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/.test(message);
+
+      const sendMessage = () => {
+        switch (true) {
+          case document.querySelector('.select') && message.value.toLowerCase() == 'tak':
+            createAnswer('Świetnie!', 1000, 500);
+            createAnswer('Wkrótce z Tobą skontaktujemy się', 1000, 500);
+          break;
+          case document.querySelector('.select') && message.value.toLowerCase() == 'nie':
+            createAnswer('Zostaw swój numer telefonu lub e-mail, abyśmy mogli się z Tobą skontaktować', 1000, 500);
+          break;
+        }
+        document.querySelector('.select') && messageIsNotEmpty(message) ? chat.removeChild(chat.lastChild) : '';
+        messageIsNotEmpty(message) ? createMessage(message.value) : '';
+        switch (true) {
+          case (chat.children.length === 3): 
+            chatGreeting.style.display = 'none';
+            createAnswer('Hej!', 1000, 500);
+            createAnswer('Napisz swój numer lub e-mail, odpowiemy szczegółowo na Twoje pytania', 1000, 500);
+          break;
+          case (chat.children.length >= 5):
+            checkEmail(message.value) ? createAnswer('Czy to jest twój e-mail?', 1000, 500) : '';
+            checkPhoneNumber(message.value) ? createAnswer('Czy to jest twój numer?', 1000, 500) : '';
+            checkEmail(message.value) || checkPhoneNumber(message.value) ? createYesOrNo() : '';
+          break;
+        }
+        clear(message);
+      }
+
+      message.addEventListener('keypress', event => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          sendMessage();
+        }
+      });
     </script>
   </body>
 </html>
