@@ -487,6 +487,7 @@
 
 /* Section */
 .section {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -570,9 +571,29 @@ hr {
   align-items: center;
 }
 
-.flavors a[uk-slider-item] {
+.flavor a[uk-slider-item] {
   height: 100%;
   padding: 100px 0;
+}
+
+.flavor__filter {
+  position: absolute;
+  top: 98px;
+  right: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 112px;
+  height: 112px;
+  padding: 10px;
+  font: 10px/15px var(--contentFont);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #E8CFB1;
+  border-radius: 100px;
 }
 
 a[uk-slider-item]::before {

@@ -21,10 +21,15 @@ ul {
   margin: 0;
 }
 
-a  {
+a {
   text-decoration: none;
 }
 
 a:hover, a:hover::before, a:hover::after {
   filter: contrast(90%)
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }
