@@ -1,6 +1,11 @@
 @import 'colors.css';
 @import 'fonts.css';
 
+* {
+  border: var(--border);
+}
+
+
 :root {
 
   /* Fonts */
@@ -12,7 +17,7 @@
 
   /* Width, margins & paddings */
   --max: 1920px;
-  --content: 1800px;
+  --content: 1700px;
   --min: 320px;
   --border: 1px solid #ddd;
 
@@ -140,6 +145,10 @@ h5, .like-h5 {
   color: var(--dark-vanilla);
 }
 
+.dark-sky-blue {
+  color: var(--dark-sky-blue);
+}
+
 /*button*/
 .btn,
 .like-btn {
@@ -187,6 +196,7 @@ h5, .like-h5 {
 
 .btn-lg {
   padding: 22px 28px;
+  border-color: #444;
 }
 
 .btn-rounded {
@@ -217,6 +227,7 @@ h5, .like-h5 {
 @media screen and (max-width: 540px) {
   .btn-lg {
     padding: 17px 25px;
+    font: normal 13px/13px var(--contentFont);
   }
   .btn-sm  {
     padding: 6px 8px;
