@@ -2,7 +2,7 @@
 @import 'fonts.css';
 
 * {
-  border: var(--border);
+  /*border: var(--border);*/
 }
 
 
@@ -16,8 +16,8 @@
   --basicFont: 'Roboto', sans-serif;
 
   /* Width, margins & paddings */
-  --max: 1920px;
-  --content: 1700px;
+  --max: 1440px;
+  --content: 1366px;
   --min: 320px;
   --border: 1px solid #ddd;
 
@@ -187,16 +187,19 @@ h5, .like-h5 {
   padding: 9px 14px;
   font-size: 0.825em;
   min-width: 120px;
+  border-color: #000;
+
 }
 
 .btn-md { 
   padding: 17px 25px;
   font-size: 16px;
+  border-color: #000;
 }
 
 .btn-lg {
   padding: 22px 28px;
-  border-color: #444;
+  border-color: #000;
 }
 
 .btn-rounded {
@@ -244,7 +247,6 @@ h5, .like-h5 {
     white-space: pre-wrap;
   }
 }
-
 
 /* Scroll */
 
