@@ -420,6 +420,7 @@
   letter-spacing: 0.2em;
   text-align: center;
   color: #FFFFFF;
+  margin: 0;
 }
 
 /* Chat icon */
@@ -1153,7 +1154,7 @@ a[uk-slider-item]::before {
   cursor: pointer;
 }
 
-.option__text, p {
+.option__text p {
   margin: 0 10px;
   font: 16px/25px var(--contentFont);
   text-transform: uppercase;
@@ -1293,6 +1294,7 @@ a[uk-slider-item]::before {
 }
 
 .chat__title {
+  margin: 0;
   font: 11.2px/22.4px var(--contentFont);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1328,7 +1330,7 @@ a[uk-slider-item]::before {
   min-height: 340px;
   max-height: 50vh;
   padding: 21px;
-  color: var(--outer-space);
+  color: #222222;
   overflow-y: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -1378,7 +1380,7 @@ a[uk-slider-item]::before {
   padding: 8px;
   margin-top: 16px;
   margin-right: 42px;
-  font: normal 14px/16px var(--contentFont);
+  font: 14px/16px var(--contentFont);
   color: #111111;
   background-color: var(--white-bean-hummus);
   border-radius: 12px;
@@ -1428,7 +1430,7 @@ a[uk-slider-item]::before {
   width: fit-content;
   padding: 8px;
   margin: 8px;
-  font: normal 14px/16px var(--contentFont);
+  font: 14px/16px var(--contentFont);
   color: #222222;
   border-radius: 12px;
   background-color: var(--white-bean-hummus);
@@ -1465,7 +1467,7 @@ a[uk-slider-item]::before {
   height: fit-content;
   margin: 5px;
   padding: 12.8px 12.8px 0;
-  font: normal 13.8px/18px var(--contentFont);
+  font: 14px/18px var(--contentFont);
   color: #222222;
   border: 1px solid #ddd;
   outline: none;
@@ -1474,12 +1476,12 @@ a[uk-slider-item]::before {
 
 @media (max-width: 800px) {
   .chat__textarea {
-    font: normal 16px/18px var(--contentFont);
+    font: 16px/18px var(--contentFont);
   }
 }
 
 .chat__textarea::placeholder {
-  font: normal 12px/25px var(--contentFont);
+  font: 12px/25px var(--contentFont);
 }
 
 .chat__textarea:focus::placeholder {
