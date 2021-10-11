@@ -1833,6 +1833,7 @@ input.viewer-toggle {
   justify-content: flex-end;
 }
 
+
 @media screen and (max-width: 1280px) {
   .map .block__title {
     font-size: 48px;
@@ -1858,6 +1859,40 @@ input.viewer-toggle {
     text-align: center;
   }
 }
+
+.footer {
+  background: #000;
+}
+.footer-nav {
+  max-width: var(--content);
+}
+.footer-nav__list {
+  width: 100%;
+  margin: 0 auto 60px;
+  display: flex;
+ /*justify-content: center;*/
+  flex-wrap: wrap;
+}
+.footer-nav__item {
+  width: 220px;
+  height: 62px;
+  margin: 4px 20px;
+
+}
+.footer-nav__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--contentFont);
+  font-size: 14px;
+  width: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
+
 
 @media screen and (max-width: 412px) {
   .city {
