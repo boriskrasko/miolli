@@ -426,7 +426,7 @@
 .chat {
   position: fixed;
   bottom: 0;
-  z-index: 79;
+  z-index: 199;
   width: 1366px;
 }
 
@@ -1276,9 +1276,9 @@ a[uk-slider-item]::before {
   bottom: -18px;
   width: 0;
   height: 0;
-  border-right: 3px solid #FFFFFF;
-  border-bottom: 2px solid transparent;
-  border-left: 2px solid transparent;
+  border-right: 28px solid #FFFFFF;
+  border-bottom: 18px solid transparent;
+  border-left: 18px solid transparent;
   content: '';
 }
 
@@ -1286,7 +1286,7 @@ a[uk-slider-item]::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 279px;
+  width: 280px;
   height: 51px;
   padding: 0 40px 0 20px;
   background-color: var(--victoriana);
@@ -1530,4 +1530,30 @@ a[uk-slider-item]::before {
   .chat__history {
     min-height: 192px;
   }
+}
+
+::-webkit-scrollbar {
+  position: absolute;
+  display: block;
+  width: 4px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  margin: 27.1px 0;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--victoriana);
+}
+
+::-webkit-scrollbar-track-piece:end {
+  margin-bottom: 27.1px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track-piece:start {
+  margin-top: 27.1px;
+  background: transparent;
 }
