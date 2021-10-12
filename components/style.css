@@ -482,7 +482,7 @@ b {
   flex-wrap: wrap;
 }
 
-.stack__item.button {
+.tagbar .stack__item.button {
   font: normal 12px/17px var(--contentFont);
   overflow: hidden;
   height: 37px;
@@ -494,6 +494,22 @@ b {
   color: #000;
   border: 1px solid #000;
   border-radius: 20px;
+}
+
+.tagbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media (max-width: 1200px) {
+  form.sorting {
+    margin: 31px 0 0;
+  }
+  .tagbar {
+    flex-wrap: wrap;
+  }
 }
 
 
@@ -525,28 +541,6 @@ form.sorting select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-}
-
-
-/***/
-
-
-/*tagbar*/
-
-.tagbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-@media (max-width: 1200px) {
-  form.sorting {
-    margin: 31px 0 0;
-  }
-  .tagbar {
-    flex-wrap: wrap;
-  }
 }
 
 
