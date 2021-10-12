@@ -35,6 +35,7 @@ body {
   max-width: var(--max);
   min-width: var(--min);
   margin: 0 auto;
+  font-size: 1em
 }
 
 a {
