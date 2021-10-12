@@ -535,14 +535,29 @@ możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk
           <h3>zamów online <br>
             odbierz w ulubionej kawiarni!</h3>
           <div>
-            <p>
-              <label for="location">wybrane miasto:</label>
-              <select name="" id="location">
-                <option selected value="waw">Warszawa</option>
-                <option value="poz">Poznań</option>
-                <option value="krk">Kraków</option>
-              </select>
-            </p>
+            <div class="dropdown">
+              wybrane miasto:
+              <div class="dropdown__select">
+                <div class="dropdown__item-current">
+                  <p class="dropdown__text-current">warszawa</p>
+                  <button class="arrow"></button>
+                </div>
+                <ul class="options">
+                  <li class="option selected" data-location="52.237049, 21.017532">
+                    <p class="option__text">Warszawa</p>
+                  </li>
+                  <li class="option" data-location="52.409538, 16.931992">
+                    <p class="option__text">Poznań</p>
+                  </li>
+                  <li class="option" data-location="50.049683, 19.944544">
+                    <p class="option__text">Kraków</p>
+                  </li>
+                  <li class="option" data-location="51.107883, 17.038538">
+                    <p class="option__text">Wrocław</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <button class="map__button">szukaj blisko mnie</button>
           </div>
         </div>
@@ -732,6 +747,33 @@ możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk
         if (event.key === 'Enter') {
           event.preventDefault();
           sendMessage();
+        }
+      });
+      let changeMap = (location) => {
+        map.setView([...location], 13)
+      }
+
+      // Dropdown
+      for (const dropdown of document.querySelectorAll('.dropdown')) {
+        dropdown.addEventListener('click', function () {
+          this.querySelector('.dropdown__select').classList.toggle('opened');
+        })
+      }
+      for (const option of document.querySelectorAll('.option')) {
+        option.addEventListener('click', function () {
+          if (!this.classList.contains('selected')) {
+            this.parentNode.querySelector('.option.selected').classList.remove('selected');
+            this.classList.add('selected');
+            this.closest('.dropdown__select').querySelector('.dropdown__item-current p').textContent = this.textContent;
+            changeMap(document.querySelector('.selected').dataset.location.split(', '));
+          }
+        })
+      }
+      window.addEventListener('click', function (e) {
+        for (const select of document.querySelectorAll('.dropdown__select')) {
+          if (!select.contains(e.target)) {
+            select.classList.remove('opened');
+          }
         }
       });
     </script>

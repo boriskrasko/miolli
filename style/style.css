@@ -1066,14 +1066,19 @@ a[uk-slider-item]::before {
 }
 
 .map__content > div {
+  min-height: 110px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .map__content h3 {
   font: 56px/64px var(--titleFont);
+}
+
+.map__content .dropdown {
+  align-self: flex-end;
 }
 
 .map__button {
@@ -1092,53 +1097,65 @@ a[uk-slider-item]::before {
 }
 
 .dropdown {
+  display: flex;
+  align-items: center;
+  min-width: 160px;
+  color: #222222;
+  text-transform: uppercase;
   background: transparent;
   user-select: none;
 }
 
 .dropdown__select {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
   border-bottom: 1px solid #000000;
 }
 
 .options {
   position: absolute;
-  top: 100%;
+  z-index: 9;
+  top: calc(100% + 2px);
   right: 0;
   left: 0;
-  z-index: 9;
   height: 0;
   background: #FFFFFF;
-  box-shadow: 0 2px 2px 1px #bbbbbb;
-  visibility: hidden;
-  overflow: hidden;
-  transition: 0.4s all;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.32);
   pointer-events: none;
   opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: 0.1s;
 }
 
 .dropdown__select.opened .options {
   height: auto;
-  visibility: visible;
   pointer-events: all;
+  visibility: visible;
   opacity: 1;
 }
 
-.option, .dropdown_current {
+.option, .dropdown__item-current {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 50px;
+  width: 100%;
+  padding-right: 20px;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  cursor: pointer;
 }
 
-.option p, .dropdown__current p {
+.option p, .dropdown__item-current p {
+  color: #000000;
+  text-transform: uppercase;
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .option {
@@ -1150,50 +1167,71 @@ a[uk-slider-item]::before {
 }
 
 .option__text:hover {
-  color: var(--victoriana);
   cursor: pointer;
+  color: var(--victoriana);
 }
 
-.option__text p {
-  margin: 0 10px;
+.option__image, .dropdown__image_current {
+  max-width: 34px;
+  max-height: 34px;
+}
+
+.option__text, .dropdown__text-current {
   font: 16px/25px var(--contentFont);
-  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+.dropdown__arrow {
+  position: absolute;
+  right: 10px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown__item-current:hover .dropdown__arrow {
+  color: var(--dark-vanilla);
+}
+
+.opened .dropdown__arrow {
+  transform: rotate(-180deg);
 }
 
 .arrow {
   position: relative;
-  height: 7px;
+  height: 9px;
 }
 
 .arrow::before,
 .arrow::after {
   position: absolute;
   bottom: 0;
-  width: 2px;
+  width: 1px;
   height: 100%;
   content: '';
-  transition: all .1s;
+  transition: 0.05s;
 }
 
 .arrow::before {
-  left: 2px;
+  left: 3px;
   transform: rotate(45deg);
-  background-color: #444;
+  background-color: #000000;
 }
 
 .arrow::after {
-  left: -2px;
+  left: -3px;
   transform: rotate(-45deg);
-  background-color: #444;
+  background-color: #000000;
 }
 
 .opened .arrow::before {
-  left: 2px;
+  left: 3px;
   transform: rotate(-45deg);
 }
 
 .opened .arrow::after {
-  left: -2px;
+  left: -3px;
   transform: rotate(45deg);
 }
 
