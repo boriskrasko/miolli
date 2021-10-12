@@ -766,7 +766,7 @@ label {
   font: normal 16px/16px var(--contentFont);
   display: inline-flex;
   min-height: 51px;
-  padding: 8px 16px;
+  padding: 0.5rem 4.75rem;
   text-align: center;
   letter-spacing: .2em;
   text-transform: uppercase;
@@ -1094,7 +1094,7 @@ label {
 
 .adding-uniqueness .block__title {
   font: 80px/86px var(--titleFont);
-  max-width: 744px;
+  max-width: 60%;
   padding: 100px 0 0;
 }
 
