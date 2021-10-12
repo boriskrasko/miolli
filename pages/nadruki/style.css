@@ -699,9 +699,9 @@
 
 .stack {
   display: inline-flex;
-  justify-content: center;
   margin: 0 auto;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .sets-block__content {
@@ -765,62 +765,66 @@
 }
 
 
-/*set card*/
-
-.set.card {
-  box-sizing: content-box;
-  width: 270px;
-  margin: 1.75rem 10px;
+.print.card {
+  display: flex;
+  flex-direction: column;
+  width: 247px;
+  min-height: 364px;
+  justify-content: space-between;
+  margin: 40px 20px 10px;
 }
 
-.set .card__figure {
+.print .card__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.print .card__figure {
+  position: relative;
   overflow: hidden;
 }
 
-.set .card__image {
+.print .card__image {
   width: 100%;
+  /*z-index: 0;*/
 }
 
-.set .card__body {
+.print .card__print {
+  position: absolute;
+  bottom: 40%;
+  left: 15%;
   display: flex;
-  flex-direction: column;
-  width: 190px;
-  min-height: 150px;
-  margin: 32px auto;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.set .card__title {
-  font: normal 30px/20px var(--titleFont);
-  text-align: center;
-  color: var(--quartz);
-}
-
-.set .card__copy {
-  font: normal 14px/21px var(--contentFont);
-  text-align: center;
-  letter-spacing: .1em;
-  color: var(--outer-space);
-}
-
-.set .card__copy.price {
-  font: normal 30px/20px var(--titleFont);
-  color: var(--quartz);
-}
-
-.set .card__actions {
-  display: flex;
+  width: 50%;
   justify-content: center;
   align-items: center;
 }
 
-.set .button {
+.print .card__body {
+  width: 170px;
+  margin: 0 auto;
+}
+
+.print .card__title {
+  font: normal 30px/20px var(--titleFont);
+  text-align: center;
+  letter-spacing: 0;
+  color: var(--outer-space);
+}
+
+.print .block__actions {
+  display: flex;
+  width: 144px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.print .button {
   font: normal 14px/14px var(--contentFont);
   display: flex;
-  min-width: 137px;
+  min-width: 40px;
   min-height: 40px;
-  padding: 8px 16px;
+  padding: 8px 8px;
   text-align: center;
   letter-spacing: .2em;
   color: var(--parrot-pink);
@@ -829,32 +833,31 @@
   align-items: center;
 }
 
-.set .button:hover {
+.print .button:hover {
   color: var(--outer-space);
   border-color: var(--outer-space);
 }
 
 @media (max-width: 576px) {
-  .set.card {
-    width: 185px;
+  .print.card {
+    width: 190px;
+    min-height: 260px;
+    margin: 20px 4px;
   }
-  .set .card__body {
-    min-height: 98px;
-    margin: 28px auto;
+  .print .card__body {
+    width: 114px;
   }
-  .set .card__title {
+  .print .card__title {
     font: normal 20px/13px var(--titleFont);
   }
-  .set .card__copy {
-    font: normal 11px/15px var(--contentFont);
+  .print .block__actions {
+    width: 104px;
   }
-  .set .card__copy.price {
-    font: normal 20px/13px var(--titleFont);
-  }
-  .set .button {
+  .print .button {
     font: normal 10px/10px var(--contentFont);
-    min-width: 91px;
-    min-height: 26px;
+    min-width: 29px;
+    min-height: 28px;
+    padding: 2px 6px;
   }
 }
 
