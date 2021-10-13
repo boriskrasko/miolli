@@ -989,6 +989,15 @@ a[uk-slider-item]::before {
   color: #000000;
 }
 
+.sub__form input[type=text]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.sub__form input[type=text]:focus {
+  border-color: #7F6B65;
+  background-color: #FFF4;
+}
+
 .sub__form input[type=submit] {
   width: 100%;
   min-width: 162px;
@@ -997,9 +1006,14 @@ a[uk-slider-item]::before {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #FFFFFF;
-  background-color: #222;
+  background-color: #111111;
   border: none;
   cursor: pointer;
+  transition: 0.1s;
+}
+
+.sub__form input[type=submit]:hover {
+  background-color: #000000;
 }
 
 .map {
