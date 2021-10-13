@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16">
+  <rect id="Rectangle_76" data-name="Rectangle 76" width="4" height="4" fill="#fff"/>
+  <rect id="Rectangle_81" data-name="Rectangle 81" width="4" height="4" transform="translate(0 6)" fill="#fff"/>
+  <rect id="Rectangle_84" data-name="Rectangle 84" width="4" height="4" transform="translate(0 12)" fill="#fff"/>
+  <rect id="Rectangle_77" data-name="Rectangle 77" width="4" height="4" transform="translate(7)" fill="#fff"/>
+  <rect id="Rectangle_80" data-name="Rectangle 80" width="4" height="4" transform="translate(7 6)" fill="#fff"/>
+  <rect id="Rectangle_83" data-name="Rectangle 83" width="4" height="4" transform="translate(7 12)" fill="#fff"/>
+  <rect id="Rectangle_78" data-name="Rectangle 78" width="4" height="4" transform="translate(14)" fill="#fff"/>
+  <rect id="Rectangle_79" data-name="Rectangle 79" width="4" height="4" transform="translate(14 6)" fill="#fff"/>
+  <path id="Path_23" data-name="Path 23" d="M0,0H4V4H0Z" transform="translate(14 12)" fill="#fff"/>
+</svg>
