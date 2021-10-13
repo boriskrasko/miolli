@@ -489,7 +489,7 @@ możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk
       <section class="reason">
         <img src="images/reason-1.png" alt="">
         <img src="images/reason-2.png" alt="">
-        <div class="reason__content">
+        <div class="reason__content" data-count="01">
           <h3 class="reason__title">5 powodów
             by kochać miolli</h3>
           <div class="reason__slider">
@@ -808,6 +808,19 @@ możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk
             select.classList.remove('opened');
           }
         }
+      });
+
+      // Slideshow counter
+      const reasonContent = document.querySelector('.reason__content');
+      UIkit.util.on('.reason__slider [uk-slideshow]', 'beforeitemshow', () => {
+        reasonContent.classList.add('changed');
+      });
+      UIkit.util.on('.reason__slider [uk-slideshow]', 'itemshown', () => {
+        reasonContent.querySelectorAll('.uk-slideshow-items li').forEach( (item, index) => {
+          item.classList.contains('uk-active') ?
+          reasonContent.dataset.count = index < 10 ? `0${++index}` : ++index : '';
+          reasonContent.classList.remove('changed');
+        })
       });
     </script>
   </body>

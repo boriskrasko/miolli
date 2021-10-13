@@ -894,11 +894,16 @@ a[uk-slider-item]::before {
 }
 
 .reason__content::before {
-  content: '01';
+  content: attr(data-count);
   position: absolute;
   font: 744px/744px var(--titleFont);
   color: #86B6C7;
   opacity: 0.5;
+  transition: 0.2s color;
+}
+
+.reason__content.changed::before {
+  color: #eeee;
 }
 
 .reason__slider {
@@ -934,6 +939,7 @@ a[uk-slider-item]::before {
 }
 
 .reason__button {
+  z-index: 9;
   display: inline-flex;
   justify-content: center;
   padding: 20px 17px;
@@ -1156,7 +1162,9 @@ a[uk-slider-item]::before {
 }
 
 .option p, .dropdown__item-current p {
-  color: #000000;
+  font: 16px/27px var(--contentFont);
+  letter-spacing: 0.1em;
+  color: #222222;
   text-transform: uppercase;
   overflow: hidden;
   white-space: nowrap;
