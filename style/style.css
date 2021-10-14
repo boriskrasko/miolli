@@ -533,6 +533,7 @@ hr {
   font: 16px/27px var(--contentFont);
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--blooming-perfect);
   outline: 1px solid var(--blooming-perfect);
 }
@@ -544,15 +545,13 @@ hr {
   overflow: hidden;
 }
 
-.swiper-wrapper div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .card hr {
   width: 59px;
   margin: 36px auto 18px;
+}
+
+.card_v img {
+  width: 180px;
 }
 
 .card_v h4 {
@@ -575,13 +574,13 @@ hr {
 
 .flavor a[uk-slider-item] {
   height: 100%;
-  padding: 100px 0;
+  padding: 80px 0;
 }
 
 .flavor__filter {
   position: absolute;
-  top: 98px;
-  right: 92px;
+  top: 16px;
+  right: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -613,7 +612,7 @@ a[uk-slider-item]::before {
   margin: 0 auto;
 }
 
-.sets .uk-slider-container ul {
+.uk-slider-container ul {
   left: -20px;
 }
 
@@ -623,6 +622,11 @@ a[uk-slider-item]::before {
 
 .uk-slider-container li {
   margin: 4px;
+}
+
+.card_s img {
+  width: 270px;
+  height: 400px;
 }
 
 .card_s h4 {
@@ -708,8 +712,8 @@ a[uk-slider-item]::before {
 .box__content {
   grid-area: content;
   justify-self: flex-end;
-  max-width: 720px;
-  padding: 140px 0 0 20px;
+  max-width: 660px;
+  padding: 140px 0 0 60px;
 }
 
 .box__title {
@@ -766,7 +770,7 @@ a[uk-slider-item]::before {
 }
 
 .box__box img {
-  width: 60%;
+  max-width: 400px;
 }
 
 .box__button {
@@ -809,8 +813,8 @@ a[uk-slider-item]::before {
 
 .uno__content {
   justify-self: flex-end;
-  max-width: 720px;
-  padding: 74px 0 130px 20px;
+  max-width: 660px;
+  padding: 74px 0 130px 60px;
   grid-area: content;
 }
 
