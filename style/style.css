@@ -597,16 +597,6 @@ hr {
   border-radius: 100px;
 }
 
-a[uk-slider-item]::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-  display: inline-flex;
-  width: 100px;
-  content: '';
-}
-
 .uk-slider-container {
   width: calc(100% - 120px);
   margin: 0 auto;
@@ -913,6 +903,14 @@ a[uk-slider-item]::before {
 .reason__slider {
   width: 80%;
   height: 100%;
+}
+
+.uk-slideshow {
+  height: 400px;
+}
+
+.uk-slideshow-items {
+  height: 400px;
 }
 
 .reason h3,
