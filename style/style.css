@@ -124,6 +124,32 @@
   background-color: #FFFFFF;
 }
 
+.topnav__item_logo {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .topnav__item_logo {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .topnav__item_logo .topnav__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .topnav__item_logo .topnav__link img {
+    width: 60%;
+  }
+}
+
+.topnav__item_logo {
+  background-color: #FFFFFFFE;
+}
+
 .topnav__link {
   display: flex;
   align-items: flex-end;

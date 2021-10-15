@@ -145,6 +145,13 @@
 }
 
 @media screen and (max-width: 500px) {
+  .sidenav {
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
   .section {
     padding: 44px 0 8px 0;
   }
