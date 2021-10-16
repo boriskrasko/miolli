@@ -651,6 +651,8 @@ z nadrukiem of topbar menu*/
   }
   .main-nav__link {
     justify-content: center;
+    text-align: center;
+    padding: 0 0.875rem;
   }
 }
 
