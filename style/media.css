@@ -145,12 +145,22 @@
 }
 
 @media screen and (max-width: 500px) {
+  .business-offer {
+    display: none;
+  }
+  .mobile-only {
+    display: flex;
+    justify-content: center;
+  }
   .sidenav {
     left: 0;
     right: 0;
     width: 100%;
     text-align: center;
     justify-content: center;
+  }
+  .sidenav__list {
+    min-height: 900px;
   }
   .section {
     padding: 44px 0 8px 0;

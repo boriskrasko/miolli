@@ -13,6 +13,10 @@ body {
   overflow-x: hidden;
 }
 
+body.open {
+  overflow: hidden;
+}
+
 .uppercase {
   text-transform: uppercase;
 }

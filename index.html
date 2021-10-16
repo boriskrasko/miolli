@@ -184,12 +184,6 @@ teraz:
         </nav>
         <nav class="sidenav">
           <ul class="sidenav__list">
-            <li class="sidenav__item" hidden>
-              <a class="sidenav__link" href="">makaronik z nadrukiem</a>
-            </li>
-            <li class="sidenav__item" hidden>
-              <a class="sidenav__link" href="">gotowe sety makaroników</a>
-            </li>
             <li class="sidenav__item">
               <a class="sidenav__link" href="">o nas</a>
             </li>
@@ -202,6 +196,12 @@ teraz:
             <li class="sidenav__item">
               <a class="sidenav__link" href="">alergeny</a>
             </li>
+            <li class="sidenav__item mobile-only">
+              <a class="sidenav__link" href="">getowe sety</a>
+            </li>
+            <li class="sidenav__item mobile-only">
+              <a class="sidenav__link" href="">makaronik z nadrukiem</a>
+            </li>
             <li class="sidenav__item">
               <a class="sidenav__link" href="">konfigurator on-line</a>
             </li>
@@ -210,6 +210,9 @@ teraz:
             </li>
             <li class="sidenav__item">
               <a class="sidenav__link" href="">oferta eventowa</a>
+            </li>
+            <li class="sidenav__item mobile-only">
+              <a class="sidenav__link" href="">miolli dla biznesu</a>
             </li>
           </ul>
         </nav>
@@ -875,6 +878,9 @@ możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk
          }, 100)
         })
       });
+      document.querySelector('#switch').addEventListener('change', () => {
+        document.body.classList.toggle('open');
+      })
     </script>
   </body>
 </html>
