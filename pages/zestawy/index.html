@@ -37,7 +37,7 @@
                   <div class="imprint-container">
                     <div class="imprint-content">
                       <a href="">wszystkie okazje</a>
-                      <p>najpopularniejsze teraz:</p>
+                      <p>najnajpopularniejszeniejsze teraz:</p>
                       <ul>
                         <li><a href="">dzień mamy</a></li>
                         <li><a href="">dzień dziecka</a></li>
@@ -159,42 +159,56 @@
         </ul>
       </nav>
       <div class="tagbar">
-      <div class="stack stack--horizontal">
-        <button type="button" value="" name="" class="stack__item button">
-        <span class="button__body uppercase">dzień mamy</span>
-        </button>
-        <button class="stack__item button">
-        <span class="button__body uppercase">dzień taty</span>
-        </button>
-        <button class="stack__item button">
-        <span class="button__body uppercase">dla zakochanych</span>
-        </button>
-        <button class="stack__item button">
-        <span class="button__body uppercase">dla dzieci</span>
-        </button>
-        <button class="stack__item button">
-        <span class="button__body uppercase">na urodziny</span>
-        </button>
-        <button class="stack__item button">
-        <span class="button__body uppercase">wielkanoc</span>
-        </button>
-      </div>
-      <div class="filter">
-            <div class="filter__body">
-              <h4 class="filter__label">filtruj:</h4>
-              <div class="sorting">
-                <select id="sort" size="1" name="pet">
-                  <option value='popular'>najpopularniejsze</option>
-                  <option value='popular'>najpopularniejsze</option>
-                  <option value='popular'>najpopularniejsze</option>
-                </select>
-                <span class="material-icons">
-                keyboard_arrow_down
-                </span>
+        <div class="stack stack--horizontal">
+          <button type="button" value="" name="" class="stack__item button">
+          <span class="button__body uppercase">dzień mamy</span>
+          </button>
+          <button class="stack__item button">
+          <span class="button__body uppercase">dzień taty</span>
+          </button>
+          <button class="stack__item button">
+          <span class="button__body uppercase">dla zakochanych</span>
+          </button>
+          <button class="stack__item button">
+          <span class="button__body uppercase">dla dzieci</span>
+          </button>
+          <button class="stack__item button">
+          <span class="button__body uppercase">na urodziny</span>
+          </button>
+          <button class="stack__item button">
+          <span class="button__body uppercase">wielkanoc</span>
+          </button>
+        </div>
+        <div class="filter">
+          <div class="filter__body">
+            <h4 class="filter__label">filtruj:</h4>
+            <div class="dropdown">
+                <div class="dropdown__select">
+                  <div class="dropdown__item-current">
+                      <p class="dropdown__text-current">najpopularniejsze</p>
+                    <button class="dropdown__arrow">
+                      <span class="material-icons">arrow_drop_down</span>
+                    </button>
+                  </div>
+                  <ul class="options">
+                    <li class="option selected">
+                      <p class="option__text">najpopularniejsze</p>
+                    </li>
+                    <li class="option selected">
+                      <p class="option__text">najpopularniejsze</p>
+                    </li>
+                   <li class="option selected">
+                      <p class="option__text">najpopularniejsze</p>
+                    </li>
+                   <li class="option selected">
+                      <p class="option__text">najpopularniejsze</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
           </div>
-    </div>
+        </div>
+      </div>
       <section class="sets">
         <article class="sets-block">
           <div class="sets-block__content">
@@ -456,6 +470,27 @@
       </footer>
     </section>
     <script>
+      for (const dropdown of document.querySelectorAll('.dropdown')) {
+        dropdown.addEventListener('click', function () {
+          this.querySelector('.dropdown__select').classList.toggle('opened');
+        })
+      }
+      for (const option of document.querySelectorAll('.option')) {
+        option.addEventListener('click', function () {
+          if (!this.classList.contains('selected')) {
+            this.parentNode.querySelector('.option.selected').classList.remove('selected');
+            this.classList.add('selected');
+            this.closest('.dropdown__select').querySelector('.dropdown__item-current p').textContent = this.textContent;
+          }
+        })
+      }
+      window.addEventListener('click', function (e) {
+        for (const select of document.querySelectorAll('.dropdown__select')) {
+          if (!select.contains(e.target)) {
+            select.classList.remove('opened');
+          }
+        }
+      });
       const cartContainer = document.querySelector('.cart-container');
       const imprintContainer = document.querySelector('.imprint-container');
       const showContainer = (containerName) => containerName.classList.toggle('visibile');

@@ -720,6 +720,12 @@
   margin: 0 auto;
 }
 
+@media (max-width: 1010px) {
+  .sets-block__pagination {
+    width: auto;
+  }
+}
+
 .pagination * {
   border: none;
 }
@@ -1053,7 +1059,7 @@
 .filter {
   display: flex;
   flex-direction: column;
-  min-width: 250px;
+  min-width: 200px;
   justify-content: space-between;
   margin: 20px;
 }
@@ -1066,40 +1072,90 @@
 
 .filter__label {
   font: 14px/27px var(--contentFont);
-  /*letter-spacing: .2em;*/
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
-.sorting {
+.dropdown {
+  background: #fff;
+  user-select: none;
+}
+
+.dropdown__select {
+  min-width: 156px;
+  min-height: 24px;
   position: relative;
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  border-bottom: 1px solid #000;
 }
 
-.sorting select {
-  font: 14px/25px var(--contentFont);
-  z-index: 1;
-  padding: 0 40px 6px 0;
-  color: #000;
-  border: none;
-  border-bottom: 1px solid #444;
-  border-radius: 0;
-  outline: none;
-  background: transparent;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.sorting span {
+.options {
   position: absolute;
-  z-index: 0;
+  z-index: 1;
+  top: 100%;
   right: 0;
+  left: 0;
+  height: 0;
+  overflow: hidden;
+  transition: .4s all;
+  pointer-events: none;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 2px 1px #2222;
 }
 
-.sorting>* {
-  font: 14px/27px var(--contentFont);
-  text-transform: uppercase;
+.dropdown__select.opened .options {
+  pointer-events: all;
+  opacity: 1;
+  height: auto;
+}
+
+.option,
+.dropdown__item-current {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.option__image,
+.dropdown__image_current {
+  max-width: 2.125rem;
+  max-height: 2.125rem;
+}
+
+.option__text,
+.dropdown__text-current {
+  font: 14px/25px var(--contentFont);
+  margin: 0 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.option:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  color: var(--dark-vanilla);
+}
+.option__text:hover {
+ color: var(--dark-vanilla);
+}
+
+.option.selected {
+  display: none;
+}
+
+.dropdown__arrow {
+  cursor: pointer;
+  position: absolute;
+  right: -7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.opened .dropdown__arrow {
+  transform: rotate(-180deg);
 }
 
 @media screen and (max-width: 768px) {
@@ -1116,12 +1172,5 @@
   .tagbar .stack--horizontal {
     width: 100%;
     justify-content: center;
-  }
-}
-
-@media (max-width: 576px) {
-  .tagbar .stack--horizontal {
-    width: 100%;
-    justify-content: flex-start;
   }
 }
