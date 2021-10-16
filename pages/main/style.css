@@ -1606,7 +1606,7 @@ z nadrukiem of topbar menu*/
 
 .composition .stack--horizontal {
   overflow: hidden;
-  height: 696px;
+  height: 700px;
   justify-content: space-around;
 }
 
@@ -1684,7 +1684,7 @@ z nadrukiem of topbar menu*/
 
 @media (max-width: 576px) {
   .composition .stack--horizontal {
-    height: 720px;
+    height: 725px;
   }
   .composition__button_arrow {
     display: none;
@@ -1694,6 +1694,13 @@ z nadrukiem of topbar menu*/
   }
   .set-card__nav-control {
     display: flex;
+  }
+  .composition__underline {
+    display: none;
+  }
+
+  .composition__subtitle {
+    padding: 1.625rem 2%;
   }
 }
 
@@ -2405,7 +2412,7 @@ z nadrukiem of topbar menu*/
   display: flex;
   float: right;
   flex-direction: column;
-  min-width: 400px;
+  min-width: 380px;
   min-height: 117px;
   margin-top: -112px;
   justify-content: space-between;
@@ -2513,7 +2520,6 @@ z nadrukiem of topbar menu*/
   justify-content: center;
   align-items: center;
   right: 10px;
-  height: 13px;
 }
 
 .opened .dropdown__arrow {
