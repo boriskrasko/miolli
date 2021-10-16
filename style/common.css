@@ -13,8 +13,11 @@ body {
   overflow-x: hidden;
 }
 
-body.open {
-  overflow: hidden;
+@media screen and (max-width: 500px)  {
+  body.open {
+    overflow: hidden;
+    padding-right: 4px;
+  }
 }
 
 .uppercase {

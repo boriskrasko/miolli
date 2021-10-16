@@ -879,7 +879,7 @@ możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk
         })
       });
       document.querySelector('#switch').addEventListener('change', () => {
-        document.body.classList.toggle('open');
+        document.querySelector('#switch').checked ? document.body.classList.add('open') : document.body.classList.remove('open');
       })
     </script>
   </body>

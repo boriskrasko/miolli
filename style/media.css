@@ -79,7 +79,7 @@
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 760px) {
   .section .title {
     font: 64px/70px var(--titleFont);
   }

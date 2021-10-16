@@ -191,7 +191,8 @@
   height: calc(100vh - 78px);
   background-color: var(--nav-menu-side-fill);
   visibility: hidden;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .switch:checked ~ .sidenav {
