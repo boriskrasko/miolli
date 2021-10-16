@@ -8,740 +8,874 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
+    <!-- chat -->
+    <div class="chat">
+      <input type="checkbox">
+      <button class="chat__button">
+      <i class="chat__icon">
+      <span></span>
+      <span></span>
+      </i>
+      </button>
+      <div class="chat-popup" id="chatForm">
+        <div class="chat-popup__heading">
+          <img class="chat-popup__logo" src="../../assets/icons/logo-min.svg" alt="logo">
+          <h5>porozmawiaj z miolli</h5>
+        </div>
+        <div class="chat-popup__history">
+          <p><span class="paragraph_upper">Obecnie nie jesteśmy dostępni on-line</span><br>
+            <span class="paragraph">Zostaw nam wiadomość lub zadzwoń pod numer XXX XXX XXX</span>
+          </p>
+          <br><br>
+          <p class="paragraph">Hello Miolli ...</p>
+          <br><br>
+        </div>
+        <form action="/" class="chat-popup__form">
+          <textarea class="chat-popup__textarea" placeholder="Wpisz swoją wiadomość" name="meassege"></textarea>
+          <button type="submit" class="chat__button_submit button-contained_dark-vanilla">
+          <img src="../../assets/icons/send.svg" alt="send">
+          </button>
+        </form>
+      </div>
+    </div>
     <header class="header">
-      <div id="mainMenu">
-        <div id="menuToggle">
-          <input type="checkbox">
-          <div id="btnToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="nav-menu">
-            <div class="topbar">
-              <div class="logo">
-                <a class="back-to-home" href="../main/index.html" title="Miolli">
-                  <picture>
-                    <source srcset="../../assets/icons/logo.svg" media="(min-width: 400px)">
-                    <img src="../../assets/icons/logo-min.svg" alt="logo">
-                  </picture>
-                </a>
-              </div>
-              <div class="topnav">
-                <nav>
-                  <a href="../kompozycja/index.html">twoja kompozycja</a>
-                  <a href="">gotowe sety makaroników</a>
-                  <a href="">makaroniki&nbsp;z nadrukiem
-                  <img width="19" height="24" src="../../assets/icons/arrow-down.svg" alt="arrow down">
+      <div class="header-menu">
+        <input class="checkbox-toogle-menu" type="checkbox">
+        <button class="button button-toogle-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
+        <div class="header-menu_inner">
+          <div class="topbar">
+            <div class="topbar__logo">
+              <a href="../main/index.html" title="Miolli">
+                <picture>
+                  <source srcset="../../assets/icons/logo.svg" media="(min-width: 320px)">
+                  <img src="../../assets/icons/logo-min.svg" alt="logo">
+                </picture>
+              </a>
+            </div>
+            <nav class="topnav" aria-label="Topnav">
+              <ul class="topnav__list">
+                <li class="topnav__item_cart topnav__item_hasChild">
+                  <a href="../koszyk/index.html" class="topnav__link">
+                  <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
+                  <span class="topnav__item_cart_counter inner">14</span>
                   </a>
-                  <div class="imprint-container">
-                    <div class="imprint-content">
-                      <a href="">wszystkie okazje</a>
-                      <p>najpopularniejsze teraz:</p>
-                      <ul>
-                        <li><a href="">dzień mamy</a></li>
-                        <li><a href="">dzień dziecka</a></li>
-                        <li><a href="">dzień taty</a></li>
+                  <div class="cart-preview">
+                    <div class="cart-preview__item">
+                      <figure class="cart-preview__figure">
+                        <img class="cart-preview__image" src="../../assets/images/set-01.png" alt="set">
+                      </figure>
+                      <div class="cart-preview__body">
+                        <div class="cart-preview__heading">
+                          <h6 class="cart-preview__name h6">set na lato</h6>
+                        </div>
+                        <ul class="cart-preview__description">
+                          <li class="cart-preview__description-item">ilość:<span class="cart-preview__quantity">2</span></li>
+                          <li class="cart-preview__description-item">cena:<span class="cart-preview__price">27</span></li>
+                          <li class="cart-preview__description-item">suma:<span class="cart-preview__cost">54</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-preview__item">
+                      <figure class="cart-preview__figure">
+                        <img class="cart-preview__image" src="../../assets/images/set-01.png" alt="set">
+                      </figure>
+                      <div class="cart-preview__body">
+                        <div class="cart-preview__heading">
+                          <h6 class="cart-preview__name h6">set na lato</h6>
+                        </div>
+                        <ul class="cart-preview__description">
+                          <li class="cart-preview__description-item">ilość:<span class="cart-preview__quantity">2</span></li>
+                          <li class="cart-preview__description-item">cena:<span class="cart-preview__price">27</span></li>
+                          <li class="cart-preview__description-item">suma:<span class="cart-preview__cost">54</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-preview__footer">
+                      <a href="../koszyk/index.html" class="cart-preview__remainder">i jeszcze <span class="rest">1</span> ...</a>
+                      <a href="../koszyk/index.html" class="cart-preview__button button button-contained button-contained_dark-vanilla button_size_m">przejdź do koszyka</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="topnav__item_user">
+                  <a href="../user/index.html" class="topnav__link">
+                  <img class="topnav__link_icon" src="../../assets/icons/user.svg" alt="user">
+                  </a>
+                </li>
+                <li class="topnav__item topnav__item_hasChild">
+                  <a href="../nadruki/index.html" class="topnav__link">makaroniki&nbsp;z nadrukiem
+                  <span class="material-icons">south</span>
+                  </a>
+                  <div class="printing">
+                    <figure class="printing__figure">
+                      <img src="https://satyr.io/200x200?text=IMAGE" alt="" class="printing__image">
+                      <img src="https://satyr.io/100x100?text=print" alt="" class="printing__image_print" style="opacity: 0.5">
+                    </figure>
+                    <span class="printing__vertical-border"></span>
+                    <nav class="printing__nav" aria-label="Printing">
+                      <ul class="printing__list printing__list_external">
+                        <li class="printing__item">
+                          <a href="../nadruki/index.html" class="printing__link">wszystkie okazje</a>
+                        </li>
+                        <li>
+                          <p>najpopularniejsze teraz:</p>
+                          <ul class="printing__list printing__list_internal">
+                            <li class="printing__item">
+                              <a href="../nadruki/index.html" class="printing__link">dzień mamy</a>
+                            </li>
+                            <li class="printing__item">
+                              <a href="../nadruki/index.html" class="printing__link">dzień dziecka</a>
+                            </li>
+                            <li class="printing__item">
+                              <a href="../nadruki/index.html" class="printing__link">dzień taty</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="printing__item printing__item_underline">
+                          <a href="../nadruki/index.html" class="printing__link">dedykowany nadruk</a>
+                          <span class="material-icons">east</span>
+                        </li>
                       </ul>
-                      <a href="../nadruki/index.html">
-                      <span>dedykowany nadruk</span>
-                      <img src="../../assets/icons/arrow-right_pink.svg" alt="arrow">
-                      </a>
-                    </div>
-                    <span class="vertical-line"></span>
-                    <div class="imprint-image">
-                      <img src="../../assets/images/slony-karmel.png" alt="slony karmel">
-                      <div class="imprint-logo">
-                        <img src="../../assets/icons/logo-min.svg" alt="logo">
-                      </div>
-                    </div>
+                    </nav>
                   </div>
-                </nav>
-                <a class="like-btn user-btn" href="#">
-                <img width="19" height="34" src="../../assets/icons/user.svg" alt="user">
-                </a>
-                <a class="like-btn cart-btn" href="#">
-                <img width="19" height="34" src="../../assets/icons/cart.svg" alt="cart">
-                <span class="count-of-cart">4</span>
-                </a>
-                <div class="cart-container">
-                  <div class="cart-item">
-                    <div class="cart-item-image">
-                      <img class="set-image" src="../../assets/images/set-01.png" alt="set">
-                    </div>
-                    <div class="cart-item-content">
-                      <div class="cart-item-heading">
-                        <h4>set na lato</h4>
-                      </div>
-                      <div class="cart-item-description">
-                        <ul>
-                          <li>ilość:<span class="quantity">2</span></li>
-                          <li>cena:<span class="price">27</span></li>
-                          <li>suma:<span class="cost">54</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart-item">
-                    <div class="cart-item-image">
-                      <img class="set-image" src="../../assets/images/set-02.png" alt="set">
-                    </div>
-                    <div class="cart-item-content">
-                      <div class="cart-item-heading">
-                        <h4>set na lato</h4>
-                      </div>
-                      <div class="cart-item-description">
-                        <ul>
-                          <li>ilość:<span class="quantity">2</span></li>
-                          <li>cena:<span class="price">27</span></li>
-                          <li>suma:<span class="cost">54</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart-item">
-                    <div class="cart-item-image">
-                      <img class="set-image" src="../../assets/images/set-03.png" alt="set">
-                    </div>
-                    <div class="cart-item-content">
-                      <div class="cart-item-heading">
-                        <h4>set na lato</h4>
-                      </div>
-                      <div class="cart-item-description">
-                        <ul>
-                          <li>ilość:<span class="quantity">2</span></li>
-                          <li>cena:<span class="price">27</span></li>
-                          <li>suma:<span class="cost">54</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <a href="#" class="remainder">i jeszcze <span class="rest">1</span> ...</a>
-                  <a href="" class="like-btn">przejdź do koszyka</a>
-                </div>
-              </div>
-            </div>
-            <div class="navbar">
-              <nav>
-                <ul>
-                  <li><a href="../o-nas/index.html">o nas</a></li>
-                  <li><a href="../blog/index.html">blog</a></li>
-                  <li><a href="../faq/index.html">faq</a></li>
-                  <li><a href="../kompozycja/index.html">konfigurator on-line</a></li>
-                  <li><a href="#">oferta dla kawiarni</a></li>
-                  <li><a href="#">oferta eventowa</a></li>
-                  <li><a href="../kompozycja/index.html">twoja kompozycja</a></li>
-                  <li><a href="#">gotowe sety makaroników</a></li>
-                  <li><a href="#">makaroniki z nadrukiem</a></li>
-                  <li><a href="../biznes/index.html">miolli dla biznesu</a></li>
-                </ul>
-              </nav>
-            </div>
-            <div class="business-offer">
-              <a href="../biznes/index.html">miolli<br>dla biznesu<img width="19" height="24" src="../../assets/icons/arrow-down.svg" alt="arrow"></a>
-            </div>
+                </li>
+                <li class="topnav__item">
+                  <a href="../zestawy/index.html" class="topnav__link">gotowe sety makaroników</a>
+                </li>
+                <li class="topnav__item">
+                  <a href="../konfigurator/index.html" class="topnav__link">twoja kompozycja</a>
+                </li>
+              </ul>
+            </nav>
           </div>
+          <nav class="main-nav" aria-label="Main">
+            <ul class="main-nav__list">
+              <li class="main-nav__item hidden">
+                <a href="../konfigurator/index.html" class="main-nav__link ">twoja kompozycja</a>
+              </li>
+              <li class="main-nav__item hidden">
+                <a href="../zestawy/index.html" class="main-nav__link">gotowe sety makaroników</a>
+              </li>
+              <li class="main-nav__item hidden">
+                <a href="../nadruki/index.html" class="main-nav__link">makaroniki z nadrukiem</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../o-nas/index.html" class="main-nav__link">o nas</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../blog/index.html" class="main-nav__link">blog</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../konfigurator/index.html" class="main-nav__link">konfigurator on-line</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../oferta/index.html" class="main-nav__link">oferta dla kawiarni</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../oferta-eventowa/index.html" class="main-nav__link">oferta eventowa</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../biznes/index.html hidden" class="main-nav__link">miolli dla biznesu</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="button_business-offer button button-contained button-contained_dark-vanilla" href="../biznes/index.html">miolli<br>dla biznesu
+          <span class="material-icons">north_east</span>
+          </a>
         </div>
       </div>
     </header>
-    <main>
-    <div class="start-screen">
-      <div class="brand-container">
-        <img class="brand-name" src="../../assets/icons/miolli.svg" alt="miolli">
-        <span class="brand-tagline uppercase">smak inspiracji</span>
-      </div>
-      <div class="nav-slide">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-    </div>
-    <section class="inspiration">
-      <div class="block inspiration__content">
-        <header class="block__header">
-          <h3 class="block__title">słodkie inspiracje</h3>
-          <hr class="block__underline underline">
-          <h4 class="block__subtitle subtitle uppercase">
-            czyli jakie smaki dostępne są dziś w miolli
-          </h4>
-        </header>
-        <div class="block__body">
-          <button class="btn btn-rounded desert-sand-fill viewer-toggle">
-          <span>filtruj po smakach sezonowych</span>
-          </button>
-          <input class="viewer-toggle" type="checkbox">
-          <div class="flavor-stack">
-            <button class="btn-arrow">
-            <span class="material-icons parrot-pink">west</span>
-            </button>
-            <div class="stack stack--horizontal">
-              <article class="card flavor">
-                <div class="card__header">
-                  <div class="card__figure">
-                    <img src="../../assets/images/czekolada-wisnia.png" alt="" class="card__image">
-                  </div>
-                </div>
-                <div class="card__body">
-                  <hr class="card__underline">
-                  <h4 class="card__title uppercase">czekolada i wiśnia</h4>
-                </div>
-                <a class="card__link" href="../nasze-smaki/index.html"></a>
-              </article>
-              <article class="card flavor">
-                <div class="card__header">
-                  <div class="card__figure">
-                    <img src="../../assets/images/whisky-wanilia.png" alt="" class="card__image">
-                  </div>
-                </div>
-                <div class="card__body">
-                  <hr class="card__underline">
-                  <h4 class="card__title uppercase">whisky wanilia</h4>
-                </div>
-                <a class="card__link" href="../nasze-smaki/index.html"></a>
-              </article>
-              <article class="card flavor">
-                <div class="card__header">
-                  <div class="card__figure">
-                    <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="card__image">
-                  </div>
-                </div>
-                <div class="card__body">
-                  <hr class="card__underline">
-                  <h4 class="card__title uppercase">pistacja z limonką</h4>
-                </div>
-                <a class="card__link" href="../nasze-smaki/index.html"></a>
-              </article>
-              <article class="card flavor">
-                <div class="card__header">
-                  <div class="card__figure">
-                    <img src="../../assets/images/rozowa-roza.png" alt="" class="card__image">
-                  </div>
-                </div>
-                <div class="card__body">
-                  <hr class="card__underline">
-                  <h4 class="card__title uppercase">różowa róża</h4>
-                </div>
-                <a class="card__link" href="../nasze-smaki/index.html"></a>
-              </article>
-              <article class="card flavor">
-                <div class="card__header">
-                  <div class="card__figure">
-                    <img src="../../assets/images/slony-karmel.png" alt="" class="card__image">
-                  </div>
-                </div>
-                <div class="card__body">
-                  <hr class="card__underline">
-                  <h4 class="card__title uppercase">słony karmel</h4>
-                </div>
-                <a class="card__link" href="../nasze-smaki/index.html"></a>
-              </article>
-              <article class="card flavor">
-                <div class="card__header">
-                  <div class="card__figure">
-                    <img src="../../assets/images/whisky-wanilia.png" alt="" class="card__image">
-                  </div>
-                </div>
-                <div class="card__body">
-                  <hr class="card__underline">
-                  <h4 class="card__title uppercase">whisky wanilia</h4>
-                </div>
-                <a class="card__link" href="../nasze-smaki/index.html"></a>
-              </article>
-              <article class="card flavor">
-                <div class="card__header">
-                  <div class="card__figure">
-                    <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="card__image">
-                  </div>
-                </div>
-                <div class="card__body">
-                  <hr class="card__underline">
-                  <h4 class="card__title uppercase">pistacja z limonką</h4>
-                </div>
-                <a class="card__link" href="../nasze-smaki/index.html"></a>
-              </article>
-              <article class="card flavor">
-                <div class="card__header">
-                  <div class="card__figure">
-                    <img src="../../assets/images/rozowa-roza.png" alt="" class="card__image">
-                  </div>
-                </div>
-                <div class="card__body">
-                  <hr class="card__underline">
-                  <h4 class="card__title uppercase">różowa róża</h4>
-                </div>
-                <a class="card__link" href="../nasze-smaki/index.html"></a>
-              </article>
-            </div>
-            <button class="btn-arrow">
-            <span class="material-icons parrot-pink">east</span>
-            </button>
-          </div>
+    <main class="main">
+      <div class="start-screen">
+        <div class="brand-container">
+          <img class="brand-name" src="../../assets/icons/miolli.svg" alt="miolli">
+          <span class="brand-tagline uppercase">smak inspiracji</span>
         </div>
-        <footer class="block__footer">
-          <div class="block__actions">
-            <a href="../kompozycja/index.html" class="button">
-            stwórz swoją kompozycję
-            </a>
-          </div>
-        </footer>
+        <a class="button_sticky button button-contained button-contained_parrot-pink button_rounded desktop-only">
+        <img class="heart-icon" src="../../assets/icons/heart.svg">
+        pamiętasz? niedługo dzień ...!
+        <span class="button_sticky__call-to-action">zamów zestaw</span>
+        <span class="material-icons">east</span>
+        <a/>
+        <a href="#inspiration" class=" button button-swipe">
+        <span class="button-swipe__item dot"></span>
+        <span class="button-swipe__item dot"></span>
+        <span class="button-swipe__item dot"></span>
+        </a>
       </div>
-    </section>
-    <section class="composition">
-      <div class="block composition__content">
-        <header class="block__header">
-          <h2 class="block__title">
-            spróbuj <br>czegoś nowego!
-          </h2>
-          <hr class="block__underline underline">
-          <h3 class="block__subtitle uppercase">
-            mamy dla Ciebie 5 kompozycji smakowych, <br>możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk
-          </h3>
-        </header>
-        <div class="block__body">
-          <button class="btn btn-rounded parrot-pink-fill viewer-toggle">
-          <span>KLIKNIJ<br> BY ZMIENIĆ WIDOK</span>
-          <span class="material-icons">call_to_action</span>
-          </button>
-          <input class="viewer-toggle" type="checkbox">
-          <div class="set-stack">
-            <button class="btn-arrow">
-            <span class="material-icons parrot-pink">west</span>
+      <section class="inspiration" id="inspiration">
+        <div class="inspiration__content">
+          <div class="inspiration__header">
+            <h2 class="inspiration__title h2 txt-color_pastel-pink">słodkie inspiracje</h2>
+            <hr class="inspiration__underline underline_heading fill_white_chocolate ">
+            <p class="inspiration__subtitle paragraph_upper">
+              czyli jakie smaki dostępne są dziś w miolli
+            </p>
+          </div>
+          <div class="inspiration__body">
+            <button class="button button-contained button-contained_desert-sand button_rounded viewer-toggle inspiration__button_rounded desktop-only">
+            <span>filtruj po smakach sezonowych</span>
             </button>
-            <article class="card set-lg">
-              <div class="card__header">
-                <div class="card__figure">
-                  <picture>
-                    <source srcset="../../assets/images/set-1.png" media="(max-width: 576px)">
-                    <img src="https://satyr.io/1024x768?text=Miolli Set" alt="" class="card__image">
-                  </picture>
+            <div class="inspiration__stack">
+              <button class="inspiration__button_arrow">
+              <span class="material-icons txt-color_pastel-pink">west</span>
+              </button>
+              <div class="stack stack--horizontal flavor-stack">
+                <div class="card-flavor">
+                  <div class="card-flavor__header">
+                    <div class="card-flavor__figure">
+                      <img src="../../assets/images/czekolada-wisnia.png" alt="" class="card-flavor__image">
+                    </div>
+                  </div>
+                  <div class="card-flavor__body">
+                    <hr class="card-flavor__underline underline">
+                    <h4 class="card-flavor__title paragraph_upper">czekolada i wiśnia</h4>
+                  </div>
+                  <a class="card-flavor__link" href="../nasze-smaki/index.html"></a>
+                </div>
+                <div class="card-flavor">
+                  <div class="card-flavor__header">
+                    <div class="card-flavor__figure">
+                      <img src="../../assets/images/whisky-wanilia.png" alt="" class="card-flavor__image">
+                    </div>
+                  </div>
+                  <div class="card-flavor__body">
+                    <hr class="card-flavor__underline underline">
+                    <h4 class="card-flavor__title paragraph_upper">whisky wanilia</h4>
+                  </div>
+                  <a class="card-flavor__link" href="../nasze-smaki/index.html"></a>
+                </div>
+                <div class="card-flavor">
+                  <div class="card-flavor__header">
+                    <div class="card-flavor__figure">
+                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="card-flavor__image">
+                    </div>
+                  </div>
+                  <div class="card-flavor__body">
+                    <hr class="card-flavor__underline underline">
+                    <h4 class="card-flavor__title paragraph_upper">pistacja z limonką</h4>
+                  </div>
+                  <a class="card-flavor__link" href="../nasze-smaki/index.html"></a>
+                </div>
+                <div class="card-flavor">
+                  <div class="card-flavor__header">
+                    <div class="card-flavor__figure">
+                      <img src="../../assets/images/rozowa-roza.png" alt="" class="card-flavor__image">
+                    </div>
+                  </div>
+                  <div class="card-flavor__body">
+                    <hr class="card-flavor__underline underline">
+                    <h4 class="card-flavor__title paragraph_upper">różowa róża</h4>
+                  </div>
+                  <a class="card-flavor__link" href="../nasze-smaki/index.html"></a>
+                </div>
+                <div class="card-flavor">
+                  <div class="card-flavor__header">
+                    <div class="card-flavor__figure">
+                      <img src="../../assets/images/slony-karmel.png" alt="" class="card-flavor__image">
+                    </div>
+                  </div>
+                  <div class="card-flavor__body">
+                    <hr class="card-flavor__underline underline">
+                    <h4 class="card-flavor__title paragraph_upper">słony karme</h4>
+                  </div>
+                  <a class="card-flavor__link" href="../nasze-smaki/index.html"></a>
+                </div>
+                <div class="card-flavor">
+                  <div class="card-flavor__header">
+                    <div class="card-flavor__figure">
+                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="card-flavor__image">
+                    </div>
+                  </div>
+                  <div class="card-flavor__body">
+                    <hr class="card-flavor__underline underline">
+                    <h4 class="card-flavor__title paragraph_upper">pistacja z limonką</h4>
+                  </div>
+                  <a class="card-flavor__link" href="../nasze-smaki/index.html"></a>
+                </div>
+                <div class="card-flavor">
+                  <div class="card-flavor__header">
+                    <div class="card-flavor__figure">
+                      <img src="../../assets/images/rozowa-roza.png" alt="" class="card-flavor__image">
+                    </div>
+                  </div>
+                  <div class="card-flavor__body">
+                    <hr class="card-flavor__underline underline">
+                    <h4 class="card-flavor__title paragraph_upper">różowa róża</h4>
+                  </div>
+                  <a class="card-flavor__link" href="../nasze-smaki/index.html"></a>
+                </div>
+                <div class="card-flavor">
+                  <div class="card-flavor__header">
+                    <div class="card-flavor__figure">
+                      <img src="../../assets/images/whisky-wanilia.png" alt="" class="card-flavor__image">
+                    </div>
+                  </div>
+                  <div class="card-flavor__body">
+                    <hr class="card-flavor__underline underline">
+                    <h4 class="card-flavor__title paragraph_upper">whisky wanilia</h4>
+                  </div>
+                  <a class="card-flavor__link" href="../nasze-smaki/index.html"></a>
+                </div>
+                <div class="card-flavor">
+                  <div class="card-flavor__header">
+                    <div class="card-flavor__figure">
+                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="card-flavor__image">
+                    </div>
+                  </div>
+                  <div class="card-flavor__body">
+                    <hr class="card-flavor__underline underline">
+                    <h4 class="card-flavor__title paragraph_upper">pistacja z limonką</h4>
+                  </div>
+                  <a class="card-flavor__link" href="../nasze-smaki/index.html"></a>
                 </div>
               </div>
-              <div class="card__body">
-                <div class="nav-control">
-                  <button class="arrow">
-                  <span class="material-icons dark-vanilla">
-                  west
-                  </span>
-                  </button>
-                  <div class="counter like-h5">
-                    <span class="current-number">1</span>
-                    <span class="сounter-delimiter">/</span>
-                    <span class="total-count">5</span>
-                  </div>
-                  <button class="arrow">
-                  <span class="material-icons dark-vanilla">
-                  east
-                  </span>
-                  </button>
-                </div>
-                <h2 class="card__title uppercase">set na lato</h2>
-                <p class="card__copy uppercase">
-                  a w nim makaroniki różane, truskawkowe, jagodowe i pomarańczowe idealne do porannej mimozy
-                </p>
-                <p class="card__copy price uppercase">
-                  34,-
-                </p>
-              </div>
-              <footer class="card__footer">
-                <div class="card__actions">
-                  <a href="#" class="button">
-                  <span class="button__body uppercase">zamów set</span>
-                  </a>
-                </div>
-              </footer>
-            </article>
-            <div class="stack stack--horizontal">
-              <article class="card set">
-                <div class="card__header">
-                  <div class="card__figure">
-                    <img src="../../assets/images/set-1.png" alt="" class="card__image">
-                  </div>
-                </div>
-                <div class="nav-control">
-                  <button class="arrow">
-                  <span class="material-icons dark-vanilla">
-                  west
-                  </span>
-                  </button>
-                  <div class="counter like-h5">
-                    <span class="current-number">1</span>
-                    <span class="сounter-delimiter">/</span>
-                    <span class="total-count">5</span>
-                  </div>
-                  <button class="arrow">
-                  <span class="material-icons dark-vanilla">
-                  east
-                  </span>
-                  </button>
-                </div>
-                <div class="card__body">
-                  <h2 class="card__title uppercase">set na lato</h2>
-                  <p class="card__copy uppercase">
-                    2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
-                  </p>
-                  <p class="card__copy price uppercase">
-                    34,-
-                  </p>
-                </div>
-                <footer class="card__footer">
-                  <div class="card__actions">
-                    <a href="#" class="button">
-                    <span class="button__body uppercase">kup</span>
-                    </a>
-                  </div>
-                </footer>
-              </article>
-              <article class="card set">
-                <div class="card__header">
-                  <div class="card__figure">
-                    <img src="../../assets/images/set-1.png" alt="" class="card__image">
-                  </div>
-                </div>
-                <div class="card__body">
-                  <h2 class="card__title uppercase">set na lato</h2>
-                  <p class="card__copy uppercase">
-                    2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
-                  </p>
-                  <p class="card__copy price uppercase">
-                    34,-
-                  </p>
-                </div>
-                <footer class="card__footer">
-                  <div class="card__actions">
-                    <a href="#" class="button">
-                    <span class="button__body uppercase">kup</span>
-                    </a>
-                  </div>
-                </footer>
-              </article>
-              <article class="card set">
-                <div class="card__header">
-                  <div class="card__figure">
-                    <img src="../../assets/images/set-1.png" alt="" class="card__image">
-                  </div>
-                </div>
-                <div class="card__body">
-                  <h2 class="card__title uppercase">set na lato</h2>
-                  <p class="card__copy uppercase">
-                    2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
-                  </p>
-                  <p class="card__copy price uppercase">
-                    34,-
-                  </p>
-                </div>
-                <footer class="card__footer">
-                  <div class="card__actions">
-                    <a href="#" class="button">
-                    <span class="button__body uppercase">kup</span>
-                    </a>
-                  </div>
-                </footer>
-              </article>
-              <article class="card set">
-                <div class="card__header">
-                  <div class="card__figure">
-                    <img src="../../assets/images/set-1.png" alt="" class="card__image">
-                  </div>
-                </div>
-                <div class="card__body">
-                  <h2 class="card__title uppercase">set na lato</h2>
-                  <p class="card__copy uppercase">
-                    2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
-                  </p>
-                  <p class="card__copy price uppercase">
-                    34,-
-                  </p>
-                </div>
-                <footer class="card__footer">
-                  <div class="card__actions">
-                    <a href="#" class="button">
-                    <span class="button__body uppercase">kup</span>
-                    </a>
-                  </div>
-                </footer>
-              </article>
-              <article class="card set">
-                <div class="card__header">
-                  <div class="card__figure">
-                    <img src="../../assets/images/set-1.png" alt="" class="card__image">
-                  </div>
-                </div>
-                <div class="card__body">
-                  <h2 class="card__title uppercase">set na lato</h2>
-                  <p class="card__copy uppercase">
-                    2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
-                  </p>
-                  <p class="card__copy price uppercase">
-                    34,-
-                  </p>
-                </div>
-                <footer class="card__footer">
-                  <div class="card__actions">
-                    <a href="#" class="button">
-                    <span class="button__body uppercase">kup</span>
-                    </a>
-                  </div>
-                </footer>
-              </article>
-            </div>
-            <button class="btn-arrow">
-            <span class="material-icons parrot-pink">east</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="box-composing">
-      <div class="block box-composing__content">
-        <aside class="block__aside">
-          <figure class="block__figure">
-            <img src="../../assets/images/box.png" alt="" class="block__image">
-          </figure>
-        </aside>
-        <div class="block__content">
-          <header class="block__header">
-            <h2 class="block__title">skomponuj swoje pudełko</h2>
-          </header>
-          <div class="block__body">
-            <ul class="list">
-              <li class="list__item like-h5">
-                <span class="list__point">1</span>
-                <span class="list__text uppercase">wybierz rozmiar (6/12/24szt)</span>
-              </li>
-              <li class="list__item like-h5">
-                <span class="list__point">2</span>
-                <span class="list__text uppercase">wybierz ulubione smaki</span>
-              </li>
-              <li class="list__item like-h5">
-                <span class="list__point">3</span>
-                <p class="list__text uppercase">dodaj nadruk z naszej bazy<br> albo swój własny 
-                <span class="lowercase"> to może być napis lub pełnokolorowy wydruk (np. Twoje logo)</span>
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <footer class="box-composing__footer">
-        <div class="">
-          <p class="uppercase">
-            proste? To do dzieła! <br>Smacznego!
-          </p>
-          <img class="logo" src="../../assets/icons/logo-min.svg" alt="logo">
-        </div>
-        <div class="box-composing__actions">
-          <a href="../kompozycja/index.html" class="btn btn-lg">stwórz swoją kompozycję</a>
-        </div>
-      </footer>
-    </section>
-    <section class="adding-uniqueness">
-      <div class="outer-container ">
-        <header class="block__header">
-          <h3 class="block__title">dodaj wyjątkowości swojemu wydarzeniu z Miolli</h3>
-        </header>
-      </div>
-      <div class="block__body">
-        <hr class="block__underline underline">
-        <p class="block__copy uppercase">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam, diam ut maximus suscipit, lectus enim interdum turpis, et scelerisque neque est in diam. Aliquam gravida dapibus urna sit amet bibendum. Pellentesque tristique massa dictum quam mattis, at laoreet augue gravida. Duis eget dapibus sem.
-        </p>
-      </div>
-      <footer class="block__footer">
-        <div class="block__actions">
-          <a href="../kompozycja/index.html" class="btn btn-lg">więcej</a>
-        </div>
-        <div class="nav-slide">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div>
-      </footer>
-    </section>
-    <section>
-      <img style="width: 100%;" class="logo" src="../../assets/images/film.png" alt="">
-    </section>
-    <section class="causes block">
-      <aside class="block__aside top">
-        <figure class="block__figure_circle circle">
-          <img src="../../assets/images/macaron-making.png" alt="Dummy Image" class="block__image">
-        </figure>
-      </aside>
-      <aside class="block__aside bottom">
-        <figure class="block__figure_circle circle">
-          <img src="../../assets/images/macaron-making.png" alt="Dummy Image" class="block__image">
-        </figure>
-      </aside>
-      <div class="block__body">
-        <button class="btn-arrow">
-        <span class="material-icons dark-sky-blue">west</span>
-        </button>
-        <article class="card">
-          <div class="card__layout">01</div>
-          <div class="card__content">
-            <header class="card__header">
-              <h4 class="uppercase">5 powodów by kochać miolli</h4>
-            </header>
-            <div class="card__body">
-              <h4 class="card__title uppercase">
-                Receptura najlepszych rosyjskich cukierników
-              </h4>
-              <p class="card__copy uppercase">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis
-                deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Repellendus sapiente harum soluta excepturi ut
-                temporibus, at amet corporis id asperiores.
-              </p>
-            </div>
-            <footer class="card__footer">
-              <div class="card__actions">
-                <div class="nav-control">
-                  <button class="arrow">
-                  <span class="material-icons">
-                  west
-                  </span>
-                  </button>
-                  <div class="counter like-h5">
-                    <span class="current-number">1</span>
-                    <span class="сounter-delimiter">/</span>
-                    <span class="total-count">5</span>
-                  </div>
-                  <button class="arrow">
-                  <span class="material-icons">
-                  east
-                  </span>
-                  </button>
-                </div>
-                <button class="button">
-                <a href="../kompozycja/index.html" class="btn btn-lg">dowiedz się więcej</a>
-                </button>
-              </div>
-            </footer>
-          </div>
-        </article>
-        <button class="btn-arrow">
-        <span class="material-icons dark-sky-blue">east</span>
-        </button>
-      </div>
-    </section>
-    <section class="newsletter">
-      <div class="block newsletter__content">
-        <header class="block__header">
-          <h2 class="block__title uppercase">newsletter</h2>
-          <h4 class="block__subtitle">
-            DOŁĄCZ, ŻEBY NIE PRZEGAPIĆ ŻADNEJ PREMIERY!
-          </h4>
-        </header>
-        <div class="block__body">
-          <form class="newsletter__form">
-            <div class="input-group">
-              <input type="email" id="email" required placeholder="podaj swój e-mail">
-              <button class="btn-submit uppercase" type="submit" name="button" title="zapisz się">
-              zapisz się
+              <button class="inspiration__button_arrow">
+              <span class="material-icons txt-color_pastel-pink">east</span>
               </button>
             </div>
-          </form>
-        </div>
-      </div>
-    </section>
-    <section class="map">
-      <div class="block map__content">
-        <header class="block__header">
-          <img src="../../assets/images/map.png" usemap="#image-map" class="block__image">
-          <map name="image-map">
-            <area target="" alt="kawiarnia fabryczna" title="kawiarnia fabryczna" href="" coords="342,83" shape="poly">
-          </map>
-        </header>
-        <div class="block__body">
-          <h2 class="block__title">zamów online<br> odbierz w ulubionej kawiarni!</h2>
-          <div class="city">
-            <div class="city__body">
-              <h4 class="city__label">wybrane miasto:</h4>
-              <div class="sorting">
-                <select id="sort" size="1" name="pet">
-                  <option value='popular'>Warszawa</option>
-                  <option value='popular'>Kraków</option>
-                  <option value='popular'>Sosnowiec</option>
-                </select>
-                <span class="material-icons">
-                keyboard_arrow_down
-                </span>
-              </div>
+          </div>
+          <footer class="inspiration__footer">
+            <div class="inspiration__actions">
+              <a href="../konfigurator/index.html" class="button button-outlined button-outlined_parrot-pink button_size_l">
+              stwórz swoją kompozycję
+              </a>
             </div>
-            <div class="city__footer">
-              <button href="../kompozycja/index.html" class="button btn btn-sm">szukaj blisko mnie</button>
+          </footer>
+        </div>
+      </section>
+      <section class="composition">
+        <div class="composition__content">
+          <header class="composition__header">
+            <h2 class="composition__title h2 txt-color_pastel-pink">
+              spróbuj <br>czegoś nowego!
+            </h2>
+            <hr class="composition__underline underline_heading">
+            <h3 class="composition__subtitle paragraph_upper">
+              mamy dla Ciebie 5 kompozycji smakowych, <br>możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk
+            </h3>
+          </header>
+          <div class="composition__body">
+            <button class="button button-contained button-contained_parrot-pink button_rounded viewer-toggle  composition__button_rounded desktop-only">
+            <span>KLIKNIJ<br> BY ZMIENIĆ WIDOK</span>
+            <span class="material-icons">call_to_action</span>
+            </button>
+            <input class="viewer-toggle desktop-only" type="checkbox">
+            <div class="composition__set-stack">
+              <button class="composition__button_arrow">
+              <span class="material-icons txt-color_pastel-pink">west</span>
+              </button>
+              <article class="set-block">
+                <div class="set-block__header">
+                  <div class="set-block__figure">
+                    <picture>
+                      <source srcset="../../assets/images/set-1.png" media="(max-width: 576px)">
+                      <img src="https://satyr.io/1024x768?text=Miolli Set" alt="" class="set-block__image">
+                      <!-- <img src="../../assets/images/composition.png" alt="" class="set-block__image"> -->
+                    </picture>
+                  </div>
+                </div>
+                <div class="set-block__body">
+                  <div class="set-block__nav-control">
+                    <button class="set-block__arrow">
+                    <span class="material-icons txt-color_pastel-pink">
+                    west
+                    </span>
+                    </button>
+                    <div class="set-block__counter">
+                      <span class="set-block__current-number">1</span>
+                      <span class="set-block__сounter-delimiter">/</span>
+                      <span class="set-block__total-count">5</span>
+                    </div>
+                    <button class="set-block__arrow">
+                    <span class="material-icons txt-color_pastel-pink">
+                    east
+                    </span>
+                    </button>
+                  </div>
+                  <h2 class="set-block__title uppercase">set na lato</h2>
+                  <p class="set-block__copy uppercase">
+                    a w nim makaroniki różane, truskawkowe, jagodowe i pomarańczowe idealne do porannej mimozy
+                  </p>
+                  <p class="set-block__copy price uppercase">
+                    34,99
+                  </p>
+                </div>
+                <footer class="set-block__footer">
+                  <div class="set-block__actions">
+                    <a href="../zestaw/index.html" class="set-block__button button button-outlined button-outlined_parrot-pink button_size_l">
+                    <span>zamów set</span>
+                    </a>
+                  </div>
+                </footer>
+              </article>
+              <div class="stack stack--horizontal">
+                <article class="set-card">
+                  <div class="set-card__header">
+                    <div class="set-card__figure">
+                      <img src="../../assets/images/set-1.png" alt="" class="card__image">
+                    </div>
+                  </div>
+                  <div class="set-card__nav-control">
+                    <button class="set-card__arrow">
+                    <span class="material-icons txt-color_pastel-pink">
+                    west
+                    </span>
+                    </button>
+                    <div class="set-card__counter">
+                      <span class="set-card__current-number">1</span>
+                      <span class="set-card__сounter-delimiter">/</span>
+                      <span class="set-card__total-count">5</span>
+                    </div>
+                    <button class="set-card__arrow">
+                    <span class="material-icons txt-color_pastel-pink">
+                    east
+                    </span>
+                    </button>
+                  </div>
+                  <div class="set-card__body">
+                    <h2 class="set-card__title uppercase">set na lato</h2>
+                    <p class="set-card__copy uppercase">
+                      2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
+                    </p>
+                    <p class="set-card__copy price uppercase">
+                      34,-
+                    </p>
+                  </div>
+                  <footer class="set-card__footer">
+                    <div class="set-card__actions">
+                      <a href="../zestaw/index.html" class="set_card_buttonset-block__button button button-outlined button-outlined_parrot-pink button_size_s">
+                      <span class="uppercase">kup</span>
+                      </a>
+                    </div>
+                  </footer>
+                </article>
+                <article class="set-card">
+                  <div class="set-card__header">
+                    <div class="set-card__figure">
+                      <img src="../../assets/images/set-1.png" alt="" class="card__image">
+                    </div>
+                  </div>
+                  <div class="set-card__nav-control">
+                    <button class="set-card__arrow">
+                    <span class="material-icons txt-color_pastel-pink">
+                    west
+                    </span>
+                    </button>
+                    <div class="set-card__counter">
+                      <span class="set-card__current-number">1</span>
+                      <span class="set-card__сounter-delimiter">/</span>
+                      <span class="set-card__total-count">5</span>
+                    </div>
+                    <button class="set-card__arrow">
+                    <span class="material-icons txt-color_pastel-pink">
+                    east
+                    </span>
+                    </button>
+                  </div>
+                  <div class="set-card__body">
+                    <h2 class="set-card__title uppercase">set na lato</h2>
+                    <p class="set-card__copy uppercase">
+                      2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
+                    </p>
+                    <p class="set-card__copy price uppercase">
+                      34,-
+                    </p>
+                  </div>
+                  <footer class="set-card__footer">
+                    <div class="set-card__actions">
+                      <a href="../zestaw/index.html" class="set_card_buttonset-block__button button button-outlined button-outlined_parrot-pink button_size_s">
+                      <span class="uppercase">kup</span>
+                      </a>
+                    </div>
+                  </footer>
+                </article>
+                <article class="set-card">
+                  <div class="set-card__header">
+                    <div class="set-card__figure">
+                      <img src="../../assets/images/set-1.png" alt="" class="card__image">
+                    </div>
+                  </div>
+                  <div class="set-card__nav-control">
+                    <button class="set-card__arrow">
+                    <span class="material-icons txt-color_pastel-pink">
+                    west
+                    </span>
+                    </button>
+                    <div class="set-card__counter">
+                      <span class="set-card__current-number">1</span>
+                      <span class="set-card__сounter-delimiter">/</span>
+                      <span class="set-card__total-count">5</span>
+                    </div>
+                    <button class="set-card__arrow">
+                    <span class="material-icons txt-color_pastel-pink">
+                    east
+                    </span>
+                    </button>
+                  </div>
+                  <div class="set-card__body">
+                    <h2 class="set-card__title uppercase">set na lato</h2>
+                    <p class="set-card__copy uppercase">
+                      2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
+                    </p>
+                    <p class="set-card__copy price uppercase">
+                      34,-
+                    </p>
+                  </div>
+                  <footer class="set-card__footer">
+                    <div class="set-card__actions">
+                      <a href="../zestaw/index.html" class="set_card_buttonset-block__button button button-outlined button-outlined_parrot-pink button_size_s">
+                      <span class="uppercase">kup</span>
+                      </a>
+                    </div>
+                  </footer>
+                </article>
+                <article class="set-card">
+                  <div class="set-card__header">
+                    <div class="set-card__figure">
+                      <img src="../../assets/images/set-1.png" alt="" class="card__image">
+                    </div>
+                  </div>
+                  <div class="set-card__nav-control">
+                    <button class="set-card__arrow">
+                    <span class="material-icons txt-color_pastel-pink">
+                    west
+                    </span>
+                    </button>
+                    <div class="set-card__counter">
+                      <span class="set-card__current-number">1</span>
+                      <span class="set-card__сounter-delimiter">/</span>
+                      <span class="set-card__total-count">5</span>
+                    </div>
+                    <button class="set-card__arrow">
+                    <span class="material-icons txt-color_pastel-pink">
+                    east
+                    </span>
+                    </button>
+                  </div>
+                  <div class="set-card__body">
+                    <h2 class="set-card__title uppercase">set na lato</h2>
+                    <p class="set-card__copy uppercase">
+                      2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
+                    </p>
+                    <p class="set-card__copy price uppercase">
+                      34,-
+                    </p>
+                  </div>
+                  <footer class="set-card__footer">
+                    <div class="set-card__actions">
+                      <a href="../zestaw/index.html" class="set_card_buttonset-block__button button button-outlined button-outlined_parrot-pink button_size_s">
+                      <span class="uppercase">kup</span>
+                      </a>
+                    </div>
+                  </footer>
+                </article>
+                <article class="set-card">
+                  <div class="set-card__header">
+                    <div class="set-card__figure">
+                      <img src="../../assets/images/set-1.png" alt="" class="card__image">
+                    </div>
+                  </div>
+                  <div class="set-card__nav-control">
+                    <button class="set-card__arrow">
+                    <span class="material-icons txt-color_pastel-pink">
+                    west
+                    </span>
+                    </button>
+                    <div class="set-card__counter">
+                      <span class="set-card__current-number">1</span>
+                      <span class="set-card__сounter-delimiter">/</span>
+                      <span class="set-card__total-count">5</span>
+                    </div>
+                    <button class="set-card__arrow">
+                    <span class="material-icons txt-color_pastel-pink">
+                    east
+                    </span>
+                    </button>
+                  </div>
+                  <div class="set-card__body">
+                    <h2 class="set-card__title uppercase">set na lato</h2>
+                    <p class="set-card__copy uppercase">
+                      2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
+                    </p>
+                    <p class="set-card__copy price uppercase">
+                      34,-
+                    </p>
+                  </div>
+                  <footer class="set-card__footer">
+                    <div class="set-card__actions">
+                      <a href="../zestaw/index.html" class="set_card_buttonset-block__button button button-outlined button-outlined_parrot-pink button_size_s">
+                      <span class="uppercase">kup</span>
+                      </a>
+                    </div>
+                  </footer>
+                </article>
+              </div>
+              <button class="composition__button_arrow">
+              <span class="material-icons txt-color_pastel-pink">east</span>
+              </button>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-      <nav class="footer-nav" aria-label="footer">
-    <ul class="footer-nav__list">
-      <li class="footer-nav__item">
-        <a href="#" class="footer-nav__link">dla biznesu</a>
-      </li>
-      <li class="footer-nav__item">
-        <a href="#" class="footer-nav__link">gotowe sety</a>
-      </li>
-      <li class="footer-nav__item">
-        <a href="#" class="footer-nav__link">o nas</a>
-      </li>
-      <li class="footer-nav__item">
-        <a href="#" class="footer-nav__link">makaroniki z nadrukiem</a>
-      </li>
-      <li class="footer-nav__item">
-        <a href="#" class="footer-nav__link">twoja kompozycja</a>
-      </li>
-      <li class="footer-nav__item">
-        <a href="#" class="footer-nav__link">alergeny</a>
-      </li>
-      <li class="footer-nav__item">
-        <a href="#" class="footer-nav__link">faq</a>
-      </li>
-      <li class="footer-nav__item">
-        <a href="#" class="footer-nav__link">blog</a>
-      </li>
-      <li class="footer-nav__item">
-        <a href="#" class="footer-nav__link">contact</a>
-      </li>
-    </ul>
-  </nav>
-  </footer>
-   <div class="chat-container">
-      <input type="checkbox">
-      <button class="chat-button">
-        <div class="chat-icon">
-          <span></span>
-          <span></span>
+      </section>
+      <section class="box-composing">
+        <div class="box-composing__container">
+          <div class="box-composing__aside">
+            <div class="box-composing__cookie-box"></div>
+          </div>
+          <div class="box-composing__content">
+            <header class="box-composing__heading">
+              <h2 class="box-composing__title h3">skomponuj <br>swoje pudełko</h2>
+            </header>
+            <div class="box-composing__body">
+              <ul class="box-composing__list">
+                <li class="box-composing__item">
+                  <span class="box-composing__point">1</span>
+                  <p class="box-composing__copy paragraph_upper">wybierz rozmiar (6/12/24szt)</p>
+                </li>
+                <li class="box-composing__item">
+                  <span class="box-composing__point">2</span>
+                  <p class="box-composing__copy paragraph_upper">wybierz ulubione smaki/
+                  <p>
+                </li>
+                <li class="box-composing__item">
+                  <span class="box-composing__point">3</span>
+                  <p class="box-composing__copy paragraph"><span class="paragraph_upper">dodaj nadruk z naszej bazy<br> albo swój własny </span><br>
+                    to może być napis lub pełnokolorowy wydruk (np. Twoje logo)
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </button>
-      <div class="chat-window">
-        <div class="chat-heading">
-          <img class="chat-logo" src="../../assets/icons/logo-min.svg" alt="logo">
-          <h5>porozmawiaj z miolli</h5>
+        <footer class="box-composing__footer">
+          <div class="box-composing__footer_wrapper">
+            <p class="box-composing__copy paragraph_upper">
+              proste? To do dzieła! <br>Smacznego!
+            </p>
+            <img class="logo" src="../../assets/icons/logo-min.svg" alt="logo">
+          </div>
+          <div class="box-composing__actions">
+            <a href="../kompozycja/index.html" class="box-composing__button button button-outlined button_size_l">stwórz swoją kompozycję</a>
+          </div>
+        </footer>
+      </section>
+      <section class="uniqueness">
+        <div class="uniqueness__header_mask">
+          <header class="uniqueness__header">
+            <h3 class="uniqueness__title h3">dodaj wyjątkowości swojemu wydarzeniu z Miolli</h3>
+          </header>
         </div>
-        <div class="chat-history">
-          <p>Obecnie nie jesteśmy dostępni on-line<br>Zostaw nam wiadomość lub zadzwoń pod numer XXX XXX XXX</p>
+        <div class="uniqueness__body">
+          <hr class="uniqueness__underline underline">
+          <p class="uniqueness__copy paragraph_upper">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam, diam ut maximus suscipit, lectus enim interdum turpis, et scelerisque neque est in diam. Aliquam gravida dapibus urna sit amet bibendum. Pellentesque tristique massa dictum quam mattis, at laoreet augue gravida. Duis eget dapibus sem.
+          </p>
         </div>
-        <div class="chat-message">
-          <form action="" class="form-container">
-            <textarea placeholder="Wpisz swoją wiadomość" name="message"></textarea>
-            <button type="submit" class="send-btn">
-            <img class="chat-btn" src="../../assets/icons/send.svg" alt="send">
-            </button>
-          </form>
+        <footer class="uniqueness__footer">
+          <div class="uniqueness__actions">
+            <a href="../kompozycja/index.html" class="uniqueness__button button button-outlined button_size_l">więcej</a>
+          </div>
+        </footer>
+        <a href="#inspiration" class="button button-swipe">
+        <span class="button-swipe__item dot"></span>
+        <span class="button-swipe__item dot"></span>
+        <span class="button-swipe__item dot"></span>
+        </a>
+      </section>
+      <section>
+        <img style="width: 100%; min-height: 400px; object-fit: cover; object-position: center; " src="../../assets/images/film.png" alt="">
+      </section>
+      <section class="causes">
+        <aside class="causes__aside top">
+          <figure class="causes__figure_circle circle">
+            <img src="../../assets/images/macaron-making-2.png" alt="" class="causes__image">
+          </figure>
+        </aside>
+        <aside class="causes__aside bottom">
+          <figure class="causes__figure_circle circle">
+            <img src="../../assets/images/macaron-making.png" alt="" class="causes__image">
+          </figure>
+        </aside>
+        <div class="causes__body">
+          <button class="causes__button_arrow">
+          <span class="material-icons dark-sky-blue">west</span>
+          </button>
+          <article class="causes-card">
+            <div class="causes-card__layout">01</div>
+            <div class="causes-card__content">
+              <header class="card__header">
+                <h4 class="causes-card__header__title paragraph_upper">5 powodów <br> by kochać miolli</h4>
+              </header>
+              <div class="causes-card__body">
+                <h4 class="causes-card__title">
+                  Receptura najlepszych rosyjskich cukierników
+                </h4>
+                <p class="causes-card__copy paragraph_upper">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis
+                  deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Repellendus sapiente harum soluta excepturi ut
+                  temporibus, at amet corporis id asperiores.
+                </p>
+              </div>
+              <footer class="causes-card__footer">
+                <div class="causes-card__actions">
+                  <div class="causes-card__nav-control">
+                    <button class="causes-card__arrow">
+                    <span class="material-icons">
+                    west
+                    </span>
+                    </button>
+                    <div class="causes-card__counter">
+                      <span class="causes-card__current-number">1</span>
+                      <span class="causes-card__сounter-delimiter">/</span>
+                      <span class="causes-card__total-count">5</span>
+                    </div>
+                    <button class="causes-card__arrow">
+                    <span class="material-icons">
+                    east
+                    </span>
+                    </button>
+                  </div>
+                  <a href="../kompozycja/index.html" class="causes-card__button button button-outlined button_size_l">dowiedz się więcej</a>
+                </div>
+              </footer>
+            </div>
+          </article>
+          <button class="causes__button_arrow">
+          <span class="material-icons dark-sky-blue">east</span>
+          </button>
         </div>
-      </div>
-    </div>
+      </section>
+      <section class="newsletter">
+        <div class="newsletter__content">
+          <header class="newsletter__header">
+            <h2 class="newsletter__title uppercase h2">newsletter</h2>
+            <h4 class="newsletter__subtitle">
+              DOŁĄCZ, ŻEBY NIE PRZEGAPIĆ ŻADNEJ PREMIERY!
+            </h4>
+          </header>
+          <div class="newsletter__body">
+            <form class="newsletter__form">
+              <div class="input-group">
+                <input type="email" id="email" required placeholder="podaj swój e-mail">
+                <button class="newsletter__button_submit button button-outlined  " type="submit" name="button" title="zapisz się">
+                zapisz się
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <div class="map__content">
+        <div class="map__aside">
+        <img src="../../assets/images/map.png" usemap="#image-map" class="map__image">
+        <map name="image-map">
+          <area target="" alt="kawiarnia fabryczna" title="kawiarnia fabryczna" href="" coords="342,83" shape="poly">
+        </map>
+        <div>
+          <div class="map__body">
+            <h2 class="map__title">zamów online<br> odbierz w ulubionej kawiarni!</h2>
+            <div class="location">
+              <div class="location__body">
+                <h4 class="location__label">wybrane miasto:</h4>
+                <div class="location__sorting">
+                  <div class="dropdown">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <p class="dropdown__text-current">warszawa</p>
+                        <button class="dropdown__arrow">
+                        <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option selected">
+                          <p class="option__text">warszawa</p>
+                        </li>
+                        <li class="option">
+                          <p class="option__text">kraków</p>
+                        </li>
+                        <li class="option ">
+                          <p class="option__text">sosnowiec</p>
+                        </li>
+                        <li class="option">
+                          <p class="option__text">suwałki</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="location__footer">
+                <button href="../kompozycja/index.html" class="button button-outlined button_size_s">szukaj blisko mnie</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <nav class="footer-nav" aria-label="footnav">
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item">
+            <a href="../biznes/index.html" class="footer-nav__link">dla biznesu</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../zestawy/index.html" class="footer-nav__link">gotowe sety</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../o-nas/index.html" class="footer-nav__link">o nas</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../nadruki/index.html" class="footer-nav__link">makaroniki z nadrukiem</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../konfigurator/index.html" class="footer-nav__link">twoja kompozycja</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../alergeny/index.html" class="footer-nav__link">alergeny</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../faq/index.html" class="footer-nav__link">faq</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../blog/index.html" class="footer-nav__link">blog</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../kontakt/index.html" class="footer-nav__link">kontakt</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link"></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
     <script>
-      const cartContainer = document.querySelector('.cart-container');
-      const imprintContainer = document.querySelector('.imprint-container');
-      const showContainer = (containerName) => containerName.classList.toggle('visibile');
-      cartContainer.addEventListener('mouseover', () => showContainer(cartContainer));
-      cartContainer.addEventListener('mouseout', () => showContainer(cartContainer));
-      imprintContainer.addEventListener('mouseover', () => showContainer(imprintContainer));
-      imprintContainer.addEventListener('mouseout',() => showContainer(imprintContainer));
+      for (const dropdown of document.querySelectorAll('.dropdown')) {
+        dropdown.addEventListener('click', function () {
+          this.querySelector('.dropdown__select').classList.toggle('opened');
+        })
+      }
+      for (const option of document.querySelectorAll('.option')) {
+        option.addEventListener('click', function () {
+          if (!this.classList.contains('selected')) {
+            this.parentNode.querySelector('.option.selected').classList.remove('selected');
+            this.classList.add('selected');
+            this.closest('.dropdown__select').querySelector('.dropdown__item-current p').textContent = this.textContent;
+          }
+        })
+      }
+      window.addEventListener('click', function (e) {
+        for (const select of document.querySelectorAll('.dropdown__select')) {
+          if (!select.contains(e.target)) {
+            select.classList.remove('opened');
+          }
+        }
+      });
     </script>
   </body>
 </html>

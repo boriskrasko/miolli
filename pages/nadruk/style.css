@@ -1,6 +1,6 @@
 @import '../../assets/styles/main.css';
 
-/** {border: var(--border);}*/
+* {border: var(--border);}
 
 .header {
   position: fixed;
@@ -695,7 +695,7 @@
   align-items: flex-start;
 }
 
-.set-block>* {
+.set-block >* {
   min-width: 400px;
   height: 90%;
   margin: 5px;
@@ -757,7 +757,7 @@
 }
 
 .set-block__image {
-  min-width: 22rem;
+  min-width: 17.5rem;
   object-fit: contain;
   object-position: center;
 }
@@ -801,9 +801,9 @@
 }
 
 .add-to-favorite__copy {
-   font: normal 14px/14px var(--contentFont);
-   color: var(--parrot-pink);
-   margin: 0 20px
+  font: normal 14px/14px var(--contentFont);
+  color: var(--parrot-pink);
+  margin: 0 20px
 }
 
 .add-to-favorite .button:hover {
@@ -882,7 +882,7 @@
     margin: 47px 0 0;
   }
   .set-block>* {
-    min-width: 400px;
+    min-width: auto;
     margin: 5px;
     padding: 0 20px;
   }
@@ -1281,11 +1281,10 @@
 .dropdown {
   background: #fff;
   user-select: none;
-  /*border-bottom: 1px solid #000;*/
 }
 
 .dropdown__select {
-  min-width: 229px;
+  width: 229px;
   min-height: 34px;
   position: relative;
   display: flex;
@@ -1347,7 +1346,6 @@
  color: var(--dark-vanilla);
 }
 
-
 .option.selected {
   display: none;
 }
@@ -1355,7 +1353,7 @@
 .dropdown__arrow {
   cursor: pointer;
   position: absolute;
-  right: 0;
+  right: -7px;
   display: flex;
   justify-content: center;
   align-items: center;
