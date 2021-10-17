@@ -44,6 +44,10 @@ a.button {
   text-decoration: none;
 }
 
+a {
+  user-select: none;
+}
+
 .button:active {
   outline: none;
 }
@@ -651,10 +655,9 @@ z nadrukiem of topbar menu*/
   .main-nav__link {
     justify-content: center;
     text-align: center;
-    padding: 0 0.875rem;
+    padding: auto 0.875rem;
   }
 }
-
 
 /*topnav line-menu*/
 
@@ -1050,6 +1053,7 @@ z nadrukiem of topbar menu*/
   justify-content: center;
   align-items: center;
   margin: 5px;
+  outline: none;
 }
 
 .chat__button_submit img {
@@ -1363,7 +1367,7 @@ z nadrukiem of topbar menu*/
 }
 
 .inspiration__button_arrow {
-  margin: 6.25rem 0 0;
+  margin: 15% 5px 0;
   transition: 0.1s color ease-in-out;
 }
 
@@ -2561,9 +2565,12 @@ z nadrukiem of topbar menu*/
 }
 
 @media screen and (max-width: 412px) {
-  .location {
-    width: auto;
-    min-width: 240px;
+  .dropdown {
+    min-width: 204px;
+  }
+  .dropdown__item-current {
+   display: flex;
+   justify-content: space-between;
   }
   .location__body {
     flex-wrap: wrap;
