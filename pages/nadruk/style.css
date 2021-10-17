@@ -1,6 +1,5 @@
 @import '../../assets/styles/main.css';
 
-
 .main {
   width: 100%;
   max-width: var(--max);
@@ -241,9 +240,8 @@
     margin: 47px 0 0;
   }
   .set-block>* {
-    min-width: auto;
-    margin: 5px;
-    padding: 0 20px;
+    min-width: 90%;
+    padding: 0 5px;
   }
   .set-block__title {
     font: normal 50px/55px var(--titleFont);
@@ -254,6 +252,9 @@
   }
   .set-block__aside .nav-control .button .material-icons {
     color: var(--dark-vanilla);
+  }
+    body {
+    overflow-x: hidden;
   }
 }
 
