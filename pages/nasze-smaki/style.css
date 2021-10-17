@@ -190,6 +190,7 @@ body {
     font-size: 53px;
   }
   .our-flavors__heading {
+    max-width: 70%;
     padding: 0;
   }
   .breadcrumbs {
@@ -201,3 +202,19 @@ body {
     margin: 0 auto;
   }
 }
+ @media screen and (max-width: 412px) {
+  .number {
+    top: auto;
+    right: -20px;
+    bottom: -20px;
+    left: auto;
+    width: 200px;
+    height: 190px;
+  }
+  .number span {
+    font-size: 200px;
+  }
+  .our-flavors__button_arow {
+    display: none;
+  }
+ }
