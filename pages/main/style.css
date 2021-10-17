@@ -2268,6 +2268,13 @@ z nadrukiem of topbar menu*/
   }
 }
 
+@media (max-width: 490px) {
+  .causes__aside.top .causes__figure_circle {
+    min-width: 21.875rem;
+    min-height: 21.875rem;
+  }
+}
+
 /***/
 
 /*7*/
