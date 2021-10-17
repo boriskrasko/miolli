@@ -8,10 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .flexbox {
   display: flex;
   justify-content: center;
@@ -2189,6 +2185,7 @@ z nadrukiem of topbar menu*/
   background: transparent;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .causes-card__header {
