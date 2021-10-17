@@ -1,4 +1,5 @@
 @import '../../assets/styles/main.css';
+
 .main {
   width: 100%;
   max-width: var(--content);
@@ -48,6 +49,7 @@
   max-width: var(--content);
   margin: 0 auto;
 }
+
 .blog__heading {
   display: flex;
   flex-direction: column;
@@ -59,7 +61,7 @@
   padding: 0 10px;
 }
 
-.blog__heading > * {
+.blog__heading>* {
   margin: 24px auto;
 }
 
@@ -69,9 +71,11 @@
   justify-content: space-around;
   padding: 0 25px;
 }
-.articles > * {
+
+.articles>* {
   margin: 25px;
 }
+
 .article {
   max-width: 364px;
   height: 87.8vw;
@@ -98,18 +102,22 @@
   object-fit: contain;
   object-position: center;
 }
+
 .article__body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-.article__body > * {
+
+.article__body>* {
   padding: 5px;
 }
+
 .article__title {
   text-align: center;
 }
+
 .article__copy {
   text-align: center;
   font-size: 14px;
@@ -194,15 +202,13 @@
     font-size: 30px;
     line-height: 35px;
   }
-
   .article__copy {
     font-size: 12px;
     line-height: 18px;
-   }
-
+  }
   .article:nth-child(odd) {
     display: none;
-   }
+  }
 }
 
 .box-composing {
@@ -243,6 +249,7 @@
   border-image-slice: 1 fill;
   border-image-outset: 37.5rem;
 }
+
 
 /*viewports for cookie box */
 
@@ -418,4 +425,3 @@
     padding-right: 5%;
   }
 }
-
