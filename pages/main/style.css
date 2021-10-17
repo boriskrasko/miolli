@@ -14,7 +14,6 @@ html {
   align-items: center;
 }
 
-
 /*Buttons*/
 
 .buttons__inner>* {
@@ -805,7 +804,7 @@ z nadrukiem of topbar menu*/
   width: 100%;
 }
 
-.checkbox-toogle-menu {
+.checkbox-toggle-menu {
   display: block;
   position: absolute;
   z-index: 99;
@@ -817,7 +816,7 @@ z nadrukiem of topbar menu*/
   opacity: 0;
 }
 
-.button-toogle-menu {
+.button-toggle-menu {
   position: absolute;
   top: 0;
   right: 0;
@@ -832,12 +831,12 @@ z nadrukiem of topbar menu*/
   align-items: center;
 }
 
-.checkbox-toogle-menu:hover~.button-toogle-menu {
+.checkbox-toggle-menu:hover~.button-toggle-menu {
   border-color: #99817A;
 }
 
-.button-toogle-menu span {
-  display: block;
+.button-toggle-menu span {
+  display: inline-flex;
   width: 2rem;
   height: 2px;
   margin: 0.25rem;
@@ -845,36 +844,36 @@ z nadrukiem of topbar menu*/
   background: #fff;
 }
 
-.checkbox-toogle-menu:checked~.button-toogle-menu span:first-child {
+.checkbox-toggle-menu:checked~.button-toggle-menu span:first-child {
   transform: rotate(45deg) translate(0.4375rem, 0.4375rem);
   opacity: 1;
 }
 
-.checkbox-toogle-menu:checked~.button-toogle-menu span:nth-child(2) {
+.checkbox-toggle-menu:checked~.button-toggle-menu span:nth-child(2) {
   transform: scale(0.2, 0.2);
   opacity: 0;
 }
 
-.checkbox-toogle-menu:checked~.button-toogle-menu span:last-child {
+.checkbox-toggle-menu:checked~.button-toggle-menu span:last-child {
   transform: rotate(-45deg) translate(0.4375rem, -0.4375rem);
   opacity: 1;
 }
 
-.checkbox-toogle-menu:checked~.header-menu_inner {
+.checkbox-toggle-menu:checked~.header-menu_inner {
   height: 100vh;
 }
 
-.checkbox-toogle-menu:checked~.header-menu_inner .main-nav {
+.checkbox-toggle-menu:checked~.header-menu_inner .main-nav {
   visibility: visible;
   opacity: 1;
 }
 
-.checkbox-toogle-menu:checked~.header-menu_inner .topbar {
+.checkbox-toggle-menu:checked~.header-menu_inner .topbar {
   visibility: visible;
   opacity: 1;
 }
 
-.checkbox-toogle-menu:checked~.header-menu_inner .button_business-offer {
+.checkbox-toggle-menu:checked~.header-menu_inner .button_business-offer {
   visibility: visible;
   opacity: 1;
 }
@@ -1107,6 +1106,7 @@ z nadrukiem of topbar menu*/
 }
 
 .chat__icon span {
+  display: inline-block;
   position: relative;
   width: 0.625rem;
   height: 0.0625rem;
