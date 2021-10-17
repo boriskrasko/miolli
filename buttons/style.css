@@ -50,19 +50,21 @@ a.button {
   --size: 7rem;
   width: var(--size);
   height: var(--size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   font-size: calc(var(--size) * 0.09);
   line-height: calc(var(--size) * 0.16);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border: none;
   border-radius: 50%;
-  display: table-cell;
-  vertical-align: middle;
   text-align: center;
 }
 
 .button_round > * {
-  margin: 0.5rem;
+  margin: 0.4rem;
 }
 
 .button_outlined {
