@@ -384,6 +384,10 @@ a {
   color: var(--pastel-pink);
 }
 
+.txt-color_dark-vanilla {
+  color: var(--dark-vanilla);
+}
+
 /*makaroniki
 z nadrukiem of topbar menu*/
 
@@ -1490,4 +1494,8 @@ h5, .like-h5 {
 .footer-nav .active {
   color: var(--dark-vanilla);
   pointer-events: none;
+}
+
+.counter {
+  display: flex;
 }
