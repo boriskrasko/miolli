@@ -5,242 +5,427 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miolli | Pyszny blog</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
+    <div class="chat">
+      <input type="checkbox">
+      <button class="chat__button">
+        <i class="chat__icon">
+        <span></span>
+        <span></span>
+        </i>
+      </button>
+      <div class="chat-popup" id="chatForm">
+        <div class="chat-popup__heading">
+          <img class="chat-popup__logo" src="../../assets/icons/logo-min.svg" alt="logo">
+          <h5>porozmawiaj z miolli</h5>
+        </div>
+        <div class="chat-popup__history">
+          <p><span class="paragraph_upper">Obecnie nie jesteśmy dostępni on-line</span><br>
+            <span class="paragraph">Zostaw nam wiadomość lub zadzwoń pod numer XXX XXX XXX</span>
+          </p>
+        </div>
+        <form action="/" class="chat-popup__form">
+          <textarea class="chat-popup__textarea" placeholder="Wpisz swoją wiadomość" name="meassege"></textarea>
+          <button type="submit" class="chat__button_submit button-contained_dark-vanilla">
+          <img src="../../assets/icons/send.svg" alt="send">
+          </button>
+        </form>
+      </div>
+    </div>
     <header class="header">
-      <div id="mainMenu">
-        <div id="menuToggle">
-          <input type="checkbox">
-          <div id="btnToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="nav-menu">
-            <div class="topbar">
-              <div class="logo">
-                <a class="back-to-home" href="#" title="Miolli">
-                  <picture>
-                    <source srcset="../../assets/icons/logo.svg" media="(min-width: 400px)">
-                    <img src="../../assets/icons/logo-min.svg" alt="logo">
-                  </picture>
-                </a>
-              </div>
-              <div class="topnav">
-                <nav>
-                  <a href="">twoja kompozycja</a>
-                  <a href="">gotowe sety makaroników</a>
-                  <a href="">makaroniki&nbsp;z nadrukiem
-                  <img width="19" height="24" src="../../assets/icons/arrow-down.svg" alt="arrow down">
+      <div class="header-menu">
+        <input class="checkbox-toggle-menu" type="checkbox">
+        <button class="button button-toggle-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
+        <div class="header-menu_inner">
+          <div class="topbar">
+            <div class="topbar__logo">
+              <a href="../main/index.html" title="Miolli">
+                <picture>
+                  <source srcset="../../assets/icons/logo.svg" media="(min-width: 320px)">
+                  <img src="../../assets/icons/logo-min.svg" alt="logo">
+                </picture>
+              </a>
+            </div>
+            <nav class="topnav" aria-label="Topnav">
+              <ul class="topnav__list">
+                <li class="topnav__item_cart topnav__item_hasChild">
+                  <a href="../koszyk/index.html" class="topnav__link">
+                  <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
+                  <span class="topnav__item_cart_counter inner">14</span>
                   </a>
-                  <div class="imprint-container">
-                    <div class="imprint-content">
-                      <a href="">wszystkie okazje</a>
-                      <p>najpopularniejsze teraz:</p>
-                      <ul>
-                        <li><a href="">dzień mamy</a></li>
-                        <li><a href="">dzień dziecka</a></li>
-                        <li><a href="">dzień taty</a></li>
+                  <div class="cart-preview">
+                    <div class="cart-preview__item">
+                      <figure class="cart-preview__figure">
+                        <img class="cart-preview__image" src="../../assets/images/set-01.png" alt="set">
+                      </figure>
+                      <div class="cart-preview__body">
+                        <div class="cart-preview__heading">
+                          <h6 class="cart-preview__name h6">set na lato</h6>
+                        </div>
+                        <ul class="cart-preview__description">
+                          <li class="cart-preview__description-item">ilość:<span class="cart-preview__quantity">2</span></li>
+                          <li class="cart-preview__description-item">cena:<span class="cart-preview__price">27</span></li>
+                          <li class="cart-preview__description-item">suma:<span class="cart-preview__cost">54</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-preview__item">
+                      <figure class="cart-preview__figure">
+                        <img class="cart-preview__image" src="../../assets/images/set-01.png" alt="set">
+                      </figure>
+                      <div class="cart-preview__body">
+                        <div class="cart-preview__heading">
+                          <h6 class="cart-preview__name h6">set na lato</h6>
+                        </div>
+                        <ul class="cart-preview__description">
+                          <li class="cart-preview__description-item">ilość:<span class="cart-preview__quantity">2</span></li>
+                          <li class="cart-preview__description-item">cena:<span class="cart-preview__price">27</span></li>
+                          <li class="cart-preview__description-item">suma:<span class="cart-preview__cost">54</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-preview__footer">
+                      <a href="../koszyk/index.html" class="cart-preview__remainder">i jeszcze <span class="rest">1</span> ...</a>
+                      <a href="../koszyk/index.html" class="cart-preview__button button button-contained button-contained_dark-vanilla button_size_m">przejdź do koszyka</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="topnav__item_user">
+                  <a href="../user/index.html" class="topnav__link">
+                  <img class="topnav__link_icon" src="../../assets/icons/user.svg" alt="user">
+                  </a>
+                </li>
+                <li class="topnav__item topnav__item_hasChild">
+                  <a href="../nadruki/index.html" class="topnav__link">makaroniki&nbsp;z nadrukiem
+                  <span class="material-icons">south</span>
+                  </a>
+                  <div class="printing">
+                    <figure class="printing__figure">
+                      <img src="https://satyr.io/200x200?text=IMAGE" alt="" class="printing__image">
+                      <img src="https://satyr.io/100x100?text=print" alt="" class="printing__image_print" style="opacity: 0.5">
+                    </figure>
+                    <span class="printing__vertical-border"></span>
+                    <nav class="printing__nav" aria-label="Printing">
+                      <ul class="printing__list printing__list_external">
+                        <li class="printing__item">
+                          <a href="../nadruki/index.html" class="printing__link">wszystkie okazje</a>
+                        </li>
+                        <li>
+                          <p>najpopularniejsze teraz:</p>
+                          <ul class="printing__list printing__list_internal">
+                            <li class="printing__item">
+                              <a href="../nadruki/index.html" class="printing__link">dzień mamy</a>
+                            </li>
+                            <li class="printing__item">
+                              <a href="../nadruki/index.html" class="printing__link">dzień dziecka</a>
+                            </li>
+                            <li class="printing__item">
+                              <a href="../nadruki/index.html" class="printing__link">dzień taty</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="printing__item printing__item_underline">
+                          <a href="../nadruki/index.html" class="printing__link">dedykowany nadruk</a>
+                          <span class="material-icons">east</span>
+                        </li>
                       </ul>
-                      <a href="">
-                      <span>dedykowany nadruk</span>
-                      <img src="../../assets/icons/arrow-right_pink.svg" alt="arrow"></a>
-                      </a>
-                    </div>
-                    <span class="vertical-line"></span>
-                    <div class="imprint-image">
-                      <img src="../../assets/images/slony-karmel.png" alt="slony karmel">
-                      <div class="imprint-logo">
-                        <img src="../../assets/icons/logo-min.svg" alt="logo">
-                      </div>
-                    </div>
+                    </nav>
                   </div>
-                  </ul>
-                </nav>
-                <a class="like-btn" href="#">
-                <img width="19" height="34" src="../../assets/icons/user.svg" alt="user">
-                </a>
-                <a class="like-btn cart-btn" href="#">
-                <img width="19" height="34" src="../../assets/icons/cart.svg" alt="cart">
-                <span class="count-of-cart">4</span>
-                </a>
-                <div class="cart-container">
-                  <div class="cart-item">
-                    <div class="cart-item-image">
-                      <img class="set-image" src="../../assets/images/set-01.png" alt="set">
-                    </div>
-                    <div class="cart-item-content">
-                      <div class="cart-item-heading">
-                        <h4>set na lato</h4>
-                      </div>
-                      <div class="cart-item-description">
-                        <ul>
-                          <li>ilość:<span class="quantity">2</span></li>
-                          <li>cena:<span class="price">27</span></li>
-                          <li>suma:<span class="cost">54</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart-item">
-                    <div class="cart-item-image">
-                      <img class="set-image" src="../../assets/images/set-02.png" alt="set">
-                    </div>
-                    <div class="cart-item-content">
-                      <div class="cart-item-heading">
-                        <h4>set na lato</h4>
-                      </div>
-                      <div class="cart-item-description">
-                        <ul>
-                          <li>ilość:<span class="quantity">2</span></li>
-                          <li>cena:<span class="price">27</span></li>
-                          <li>suma:<span class="cost">54</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart-item">
-                    <div class="cart-item-image">
-                      <img class="set-image" src="../../assets/images/set-03.png" alt="set">
-                    </div>
-                    <div class="cart-item-content">
-                      <div class="cart-item-heading">
-                        <h4>set na lato</h4>
-                      </div>
-                      <div class="cart-item-description">
-                        <ul>
-                          <li>ilość:<span class="quantity">2</span></li>
-                          <li>cena:<span class="price">27</span></li>
-                          <li>suma:<span class="cost">54</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <a href="#" class="remainder">i jeszcze <span class="rest">1</span> ...</a>
-                  <a href="" class="like-btn">przejdź do koszyka</a>
-                </div>
-              </div>
-            </div>
-            <div class="navbar">
-              <nav>
-                <ul>
-                  <li><a href="#">o nas</a></li>
-                  <li><a href="">blog</a></li>
-                  <li><a href="../faq/index.html">faq</a></li>
-                  <li><a href="#">konfigurator on-line</a></li>
-                  <li><a href="#">oferta dla kawiarni</a></li>
-                  <li><a href="#">oferta eventowa</a></li>
-                  <li><a href="#">twoja kompozycja</a></li>
-                  <li><a href="#">gotowe sety makaroników</a></li>
-                  <li><a href="#">makaroniki z nadrukiem</a></li>
-                  <li><a href="#">miolli dla biznesu</a></li>
-                </ul>
-              </nav>
-            </div>
-            <div class="business-offer">
-              <a href="../biznes/index.html">miolli<br>dla biznesu<img width="19" height="24" src="../../assets/icons/arrow-down.svg" alt="arrow"></a>
-            </div>
+                </li>
+                <li class="topnav__item">
+                  <a href="../zestawy/index.html" class="topnav__link">gotowe sety makaroników</a>
+                </li>
+                <li class="topnav__item">
+                  <a href="../konfigurator/index.html" class="topnav__link">twoja kompozycja</a>
+                </li>
+              </ul>
+            </nav>
           </div>
+          <nav class="main-nav" aria-label="Main">
+            <ul class="main-nav__list">
+              <li class="main-nav__item hidden">
+                <a href="../konfigurator/index.html" class="main-nav__link ">twoja kompozycja</a>
+              </li>
+              <li class="main-nav__item hidden">
+                <a href="../zestawy/index.html" class="main-nav__link">gotowe sety makaroników</a>
+              </li>
+              <li class="main-nav__item hidden">
+                <a href="../nadruki/index.html" class="main-nav__link">makaroniki z nadrukiem</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../o-nas/index.html" class="main-nav__link">o nas</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../blog/index.html" class="main-nav__link active">blog</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../konfigurator/index.html" class="main-nav__link">konfigurator on-line</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../oferta/index.html" class="main-nav__link">oferta dla kawiarni</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../oferta-eventowa/index.html" class="main-nav__link">oferta eventowa</a>
+              </li>
+              <li class="main-nav__item hidden">
+                <a href="../biznes/index.html" class="main-nav__link">miolli dla biznesu</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="button_business-offer button button-contained button-contained_dark-vanilla" href="../biznes/index.html">miolli<br>dla biznesu
+          <span class="material-icons">north_east</span>
+          </a>
         </div>
       </div>
     </header>
-    <main>
-        <div class="breadcrumbs">
-          <img src="../../assets/icons/home.svg" alt="home">
-          <a href="../main/index.html">strona główna</a>
-          <img src="../../assets/icons/arrow-right-s.svg" alt="&#8594;">
-          <a href="">pyszny blog</a>
+    <main class="main">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ul class="breadcrumb__list uppercase">
+          <li class="breadcrumb__item">
+            <img src="../../assets/icons/home.svg" alt="&#8962;">
+            <a class="breadcrumb__link" href="../main/index.html">strona główna</a>
+          </li>
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__icon material-icons">east</span>
+            <a class="breadcrumb__link" href="#">blog</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="blog">
+        <div class="blog__heading">
+          <h1 class="blog__title h1 txt-color_pastel-pink">pyszny blog</h1>
+          <hr class="blog__underline underline_heading">
+          <h4 class="blog__subtitle paragraph_upper">
+            czyli wszystko co powinieneś wiedzieć o makaronikach i nie tylko!
+          </h4>
         </div>
-      <section class="greeting">
-        <div class="greeting__content">
-          <div class="greeting__heading">
-            <h1 class="greeting__title">pyszny blog</h1>
-            <span class="underline"></span>
-            <h4 class="greeting__subtitle">czyli wszystko co powinieneś wiedzieć o makaronikach i nie tylko!</h4>
-          </div>
-          <div class="greeting__articles">
-            <article>
-              <img src="../../assets/images/article-image-1.png" alt="">
-              <h2>czy większe znaczy lepsze?</h2>
-              <p>o tym czym charakteryzują się najlepszej jakości makaroniki</p>
-              <a href="" class="like-btn">czytaj</a>
-            </article>
-            <article>
-              <img src="../../assets/images/article-image-1.png" alt="">
-              <h2>czy większe znaczy lepsze?</h2>
-              <p>o tym czym charakteryzują się najlepszej jakości makaroniki</p>
-             <a href="" class="like-btn">czytaj</a>
-            </article>
-            <article>
-              <img src="../../assets/images/article-image-1.png" alt="">
-              <h2>czy większe znaczy lepsze?</h2>
-              <p>o tym czym charakteryzują się najlepszej jakości makaroniki</p>
-              <a href="" class="like-btn">czytaj</a>
-            </article>
-            <article>
-              <img src="../../assets/images/article-image-1.png" alt="">
-              <h2>czy większe znaczy lepsze?</h2>
-              <p>o tym czym charakteryzują się najlepszej jakości makaroniki</p>
-              <a href="" class="like-btn">czytaj</a>
-            </article>
-            <article>
-              <img src="../../assets/images/article-image-1.png" alt="">
-              <h2>czy większe znaczy lepsze?</h2>
-              <p>o tym czym charakteryzują się najlepszej jakości makaroniki</p>
-             <a href="" class="like-btn">czytaj</a>
-            </article>
-            <article>
-              <img src="../../assets/images/article-image-1.png" alt="">
-              <h2>czy większe znaczy lepsze?</h2>
-              <p>o tym czym charakteryzują się najlepszej jakości makaroniki</p>
-              <a href="" class="like-btn">czytaj</a>
-            </article>
+        <div class="blog__body articles">         
+          <article class="article">
+            <div class="article__header">
+              <figure class="article__figure">
+                <img src="../../assets/images/article-image-1.png" alt="">
+              </figure>
+            </div>
+            <div class="article__body">
+              <h2 class="article__title h5">czy większe znaczy lepsze?</h2>
+              <p class="article__copy paragraph_upper">
+               o tym czym charakteryzują się najlepszej jakości makaroniki
+              </p>
+            </div>
+            <footer class="article__footer">
+              <div class="article__actions">
+                <a href="articles/index.html" class="article__button button button-outlined button-outlined_parrot-pink button_size_m">
+                 czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
+          <article class="article">
+            <div class="article__header">
+              <figure class="article__figure">
+                <img src="../../assets/images/article-image-1.png" alt="">
+              </figure>
+            </div>
+            <div class="article__body">
+              <h2 class="article__title h5">czy większe znaczy lepsze?</h2>
+              <p class="article__copy paragraph_upper">
+               o tym czym charakteryzują się najlepszej jakości makaroniki
+              </p>
+            </div>
+            <footer class="article__footer">
+              <div class="article__actions">
+                <a href="articles/index.html" class="article__button button button-outlined button-outlined_parrot-pink button_size_m">
+                 czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
+          <article class="article">
+            <div class="article__header">
+              <figure class="article__figure">
+                <img src="../../assets/images/article-image-1.png" alt="">
+              </figure>
+            </div>
+            <div class="article__body">
+              <h2 class="article__title h5">czy większe znaczy lepsze?</h2>
+              <p class="article__copy paragraph_upper">
+               o tym czym charakteryzują się najlepszej jakości makaroniki
+              </p>
+            </div>
+            <footer class="article__footer">
+              <div class="article__actions">
+                <a href="articles/index.html" class="article__button button button-outlined button-outlined_parrot-pink button_size_m">
+                 czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
+          <article class="article">
+            <div class="article__header">
+              <figure class="article__figure">
+                <img src="../../assets/images/article-image-1.png" alt="">
+              </figure>
+            </div>
+            <div class="article__body">
+              <h2 class="article__title h5">czy większe znaczy lepsze?</h2>
+              <p class="article__copy paragraph_upper">
+               o tym czym charakteryzują się najlepszej jakości makaroniki
+              </p>
+            </div>
+            <footer class="article__footer">
+              <div class="article__actions">
+                <a href="articles/index.html" class="article__button button button-outlined button-outlined_parrot-pink button_size_m">
+                 czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
+          <article class="article">
+            <div class="article__header">
+              <figure class="article__figure">
+                <img src="../../assets/images/article-image-1.png" alt="">
+              </figure>
+            </div>
+            <div class="article__body">
+              <h2 class="article__title h5">czy większe znaczy lepsze?</h2>
+              <p class="article__copy paragraph_upper">
+               o tym czym charakteryzują się najlepszej jakości makaroniki
+              </p>
+            </div>
+            <footer class="article__footer">
+              <div class="article__actions">
+                <a href="articles/index.html" class="article__button button button-outlined button-outlined_parrot-pink button_size_m">
+                 czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
+          <article class="article">
+            <div class="article__header">
+              <figure class="article__figure">
+                <img src="../../assets/images/article-image-1.png" alt="">
+              </figure>
+            </div>
+            <div class="article__body">
+              <h2 class="article__title h5">czy większe znaczy lepsze?</h2>
+              <p class="article__copy paragraph_upper">
+               o tym czym charakteryzują się najlepszej jakości makaroniki
+              </p>
+            </div>
+            <footer class="article__footer">
+              <div class="article__actions">
+                <a href="articles/index.html" class="article__button button button-outlined button-outlined_parrot-pink button_size_m">
+                 czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
+        </div>
+        <div class="blog__footer">
+           <div class="sets-block__pagination">
+            <nav class="pagination" aria-label="Pagination">
+              <ul class="pagination__list">
+                <li class="pagination__item"><a href="#" class="pagination__link pagination__link_prev pagination__link_disabled">
+                  <span class="material-icons">arrow_back_ios</span>
+                  </a>
+                </li>
+                <li class="pagination__item"><a href="#" class="pagination__link active">1</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link pagination__link_next">
+                  <span class="material-icons">arrow_forward_ios</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </section>
-      <div class="pagination-bar">
-        <a href="#">&lt;</a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">&gt;</a>
-      </div>
+      <section class="box-composing">
+        <div class="box-composing__container">
+          <div class="box-composing__aside">
+            <div class="box-composing__cookie-box"></div>
+          </div>
+          <div class="box-composing__content">
+            <header class="box-composing__heading">
+              <h2 class="box-composing__title h3">skomponuj <br>swoje pudełko</h2>
+            </header>
+            <div class="box-composing__body">
+              <ul class="box-composing__list">
+                <li class="box-composing__item">
+                  <span class="box-composing__point">1</span>
+                  <p class="box-composing__copy paragraph_upper">wybierz rozmiar (6/12/24szt)</p>
+                </li>
+                <li class="box-composing__item">
+                  <span class="box-composing__point">2</span>
+                  <p class="box-composing__copy paragraph_upper">wybierz ulubione smaki/
+                  </p>
+                </li>
+                <li class="box-composing__item">
+                  <span class="box-composing__point">3</span>
+                  <p class="box-composing__copy paragraph"><span class="paragraph_upper">dodaj nadruk z naszej bazy<br> albo swój własny </span><br>
+                    to może być napis lub pełnokolorowy wydruk (np. Twoje logo)
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <footer class="box-composing__footer">
+          <div class="box-composing__footer_wrapper">
+            <p class="box-composing__copy paragraph_upper">
+              proste? To do dzieła! <br>Smacznego!
+            </p>
+            <img class="logo" src="../../assets/icons/logo-min.svg" alt="logo">
+          </div>
+          <div class="box-composing__actions">
+            <a href="../konfigurator/index.html" class="box-composing__button button button-outlined button_size_l">stwórz swoją kompozycję</a>
+          </div>
+        </footer>
+      </section>
     </main>
-    <div class="chat-container">
-      <input type="checkbox">
-      <button class="chat-button">
-        <div class="chat-icon">
-          <span></span>
-          <span></span>
-        </div>
-      </button>
-      <div class="chat-window">
-        <div class="chat-heading">
-          <img class="chat-logo" src="../../assets/icons/logo-min.svg" alt="logo">
-          <h5>porozmawiaj z miolli</h5>
-        </div>
-        <div class="chat-history">
-          <p>Obecnie nie jesteśmy dostępni on-line<br>Zostaw nam wiadomość lub zadzwoń pod numer XXX XXX XXX</p>
-        </div>
-        <div class="chat-message">
-          <form action="" class="form-container">
-            <textarea placeholder="Wpisz swoją wiadomość" name="message"></textarea>
-            <button type="submit" class="send-btn">
-            <img class="chat-btn" src="../../assets/icons/send.svg" alt="send">
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <footer class="footer"><h4>FOOTER</h4></footer>
-    <script>
-      const cartContainer = document.querySelector('.cart-container');
-      const imprintContainer = document.querySelector('.imprint-container');
-      const showContainer = (containerName) => containerName.classList.toggle('visibile');
-      cartContainer.addEventListener('mouseover', () => showContainer(cartContainer));
-      cartContainer.addEventListener('mouseout', () => showContainer(cartContainer));
-      imprintContainer.addEventListener('mouseover', () => showContainer(imprintContainer));
-      imprintContainer.addEventListener('mouseout',() => showContainer(imprintContainer));
-    </script>
+    <footer class="footer">
+      <nav class="footer-nav" aria-label="footnav">
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item">
+            <a href="../biznes/index.html" class="footer-nav__link">dla biznesu</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../zestawy/index.html" class="footer-nav__link">gotowe sety</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../o-nas/index.html" class="footer-nav__link">o nas</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../nadruki/index.html" class="footer-nav__link">makaroniki z nadrukiem</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../konfigurator/index.html" class="footer-nav__link">twoja kompozycja</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../alergeny/index.html" class="footer-nav__link">alergeny</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../faq/index.html" class="footer-nav__link">faq</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../blog/index.html" class="footer-nav__link active">blog</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../kontakt/index.html" class="footer-nav__link">kontakt</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link"></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

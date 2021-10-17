@@ -189,3 +189,9 @@ main {
 .faq__list li input:checked~.faq__question::after {
   content: '-';
 }
+
+@media (max-width: 412px) {
+  .faq__list .faq__question::after {
+    left: 10%;
+  }
+}
