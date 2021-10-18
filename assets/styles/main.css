@@ -320,6 +320,9 @@ a {
   .h3 {
     font: normal 50px/50px var(--titleFont);
   }
+  .h5 {
+    font: normal 1.3125rem/25px var(--titleFont);
+  }
 }
 
 /*paragraph*/
@@ -386,6 +389,10 @@ a {
 
 .txt-color_dark-vanilla {
   color: var(--dark-vanilla);
+}
+
+.fill_dark-vanilla {
+  background: var(--dark-vanilla);
 }
 
 /*makaroniki
@@ -571,6 +578,7 @@ z nadrukiem of topbar menu*/
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-transform: uppercase;
 }
 
 .cart-preview__description {
