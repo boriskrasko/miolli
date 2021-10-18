@@ -16,7 +16,7 @@ body {
 @media screen and (max-width: 500px)  {
   body.open {
     overflow: hidden;
-    padding-right: 4px;
+    margin-right: 4px;
   }
 }
 
@@ -219,4 +219,8 @@ a.button {
   .flavor {--size: 170px}
   .button_round > span {display: none;}
   .button_round > svg {width: 3rem; height: 3rem;}
+}
+
+main {
+  min-height: 100vh;
 }

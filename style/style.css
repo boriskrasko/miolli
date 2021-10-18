@@ -88,11 +88,14 @@
   justify-content: flex-end;
   width: 100%;
   height: 78px;
+}
+
+.header_homepage .topnav {
   visibility: hidden;
 }
 
-.switch:checked ~ .topnav{
-  visibility: visible;
+.switch:checked ~ .topnav {
+  visibility: visible ;
 }
 
 .topnav__list {
@@ -100,11 +103,15 @@
   right: 78px;
   display: inline-flex;
   justify-content: flex-end;
-  width: max-content;
+  width: calc(100% - 78px);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.17);
 }
 
-@media (max-width: 868px) {
+.header_homepage .topnav__list {
+  width: max-content;
+}
+
+@media (max-width: 960px) {
   .topnav__item {
     display: none;
   }
@@ -115,34 +122,22 @@
   background-color: #FFFFFF;
 }
 
-.topnav__item_logo {
-  display: none;
-}
-
 .mobile-only {
   display: none;
 }
 
-@media screen and (max-width: 500px) {
-  .topnav__item_logo {
-    display: flex;
-  }
-}
-
-@media screen and (max-width: 374px) {
-  .topnav__item_logo .topnav__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
-  .topnav__item_logo .topnav__link img {
-    width: 60%;
-  }
-}
-
 .topnav__item_logo {
+  position: absolute;
+  left: 0;
   background-color: #FFFFFFFE;
+}
+
+.header_homepage .topnav__item_logo {
+  display: none;
+}
+
+.topnav__item_logo img[src="icons/miolli-logo-small.svg"] {
+  display: none;
 }
 
 .topnav__link {
@@ -1647,7 +1642,6 @@ hr {
 }
 
 ::-webkit-scrollbar-track {
-  margin: 27.1px 0;
   background: transparent;
 }
 
@@ -1656,12 +1650,10 @@ hr {
 }
 
 ::-webkit-scrollbar-track-piece:end {
-  margin-bottom: 27.1px;
   background: transparent;
 }
 
 ::-webkit-scrollbar-track-piece:start {
-  margin-top: 27.1px;
   background: transparent;
 }
 
