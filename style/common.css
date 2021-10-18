@@ -188,18 +188,18 @@ a.button {
 }
 
 .arrow-icon {
-  width: 100%;
-  height: 100%;
-  stroke: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-b));
+  width: 42px;
+  height: 42px;
+  stroke: hsl(var(--primary-h), var(--primary-s), var(--primary-b));
   fill: transparent;
 }
 
 .button_arrow:hover > .arrow-icon {
-  --secondary-b: 71%;
+  --primary-b: 67%;
 }
 
 .button_arrow:active > .arrow-icon {
-  --secondary-b: 81%;
+  --primary-b: 77%;
 }
 
 .grid-icon {

@@ -399,10 +399,12 @@
 
 .topnav-cart__button {
   display: flex;
+  align-self: center;
   justify-content: center;
   padding: 16px 23px;
   font: 16px/27px var(--contentFont);
   color: #FFFFFF;
+  margin-left: 7px;
 }
 
 /* Hero */
@@ -563,7 +565,8 @@ hr {
 
 .section__button {
   padding: 16px 23px;
-  font: 16px/27px var(--contentFont);
+  /* font: 16px/27px var(--contentFont); */
+  
 }
 
 .section__slider {
@@ -959,6 +962,18 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.reason__slider .arrow-icon {
+  stroke: hsl(196, 37%, 65%);
+}
+
+.reason__slider .button_arrow:hover .arrow-icon {
+  stroke: hsl(196, 37%, 55%);
+}
+
+.reason__slider .button_arrow:active .arrow-icon {
+  stroke: hsl(196, 37%, 70%);
 }
 
 .reason__button {
