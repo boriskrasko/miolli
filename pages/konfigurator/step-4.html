@@ -188,16 +188,16 @@
       <div class="configurator">
         <div class="configurator__content">
           <div class="configurator__header">
-            <h2 class="configurator__title h2 configurator__title_notFirstStep">skomponuj swoje pudełko</h2>
+            <h2 class="configurator__title h2">gotowe!</h2>
           </div>
           <div class="progress-bar">
             <div class="progress-counter">
              <p>
-              <span class="progress-counter__current-step">3</span>
+              <span class="progress-counter__current-step">4</span>
               <span class="progress-counter__delimiter">/</span>
               <span class="progress-counter__total-steps">4</span>
              </p>
-              <p class="progress-counter__current-step-name">dodaj nadruk</p>
+              <p class="progress-counter__current-step-name">dodaj do koszyka</p>
             </div>
             <ul class="progress-bar__steps">
               <li class="progress-bar__step">
@@ -213,7 +213,7 @@
                 <span class="progress-bar__step-name">dodaj nadruk</span>
               </li>
               <li class="progress-bar__step">
-                <span class="progress-bar__count"></span>
+                <span class="progress-bar__count active"></span>
                 <span class="progress-bar__step-name">dodaj do koszyka</span>
               </li>
             </ul>
@@ -223,196 +223,32 @@
             <div class="configurator__asside">
               <div class="cookie-box"></div>
             </div>
-            <div class="print-choice">
-        <div class="print-choice__header">
-        <div class="print-choice__price">
-          <span class="print-choice__price_number">200, - </span>
-          <span class="print-choice__price_copy">bieżąca cena</span>
-        </div>
-    </div>
-    <div class="print-choice__body">
-      <section class="print-choice__section">
-       <div class="print-choice__heading">
-          <h2 class="print-choice__subtitle paragraph_upper_l">dodaj nadruk</h2>
-       </div>
-        <div class="print-choice__paragraph">
-          <p class="print-choice__copy paragraph">
-          Kliknij w nadruk by dodać go do pudełka. <br>
-          Chcesz dostać dedykowany nadruk 
-          <a class="print-choice__copy_link" href="">kliknij tutaj</a>
-
-        </p>
-        <p class="print-choice__copy paragraph">
-          Ważne! Nadruki wyglądają najlepiej na jasnych 
-          makaronikach. Firma Miolli zastrzega sobie 
-          prawo do za druku tych makaroników na których 
-          projekt wyglądać będzie najlepiej
-        </p>
-        <p class="print-choice__copy paragraph">
-          Nie chcesz nadruku? 
-          <a class="print-choice__copy_link" href="">Kliknij tutaj</a>
-        </p>
-        </div>
-      </section>
-      <section class="print-choice__section print-base">
-       <div class="print-choice__heading">
-          <h2 class="configurator__subtitle paragraph_upper_l">nasza baza nadruków</h2>
-       </div>
-       <div class="print-choice__paragraph">
-        <div class="print-choice__filter">
-          <p class="print-choice__copy paragraph">
-          Wybierz kategorię nadruków:
-        </p>
-        <div class="print-choice__filter_body">
-          <div class="dropdown">
-                <div class="dropdown__select">
-                  <div class="dropdown__item-current">
-                      <p class="dropdown__text-current">najpopularniejsze</p>
-                    <button class="dropdown__arrow">
-                      <span class="material-icons">arrow_drop_down</span>
+            <div class="quantity_choice">
+              <div class="quantity_choice__heading">
+                <h4 class="paragraph_upper_l">Super!</h4>
+                <p class="paragraph">Skonfigurowałeś swoje pierwsze pudełko!</p>
+                <p class="paragraph">Ile takich pudełek potrzebujesz?</p>
+                <div class="quantity box-count">
+                  <input id="boxSize" name="boxSize" type="text" readonly value="2">
+                  <p class="smth">szt.</p>
+                  <div class="quantity__btns">
+                    <button class="button">
+                    <span class="material-icons">arrow_drop_up</span>
                     </button>
+                    <button class="button">
+                    <span class="material-icons">arrow_drop_down</span>
+                    </button> 
                   </div>
-                  <ul class="options">
-                    <li class="option selected">
-                      <p class="option__text">najpopularniejsze</p>
-                    </li>
-                    <li class="option selected">
-                      <p class="option__text">najpopularniejsze</p>
-                    </li>
-                   <li class="option selected">
-                      <p class="option__text">najpopularniejsze</p>
-                    </li>
-                   <li class="option selected">
-                      <p class="option__text">najpopularniejsze</p>
-                    </li>
-                  </ul>
                 </div>
               </div>
-              <button class="filter__button button button-outlined button_size_s">
-                wyberz
-              </button>
+              <div class="quantity_choice__footer">
+                <p class="paragraph">Chcesz skonfigurować kolejne pudełko?</p>
+                 <a href="index.html" class="quantity_choice__button button button-outlined button_size_l">tak</a>
+                <a href="step-3.html" class="quantity_choice__button button button-outlined button_size_l">nie, idę do koszyka</a>
+              </div>
+            </div>
+
           </div>
-        </div>
-        <p class="print-choice__copy paragraph">
-          Najczęściej wybierane kategorie:
-        </p>
-         <div class="tagbar">
-      <div class="stack stack--horizontal">
-        <button type="button" value="" name="" class="stack__item button">
-        <span class="button__body uppercase">dzień mamy</span>
-        </button>
-        <button class="stack__item button">
-        <span class="button__body uppercase">dzień taty</span>
-        </button>
-        <button class="stack__item button">
-        <span class="button__body uppercase">dla zakochanych</span>
-        </button>
-        <button class="stack__item button">
-        <span class="button__body uppercase">dla dzieci</span>
-        </button>
-        <button class="stack__item button">
-        <span class="button__body uppercase">na urodziny</span>
-        </button>
-        <button class="stack__item button">
-        <span class="button__body uppercase">wielkanoc</span>
-        </button>
-      </div>
-    </div>
-        </div>
-        <div class="print-choice__scrollbox">
-          <div class="scrollbox">
-                  <div class="scrollbox__container">
-                     <ul class="print-list print-variants">
-                      <li class="print-list__item">
-                        <img class="print-list__image"  src="../../assets/images/conf-1-modified.png" alt="print">
-                        <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                        <span class="marker">+</span>
-                      </li>
-                      <li class="print-list__item">
-                        <img class="print-list__image"  src="../../assets/images/conf-1-modified.png" alt="print">
-                        <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                        <span class="marker">+</span>
-                      </li>
-                      <li class="print-list__item">
-                        <img class="print-list__image"  src="../../assets/images/conf-1-modified.png" alt="print">
-                        <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                        <span class="marker">+</span>
-                      </li>
-                      <li class="print-list__item">
-                        <img class="print-list__image"  src="../../assets/images/conf-1-modified.png" alt="print">
-                        <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                        <span class="marker">+</span>
-                      </li>
-                      <li class="print-list__item">
-                        <img class="print-list__image"  src="../../assets/images/conf-1-modified.png" alt="print">
-                        <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                        <span class="marker">+</span>
-                      </li>
-                      <li class="print-list__item">
-                        <img class="print-list__image"  src="../../assets/images/conf-1-modified.png" alt="print">
-                        <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                        <span class="marker">+</span>
-                      </li>
-                      <li class="print-list__item">
-                        <img class="print-list__image"  src="../../assets/images/conf-1-modified.png" alt="print">
-                        <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                        <span class="marker">+</span>
-                      </li>
-                      <li class="print-list__item">
-                        <img class="print-list__image"  src="../../assets/images/conf-1-modified.png" alt="print">
-                        <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                        <span class="marker">+</span>
-                      </li>
-                      <li class="print-list__item">
-                        <img class="print-list__image"  src="../../assets/images/conf-1-modified.png" alt="print">
-                        <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                        <span class="marker">+</span>
-                      </li>
-                      <li class="print-list__item">
-                        <img class="print-list__image"  src="../../assets/images/conf-1-modified.png" alt="print">
-                        <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                        <span class="marker">+</span>
-                      </li>
-                      <li class="print-list__item">
-                        <img class="print-list__image"  src="../../assets/images/conf-1-modified.png" alt="print">
-                        <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                        <span class="marker">+</span>
-                      </li>
-                      <li class="print-list__item">
-                        <img class="print-list__image"  src="../../assets/images/conf-1-modified.png" alt="print">
-                        <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                        <span class="marker">+</span>
-                      </li>
-                      <li class="print-list__item">
-                        <img class="print-list__image"  src="../../assets/images/conf-1-modified.png" alt="print">
-                        <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                        <span class="marker">+</span>
-                      </li>
-                      <li class="print-list__item">
-                        <img class="print-list__image"  src="../../assets/images/conf-1-modified.png" alt="print">
-                        <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                        <span class="marker">+</span>
-                      </li>
-                      
-                    </ul>
-                  </div>
-                  <button class="scrollbox__arrow up inactive">
-                   <span class="material-icons">north</span>
-                  </button>
-                  <button class="scrollbox__arrow down">
-                    <span class="material-icons">south</span>
-                  </button>  
-                </div>
-        </div>
-              </section>
-              <div class="print-choice__footer">
-            <button class="print-choice__button button button-outlined button_size_l">dodaj swój nadruk</button>
-            <a href="step-4.html" class="print-choice__button button button-outlined button_size_l">GOTOWE! PRZEJDŹ DALEJ</a>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
     </main>
     <footer class="footer">
       <nav class="footer-nav" aria-label="footnav">
@@ -450,28 +286,5 @@
         </ul>
       </nav>
     </footer>
-     <script>
-      for (const dropdown of document.querySelectorAll('.dropdown')) {
-        dropdown.addEventListener('click', function () {
-          this.querySelector('.dropdown__select').classList.toggle('opened');
-        })
-      }
-      for (const option of document.querySelectorAll('.option')) {
-        option.addEventListener('click', function () {
-          if (!this.classList.contains('selected')) {
-            this.parentNode.querySelector('.option.selected').classList.remove('selected');
-            this.classList.add('selected');
-            this.closest('.dropdown__select').querySelector('.dropdown__item-current p').textContent = this.textContent;
-          }
-        })
-      }
-      window.addEventListener('click', function (e) {
-        for (const select of document.querySelectorAll('.dropdown__select')) {
-          if (!select.contains(e.target)) {
-            select.classList.remove('opened');
-          }
-        }
-      });
-    </script>
   </body>
 </html>
