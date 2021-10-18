@@ -164,6 +164,26 @@
   color: var(--nav-menu-text);
 }
 
+.topnav a, .topnav li, .sidenav a {
+  transition: color 0.1s ease-out;
+}
+
+.topnav li:hover > a,
+.topnav li:hover .arrow,
+.topnav a:hover:not(.topnav-cart__button)  {
+  color: var(--victoriana);
+  stroke: var(--victoriana);
+}
+
+.topnav__link .arrow {
+  top: 8px;
+  width: 36px;
+  height: 36px;
+  transform: scale(1.7);
+  stroke: #444;
+  fill: transparent;
+}
+
 .like-button {
   z-index: 99;
   display: flex;
@@ -174,10 +194,19 @@
   background-color: var(--nav-menu-fill);
 }
 
+.like-button:hover img {
+  transition: color 0.1s ease-out;
+}
+
+.like-button:hover > * {
+  opacity: 0.7;
+}
+
 .cart-count {
   position: absolute;
   z-index: -1;
-  font: 12px/14px'Monument Grotesk', sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
   color: #FFFFFF;
 }
 
@@ -208,6 +237,10 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #FFFFFF;
+}
+
+.sidenav a:hover   {
+  color: var(--victoriana);
 }
 
 /* Oferta dla biznesu */
