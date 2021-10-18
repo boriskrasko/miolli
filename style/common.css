@@ -16,6 +16,11 @@ body {
 @media screen and (max-width: 500px)  {
   body.open {
     overflow: hidden;
+  }
+}
+
+@media screen and (width: 500px)  {
+  body.open {
     margin-right: 4px;
   }
 }
