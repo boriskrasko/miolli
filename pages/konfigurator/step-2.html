@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miolli | Twoja kompozycja</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <div class="chat">
+      <input type="checkbox">
+      <button class="chat__button">
+        <i class="chat__icon">
+        <span></span>
+        <span></span>
+        </i>
+      </button>
+      <div class="chat-popup" id="chatForm">
+        <div class="chat-popup__heading">
+          <img class="chat-popup__logo" src="../../assets/icons/logo-min.svg" alt="logo">
+          <h5>porozmawiaj z miolli</h5>
+        </div>
+        <div class="chat-popup__history">
+          <p><span class="paragraph_upper">Obecnie nie jesteśmy dostępni on-line</span><br>
+            <span class="paragraph">Zostaw nam wiadomość lub zadzwoń pod numer XXX XXX XXX</span>
+          </p>
+        </div>
+        <form action="/" class="chat-popup__form">
+          <textarea class="chat-popup__textarea" placeholder="Wpisz swoją wiadomość" name="meassege"></textarea>
+          <button type="submit" class="chat__button_submit button-contained_dark-vanilla">
+          <img src="../../assets/icons/send.svg" alt="send">
+          </button>
+        </form>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header-menu">
+        <input class="checkbox-toggle-menu" type="checkbox">
+        <button class="button button-toggle-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
+        <div class="header-menu_inner">
+          <div class="topbar">
+            <div class="topbar__logo">
+              <a href="../main/index.html" title="Miolli">
+                <picture>
+                  <source srcset="../../assets/icons/logo.svg" media="(min-width: 320px)">
+                  <img src="../../assets/icons/logo-min.svg" alt="logo">
+                </picture>
+              </a>
+            </div>
+            <nav class="topnav" aria-label="Topnav">
+              <ul class="topnav__list">
+                <li class="topnav__item_cart topnav__item_hasChild">
+                  <a href="../koszyk/index.html" class="topnav__link">
+                  <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
+                  <span class="topnav__item_cart_counter inner">14</span>
+                  </a>
+                  <div class="cart-preview">
+                    <div class="cart-preview__item">
+                      <figure class="cart-preview__figure">
+                        <img class="cart-preview__image" src="../../assets/images/set-01.png" alt="set">
+                      </figure>
+                      <div class="cart-preview__body">
+                        <div class="cart-preview__heading">
+                          <h6 class="cart-preview__name h6">set na lato</h6>
+                        </div>
+                        <ul class="cart-preview__description">
+                          <li class="cart-preview__description-item">ilość:<span class="cart-preview__quantity">2</span></li>
+                          <li class="cart-preview__description-item">cena:<span class="cart-preview__price">27</span></li>
+                          <li class="cart-preview__description-item">suma:<span class="cart-preview__cost">54</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-preview__item">
+                      <figure class="cart-preview__figure">
+                        <img class="cart-preview__image" src="../../assets/images/set-01.png" alt="set">
+                      </figure>
+                      <div class="cart-preview__body">
+                        <div class="cart-preview__heading">
+                          <h6 class="cart-preview__name h6">set na lato</h6>
+                        </div>
+                        <ul class="cart-preview__description">
+                          <li class="cart-preview__description-item">ilość:<span class="cart-preview__quantity">2</span></li>
+                          <li class="cart-preview__description-item">cena:<span class="cart-preview__price">27</span></li>
+                          <li class="cart-preview__description-item">suma:<span class="cart-preview__cost">54</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-preview__footer">
+                      <a href="../koszyk/index.html" class="cart-preview__remainder">i jeszcze <span class="rest">1</span> ...</a>
+                      <a href="../koszyk/index.html" class="cart-preview__button button button-contained button-contained_dark-vanilla button_size_m">przejdź do koszyka</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="topnav__item_user">
+                  <a href="../user/index.html" class="topnav__link">
+                  <img class="topnav__link_icon" src="../../assets/icons/user.svg" alt="user">
+                  </a>
+                </li>
+                <li class="topnav__item topnav__item_hasChild">
+                  <a href="../nadruki/index.html" class="topnav__link">makaroniki&nbsp;z nadrukiem
+                  <span class="material-icons">south</span>
+                  </a>
+                  <div class="printing">
+                    <figure class="printing__figure">
+                      <img src="https://satyr.io/200x200?text=IMAGE" alt="" class="printing__image">
+                      <img src="https://satyr.io/100x100?text=print" alt="" class="printing__image_print" style="opacity: 0.5">
+                    </figure>
+                    <span class="printing__vertical-border"></span>
+                    <nav class="printing__nav" aria-label="Printing">
+                      <ul class="printing__list printing__list_external">
+                        <li class="printing__item">
+                          <a href="../nadruki/index.html" class="printing__link">wszystkie okazje</a>
+                        </li>
+                        <li>
+                          <p>najpopularniejsze teraz:</p>
+                          <ul class="printing__list printing__list_internal">
+                            <li class="printing__item">
+                              <a href="../nadruki/index.html" class="printing__link">dzień mamy</a>
+                            </li>
+                            <li class="printing__item">
+                              <a href="../nadruki/index.html" class="printing__link">dzień dziecka</a>
+                            </li>
+                            <li class="printing__item">
+                              <a href="../nadruki/index.html" class="printing__link">dzień taty</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="printing__item printing__item_underline">
+                          <a href="../nadruki/index.html" class="printing__link">dedykowany nadruk</a>
+                          <span class="material-icons">east</span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </li>
+                <li class="topnav__item">
+                  <a href="../zestawy/index.html" class="topnav__link">gotowe sety makaroników</a>
+                </li>
+                <li class="topnav__item">
+                  <a href="../konfigurator/index.html" class="topnav__link active">twoja kompozycja</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <nav class="main-nav" aria-label="Main">
+            <ul class="main-nav__list">
+              <li class="main-nav__item hidden">
+                <a href="../konfigurator/index.html" class="main-nav__link ">twoja kompozycja</a>
+              </li>
+              <li class="main-nav__item hidden">
+                <a href="../zestawy/index.html" class="main-nav__link">gotowe sety makaroników</a>
+              </li>
+              <li class="main-nav__item hidden">
+                <a href="../nadruki/index.html" class="main-nav__link">makaroniki z nadrukiem</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../o-nas/index.html" class="main-nav__link">o nas</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../blog/index.html" class="main-nav__link">blog</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../konfigurator/index.html" class="main-nav__link active">konfigurator on-line</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../oferta/index.html" class="main-nav__link">oferta dla kawiarni</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../oferta-eventowa/index.html" class="main-nav__link">oferta eventowa</a>
+              </li>
+              <li class="main-nav__item hidden">
+                <a href="../biznes/index.html" class="main-nav__link">miolli dla biznesu</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="button_business-offer button button-contained button-contained_dark-vanilla" href="../biznes/index.html">miolli<br>dla biznesu
+          <span class="material-icons">north_east</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="configurator">
+        <div class="configurator__content">
+          <div class="configurator__header">
+            <h2 class="configurator__title h2 configurator__title_notFirstStep">skomponuj swoje pudełko</h2>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-counter">
+             <p>
+              <span class="progress-counter__current-step">2</span>
+              <span class="progress-counter__delimiter">/</span>
+              <span class="progress-counter__total-steps">4</span>
+             </p>
+              <p class="progress-counter__current-step-name">wybierz smaki</p>
+            </div>
+            <ul class="progress-bar__steps">
+              <li class="progress-bar__step">
+                <span class="progress-bar__count active"></span>
+                <span class="progress-bar__step-name">wybierz rozmiar</span>
+              </li>
+              <li class="progress-bar__step">
+                <span class="progress-bar__count active"></span>
+                <span class="progress-bar__step-name">wybierz smaki</span>
+              </li>
+              <li class="progress-bar__step">
+                <span class="progress-bar__count"></span>
+                <span class="progress-bar__step-name">dodaj nadruk</span>
+              </li>
+              <li class="progress-bar__step">
+                <span class="progress-bar__count"></span>
+                <span class="progress-bar__step-name">dodaj do koszyka</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="configurator__body">
+            <div class="configurator__asside">
+              <div class="cookie-box"></div>
+            </div>
+            <div class="flavor-choice">
+              <div class="flavor-choice__heading">
+                <h4 class="paragraph_upper_l">WYBIERZ SMAKI</h4>
+                <p class="paragraph">Kliknij w smak lub przeciągnij go do pudełka</p>
+                <p class="paragraph">Nie chcesz tracić czasu na konfigurację? <br>
+                <a href="">Kliknij tutaj </a>
+              i LOSUJ SMAKI!</p>
+              <button class="flavor-choice__button_rounded button button-contained button-contained_parrot-pink button_rounded desktop-only">
+                <span class="paragraph_upper">LOSUJ SMAKI</span></button>
+              </div>
+              <div class="flavor-choice__body scrollbox__outer">
+               <div class="scrollbox__heading">
+                  <h4 class="paragraph_upper_l">DOSTĘPNE SMAKI</h4>
+               </div>
+                <div class="scrollbox">
+                  <div class="scrollbox__container">
+                    <ul class="flavor-list">
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                        <span class="marker">+</span>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                        <span class="marker">+</span>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                        <span class="marker">+</span>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                        <span class="marker">+</span>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                        <span class="marker">+</span>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                        <span class="marker">+</span>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                        <span class="marker">+</span>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                      <li class="flavor-list__item">
+                        <img class="flavor-list__image"  src="../../assets/images/conf-1-modified.png" alt="flavor">
+                        <p class="flavor-list__copy">whisky i wanilia</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <button class="scrollbox__arrow up inactive">
+                   <span class="material-icons">north</span>
+                  </button>
+                  <button class="scrollbox__arrow down">
+                    <span class="material-icons">south</span>
+                  </button>  
+                </div>
+              </div>
+              <div class="flavor-choice__footer">
+                <a href="step-3.html" class="flavor-choice__button button button-outlined button_size_l">GOTOWE! PRZEJDŹ DALEJ</a>
+              </div>
+            </div>
+
+          </div>
+    </main>
+    <footer class="footer">
+      <nav class="footer-nav" aria-label="footnav">
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item">
+            <a href="../biznes/index.html" class="footer-nav__link">dla biznesu</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../zestawy/index.html" class="footer-nav__link">gotowe sety</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../o-nas/index.html" class="footer-nav__link">o nas</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../nadruki/index.html" class="footer-nav__link">makaroniki z nadrukiem</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../konfigurator/index.html" class="footer-nav__link active">twoja kompozycja</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../alergeny/index.html" class="footer-nav__link">alergeny</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../faq/index.html" class="footer-nav__link">faq</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../blog/index.html" class="footer-nav__link">blog</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../kontakt/index.html" class="footer-nav__link">kontakt</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link"></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
