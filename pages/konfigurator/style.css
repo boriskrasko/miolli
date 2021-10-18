@@ -139,7 +139,6 @@ main {
   color: #000;
 }
 
-
 /*progress bar*/
 
 .progress-bar {
@@ -590,6 +589,7 @@ main {
 
 .print-choice__heading {
   width: max-content;
+  margin: 17px 0;
   padding: 7px 17px;
   display: flex;
   min-height: 39px;
@@ -597,7 +597,7 @@ main {
 }
 
 .print-choice__paragraph {
-  padding: 0 17px;
+  padding: 0 17px 24px;
 }
 
 .print-choice__paragraph .print-choice__copy {
@@ -658,17 +658,16 @@ main {
   color: var(--dark-vanilla);
 }
 
-.print-choice__button {
+.print-choice__footer {
+  width: 100%;
+  padding: 39px 5% 39px 5%;
   display: flex;
-  height: 62px;
-  margin: 40px 17px;
-  padding: 0 32px;
-  letter-spacing: .2em;
-  color: #000;
-  border: 1px solid #000;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.print-choice__button {
+  margin: 20px 0;
 }
 
 @media (max-width: 900px) {
@@ -680,54 +679,8 @@ main {
   }
 }
 
-
-/*@media (max-width: 576px) {
-  .print-choice__body,
-  .print-choice__footer {
-    width: auto;
-  }
-  .print-choice__heading {
-    background: transparent;
-  }
-  .print-choice__copy {
-    font: normal 14px/20px var(--contentFont);
-    color: #000;
-  }
-  .print-choice__body {
-     max-width: 464px;
-    padding: 0 29px;
-    margin: 0 auto;
-  }
-}
-.print-base .stack__item.button {
-  font: normal 9px/12px var(--contentFont);
-  overflow: hidden;
-  height: 34px;
-  margin: 6px;
-  padding: 0 20px;
-  white-space: nowrap;
-  letter-spacing: .2em;
-  text-overflow: ellipsis;
-  color: #000;
-  border: 1px solid #000;
-  border-radius: 20px;
-}
-.print-base .print-choice__filter .option__text,
-.print-base .print-choice__filter .dropdown__text-current {
-  font: 14px/25px var(--contentFont);
-}
-.print-choice > * {
-  padding: 0;
-  margin: 0;
-  }
-}*/
-
-.print-choice__paragraph .print-choice__copy {
-  margin: 20px 0;
-}
-
-.print-choice__paragraph {
-  padding: 0 17px 24px;
+.print-choice__scrollbox {
+  padding-right: 7%;
 }
 
 .print-list {
@@ -737,7 +690,7 @@ main {
 }
 
 .print-list__item {
-  margin: 0 2rem 1.25rem 1rem;
+  margin: 0 2rem 3.2rem 1rem;
   width: 8.375rem;
   height: 8.375rem;
   text-align: center;
@@ -746,6 +699,22 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.print-list .marker {
+  font-size: 25px;
+  z-index: 3;
+  width: 41px;
+  height: 41px;
+}
+
+@media (max-width: 500px) {
+  .print-list__item {
+    margin: 0 1rem 3.2rem 0.5rem
+  }
+  .print-choice__scrollbox {
+    padding-right: 0;
+  }
 }
 
 .print-list__image {
