@@ -1,0 +1,7 @@
+@import '../../assets/styles/main.css';
+main {
+  position: relative;
+  top: 78px;
+  min-height: 100vh;
+}
+
