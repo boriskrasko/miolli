@@ -184,11 +184,11 @@ a.button {
   fill: #fff;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 640px) {
   html {font-size: 14px}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   html {font-size: 10px}
   body {font-size: 14px}
   .flavor {--size: 170px}

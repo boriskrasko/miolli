@@ -23,4 +23,16 @@
   --button: var(--blooming-perfect);
   --topnav-cart: var(--shadowed-steel);
   --hr: var(--echoes-of-love);
+
+  --primary-h: 0;
+  --primary-s: 45%;
+  --primary-b: 72%;
+
+  --secondary-h: 13;
+  --secondary-s: 34%;
+  --secondary-b: 76%;
+
+  --dark-h: 0;
+  --dark-s: 0%;
+  --dark-b: 0%;
 }

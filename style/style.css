@@ -233,7 +233,6 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--nav-menu-text);
-  background-color: var(--nav-menu-fill);
 }
 
 .business-offer__link img {
@@ -403,10 +402,7 @@
   justify-content: center;
   padding: 16px 23px;
   font: 16px/27px var(--contentFont);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
   color: #FFFFFF;
-  background-color: var(--victoriana);
 }
 
 /* Hero */
@@ -435,6 +431,11 @@
   padding: 20px 15px 10px;
   background-color: #CE5445;
   border-radius: 100px;
+  transition: background-color 0.1s ease-out;
+}
+
+.label:hover {
+  background-color: #BE4435;
 }
 
 .label h3 {
@@ -561,15 +562,8 @@ hr {
 }
 
 .section__button {
-  display: inline-flex;
-  justify-content: center;
   padding: 16px 23px;
   font: 16px/27px var(--contentFont);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--blooming-perfect);
-  outline: 1px solid var(--blooming-perfect);
 }
 
 .section__slider {
@@ -629,6 +623,12 @@ hr {
   color: #FFFFFF;
   background-color: #E8CFB1;
   border-radius: 100px;
+  transition: background-color 0.1s ease-out;
+}
+
+.flavor__filter:hover {
+  background-color: #D8BFA1;
+
 }
 
 .uk-slider-container {
@@ -682,14 +682,8 @@ hr {
 }
 
 .card_s .card__button {
-  display: inline-flex;
-  justify-content: center;
   padding: 9px 47px;
   font: 16px/21px var(--contentFont);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--blooming-perfect);
-  outline: 1px solid var(--blooming-perfect);
 }
 
 .sets a[uk-slider-item] {
@@ -715,6 +709,11 @@ hr {
   color: #FFFFFF;
   background-color: #D89898;
   border-radius: 100px;
+  transition: background-color 0.1s ease-out;
+}
+
+.current {
+  font: 16px/27px var(--contentFont);
 }
 
 .box {
@@ -811,14 +810,8 @@ hr {
 }
 
 .box__button a {
-  display: inline-flex;
-  justify-content: center;
   padding: 20px 17px;
   font: 16px/27px var(--contentFont);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000000;
-  outline: 1px solid #000000;
 }
 
 .uno {
@@ -857,14 +850,8 @@ hr {
 }
 
 .uno__button {
-  display: inline-flex;
-  justify-content: center;
   padding: 20px 17px;
   font: 16px/27px var(--contentFont);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000000;
-  outline: 1px solid #000000;
 }
 
 .uno hr {
@@ -976,14 +963,8 @@ hr {
 
 .reason__button {
   z-index: 9;
-  display: inline-flex;
-  justify-content: center;
   padding: 20px 17px;
   font: 16px/27px var(--contentFont);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000000;
-  outline: 1px solid #000000;
 }
 
 .sub {
@@ -1144,18 +1125,10 @@ hr {
 }
 
 .map__button {
-  display: inline-flex;
-  justify-content: center;
   width: 280px;
   padding: 13px 28px;
   font: 16px/27px var(--contentFont);
   letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #000000;
-  border: none;
-  outline: 1px solid #000000;
-  background-color: transparent;
-  grid-area: button;
 }
 
 .dropdown {
@@ -1687,14 +1660,8 @@ div[grid] .card__text {
 }
 
 div[grid] .card__button {
-  display: inline-flex;
-  justify-content: center;
   padding: 16px 31px;
   font: 16px/27px var(--contentFont);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--blooming-perfect);
-  outline: 1px solid var(--blooming-perfect);
 }
 
 input.set__viewer {
@@ -1711,4 +1678,8 @@ input.set__viewer {
 .set__viewer:checked ~ div[grid], 
 .set__viewer:checked ~ button img[grid] {
   display: block;
+}
+
+.set__viewer:hover ~ .set__viewer {
+  background-color: #C88888;
 }
