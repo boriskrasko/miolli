@@ -861,7 +861,6 @@ main {
 
 .quantity_choice__heading {
   position: relative;
-  min-width: 351px;
   min-height: 154px;
   padding: 25px;
 }
