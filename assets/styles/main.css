@@ -5,7 +5,6 @@
   /*border: var(--border);*/
 }
 
-
 :root {
   /* Fonts */
   --contentFont: 'BasierCircle-Regular', sans-serif;
@@ -121,13 +120,13 @@ a {
 }
 
 .button-contained {
-  outline: 1px solid #777;
+  border: 1px solid #777;
   background-color: #777;
   color: #fff;
 }
 
 .button-contained:active {
-  outline: 1px solid #000;
+  border: 1px solid #000;
   color: #000;
 }
 
@@ -147,17 +146,17 @@ a {
 }
 
 .button-contained_parrot-pink {
-  outline: 1px solid var(--parrot-pink);
+  border: 1px solid var(--parrot-pink);
   background-color: var(--parrot-pink);
   color: #fff;
 }
 
 .button-contained_parrot-pink:hover {
-  outline: 1px solid #996B6B;
+  border: 1px solid #996B6B;
 }
 
 .button-contained_parrot-pink:active {
-  outline: 1px solid #FFB3B3;
+  border: 1px solid #FFB3B3;
   background-color: #996B6B;
   color: #fff;
 }
@@ -178,33 +177,33 @@ a {
 }
 
 .button-contained_dark-vanilla {
-  outline: 1px solid var(--dark-vanilla);
+  border: 1px solid var(--dark-vanilla);
   background-color: var(--dark-vanilla);
   color: #fff;
 }
 
 .button-contained_dark-vanilla:hover {
-  outline: 1px solid #99817A;
+  border: 1px solid #99817A;
 }
 
 .button-contained_dark-vanilla:active {
-  outline: 1px solid #FFD7CC;
+  border: 1px solid #FFD7CC;
   background-color: #99817A;
   color: #fff;
 }
 
 .button-contained_desert-sand {
-  outline: 1px solid var(--desert-sand);
+  border: 1px solid var(--desert-sand);
   background-color: var(--desert-sand);
   color: #fff;
 }
 
 .button-contained_desert-sand:hover {
-  outline: 1px solid #998874;
+ border: 1px solid #998874;
 }
 
 .button-contained_desert-sand:active {
-  outline: 1px solid #FFE3C2;
+  border: 1px solid #FFE3C2;
   background-color: #998874;
   color: #fff;
 }
@@ -244,7 +243,7 @@ a {
     padding: 0.9375rem 1.0625rem;
   }
   .button_size_s {
-    font: normal 0.625rem/1.0625rem var(--contentFont);
+    font: normal 0.75rem/1.0625rem var(--contentFont);
     letter-spacing: 0.2em;
     text-transform: uppercase;
     max-height: 1.5rem;
@@ -333,7 +332,7 @@ a {
 }
 
 .paragraph_upper {
-  font: normal 1rem/25px var(--contentFont);
+  font: normal 1rem/24px var(--contentFont);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -356,6 +355,10 @@ a {
 .uppercase {
   text-transform: uppercase;
 }
+.lowercase {
+  text-transform: lowercase;
+}
+
 
 
 /*underlines*/
@@ -1226,7 +1229,7 @@ z nadrukiem of topbar menu*/
 }
 
 @media (max-width: 768px) {
-  .hidden {
+  .main-nav .hidden {
     display: flex;
   }
   .desktop-only {
@@ -1260,61 +1263,6 @@ z nadrukiem of topbar menu*/
   background: transparent;
 }
 
-/*h1, .like-h1,
-h2, .like-h2, 
-h3, .like-h3 {
-  font-family: var(--titleFont);
-  color: 000;
-  font-weight: 400;
-}
-
-h2, .like-h2 {
-  font-size: 5.875em;
-  line-height: 94px;
-}
-
-h3, .like-h3 {
-  font-size: 4.5625em;
-}
-
-h4, .like-h4,
-h5, .like-h5 {
-  font-family: var(--contentFont);
-  color: #000;
-  font-weight: 400;
-}
-
-p, .paragraph {
-  font-family: var(--contentFont);
-  color: var(--dark-s);
-}
-
-h4, .like-h4,
-p, .paragraph {
-  font-size: 16px;
-}
-
-h5, .like-h5 {
-  font-size: 0.8625em;
-}*/
-
-/*.paragraph-s {
-  font-size: 14px;
-  line-height: 21px;
-  letter-spacing: 0.1em;
-}
-
-.lowercase {
-  text-transform: lowercase;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.pink {
-  color: var(--pastel-pink);
-}*/
 
 .parrot-pink {
   color: var(--parrot-pink);

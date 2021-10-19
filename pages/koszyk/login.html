@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miolli | Koszyk</title>
+    <title>Miolli | Logowanie</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
@@ -187,97 +187,40 @@
     <main>
      <div class="cart">
       <div class="cart__header">
-         <h2 class="h2 txt-color_dark-vanilla">twój koszyk</h2>
+         <h2 class="h2 txt-color_dark-vanilla">logowanie</h2>
       <hr class="underline underline_heading fill_dark-vanilla">
-      <a class="cart__header-link paragraph_upper" href="../../main/index.html">wróć do sklepu</a>
       </div>
       <div class="cart__body">
-        <ul class="cart__list">
-          <li class="cart__item">
-            <div class="cart__aside">
-              <img src="../../assets/images/set-1.png" class="cart__item-image" alt="set">
+        <div class="login">
+          <div class="login__btns">
+            <button class="button cart__button_rounded button_size_l cart__button_active">zaloguj się</button>
+            <a href="dane.html" class="button cart__button_rounded button_size_l">kup, jako gość</a>
             </div>
-            <div class="cart__item-body">
-              <h5 class="cart__item-name h5 uppercase">set na lato</h5>
-                <div class="cart__item-description paragraph_upper">
-                  <div class="cart__item-quantity">
-                    <span>iłość</span>
-                  </div>
-                  <div class="cart__item-price">
-                    <span>cena:</span>
-                    <span> 44,-</span>
-                  </div>
-                  <div class="cart__item-cost">
-                    <span>suma</span>
-                    <span>130,-</span>
-                  </div>
-                  <button class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
-                  </button>
+            <div class="login__body">
+              <div class="login__socials">
+              <button class="login__button" style="background: #3b5998">
+               facebook
+              </button>
+              <button class="login__button" style="background: #de5246">
+               google
+              </button>
+            </div>
+            <div class="login__form">
+             <form action="" class="form">
+                <div class="form__content">
+                  <label for="email-input" class="form__label paragraph_upper">Login</label>
+                  <input id="email-input" class="form__text-input paragraph" type="email">
+                  <label for="password-input" class="form__label paragraph_upper">Password</label>
+                  <input id="password-input" class="form__text-input paragraph" type="password"/>
                 </div>
-              </h4>
+                  <p class="paragraph_upper question">nie masz konta? <br>
+                    <a href="">zarejestruj się</a></p>
+                  <button type="submit" class="form__button button button-outlined button-outlined_dark-vanilla button_size_m">zaloguj się</button>
+              </form>
             </div>
-          </li>
-          <li class="cart__item">
-            <div class="cart__aside">
-              <img src="../../assets/images/set-1.png" class="cart__item-image" alt="set">
-            </div>
-            <div class="cart__item-body">
-              <h5 class="cart__item-name h5 uppercase">set na lato</h5>
-                <div class="cart__item-description paragraph_upper">
-                  <div class="cart__item-quantity">
-                    <span>iłość</span>
-                  </div>
-                  <div class="cart__item-price">
-                    <span>cena:</span>
-                    <span> 44,-</span>
-                  </div>
-                  <div class="cart__item-cost">
-                    <span>suma</span>
-                    <span>130,-</span>
-                  </div>
-                  <button class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
-                  </button>
-                </div>
-              </h4>
-            </div>
-          </li>
-          <li class="cart__item">
-            <div class="cart__aside">
-              <img src="../../assets/images/set-1.png" class="cart__item-image" alt="set">
-            </div>
-            <div class="cart__item-body">
-              <h5 class="cart__item-name h5 uppercase">set na lato</h5>
-                <div class="cart__item-description paragraph_upper">
-                  <div class="cart__item-quantity">
-                    <span>iłość</span>
-                  </div>
-                  <div class="cart__item-price">
-                    <span>cena:</span>
-                    <span> 44,-</span>
-                  </div>
-                  <div class="cart__item-cost">
-                    <span>suma</span>
-                    <span>130,-</span>
-                  </div>
-                  <button class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
-                  </button>
-                </div>
-              </h4>
-            </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
-      <div class="cart__footer">
-       <!-- <button class="button button-outlined button-outlined_dark-vanilla button_size_m">zamów</button> -->
-       <a href="login.html" class="button button-outlined button-outlined_dark-vanilla button_size_m">zamów</a>
-      </div>
-     </div>
     </main>
     <footer class="footer">
       <nav class="footer-nav" aria-label="footnav">
