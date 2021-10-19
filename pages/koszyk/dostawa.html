@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miolli | Koszyk</title>
+    <title>Miolli | sposób dostawy</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
@@ -185,99 +185,70 @@
       </div>
     </header>
     <main>
-     <div class="cart">
-      <div class="cart__header">
-         <h2 class="h2 txt-color_dark-vanilla">twój koszyk</h2>
-      <hr class="underline underline_heading fill_dark-vanilla">
-      <a class="cart__header-link paragraph_upper" href="../../main/index.html">wróć do sklepu</a>
-      </div>
-      <div class="cart__body">
-        <ul class="cart__list">
-          <li class="cart__item">
-            <div class="cart__aside">
-              <img src="../../assets/images/set-1.png" class="cart__item-image" alt="set">
+     <form class="cart">
+      <section class="delivery-form">
+        <h2 class="delivery-form__title h2 dark-vanilla">sposób dostawy</h2>
+        <hr class="underline underline_heading fill_dark-vanilla">
+          <fieldset class="delivery__methods">
+            <legend class="paragraph_upper">wybierz sposób dostawy</legend>
+              <p class="delivery__method paragraph_upper">
+              <input id="impost" type="radio" name="delivery-method" value="impost">
+              <label for="impost">paczkomaty impost</label>
+              <span class="price">12, 90</span>
+            </p>
+            <p class="delivery__method paragraph_upper">
+              <input id="dpi" type="radio" name="delivery-method" value="dpi">
+              <label for="dpi">kurier dpi</label>
+              <span class="price">20, 00</span>
+            </p>
+            <p class="delivery__method paragraph_upper">
+              <input id="coffeehouse" type="radio" name="delivery-method" value="kawiarnia">
+              <label for="coffeehouse">odbiór w kawiarni</label>
+              <span class="price">00, 00</span>
+            </p>
+          </fieldset>
+          <fieldset class="coffeehouse-select">
+            <div class="coffeehouse__map">
+              <img src="../../assets/images/map-min.png" alt="map">
             </div>
-            <div class="cart__item-body">
-              <h5 class="cart__item-name h5 uppercase">set na lato</h5>
-                <div class="cart__item-description paragraph_upper">
-                  <div class="cart__item-quantity">
-                    <span>iłość</span>
-                  </div>
-                  <div class="cart__item-price">
-                    <span>cena:</span>
-                    <span> 44,-</span>
-                  </div>
-                  <div class="cart__item-cost">
-                    <span>suma</span>
-                    <span>130,-</span>
-                  </div>
-                  <button class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
-                  </button>
-                </div>
-              </h4>
+            <div class="coffeehouse__container">
+              <p>
+                <label class="paragraph_upper" for="coffeehouse-search">sklepy blisko:</label>
+                <input class="coffeehouse__search" type="search" id="site-coffeehouse-search" name="" aria-label="Search coffeehouse" placeholder="twój adres">
+                <legend class="paragraph_upper hidden">wybierz kawiarnu</legend>
+              </p>
+             <ol class="coffeehouse__list">
+                <li class="delivery__method_coffeehouse paragraph_upper">
+                  <input class="button_size_s" id="coffeehouse_1" type="radio" name="coffeehouse" value="kawiarnia_1">
+                  <label for="coffeehouse_1">
+                    <span class="coffeehouse__place">Kawiarnia A </span>
+                    <span class="coffeehouse__address">address example 918 Wines Lane 34 00-224</span>
+                  </label>
+                  <button class="button button-outlined button_size_s"></button>
+                </li>
+                <li class="delivery__method_coffeehouse paragraph_upper">
+                  <input class="button_size_s" id="coffeehouse_2" type="radio" name="coffeehouse" value="kawiarnia_2">
+                  <label for="coffeehouse_2">
+                    <span class="coffeehouse__place">Kawiarnia A </span>
+                    <span class="coffeehouse__address">address example 918 Wines Lane 34 00-224</span>
+                  </label>
+                  <button class="button button-outlined button_size_s"></button>
+                </li>
+                <li class="delivery__method_coffeehouse paragraph_upper">
+                  <input class="button_size_s" id="coffeehouse_3" type="radio" name="coffeehouse" value="kawiarnia_3">
+                  <label for="coffeehouse_3">
+                    <span class="coffeehouse__place">Kawiarnia A </span>
+                    <span class="coffeehouse__address">address example 918 Wines Lane 34 00-224</span>
+                  </label>
+                  <button class="button button-outlined button_size_s"></button>
+                </li>
+              </ol>
             </div>
-          </li>
-          <li class="cart__item">
-            <div class="cart__aside">
-              <img src="../../assets/images/set-1.png" class="cart__item-image" alt="set">
-            </div>
-            <div class="cart__item-body">
-              <h5 class="cart__item-name h5 uppercase">set na lato</h5>
-                <div class="cart__item-description paragraph_upper">
-                  <div class="cart__item-quantity">
-                    <span>iłość</span>
-                  </div>
-                  <div class="cart__item-price">
-                    <span>cena:</span>
-                    <span> 44,-</span>
-                  </div>
-                  <div class="cart__item-cost">
-                    <span>suma</span>
-                    <span>130,-</span>
-                  </div>
-                  <button class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
-                  </button>
-                </div>
-              </h4>
-            </div>
-          </li>
-          <li class="cart__item">
-            <div class="cart__aside">
-              <img src="../../assets/images/set-1.png" class="cart__item-image" alt="set">
-            </div>
-            <div class="cart__item-body">
-              <h5 class="cart__item-name h5 uppercase">set na lato</h5>
-                <div class="cart__item-description paragraph_upper">
-                  <div class="cart__item-quantity">
-                    <span>iłość</span>
-                  </div>
-                  <div class="cart__item-price">
-                    <span>cena:</span>
-                    <span> 44,-</span>
-                  </div>
-                  <div class="cart__item-cost">
-                    <span>suma</span>
-                    <span>130,-</span>
-                  </div>
-                  <button class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
-                  </button>
-                </div>
-              </h4>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="cart__footer">
-       <!-- <button class="button button-outlined button-outlined_dark-vanilla button_size_m">zamów</button> -->
-       <a href="login.html" class="button button-outlined button-outlined_dark-vanilla button_size_m">zamów</a>
-      </div>
-     </div>
+          </fieldset>
+        </section>
+         <!-- <button type="submit" class="shipping-form_button_submit button button-outlined button-outlined_dark-vanilla button_size_m">dalej</button> -->
+          <a href="pay.html" class="delivery-form_button_submit button button-outlined button-outlined_dark-vanilla button_size_m">dalej</a>
+      </form>
     </main>
     <footer class="footer">
       <nav class="footer-nav" aria-label="footnav">

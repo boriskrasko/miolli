@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miolli | Koszyk</title>
+    <title>Miolli | Dane do wysyłki</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
@@ -187,97 +187,80 @@
     <main>
      <div class="cart">
       <div class="cart__header">
-         <h2 class="h2 txt-color_dark-vanilla">twój koszyk</h2>
+         <h2 class="h2 txt-color_dark-vanilla">dane do wysyłki</h2>
       <hr class="underline underline_heading fill_dark-vanilla">
-      <a class="cart__header-link paragraph_upper" href="../../main/index.html">wróć do sklepu</a>
+      <p class="paragraph_upper">podaj dane do wysyłki</p>
       </div>
       <div class="cart__body">
-        <ul class="cart__list">
-          <li class="cart__item">
-            <div class="cart__aside">
-              <img src="../../assets/images/set-1.png" class="cart__item-image" alt="set">
-            </div>
-            <div class="cart__item-body">
-              <h5 class="cart__item-name h5 uppercase">set na lato</h5>
-                <div class="cart__item-description paragraph_upper">
-                  <div class="cart__item-quantity">
-                    <span>iłość</span>
-                  </div>
-                  <div class="cart__item-price">
-                    <span>cena:</span>
-                    <span> 44,-</span>
-                  </div>
-                  <div class="cart__item-cost">
-                    <span>suma</span>
-                    <span>130,-</span>
-                  </div>
-                  <button class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
-                  </button>
-                </div>
-              </h4>
-            </div>
-          </li>
-          <li class="cart__item">
-            <div class="cart__aside">
-              <img src="../../assets/images/set-1.png" class="cart__item-image" alt="set">
-            </div>
-            <div class="cart__item-body">
-              <h5 class="cart__item-name h5 uppercase">set na lato</h5>
-                <div class="cart__item-description paragraph_upper">
-                  <div class="cart__item-quantity">
-                    <span>iłość</span>
-                  </div>
-                  <div class="cart__item-price">
-                    <span>cena:</span>
-                    <span> 44,-</span>
-                  </div>
-                  <div class="cart__item-cost">
-                    <span>suma</span>
-                    <span>130,-</span>
-                  </div>
-                  <button class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
-                  </button>
-                </div>
-              </h4>
-            </div>
-          </li>
-          <li class="cart__item">
-            <div class="cart__aside">
-              <img src="../../assets/images/set-1.png" class="cart__item-image" alt="set">
-            </div>
-            <div class="cart__item-body">
-              <h5 class="cart__item-name h5 uppercase">set na lato</h5>
-                <div class="cart__item-description paragraph_upper">
-                  <div class="cart__item-quantity">
-                    <span>iłość</span>
-                  </div>
-                  <div class="cart__item-price">
-                    <span>cena:</span>
-                    <span> 44,-</span>
-                  </div>
-                  <div class="cart__item-cost">
-                    <span>suma</span>
-                    <span>130,-</span>
-                  </div>
-                  <button class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
-                  </button>
-                </div>
-              </h4>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="cart__footer">
-       <!-- <button class="button button-outlined button-outlined_dark-vanilla button_size_m">zamów</button> -->
-       <a href="login.html" class="button button-outlined button-outlined_dark-vanilla button_size_m">zamów</a>
-      </div>
-     </div>
+        <form class="shipping-form">
+          <div class="fields paragraph_upper">
+          <fieldset class="buyer-type">
+            <legend class="hidden">private or company</legend>
+            <label>
+               <input type="radio" name="buyer-type" value="private">
+               <span>osoba prywatna</span>
+            </label>
+            <label>
+              <input type="radio" name="buyer-type" value="company">
+              <span>firma</span>
+            </label>
+          </fieldset>
+            <label class="field">
+              <span class="field__label" for="firstname">Imię:</span>
+              <input class="field__input" type="text" id="firstname" value="">
+            </label>
+            <label class="field field_short">
+              <span class="field__label" for="lastname">Nazwisko:</span>
+              <input class="field__input" type="text" id="lastname" value="">
+            </label>
+          <label class="field field_wide">
+            <span class="field__label" for="address">Adres:</span>
+            <input class="field__input" type="text" id="address">
+          </label>
+          <label class="field">
+            <span class="field__label" for="zipcode">Kod pocztowy:</span>
+            <input class="field__input" type="text" id="zipcode">
+          </label>
+          <label class="field field_short">
+            <span class="field__label" for="city">Miejscowość:</span>
+            <input class="field__input" type="text" id="city">
+          </label>
+          <label class="field">
+            <span class="field__label" for="state">Województwo:</span>
+            <select class="field__input" id="state">
+              <option value=""></option>
+            </select>
+          </label>
+          <label class="field field_short">
+            <span class="field__label" for="country">Kraj:</span>
+            <select class="field__input" id="country">
+              <option value=""></option>
+              <option value="unitedstates">Polska</option>
+            </select>
+          </label>
+          <label class="field">
+            <span class="field__label" for="city">Email:</span>
+            <input class="field__input" type="text" id="email">
+          </label>
+          <label class="field field_short">
+            <span class="field__label" for="city">Telefon:</span>
+            <input class="field__input" type="text" id="phone">
+          </label>
+          <fieldset class="shipping-form__confirm">
+            <legend class="hidden">Confirm</legend>
+            <label class="field_confirm">
+            <input type="checkbox" name="" required>
+            <span class="lowercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. </span>
+          </label>
+           <label class="field_confirm">
+            <input type="checkbox" name="" required>
+            <span class="lowercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. </span>
+          </label>
+          </fieldset>
+          </div>
+          <!-- <button type="submit" class="shipping-form_button_submit button button-outlined button-outlined_dark-vanilla button_size_m">dalej</button> -->
+          <a href="dostawa.html" class="shipping-form_button_submit button button-outlined button-outlined_dark-vanilla button_size_m">dalej</a>
+        </form>
     </main>
     <footer class="footer">
       <nav class="footer-nav" aria-label="footnav">

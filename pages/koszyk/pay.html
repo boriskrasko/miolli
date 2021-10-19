@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miolli | Koszyk</title>
+    <title>Miolli | Płatność</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
@@ -185,99 +185,33 @@
       </div>
     </header>
     <main>
-     <div class="cart">
-      <div class="cart__header">
-         <h2 class="h2 txt-color_dark-vanilla">twój koszyk</h2>
-      <hr class="underline underline_heading fill_dark-vanilla">
-      <a class="cart__header-link paragraph_upper" href="../../main/index.html">wróć do sklepu</a>
-      </div>
-      <div class="cart__body">
-        <ul class="cart__list">
-          <li class="cart__item">
-            <div class="cart__aside">
-              <img src="../../assets/images/set-1.png" class="cart__item-image" alt="set">
-            </div>
-            <div class="cart__item-body">
-              <h5 class="cart__item-name h5 uppercase">set na lato</h5>
-                <div class="cart__item-description paragraph_upper">
-                  <div class="cart__item-quantity">
-                    <span>iłość</span>
-                  </div>
-                  <div class="cart__item-price">
-                    <span>cena:</span>
-                    <span> 44,-</span>
-                  </div>
-                  <div class="cart__item-cost">
-                    <span>suma</span>
-                    <span>130,-</span>
-                  </div>
-                  <button class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
-                  </button>
-                </div>
-              </h4>
-            </div>
-          </li>
-          <li class="cart__item">
-            <div class="cart__aside">
-              <img src="../../assets/images/set-1.png" class="cart__item-image" alt="set">
-            </div>
-            <div class="cart__item-body">
-              <h5 class="cart__item-name h5 uppercase">set na lato</h5>
-                <div class="cart__item-description paragraph_upper">
-                  <div class="cart__item-quantity">
-                    <span>iłość</span>
-                  </div>
-                  <div class="cart__item-price">
-                    <span>cena:</span>
-                    <span> 44,-</span>
-                  </div>
-                  <div class="cart__item-cost">
-                    <span>suma</span>
-                    <span>130,-</span>
-                  </div>
-                  <button class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
-                  </button>
-                </div>
-              </h4>
-            </div>
-          </li>
-          <li class="cart__item">
-            <div class="cart__aside">
-              <img src="../../assets/images/set-1.png" class="cart__item-image" alt="set">
-            </div>
-            <div class="cart__item-body">
-              <h5 class="cart__item-name h5 uppercase">set na lato</h5>
-                <div class="cart__item-description paragraph_upper">
-                  <div class="cart__item-quantity">
-                    <span>iłość</span>
-                  </div>
-                  <div class="cart__item-price">
-                    <span>cena:</span>
-                    <span> 44,-</span>
-                  </div>
-                  <div class="cart__item-cost">
-                    <span>suma</span>
-                    <span>130,-</span>
-                  </div>
-                  <button class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
-                  </button>
-                </div>
-              </h4>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="cart__footer">
-       <!-- <button class="button button-outlined button-outlined_dark-vanilla button_size_m">zamów</button> -->
-       <a href="login.html" class="button button-outlined button-outlined_dark-vanilla button_size_m">zamów</a>
-      </div>
-     </div>
+     <form class="cart">
+      <section class="delivery-form">
+        <h2 class="delivery-form__title h2 dark-vanilla">płatność</h2>
+        <hr class="underline underline_heading fill_dark-vanilla">
+          <fieldset class="pay__methods">
+            <legend class="paragraph_upper">wybierz metodę płatności</legend>
+              <p class="pay__method paragraph_upper">
+              <input id="1" type="radio" name="pay-method" value="1">
+              <label for="1"></label>
+            </p>
+            <p class="pay__method paragraph_upper">
+              <input id="2" type="radio" name="pay-method" value="2">
+              <label for="2"></label>
+            </p>
+            <p class="pay__method paragraph_upper">
+              <input id="3" type="radio" name="pay-method" value="3">
+              <label for="3"></label>
+            </p>
+            <p class="pay__method paragraph_upper">
+              <input id="4" type="radio" name="pay-method" value="4">
+              <label for="4"></label>
+            </p>
+          </fieldset>
+        </section>
+         <!-- <button type="submit" class="shipping-form_button_submit button button-outlined button-outlined_dark-vanilla button_size_m">dalej</button> -->
+          <a href="done.html" class="delivery-form_button_submit button button-outlined button-outlined_dark-vanilla button_size_m">dalej</a>
+      </form>
     </main>
     <footer class="footer">
       <nav class="footer-nav" aria-label="footnav">
