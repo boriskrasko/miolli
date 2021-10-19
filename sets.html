@@ -4,15 +4,11 @@
     <meta charset='utf-8'>
     <title>Miolli | Gotowe sety</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="uikit/css/uikit.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href='style/colors.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/fonts.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/common.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/media.css'>
-    <script src="uikit/js/uikit.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
   </head>
   <body>
     <header class="header">
@@ -181,8 +177,21 @@ teraz:
         </form>
       </div>
     </div>
-    <main>
-      
+    <main class="main">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item">
+            <svg class="breadcrumb__home">
+              <use href="#home"></use>
+            </svg>
+            <a class="breadcrumb__link" href="#">strona główna</a></li>
+          <li class="breadcrumb__item disabled">
+            <svg class="breadcrumb__arrow">
+              <use href="#breadcrumbArrow"></use>
+            </svg>
+            <a class="breadcrumb__link" href="#" aria-current="location">gotowe sety makaroników</a></li>
+          </ul>
+      </nav>
     </main>
     <footer class="footer">
       <nav>
@@ -236,6 +245,19 @@ teraz:
           <path d="M350.442,58.729l9.8,9.8-9.8,9.8" transform="translate(-11.304)" stroke-miterlimit="10" stroke-width="1"/>
         </g>
       </symbol>
+      <symbol id="home" viewBox="0 0 11 13">
+        <g transform="translate(-60 -94)">
+          <rect id="Rectangle_96" data-name="Rectangle 96" width="11" height="8" transform="translate(60 99)" fill="#3c3c3c"/>
+          <path id="Polygon_5" data-name="Polygon 5" d="M5.5,0,11,5H0Z" transform="translate(60 94)" fill="#3c3c3c"/>
+        </g>
+      </symbol>
+      <symbol id="breadcrumbArrow" viewBox="0 0 10.305 8.098">
+        <g transform="translate(-324.157 -58.376)">
+          <line x2="10" transform="translate(324.157 62.424)" fill="none" stroke="#484848" stroke-miterlimit="10" stroke-width="1"/>
+          <path d="M350.442,58.729l3.7,3.7-3.7,3.7" transform="translate(-20.383)" fill="none" stroke="#484848" stroke-miterlimit="10" stroke-width="1"/>
+        </g>
+      </symbol>
+      
     </svg>
     <script>
       // Chat
