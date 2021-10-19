@@ -171,6 +171,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  .brand {
+    font-size: 10px
+  }
   .business-offer {
     display: none;
   }

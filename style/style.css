@@ -9,12 +9,6 @@
   margin: 0 auto;
 }
 
-@media (max-width: 500px) {
-  .brand {
-    font-size: 10px;
-  }
-}
-
 .brand__name {
   width: 100%;
 }
@@ -30,7 +24,6 @@
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Header */
 .header {
   position: sticky;
   top: 0;
@@ -40,7 +33,6 @@
   height: 0;
 }
 
-/* Switch */
 .switch {
   position: absolute;
   top: 0;
@@ -91,7 +83,6 @@
   opacity: 1;
 }
 
-/* Topnav */
 .topnav {
   display: flex;
   justify-content: flex-end;
@@ -205,12 +196,11 @@
 .cart-count {
   position: absolute;
   z-index: -1;
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 10px;
   color: #FFFFFF;
 }
 
-/* Sidenav */
 .sidenav {
   position: absolute;
   top: 78px;
@@ -243,8 +233,6 @@
   color: var(--victoriana);
 }
 
-/* Oferta dla biznesu */
-
 .business-offer {
   position: fixed;
   bottom: 0;
@@ -276,7 +264,6 @@
   visibility: visible;
 }
 
-/* Topnav offer submenu */ 
 .topnav__dropdown {
   position: absolute;
   top: 78px;
@@ -375,7 +362,6 @@
   transform: translate(-50%, 0);
 }
 
-/* Cart dropdown */
 .topnav-cart {
   width: 400px;
   height: 600px;
@@ -440,7 +426,6 @@
   margin-left: 7px;
 }
 
-/* Hero */
 .hero {
   position: relative;
   display: flex;
@@ -491,7 +476,6 @@
   margin: 0;
 }
 
-/* Chat icon */
 .chat {
   position: fixed;
   bottom: 0;
@@ -555,7 +539,6 @@
   margin-top: 3px;
 }
 
-/* Section */
 .section {
   position: relative;
   display: flex;
@@ -598,8 +581,7 @@ hr {
 
 .section__button {
   padding: 16px 23px;
-  /* font: 16px/27px var(--contentFont); */
-  
+  font: 16px/27px var(--contentFont);
 }
 
 .section__slider {
@@ -1377,7 +1359,6 @@ hr {
   pointer-events: none;
 }
 
-/* Chat */
 .chat__popup {
   position: absolute;
   right: 20px;
