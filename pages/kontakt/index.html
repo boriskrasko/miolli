@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miolli | Dane do wysyłki</title>
+    <title>Miolli | Kontakt</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
@@ -185,84 +185,63 @@
       </div>
     </header>
     <main>
-     <div class="cart">
-      <div class="cart__header">
-         <h2 class="h2 txt-color_dark-vanilla">dane do wysyłki</h2>
-      <hr class="underline underline_heading fill_dark-vanilla">
-      <p class="paragraph_upper">podaj dane do wysyłki</p>
-      </div>
-      <div class="cart__body">
-        <form class="shipping-form">
-          <div class="fields paragraph_upper">
-          <fieldset class="buyer-type">
-            <legend class="hidden">private or company</legend>
-            <label>
-               <input type="radio" name="buyer-type" value="private">
-               <span>osoba prywatna</span>
-            </label>
-            <label>
-              <input type="radio" name="buyer-type" value="company">
-              <span>firma</span>
-            </label>
-          </fieldset>
-            <label class="field">
+     <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ul class="breadcrumb__list uppercase">
+          <li class="breadcrumb__item">
+            <img src="../../assets/icons/home.svg" alt="&#8962;">
+            <a class="breadcrumb__link" href="../main/index.html">strona główna</a>
+          </li>
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__icon material-icons">east</span>
+            <a class="breadcrumb__link" href="#">kontakt</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="contact">
+        <div class="map">
+          <img src="../../assets/images/map-contact.png" alt="map">
+        </div>
+        <div class="contact__content">
+          <h1 class="contact__title h1 dark-vanilla">Kontakt</h1>
+          <address class="paragraph_upper">
+            siedziba główna: <br>
+            Lorem ipsum dolor sit amet, <br>
+            30-192 Warszawa<br>
+            <a href="tel:+48887675768">+48 887 675 768</a><br><br>
+            obsługa klienta biznesowego:<br><br>
+            <a href="mialto:kontakt@miolli.pl">kontakt@miolli.pl</a><br>
+            <a href="tel:+48887675768">+48 887 675 768</a><br><br>
+            obsługa klienta biznesowego:<br><br>
+            <a href="mialto:kontakt@miolli.pl">kontakt@miolli.pl</a><br>
+            <a href="tel:+48887675768">+48 887 675 768</a>
+          </address>
+        </div>
+      </section>
+       <form action="#" class="contact-form" class="paragraph_upper">
+          <h2 class="delivery-form__title h2 dark-vanilla">napisz do nas</h2>
+          <!-- <hr class="underline underline_heading fill_dark-vanilla"> -->
+            <fieldset class="fields">
+              <label class="field paragraph_upper">
               <span class="field__label" for="firstname">Imię:</span>
               <input class="field__input" type="text" id="firstname" value="">
             </label>
-            <label class="field field_short">
-              <span class="field__label" for="lastname">Nazwisko:</span>
-              <input class="field__input" type="text" id="lastname" value="">
+
+            <label class="field paragraph_upper">
+              <span class="field__label" for="email">Email:</span>
+              <input class="field__input" type="text" id="email">
             </label>
-          <label class="field field_wide">
-            <span class="field__label" for="address">Adres:</span>
-            <input class="field__input" type="text" id="address">
+
+            <label class="field paragraph_upper">
+            <span class="field__label" for="message">wiadomość</span>
+            <textarea class="field__textarea" id="message" name="message" rows="4" cols="80"></textarea>
           </label>
-          <label class="field">
-            <span class="field__label" for="zipcode">Kod pocztowy:</span>
-            <input class="field__input" type="text" id="zipcode">
-          </label>
-          <label class="field field_short">
-            <span class="field__label" for="city">Miejscowość:</span>
-            <input class="field__input" type="text" id="city">
-          </label>
-          <label class="field">
-            <span class="field__label" for="state">Województwo:</span>
-            <select class="field__input" id="state">
-              <option value=""></option>
-            </select>
-          </label>
-          <label class="field field_short">
-            <span class="field__label" for="country">Kraj:</span>
-            <select class="field__input" id="country">
-              <option value=""></option>
-              <option value="unitedstates">Polska</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field__label" for="email">Email:</span>
-            <input class="field__input" type="text" id="email">
-          </label>
-          <label class="field field_short">
-            <span class="field__label" for="city">Telefon:</span>
-            <input class="field__input" type="phone" id="phone">
-          </label>
-          <fieldset class="shipping-form__confirm">
-            <legend class="hidden">Confirm</legend>
-            <label class="field_confirm">
-            <input type="checkbox" name="" required>
-            <span class="lowercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. </span>
-          </label>
-           <label class="field_confirm">
-            <input type="checkbox" name="" required>
-            <span class="lowercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. </span>
-          </label>
-          </fieldset>
-          </div>
-          <!-- <button type="submit" class="shipping-form_button_submit button button-outlined button-outlined_dark-vanilla button_size_m">dalej</button> -->
-          <a href="dostawa.html" class="shipping-form_button_submit button button-outlined button-outlined_dark-vanilla button_size_m">dalej</a>
+            </fieldset>
+
+            <input type="submit" value="Submit" class="button button-outlined button-outlined_dark-vanilla button_size_m contact-form_button_submit">
+          </form>
         </form>
     </main>
-    <footer class="footer">
+     <footer class="footer">
       <nav class="footer-nav" aria-label="footnav">
         <ul class="footer-nav__list">
           <li class="footer-nav__item">
@@ -290,7 +269,7 @@
             <a href="../blog/index.html" class="footer-nav__link">blog</a>
           </li>
           <li class="footer-nav__item">
-            <a href="../kontakt/index.html" class="footer-nav__link">kontakt</a>
+            <a href="../kontakt/index.html" class="footer-nav__link active">kontakt</a>
           </li>
           <li class="footer-nav__item">
             <a href="#" class="footer-nav__link"></a>

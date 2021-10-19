@@ -416,17 +416,17 @@
     min-width: 240px;
   }
   .box-composing__heading {
-    max-width: auto;
+    max-width: 100%;
   }
   .box-composing__list {
-    max-width: auto;
+    max-width: 100%;
     margin: 4.1875rem 0 0 1.8%;
   }
 }
 
 @media (max-width: 490px) {
   .box-composing__list {
-    max-width: auto;
+    max-width: 100%;
     margin: 4.1875rem 0;
   }
   .box-composing__point {
