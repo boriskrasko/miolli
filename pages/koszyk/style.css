@@ -262,8 +262,8 @@ fieldset {
   margin: 21.5px 0 0;
 }
 
-.field_confirm input[type='checkbox'] {
-  margin: 0 23px 0 0;
+.field_confirm span  {
+  margin: 0 0 0 23px;
 }
 
 .buyer-type {
@@ -338,6 +338,7 @@ fieldset {
 }
 
 .delivery-form legend {
+  text-align: center;
   margin: 34.5px auto;
 } 
 
@@ -394,6 +395,7 @@ fieldset {
 }
 
 .coffeehouse__search {
+  /*-webkit-appearance: none;*/
   padding: 20px;
   height: 40px;
   width: 100%;
@@ -405,7 +407,7 @@ fieldset {
 
 .coffeehouse__search::placeholder {
   font: 14px/25px var(--contentFont);
-  text-transform: uppercase;
+  /*height: 40px;*/
 }
 
 .coffeehouse__list {
