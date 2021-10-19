@@ -1709,11 +1709,12 @@ input.set__viewer {
 .main {
   position: relative;
   top: 78px;
-  margin-bottom: 78px;
+  width: 90%;
+  margin: 0 auto 320px;
 }
 
 .breadcrumb {
-  margin: 36px 76px;
+  margin: 36px 0;
 }
 
 .breadcrumb__list {
@@ -1726,7 +1727,12 @@ input.set__viewer {
   margin: 0 8px 8px 0;
 }
 
-.breadcrumb__item.disabled {
+.breadcrumb__item.disabled,
+.topnav__item.disabled,
+.sidenav__item.disabled,
+.footer__item.disabled,
+.pagination__link.disabled,
+.pagination__btn.disabled {
   pointer-events: none;
   cursor: default;
   opacity: 0.7;
@@ -1753,4 +1759,21 @@ input.set__viewer {
 .breadcrumb__arrow {
   width: 10px;
   height: 8px;
+}
+
+.main .sets {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  column-gap: 4%;
+}
+
+.main .sets > * {
+  position: relative;
+  margin: 36px 0;
+}
+
+.main .card_s img {
+  margin-bottom: 32px;
 }

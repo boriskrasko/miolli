@@ -173,7 +173,6 @@
 @media screen and (max-width: 500px) {
   .header_homepage .topnav__list {
     width: calc(100% - 78px);
-    background-color: #FFFFFF;
   }
   
   .header_homepage .topnav__item_logo {
