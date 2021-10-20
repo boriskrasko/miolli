@@ -1,7 +1,4 @@
 @import '../../assets/styles/main.css';
-body {
-  overflow-x: hidden;
-}
 
 main {
   padding: 4.875rem 0 0;
@@ -70,6 +67,7 @@ fieldset {
   width: 100%;
   max-width: var(--content);
   margin: 0 auto;
+  padding: 27px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
