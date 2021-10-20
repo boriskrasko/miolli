@@ -1790,8 +1790,8 @@ input.set__viewer {
 .pagination__list,
 .pagination__item,
 .pagination__link {
-  font: 14px/20px var(--contentFont);
-  letter-spacing: 0.2em;
+  font: 16px/25px var(--contentFont);
+  letter-spacing: 0.1em;
   color: var(--pig-iron);
 }
 
@@ -1809,4 +1809,88 @@ input.set__viewer {
   margin: 0 12px;
   font-style: normal;
   color: var(--pig-iron);
+}
+
+.main .dropdown * {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.filter {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.filter > * {
+  margin: 0 auto 24px;
+}
+
+.filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter__item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  margin: 0 10px 10px 0;
+  font: 12px/17px var(--contentFont);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--pig-iron);
+  border-radius: 50px;
+  border: 1px solid var(--pig-iron);
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.filter__item:hover {
+  border-color: var(--victoriana);
+  box-shadow: 0 0 1px 1px var(--victoriana);
+}
+
+.filter input:checked + label {
+  color: #FFFFFF;
+  border-color: var(--victoriana);
+  background-color: var(--victoriana);
+}
+
+.sort-switch {
+  position: absolute;
+  right: 24px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 17px;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.filter .dropdown {
+  margin-top: 4px;
+}
+
+.sort-switch svg {
+  transition: 0.1s;
+}
+
+.sort-switch svg:hover {
+  fill: var(--victoriana);
+  opacity: 0.8;
+}
+
+#sortBtn:checked ~ .filter {
+  display: flex;
+}
+
+#sortBtn:checked + label {
+  fill: var(--victoriana);
 }

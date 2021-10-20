@@ -184,15 +184,95 @@ teraz:
             <svg class="breadcrumb__home">
               <use href="#home"></use>
             </svg>
-            <a class="breadcrumb__link" href="#">strona główna</a></li>
+            <a class="breadcrumb__link" href="#">strona główna</a>
+          </li>
           <li class="breadcrumb__item disabled">
             <svg class="breadcrumb__arrow">
               <use href="#breadcrumbArrow"></use>
             </svg>
-            <a class="breadcrumb__link" href="#" aria-current="location">gotowe sety makaroników</a></li>
-          </ul>
+            <a class="breadcrumb__link" href="#" aria-current="location">gotowe sety makaroników</a>
+          </li>
+        </ul>
       </nav>
+      <input id="sortBtn" type="checkbox">
+      <label class="sort-switch" for="sortBtn">
+        <svg>
+          <use href="#sort"></use>
+        </svg>
+      </label>
+      <div class="filter">
+        <div class="filter__list">
+          <input id="id1" type="checkbox">
+          <label for="id1" class="filter__item">dzień mamy</label>
+          <input id="id2" type="checkbox">
+          <label for="id2" class="filter__item">dla zakochanych</label>
+          <input id="id3" type="checkbox">
+          <label for="id3" class="filter__item">dla dzieci</label>
+          <input id="id4" type="checkbox">
+          <label for="id4" class="filter__item">na urodziny</label>
+          <input id="id5" type="checkbox">
+          <label for="id5" class="filter__item">wielkanoc</label>
+          <input id="id6" type="checkbox">
+          <label for="id6" class="filter__item">dzień taty</label>
+        </div>
+        <div class="dropdown">
+          <p>Filtruj:</p>
+          <div class="dropdown__select">
+            <div class="dropdown__item-current">
+              <p class="dropdown__text-current">najpopularniejsze</p>
+              <button class="arrow"></button>
+            </div>
+            <ul class="options">
+              <li class="option selected">
+                <p class="option__text">najpopularniejsze</p>
+              </li>
+              <li class="option">
+                <p class="option__text">po cene</p>
+              </li>
+              <li class="option">
+                <p class="option__text">po nazwie</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <div class="sets">
+        <div class="card card_s">
+          <img class="card__image" src="images/set_small-1.png" width="260" height="405" alt="set na lato">
+          <h4 class="card__name">set na lato</h4>
+          <p class="card__text">2xlimonka, 3xcytryna
+            i mięta, 1xtruskawka,
+            3xszczaw</p>
+          <p class="card_cost">34,-</p>
+          <a class="card__button button button_size_m button_width_x2 button_outlined_primary" href="">kup</a>
+        </div>
+        <div class="card card_s">
+          <img class="card__image" src="images/set_small-2.png" width="260" height="405" alt="set na lato">
+          <h4 class="card__name">set na lato</h4>
+          <p class="card__text">2xlimonka, 3xcytryna
+            i mięta, 1xtruskawka,
+            3xszczaw</p>
+          <p class="card_cost">34,-</p>
+          <a class="card__button button button_size_m button_width_x2 button_outlined_primary" href="">kup</a>
+        </div>
+        <div class="card card_s">
+          <img class="card__image" src="images/set_small-3.png" width="260" height="405" alt="set na lato">
+          <h4 class="card__name">set na lato</h4>
+          <p class="card__text">2xlimonka, 3xcytryna
+            i mięta, 1xtruskawka,
+            3xszczaw</p>
+          <p class="card_cost">34,-</p>
+          <a class="card__button button button_size_m button_width_x2 button_outlined_primary" href="">kup</a>
+        </div>
+        <div class="card card_s">
+          <img class="card__image" src="images/set_small-4.png" width="260" height="405" alt="set na lato">
+          <h4 class="card__name">set na lato</h4>
+          <p class="card__text">2xlimonka, 3xcytryna
+            i mięta, 1xtruskawka,
+            3xszczaw</p>
+          <p class="card_cost">34,-</p>
+          <a class="card__button button button_size_m button_width_x2 button_outlined_primary" href="">kup</a>
+        </div>
         <div class="card card_s">
           <img class="card__image" src="images/set_small-1.png" width="260" height="405" alt="set na lato">
           <h4 class="card__name">set na lato</h4>
@@ -332,6 +412,9 @@ teraz:
           <line x2="10" transform="translate(324.157 62.424)" fill="none" stroke="#484848" stroke-miterlimit="10" stroke-width="1"/>
           <path d="M350.442,58.729l3.7,3.7-3.7,3.7" transform="translate(-20.383)" fill="none" stroke="#484848" stroke-miterlimit="10" stroke-width="1"/>
         </g>
+      </symbol>
+      <symbol id="sort" viewBox="0 0 1024 1024">
+        <path d="M128 768h256v-85.333333H128v85.333333z m0-512v85.333333h768v-85.333333H128z m0 298.666667h512v-85.333334H128v85.333334z" />
       </symbol>
       
     </svg>
