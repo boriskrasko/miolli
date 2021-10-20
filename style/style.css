@@ -1714,6 +1714,7 @@ input.set__viewer {
 }
 
 .breadcrumb {
+  max-width: calc(100% - 32px);
   margin: 36px 0;
 }
 
@@ -1763,7 +1764,6 @@ input.set__viewer {
 
 .main .sets {
   display: flex;
-  justify-content: center;
   margin: 0 auto;
   flex-wrap: wrap;
   column-gap: 4%;
@@ -1819,18 +1819,15 @@ input.set__viewer {
 .filter {
   display: none;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
-}
-
-.filter > * {
-  margin: 0 auto 24px;
+  column-gap: 12px;
+  row-gap: 24px;
 }
 
 .filter__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .filter__item {
@@ -1862,7 +1859,7 @@ input.set__viewer {
 
 .sort-switch {
   position: absolute;
-  right: 24px;
+  right: 0;
   top: 0;
   display: flex;
   justify-content: center;

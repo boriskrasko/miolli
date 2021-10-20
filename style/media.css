@@ -168,6 +168,9 @@
     width: 24px;
     height: 24px;
   }
+  .main .sets {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 500px) {
