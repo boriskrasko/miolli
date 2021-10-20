@@ -1777,3 +1777,36 @@ input.set__viewer {
 .main .card_s img {
   margin-bottom: 32px;
 }
+
+.pagination {
+  margin: 64px 0;
+}
+
+.pagination__list {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination__list,
+.pagination__item,
+.pagination__link {
+  font: 14px/20px var(--contentFont);
+  letter-spacing: 0.2em;
+  color: var(--pig-iron);
+}
+
+.pagination__item {
+  margin: 0 12px;
+}
+
+.pagination__link:hover,
+.pagination__btn:hover {
+  color: var(--victoriana);
+  cursor: pointer;
+}
+
+.pagination__btn {
+  margin: 0 12px;
+  font-style: normal;
+  color: var(--pig-iron);
+}
