@@ -420,8 +420,8 @@
             </div>
              <div class="print__selection-bar">
               <p class="paragraph">Wybierz typ nadruku</p>
-              <input class="button" type="button" name="" value="Wpisz swój text">
-              <input class="button" type="button" name="" value="Dodaj swój plik graficzny">
+              <input class="button button-outlined" type="button" name="" value="Wpisz swój text"><br>
+              <input class="button button-outlined" type="button" name="" value="Dodaj swój plik graficzny">
               <form class="select-font-form">
                 <p class="paragraph">Wybierz kolor tekstu</p>
                 <div class="select-font-color">
@@ -455,7 +455,39 @@
                   </p>
                 </div>
                 <p class="paragraph">Na ilu makaronikach chcesz umieścić nadruk dedykowany?*</p>
-                <input type="number" name="" value="6">
+                <div class="quantity box-count">
+                  <input id="boxCount" name="boxCount" type="text" readonly value="6">
+                  <p class="smth">szt.</p>
+                  <div class="quantity__btns">
+                    <button class="button">
+                      <span class="material-icons">arrow_drop_up</span>
+                    </button>
+                    <button class="button">
+                      <span class="material-icons">arrow_drop_down</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <form class="select-font-form">
+                <p class="paragraph">Firma miolli zastrzega sobie ….</p>
+                <p class="paragraph">Wybierz czcionkę</p>
+                <div class="select-color">
+                  <p class="select-color__item">
+                    <input id="blackColor" type="radio" name="color">
+                    <span class="color-box"></span>
+                    <label for="blackColor">czarny</label>
+                  </p>
+                  <p class="select-color__item">
+                    <input id="fullColor" type="radio" name="color">
+                    <span class="color-box color-box_fullColor"></span>
+                    <label for="fullColor">full kolor</label>
+                  </p>
+                </div>
+                <p class="paragraph">Dodaj nadruk w wersji png, pdf lub cdr</p>
+                <div>
+                  <input class="input-file" type="file" name="">
+                  <button class="button button-outlined button_size_s">gotowe</button>
+                </div>
               </form>
               <button class="print-choice__button button button-outlined button_size_m">GOTOWE! PRZEJDŹ DALEJ</button>
             </div>
