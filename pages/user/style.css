@@ -59,9 +59,10 @@ main {
   min-height: calc(100vh - 78px);
   margin: 0 auto 78px;
   background-color: var(--limen);
-  background-image: url(../../assets/images/conf-bg.png);
+  background-image: url(../../assets/images/account-mask.png);
   background-repeat: no-repeat;
   background-position: top right;
+  background-size: cover;
   align-items: center;
 }
 
@@ -87,6 +88,15 @@ main {
   flex-wrap: wrap;
 }
 
+.account__menu_open {
+  max-width: 400px;
+  /*margin: 0;*/
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-self: flex-start;
+}
+
 .menu__item {
   font: 25px/35px var(--contentFont);
   width: 275px;
@@ -100,8 +110,104 @@ main {
   text-transform: uppercase;
 }
 
+.menu__item_open {
+  font: 25px/35px var(--contentFont);
+  width: 320px;
+  height: 68px;
+  border-bottom: 1px solid gray;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.menu__item_open_active {
+  width: 275px;
+  height: 168px;
+  background: #000;
+  color: #fff;
+}
+
 @media (max-width: 500px) {
   .account__header {
     padding: 10px;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 7%;
+}
+
+.container > * {
+  margin: 20px;
+}
+
+.user-data-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-data-form .button {
+  align-self: flex-start;
+  margin: 40px 0;
+}
+
+.change-pass {
+  align-self: flex-start;
+  margin: 20px 0;
+  text-decoration: underline;
+}
+
+.fields {
+  width: 448px;
+  margin: 0 auto;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  min-width: 324px;
+  width: 100%;
+}
+
+.field__input {
+  height: 65px;
+  border: 1px solid #000;
+  outline-color: var(--dark-vanilla);
+  font: 16px/25px var(--contentFont);
+  padding: 0 30px;
+  background: transparent;
+}
+
+.field__label {
+  margin: 26px 30px 15px;
+}
+
+@media (max-width: 760px) {
+  .fields {
+    width: 100%;
+  }
+  .field {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .field {
+    min-width: 100%;
+    width: 100%;
   }
 }
