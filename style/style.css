@@ -1888,6 +1888,11 @@ input.set__viewer {
   display: flex;
 }
 
+#sortBtn, .filter__list input  {
+  position: absolute;
+  z-index: -1;
+}
+
 #sortBtn:checked + label {
   fill: var(--victoriana);
 }
