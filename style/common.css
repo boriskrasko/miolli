@@ -13,6 +13,12 @@ body {
   overflow-x: hidden;
 }
 
+body.test *, 
+body.test *::before,
+body.test *::after {
+  outline: 1px solid #f00;
+}
+
 @media screen and (max-width: 500px)  {
   body.open {
     overflow: hidden;
