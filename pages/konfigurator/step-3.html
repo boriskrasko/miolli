@@ -418,38 +418,46 @@
               <input type="range" id="zoom" name="vol" min="0" max="25">
               <p class="print__result-copy paragraph_upper">tak wyglądać będzie twój makaronik</p>
             </div>
-            <div class="print__selection-bar">
+             <div class="print__selection-bar">
               <p class="paragraph">Wybierz typ nadruku</p>
               <input class="button" type="button" name="" value="Wpisz swój text">
               <input class="button" type="button" name="" value="Dodaj swój plik graficzny">
-              <form>
-                <p>Wybierz kolor tekstu</p>
-                <div>
-                  <input type="color" id="head" name="color" value="#000">
-                  <button>Zmień</button><br>
-                  <label for="color">wybierz z palety</label>
+              <form class="select-font-form">
+                <p class="paragraph">Wybierz kolor tekstu</p>
+                <div class="select-font-color">
+                  <input class="input-font-color" type="color" id="color" name="color" value="#338888">
+                  <button class="button button-outlined button_size_s">Zmień</button><br>
                 </div>
-                <p>Firma miolli zastrzega sobie ….</p>
-                <p>Wpisz tekst</p>
+                <!-- <p class="paragraph" for="color">wybierz z palety</p> -->
+                <p class="paragraph">Firma miolli zastrzega sobie ….</p>
+                <p class="paragraph">Wpisz tekst</p>
                 <div>
-                  <input type="text" name="" placeholder="Dla ukochanego Tomka">
-                  <button>gotowe</button>
+                  <input class="input-text" type="text" name="" placeholder="Dla ukochanego Tomka">
+                  <button class="button button-outlined button_size_s">gotowe</button>
                 </div>
-                <p>Wybierz czcionkę</p>
-                <div>
-                  <input id="font_1" type="radio" name="font">
-                  <label for="font_1">mm</label>
-                   <input id="font_2" type="radio" name="font">
-                  <label for="font_2">mm</label>
-                   <input id="font_3" type="radio" name="font">
-                  <label for="font_3">mm</label>
-                   <input id="font_4" type="radio" name="font">
-                  <label for="font_4">mm</label>
+                <p class="paragraph">Wybierz czcionkę</p>
+                <div class="select-font">
+                  <p class="select-font__item">
+                    <label for="font_1">Mm</label>
+                    <input id="font_1" type="radio" name="font">
+                  </p>
+                  <p class="select-font__item">
+                     <label for="font_2">Mm</label>
+                    <input id="font_2" type="radio" name="font">
+                  </p>
+                  <p class="select-font__item">
+                    <label for="font_3">Mm</label>
+                    <input id="font_3" type="radio" name="font">
+                  </p>
+                  <p class="select-font__item">
+                    <label for="font_4">Mm</label>
+                    <input id="font_4" type="radio" name="font">
+                  </p>
                 </div>
-                <p>Na ilu makaronikach chcesz umieścić nadruk dedykowany?*</p>
+                <p class="paragraph">Na ilu makaronikach chcesz umieścić nadruk dedykowany?*</p>
                 <input type="number" name="" value="6">
               </form>
-              <button>GOTOWE! PRZEJDŹ DALEJ</button>
+              <button class="print-choice__button button button-outlined button_size_m">GOTOWE! PRZEJDŹ DALEJ</button>
             </div>
           </div>
         </div>
