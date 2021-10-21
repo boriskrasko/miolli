@@ -195,23 +195,49 @@
               </li>
               <li class="breadcrumb__item">
                 <span class="breadcrumb__icon material-icons">east</span>
-                <a class="breadcrumb__link" href="#">twoje konto</a>
+                <a class="breadcrumb__link" href="index.html">twoje konto</a>
+              </li>
+              <li class="breadcrumb__item">
+                <span class="breadcrumb__icon material-icons">east</span>
+                <a class="breadcrumb__link" href="#">twoje dane</a>
               </li>
             </ul>
           </nav>
           <div class="account__header">
             <h2 class="account__title h2">Hello <span class="account-name">Marta</span>!</h2>
           </div>
-          <div class="account__menu">
-            <a href="dane.html" class="menu__item">twoje dane</a>
-            <button class="menu__item">adresy</button>
-            <button class="menu__item">archiwum zamówień</button>
-            <button class="menu__item">kody rabatowe</button>
-            <button class="menu__item">ulubione</button>
-            <button class="menu__item">faktury</button>
+         <div class="container">
+            <div class="account__menu_open">
+            <button class="menu__item_open menu__item_open_active">twoje dane</button>
+            <button class="menu__item_open">adresy</button>
+            <button class="menu__item_open">archiwum zamówień</button>
+            <button class="menu__item_open">kody rabatowe</button>
+            <button class="menu__item_open">ulubione</button>
+            <button class="menu__item_open">faktury</button>
           </div>
+          <div account__data>
+             <form class="user-data-form">
+          <div class="fields paragraph_upper">
+          <label class="field">
+            <span class="field__label" for="firstname">Imię i nazwisko::</span>
+            <input class="field__input" type="text" id="firstname" value="">
+          </label>
+          <label class="field">
+            <span class="field__label" for="email">Email:</span>
+            <input class="field__input" type="text" id="email">
+          </label>
+           <label class="field">
+            <span class="field__label" for="lastname">Hasło</span>
+            <input class="field__input" type="password" id="password" value="">
+          </label>
+          </div>
+          <!-- <button type="submit" class=" button button-outlined button-outlined_dark-vanilla button_size_m">zapisz</button> -->
+          <button class="change-pass paragraph_upper">zmień hasło</button>
+          <a href="" class="button button-outlined button_size_m">zapisz</a>
+        </form>
         </div>
       </div>
+         </div>
     </main>
     <footer class="footer">
       <nav class="footer-nav" aria-label="footnav">
