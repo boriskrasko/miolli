@@ -1184,27 +1184,6 @@ z nadrukiem of topbar menu*/
   }
 }
 
-
-/*@media (max-width: 768px) {
-  html {
-    font-size: 15px;
-  }
-}*/
-
-
-/*@media (max-width: 576px) {
-  html {
-    font-size: 14px;
-  }
-}*/
-
-
-/*@media (min-width: 1400px) {
-  html {
-    font-size: 20px;
-  }
-}*/
-
 .inner {
   position: absolute;
   top: 0;

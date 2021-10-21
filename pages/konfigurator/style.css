@@ -183,6 +183,7 @@ main {
   }
 }
 
+
 /*progress bar*/
 
 .progress-bar {
@@ -698,13 +699,12 @@ main {
 
 @media (max-width: 500px) {
   .print-choice__footer {
-  width: 100%;
-  padding: 18.5px 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
+    width: 100%;
+    padding: 18.5px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .print-choice__button {
     min-width: 249px;
     margin: 10px auto;
@@ -898,6 +898,7 @@ main {
   transform: rotate(-180deg);
 }
 
+
 /*STEP 4*/
 
 .quantity_choice {
@@ -968,7 +969,6 @@ main {
   align-items: center;
 }
 
-
 @media screen and (max-width: 768px) {
   .filter {
     margin: 20px auto;
@@ -986,6 +986,215 @@ main {
   }
 }
 
+
+/*modal*/
+
+.print__modal {
+  width: 100%;
+  max-width: 1025px;
+  min-height: 1107px;
+  background: #fff;
+  padding: 6%;
+  border: 20px solid var(--dark-vanilla);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 9%;
+}
+
+.print__result-preview {
+  position: relative;
+  width: 100%;
+  max-width: 256px;
+}
+
+.print__result-image {
+  width: 256px;
+  height: 256px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.print__cookie-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px ridge #fff1;
+}
+
+.print__cookie-image img {
+  width: 100%;
+}
+
+.print__text {
+  position: absolute;
+  max-width: 90%;
+  text-align: center;
+}
+
+.print__selection-bar {
+  min-width: 240px;
+}
+
+.print__result-copy {
+  font: 12px/17px var(--contentFont);
+  margin: 0 auto;
+  max-width: 80%;
+  text-align: center;
+}
+
+.select-font-form>* {
+  margin: 20px 0;
+}
+
+.select-font-color {
+  height: 50px;
+}
+
+.input-font-color {
+  -webkit-appearance: none;
+  width: 102px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.input-font-color~.button {
+  margin-bottom: 34px;
+  width: 120px;
+  min-height: 40px;
+  font-size: 12px;
+}
+
+.input-text {
+  height: 40px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+.input-text~.button {
+  width: 120px;
+  min-height: 40px;
+  font-size: 12px;
+}
+
+.select-font__item {
+  width: 100px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-font__item>* {
+  margin: 10px 20px;
+}
+
+input[type=range] {
+  height: 35px;
+  -webkit-appearance: none;
+  margin: 20px;
+  width: 80%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #777;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  height: 28px;
+  width: 28px;
+  border-radius: 20px;
+  background-color: #000;
+  background-image: url(../../assets/icons/loupe.svg);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #777;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #777;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 28px;
+  width: 28px;
+  border-radius: 20px;
+  background-color: #000;
+  background-image: url(../../assets/icons/loupe.svg);
+  cursor: pointer;
+  border: none;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #777;
+  border: 0px solid #000000;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #777;
+  border: 0px solid #000000;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #000000;
+  height: 28px;
+  width: 28px;
+  border-radius: 20px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #777;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #777;
+}
 
 @media (max-width: 500px) {
   .configurator__title_notFirstStep {
