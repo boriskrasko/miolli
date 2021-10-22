@@ -69,6 +69,7 @@ a.button {
   font-size: 1em;
   cursor: pointer;
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 0.2rem;
 }
 
@@ -233,5 +234,5 @@ a.button {
 }
 
 main {
-  min-height: 100vh;
+  min-height: 700px;
 }
