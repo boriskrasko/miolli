@@ -2130,10 +2130,11 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  column-gap: 0 !important;
 }
 
 .flex-row > .card {
-  margin: 12px 24px;
+  margin: 12px;
 }
 
 .card__button {
