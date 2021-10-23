@@ -2,13 +2,15 @@
 <html lang="pl">
   <head>
     <meta charset='utf-8'>
-    <title>Miolli | Makaroniki z nadrukiem</title>
+    <title>Miolli | Nadruk</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="uikit/css/uikit.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href='style/colors.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/fonts.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/common.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/media.css'>
+    <script src="uikit/js/uikit.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -32,8 +34,8 @@
           <li class="topnav__item">
             <a class="topnav__link" href="sets.html">gotowe sety makaroników</a>
           </li>
-          <li class="topnav__item hasChild disabled">
-            <a class="topnav__link" href="">makaroniki z nadrukiem
+          <li class="topnav__item hasChild">
+            <a class="topnav__link" href="prints.html">makaroniki z nadrukiem
               <svg class="arrow">
                 <use href="#bottom"></use>
               </svg>
@@ -127,8 +129,8 @@ teraz:
           <li class="sidenav__item mobile-only">
             <a class="sidenav__link" href="sets.html">gotowe sety</a>
           </li>
-          <li class="sidenav__item mobile-only disabled">
-            <a class="sidenav__link" href="#">makaroniki z nadrukiem</a>
+          <li class="sidenav__item mobile-only">
+            <a class="sidenav__link" href="prints.html">makaroniki z nadrukiem</a>
           </li>
           <li class="sidenav__item">
             <a class="sidenav__link" href="">konfigurator on-line</a>
@@ -186,57 +188,231 @@ teraz:
             </svg>
             <a class="breadcrumb__link" href="index.html">strona główna</a>
           </li>
+          <li class="breadcrumb__item">
+            <svg class="breadcrumb__arrow">
+              <use href="#breadcrumbArrow"></use>
+            </svg>
+            <a class="breadcrumb__link" href="prints.html">makaroniki z nadrukiem</a>
+          </li>
           <li class="breadcrumb__item disabled">
             <svg class="breadcrumb__arrow">
               <use href="#breadcrumbArrow"></use>
             </svg>
-            <a class="breadcrumb__link" href="#" aria-current="location">makaroniki z nadrukiem</a>
+            <a class="breadcrumb__link" href="#" aria-current="location">nadruk</a>
           </li>
         </ul>
       </nav>
-      <input id="sortBtn" type="checkbox">
-      <label class="sort-switch" for="sortBtn">
-        <svg>
-          <use href="#sort"></use>
-        </svg>
-      </label>
-      <div class="filter">
-        <div class="filter__list">
-          <input id="id1" type="checkbox">
-          <label for="id1" class="filter__item">dzień mamy</label>
-          <input id="id2" type="checkbox">
-          <label for="id2" class="filter__item">dla zakochanych</label>
-          <input id="id3" type="checkbox">
-          <label for="id3" class="filter__item">dla dzieci</label>
-          <input id="id4" type="checkbox">
-          <label for="id4" class="filter__item">na urodziny</label>
-          <input id="id5" type="checkbox">
-          <label for="id5" class="filter__item">wielkanoc</label>
-          <input id="id6" type="checkbox">
-          <label for="id6" class="filter__item">dzień taty</label>
-        </div>
-        <div class="dropdown dropdown_sort">
-          <p>Filtruj:</p>
-          <div class="dropdown__select">
-            <div class="dropdown__item-current">
-              <p class="dropdown__text-current">najpopularniejsze</p>
-              <button class="arrow"></button>
-            </div>
-            <ul class="options">
-              <li class="option selected">
-                <p class="option__text">najpopularniejsze</p>
-              </li>
-              <li class="option">
-                <p class="option__text">po cene</p>
-              </li>
-              <li class="option">
-                <p class="option__text">po nazwie</p>
-              </li>
-            </ul>
+      <div class="print print_single">
+        <aside class="print__image">
+          <img class="print__print" src="icons/miolli-logo.svg" alt="">
+          <img src="images/slony-karmel.png" alt="">
+        </aside>
+        <div class="print__content">
+          <h1 class="print__title">i love you</h1>
+          <p>
+            <input id="favorite" type="checkbox">
+            <label for="favorite">
+              <svg class="like">
+                <use href="#like"></use>
+              </svg>
+            </label>
+          </p>
+          <div class="price">
+            <p class="price__copy">
+              <span data-integer>34</span> ,-
+            </p>
+            <p class="price__details"> cena za <span data-quantity>6</span> sztuk </p>
           </div>
+          <fieldset class="boxsize">
+            <legend>
+              <b>wybierz wielkość pudełka: </b>
+            </legend>
+            <p>
+              <label for="boxsize">S</label>
+              <input type="number" id="boxsize" readonly min="6" max="24" value="6" step="6">
+              <i>szt.</i>
+              <button class="arrow-up"></button>
+              <button class="arrow-down"></button>
+            </p>
+          </fieldset>
+          <fieldset class="select-flavor">
+            <legend>
+              <b>wybierz smaki:</b>
+            </legend>
+            <div class="dropdown dropdown_print">
+              <div class="dropdown__select">
+                <div class="dropdown__item-current">
+                  <img class="dropdown__image-current" src="images/pistacja-z-limonka.png" alt="">
+                  <p class="dropdown__text-current">pistacja z limonka</p>
+                  <button class="arrow"></button>
+                </div>
+                <ul class="options">
+                  <li class="option selected">
+                    <img src="images/pistacja-z-limonka.png" alt="">
+                    <p class="option__text">pistacja z limonka</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/czekolada-wisnia.png" alt="">
+                    <p class="option__text">czekołada wiśnia</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/whisky-wanilia.png" alt="">
+                    <p class="option__text">whisky wanilia</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/rozowa-roza.png" alt="">
+                    <p class="option__text">różowa róża</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/slony-karmel.png" alt="">
+                    <p class="option__text">słony karmel</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown dropdown_print">
+              <div class="dropdown__select">
+                <div class="dropdown__item-current">
+                  <img class="dropdown__image-current" src="images/czekolada-wisnia.png" alt="">
+                  <p class="dropdown__text-current">czekołada wiśnia</p>
+                  <button class="arrow"></button>
+                </div>
+                <ul class="options">
+                  <li class="option">
+                    <img src="images/pistacja-z-limonka.png" alt="">
+                    <p class="option__text">pistacja z limonka</p>
+                  </li>
+                  <li class="option selected">
+                    <img src="images/czekolada-wisnia.png" alt="">
+                    <p class="option__text">czekołada wiśnia</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/whisky-wanilia.png" alt="">
+                    <p class="option__text">whisky wanilia</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/rozowa-roza.png" alt="">
+                    <p class="option__text">różowa róża</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/slony-karmel.png" alt="">
+                    <p class="option__text">słony karmel</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown dropdown_print">
+              <div class="dropdown__select">
+                <div class="dropdown__item-current">
+                  <img class="dropdown__image-current" src="images/whisky-wanilia.png" alt="">
+                  <p class="dropdown__text-current">whisky wanilia</p>
+                  <button class="arrow"></button>
+                </div>
+                <ul class="options">
+                  <li class="option">
+                    <img src="images/pistacja-z-limonka.png" alt="">
+                    <p class="option__text">pistacja z limonka</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/czekolada-wisnia.png" alt="">
+                    <p class="option__text">czekołada wiśnia</p>
+                  </li>
+                  <li class="option selected">
+                    <img src="images/whisky-wanilia.png" alt="">
+                    <p class="option__text">whisky wanilia</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/rozowa-roza.png" alt="">
+                    <p class="option__text">różowa róża</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/slony-karmel.png" alt="">
+                    <p class="option__text">słony karmel</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown dropdown_print">
+              <div class="dropdown__select">
+                <div class="dropdown__item-current">
+                  <img class="dropdown__image-current" src="images/rozowa-roza.png" alt="">
+                  <p class="dropdown__text-current">rozowa roza</p>
+                  <button class="arrow"></button>
+                </div>
+                <ul class="options">
+                  <li class="option">
+                    <img src="images/pistacja-z-limonka.png" alt="">
+                    <p class="option__text">pistacja z limonka</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/czekolada-wisnia.png" alt="">
+                    <p class="option__text">czekołada wiśnia</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/whisky-wanilia.png" alt="">
+                    <p class="option__text">whisky wanilia</p>
+                  </li>
+                  <li class="option selected">
+                    <img src="images/rozowa-roza.png" alt="">
+                    <p class="option__text">różowa róża</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/slony-karmel.png" alt="">
+                    <p class="option__text">słony karmel</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown dropdown_print">
+              <div class="dropdown__select">
+                <div class="dropdown__item-current">
+                  <img class="dropdown__image-current" src="images/slony-karmel.png" alt="">
+                  <p class="dropdown__text-current">słony karmel</p>
+                  <button class="arrow"></button>
+                </div>
+                <ul class="options">
+                  <li class="option">
+                    <img src="images/pistacja-z-limonka.png" alt="">
+                    <p class="option__text">pistacja z limonka</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/czekolada-wisnia.png" alt="">
+                    <p class="option__text">czekołada wiśnia</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/whisky-wanilia.png" alt="">
+                    <p class="option__text">whisky wanilia</p>
+                  </li>
+                  <li class="option">
+                    <img src="images/rozowa-roza.png" alt="">
+                    <p class="option__text">różowa róża</p>
+                  </li>
+                  <li class="option selected">
+                    <img src="images/slony-karmel.png" alt="">
+                    <p class="option__text">słony karmel</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="boxcount">
+            <legend>
+              <b>wybierz ilość pudełek: </b>
+            </legend>
+            <p>
+              <input type="number" id="boxcount" readonly min="1" max="99" value="1" step="1">
+              <i>szt.</i>
+              <button class="arrow-up"></button>
+              <button class="arrow-down"></button>
+            </p>
+          </fieldset>
+          <a class="button button_size_m button_width_x2 button_primary" href="">kup teraz</a>
         </div>
       </div>
-      <div class="print_row">
+    </main>
+    <section class="section flavor flavor_change">
+      <h2 class="title title_print">masz ochotę na więcej?</h2>
+      <div class="flex-row">
         <div class="card card_print">
           <aside>
             <img class="card__print" src="icons/miolli-logo.svg" alt="">
@@ -245,7 +421,7 @@ teraz:
           </aside>
           <h4 class="card__name">i love you</h4>
           <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
+            <a class="card__button button button_size_s button_outlined_primary">Zamów</a>
             <input id="favorite1" type="checkbox" checked>
             <label for="favorite1" class="card__button card__button_like button_outlined_primary">
               <svg class="like">
@@ -262,7 +438,7 @@ teraz:
           </aside>
           <h4 class="card__name">i love you</h4>
           <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
+            <a class="card__button button button_size_s button_outlined_primary">Zamów</a>
             <input id="favorite2" type="checkbox">
             <label for="favorite2" class="card__button card__button_like button_outlined_primary">
               <svg class="like">
@@ -278,7 +454,7 @@ teraz:
           </aside>
           <h4 class="card__name">i love you</h4>
           <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
+            <a class="card__button button button_size_s button_outlined_primary">Zamów</a>
             <input id="favorite3" type="checkbox">
             <label for="favorite3" class="card__button card__button_like button_outlined_primary">
               <svg class="like">
@@ -295,7 +471,7 @@ teraz:
           </aside>
           <h4 class="card__name">i love you</h4>
           <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
+            <a class="card__button button button_size_s button_outlined_primary">Zamów</a>
             <input id="favorite4" type="checkbox">
             <label for="favorite4" class="card__button card__button_like button_outlined_primary">
               <svg class="like">
@@ -304,111 +480,16 @@ teraz:
             </label>
           </div>
         </div>
-        <div class="card card_print">
-          <aside>
-            <img class="card__print" src="icons/miolli-logo.svg" alt="">
-            <img class="card__image" src="images/czekolada-wisnia.png" alt="czekolada
-          i wiśnia">
-          </aside>
-          <h4 class="card__name">i love you</h4>
-          <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
-            <input id="favorite5" type="checkbox">
-            <label for="favorite5" class="card__button card__button_like button_outlined_primary">
-              <svg class="like">
-                <use href="#like"></use>
-              </svg>
-            </label>
-          </div>
-        </div>
-        <div class="card card_print">
-          <aside>
-            <img class="card__print" src="icons/miolli-logo.svg" alt="">
-            <img class="card__image" src="images/pistacja-z-limonka.png" alt="pistacja
-          z limonkąl">
-          </aside>
-          <h4 class="card__name">i love you</h4>
-          <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
-            <input id="favorite6" type="checkbox">
-            <label for="favorite6" class="card__button card__button_like button_outlined_primary">
-              <svg class="like">
-                <use href="#like"></use>
-              </svg>
-            </label>
-          </div>
-        </div>
-        <div class="card card_print">
-          <aside>
-            <img class="card__print" src="icons/miolli-logo.svg" alt="">
-            <img class="card__image" src="images/slony-karmel.png" alt="slony karmel">
-          </aside>
-          <h4 class="card__name">i love you</h4>
-          <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
-            <input id="favorite7" type="checkbox">
-            <label for="favorite7" class="card__button card__button_like button_outlined_primary">
-              <svg class="like">
-                <use href="#like"></use>
-              </svg>
-            </label>
-          </div>
-        </div>
-        <div class="card card_print">
-          <aside>
-            <img class="card__print" src="icons/miolli-logo.svg" alt="">
-            <img class="card__image" src="images/pistacja-z-limonka.png" alt="pistacja
-          z limonkąl">
-          </aside>
-          <h4 class="card__name">i love you</h4>
-          <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
-            <input id="favorite8" type="checkbox">
-            <label for="favorite8" class="card__button card__button_like button_outlined_primary">
-              <svg class="like">
-                <use href="#like"></use>
-              </svg>
-            </label>
-          </div>
-        </div>
       </div>
-      <div class="pagination">
-        <ul class="pagination__list">
-          <i class="pagination__btn pagination__btn_prev disabled"><</i>
-          <li class="pagination__item">
-            <a href="#" class="pagination__link disabled">1</a>
-          </li>
-          <li class="pagination__item">
-            <a href="#" class="pagination__link">2</a>
-          </li>
-          <li class="pagination__item">
-            <a href="#" class="pagination__link">3</a>
-          </li>
-          <i class="pagination__btn pagination__btn_next">></i>
-        </ul>
-      </div>
-    </main>
-    <section class="box">
-      <div class="box__content">
-        <h2 class="box__title">skomponuj
-          swoje pudełko</h2>
-          <ul class="box__list">
-            <li class="box__item">wybierz rozmiar (6/12/24szt)</li>
-            <li class="box__item">wybierz ulubione smaki</li>
-            <li class="box__item">dodaj nadruk z naszej bazy
-              albo swój własny
-              to może być napis lub pełnokolorowy
-              wydruk (np. Twoje logo)</li>
-          </ul>
-          <p class="box__text">proste? To do dzieła!
-            Smacznego!</p>
-          <img class="box__logo" src="icons/miolli-logo-small.svg" alt="miolli logo">
-      </div>
-      <div class="box__box">
-        <img src="images/box.png" alt="miolli box">
-      </div>
-      <div class="box__button">
-        <a class="button button_size_l button_outlined" href="">stwórz swoją kompozycję</a>
+    </section>
+    <section class="uno">
+      <div class="uno__content">
+        <h2 class="uno__title">dodaj wyjątkowości
+          swojemu wydarzeniu
+          z Miolli</h2>
+          <hr>
+          <p class="uno__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam, diam ut maximus suscipit, lectus enim interdum turpis, et scelerisque neque est in diam. Aliquam gravida dapibus urna sit amet bibendum. Pellentesque tristique massa dictum quam mattis, at laoreet augue gravida.</p>
+          <a class="uno__button button button_size_l button_outlined" href="">konfiguruj zamówienie</a>
       </div>
     </section>
     <footer class="footer">
@@ -423,8 +504,8 @@ teraz:
           <li class="footer__item">
             <a href="" class="footer__link">o nas</a>
           </li>
-          <li class="footer__item disabled">
-            <a href="" class="footer__link">makaroniki z nadrukiem</a>
+          <li class="footer__item">
+            <a href="prints.html" class="footer__link">makaroniki z nadrukiem</a>
           </li>
           <li class="footer__item">
             <a href="" class="footer__link">twoja kompozycja</a>
@@ -604,8 +685,21 @@ teraz:
         }
       });
 
-      // Dropdown
-      for (const dropdown of document.querySelectorAll('.dropdown')) {
+      document.querySelectorAll('fieldset').forEach(elem => elem.addEventListener('click', function(e) {
+			let input = this.querySelector('input');
+      let label = this.querySelector('label')
+			if(e.target === this.querySelector('.arrow-up')) {
+				input.stepUp();
+				if (label) label.textContent = input.value > 12 ? 'L' : 'M';
+			}
+			if(e.target === this.querySelector('.arrow-down')) {
+				input.stepDown();
+				if (label) label.textContent = input.value > 12 ? 'L' : input.value == 12 ? 'M' : 'S';
+			}
+		}))
+
+       // Dropdown
+       for (const dropdown of document.querySelectorAll('.dropdown')) {
         dropdown.addEventListener('click', function () {
           this.querySelector('.dropdown__select').classList.toggle('opened');
         })
@@ -616,7 +710,7 @@ teraz:
             this.parentNode.querySelector('.option.selected').classList.remove('selected');
             this.classList.add('selected');
             this.closest('.dropdown__select').querySelector('.dropdown__item-current p').textContent = this.textContent;
-            changeMap(document.querySelector('.selected').dataset.location.split(', '));
+            this.closest('.dropdown__select').querySelector('.dropdown__item-current img').src = this.children[0].src;
           }
         })
       }
@@ -627,7 +721,6 @@ teraz:
           }
         }
       });
-
       document.querySelector('#switch').addEventListener('change', () => {
         document.querySelector('#switch').checked ? document.body.classList.add('open') : document.body.classList.remove('open');
       })

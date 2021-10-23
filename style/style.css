@@ -2019,7 +2019,7 @@ input.set__viewer {
   }
   .set__title {
     max-width: 100%;
-    font: 64px/64px var(--titleFont);
+    font: 74px/74px var(--titleFont);
   }
   .set__content {
     max-width: 390px;
@@ -2220,4 +2220,147 @@ input[type=number]::-webkit-outer-spin-button {
 .card_print input:checked ~ label {
   background-color: #FFFFFF;
   fill: #d89898;
+}
+
+.dropdown_print {
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.dropdown_print .option__text,
+.dropdown_print .dropdown__text-current {
+  text-transform: lowercase;
+  letter-spacing: 0;
+}
+
+.dropdown_print img {
+  width: 36px;
+}
+
+.dropdown_print .option {
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.dropdown_print .dropdown__select {
+  width: 100%;
+  max-width: 300px;
+  align-items: flex-start;
+}
+
+.dropdown_print .dropdown__item-current {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.dropdown_print .arrow {
+ position: absolute;
+ right: 10px;
+}
+
+.select-flavor {
+  border: none;
+  padding: 12px 0 0;
+  counter-reset: step;
+}
+
+.select-flavor legend b {
+  text-transform: uppercase;
+  color: #111111
+}
+
+.dropdown::before {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 28px;
+  align-self: flex-end;
+  content: counter(step);
+  counter-increment: step;
+}
+
+.print_single {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.print__image {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  padding-top: 36px;
+  margin: 0;
+}
+
+.print__image img {
+  width: 80%;
+}
+
+.print__print {
+  position: absolute;
+  max-width: 40%;
+}
+
+.print__content {
+  width: 100%;
+  max-width: 500px;
+  padding-top: 40px;
+}
+
+.print__title {
+  max-width: 350px;
+  font: 94px/94px var(--titleFont);
+  color: var(--blooming-perfect);
+}
+
+.print_single label {
+  cursor: pointer;
+}
+
+label[for="favorite"]::after {
+  content: 'dodaj wzór do ulubionych';
+  margin-left: 4px;
+  font: 14px/20px var(--contentFont);
+  text-transform: uppercase;
+}
+
+.print_single label svg {
+  width: 40px;
+  height: 40px;
+  stroke: var(--blooming-perfect);
+  fill: #FFFFFF;
+  padding: 4px;
+  border: 1px solid var(--blooming-perfect);
+}
+
+.print_single label.card__button:hover {
+  background-color: transparent;
+}
+
+.print_single input:checked ~ label svg,
+.print_single input:checked ~ label {
+  background-color: #FFFFFF;
+  fill: var(--blooming-perfect);
+}
+
+.print_single input:checked  ~ label[for="favorite"]::after {
+  content: 'w ulubionych';
+}
+
+.section .title.title_print {
+  max-width: 900px;
+}
+
+@media screen and (max-width: 840px) {
+  .print_single {
+    flex-wrap: wrap;
+  }
 }
