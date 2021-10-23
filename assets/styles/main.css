@@ -1384,6 +1384,7 @@ z nadrukiem of topbar menu*/
   width: 100%;
   background: #000;
   z-index: 0;
+  clear: both;
 }
 
 .footer-nav {

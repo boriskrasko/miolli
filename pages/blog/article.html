@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miolli | Dane do wysyłki</title>
+    <title>Miolli | Article</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
@@ -184,83 +184,135 @@
         </div>
       </div>
     </header>
-    <main>
-     <div class="cart">
-      <div class="cart__header">
-         <h2 class="h2 txt-color_dark-vanilla">dane do wysyłki</h2>
-      <hr class="underline underline_heading fill_dark-vanilla">
-      <p class="paragraph_upper">podaj dane do wysyłki</p>
+    <main class="main">
+      <div class="start-screen">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ul class="breadcrumb__list uppercase">
+            <li class="breadcrumb__item">
+              <img src="../../assets/icons/home.svg" alt="&#8962;">
+              <a class="breadcrumb__link" href="../main/index.html">strona główna</a>
+            </li>
+            <li class="breadcrumb__item">
+              <span class="breadcrumb__icon material-icons">east</span>
+              <a class="breadcrumb__link" href="index.html">Pyshny blog</a>
+            </li>
+            <li class="breadcrumb__item">
+              <span class="breadcrumb__icon material-icons">east</span>
+              <a class="breadcrumb__link" href="index.html">Article</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div class="cart__body">
-        <form class="shipping-form">
-          <div class="fields paragraph_upper">
-          <fieldset class="buyer-type">
-            <legend class="hidden">private or company</legend>
-            <label>
-               <input type="radio" name="buyer-type" value="private">
-               <span>osoba prywatna</span>
-            </label>
-            <label>
-              <input type="radio" name="buyer-type" value="company">
-              <span>firma</span>
-            </label>
-          </fieldset>
-          <label class="field">
-            <span class="field__label" for="firstname">Imię:</span>
-            <input class="field__input" type="text" id="firstname" value="">
-          </label>
-          <label class="field field_short">
-            <span class="field__label" for="lastname">Nazwisko:</span>
-            <input class="field__input" type="text" id="lastname" value="">
-          </label>
-          <label class="field field_wide">
-            <span class="field__label" for="address">Adres:</span>
-            <input class="field__input" type="text" id="address">
-          </label>
-          <label class="field">
-            <span class="field__label" for="zipcode">Kod pocztowy:</span>
-            <input class="field__input" type="text" id="zipcode">
-          </label>
-          <label class="field field_short">
-            <span class="field__label" for="city">Miejscowość:</span>
-            <input class="field__input" type="text" id="city">
-          </label>
-          <label class="field">
-            <span class="field__label" for="state">Województwo:</span>
-            <select class="field__input" id="state">
-              <option value=""></option>
-            </select>
-          </label>
-          <label class="field field_short">
-            <span class="field__label" for="country">Kraj:</span>
-            <select class="field__input" id="country">
-              <option value=""></option>
-              <option value="unitedstates">Polska</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field__label" for="email">Email:</span>
-            <input class="field__input" type="text" id="email">
-          </label>
-          <label class="field field_short">
-            <span class="field__label" for="city">Telefon:</span>
-            <input class="field__input" type="phone" id="phone">
-          </label>
-          <fieldset class="shipping-form__confirm">
-            <legend class="hidden">Confirm</legend>
-            <label class="field_confirm">
-            <input type="checkbox" name="" required>
-            <span class="lowercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. </span>
-          </label>
-           <label class="field_confirm">
-            <input type="checkbox" name="" required>
-            <span class="lowercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. </span>
-          </label>
-          </fieldset>
-          </div>
-          <!-- <button type="submit" class="shipping-form_button_submit button button-outlined button-outlined_dark-vanilla button_size_m">dalej</button> -->
-          <a href="dostawa.html" class="shipping-form_button_submit button button-outlined button-outlined_dark-vanilla button_size_m">dalej</a>
-        </form>
+      <article class="blog-article">
+        <header class="blog-article__header">
+          <h1 class="blog-article__title h4">CZY WIĘKSZE ZNACZY LEPSZE?</h1>
+          <hr class="blog-article__underline underline_heading fill_white_chocolate">
+          <p class="blog-article__subtitle paragraph_upper">
+            o tym czym charakteryzują się najlepszej jakości makaronikI
+          </p>
+        </header>
+        <div class="blog-article__body">
+          <!-- <img class="right" src="../../assets/images/cookie-line.png" alt=""> -->
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquam.
+          </p>
+          <img class="right" src="../../assets/images/cookie-line.png" alt="">
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquam.
+          </p>
+          <h2 class="h5"> Lorem ipsum dolor</h2>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquam.
+          </p>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquam.
+          </p>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquam.
+          </p>
+          <h2 class="h5"> Lorem ipsum dolor</h2>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquam.
+          </p>
+          <img class="center" src="../../assets/images/makaroniki-pozostale.png" alt="">
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquam.
+          </p>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquam.
+          </p>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquam.
+          </p>
+        </div>
+      </article>
+      <section class="blog">
+        <div class="blog__heading">
+          <h3 class="blog__title h2 txt-color_pastel-pink">masz ochotę na więcej?</h3>
+        </div>
+        <div class="blog__body articles">         
+          <article class="article">
+            <div class="article__header">
+              <figure class="article__figure">
+                <img src="../../assets/images/article-image-1.png" alt="">
+              </figure>
+            </div>
+            <div class="article__body">
+              <h2 class="article__title h5">czy większe znaczy lepsze?</h2>
+              <p class="article__copy paragraph_upper">
+               o tym czym charakteryzują się najlepszej jakości makaroniki
+              </p>
+            </div>
+            <footer class="article__footer">
+              <div class="article__actions">
+                <a href="articles/index.html" class="article__button button button-outlined button-outlined_parrot-pink button_size_m">
+                 czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
+          <article class="article">
+            <div class="article__header">
+              <figure class="article__figure">
+                <img src="../../assets/images/article-image-1.png" alt="">
+              </figure>
+            </div>
+            <div class="article__body">
+              <h2 class="article__title h5">czy większe znaczy lepsze?</h2>
+              <p class="article__copy paragraph_upper">
+               o tym czym charakteryzują się najlepszej jakości makaroniki
+              </p>
+            </div>
+            <footer class="article__footer">
+              <div class="article__actions">
+                <a href="articles/index.html" class="article__button button button-outlined button-outlined_parrot-pink button_size_m">
+                 czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
+          <article class="article">
+            <div class="article__header">
+              <figure class="article__figure">
+                <img src="../../assets/images/article-image-1.png" alt="">
+              </figure>
+            </div>
+            <div class="article__body">
+              <h2 class="article__title h5">czy większe znaczy lepsze?</h2>
+              <p class="article__copy paragraph_upper">
+               o tym czym charakteryzują się najlepszej jakości makaroniki
+              </p>
+            </div>
+            <footer class="article__footer">
+              <div class="article__actions">
+                <a href="articles/index.html" class="article__button button button-outlined button-outlined_parrot-pink button_size_m">
+                 czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <nav class="footer-nav" aria-label="footnav">
