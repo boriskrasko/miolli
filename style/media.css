@@ -80,7 +80,7 @@
 }
 
 @media screen and (max-width: 760px) {
-  .section .title, .print__title, .set__title {
+  .section .title, .print__title, .set__title, .constructor__title  {
     font: 64px/70px var(--titleFont);
   }
   .flavor__filter {
@@ -195,7 +195,7 @@
   .section {
     padding: 44px 0 8px 0;
   }
-  .section .title, .box__title, .uno__title, .print__title, .set__title {
+  .section .title, .box__title, .uno__title, .print__title, .set__title, .constructor__title {
     margin-bottom: 4px;
     font: 50px/60px var(--titleFont);
   }
@@ -343,8 +343,21 @@
   .set__slideshow li {
     margin-left: 0;
   }
-  .main {
-    margin: 0 auto 40px;
+  .main_constructor {
+    padding: 20px;
+  }
+  .progressbar {
+    display: none;
+  }
+  .progressbar_mobile {
+    display: block;
+    margin-top: 24px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .boxselect {
+    padding: 41px 0;
   }
 }
 

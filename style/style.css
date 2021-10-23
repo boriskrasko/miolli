@@ -1703,18 +1703,15 @@ input.set__viewer {
 
 .main {
   position: relative;
-  top: 78px;
-  width: 90%;
-  margin: 0 auto 160px;
-}
-
-.main_cards {
-  margin: 0 auto 320px;
+  margin-top: 78px;
+  width: 100%;
+  padding: 0 5%;
 }
 
 .breadcrumb {
   max-width: calc(100% - 32px);
-  margin: 36px 0;
+  margin: calc(78px + 32px) 0 32px;
+
 }
 
 .breadcrumb__list {
@@ -1863,7 +1860,7 @@ input.set__viewer {
 
 .sort-switch {
   position: absolute;
-  right: 0;
+  right: 5%;
   top: 0;
   display: flex;
   justify-content: center;
@@ -2371,4 +2368,133 @@ label[for="favorite"]::after {
   .print_single {
     flex-wrap: wrap;
   }
+}
+
+.main_constructor {
+  padding: 32px;
+}
+
+.constructor {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  background-color: #FFECE6;
+  background-image: url(../images/mask.png);
+  background-position: -1000px -700px;
+  background-size: cover;
+  transition: 0.4s background-color;
+  padding: 82px 5% 0;
+}
+
+.constructor__title {
+  font: 94px/90px var(--titleFont);
+  text-align: center;
+}
+
+.progressbar {
+  width: 100%;
+  max-width: 600px;
+  margin: 52px auto;
+}
+
+.progressbar li {
+  position: relative;
+  float: left;
+  width: 25%;
+  padding: 0 20px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #484848;
+}
+
+.progressbar li.active::before {
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+.progressbar li::before {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 38px;
+  height: 38px;
+  margin: 12px auto;
+  content: "";
+  font-size: 16px;
+  text-align: center;
+  line-height: 38px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  background-color: #FFECE6;
+}
+
+.progressbar li::after {
+  position: absolute;
+  top: 29px;
+  left: -50%;
+  z-index: 0;
+  width: 100%;
+  height: 1px;
+  content: '';
+  background-color: #000000;
+}
+
+.progressbar li:first-child:after {
+  content: none;
+}
+
+.progressbar {
+  counter-reset: step;
+}
+
+.progressbar li:before {
+  content: counter(step);
+  counter-increment: step; 
+}
+
+.boxselect {
+  clear: left;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 82px 0;
+  border: none;
+}
+
+.boxselect input {
+  position: absolute;
+  bottom: 12%;
+}
+
+.boxselect p {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.boxselect label::before {
+  content: url(../images/box-min.png);
+}
+
+.boxselect label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  font: 51px/50px var(--titleFont);
+  color: #434343;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 860px) {
+  .boxselect {
+    flex-direction: column;
+  }
+}
+
+.progressbar_mobile {
+  display: none;
 }

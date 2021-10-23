@@ -233,6 +233,32 @@ a.button {
   .button_round > svg {width: 3rem; height: 3rem;}
 }
 
-main {
-  min-height: 700px;
+input[type="radio"] {
+  --size: 18px;
+  --color: hsla(var(--input-h), var(--input-s), var(--input-b), 1);
+  --unit: calc(var(--size) * 0.125);
+  --border: hsla(var(--input-h), var(--input-s), 10%, 1);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: var(--size, 1rem);
+  height: var(--size, 1rem);
+  border: var(--border-width, 0.0625rem) solid var(--color, #000);
+}
+
+input[type="radio"]:hover {
+  --input-b: 25%;
+}
+
+input[type="radio"]:checked {
+  --input-b: 10%;
+  box-shadow: inset 0 0 0 var(--unit, 0.125rem) #fff;
+  background-color: var(--color, #000);
+}
+
+input[type="radio"]:checked:hover {
+  --input-b: 0%;
+  box-shadow: inset 0 0 0 var(--unit, 0.125rem) #fff;
+  background-color: var(--color, #000);
 }

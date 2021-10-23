@@ -2,7 +2,7 @@
 <html lang="pl">
   <head>
     <meta charset='utf-8'>
-    <title>Miolli | Set na lato</title>
+    <title>Miolli | Online konstruktor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="uikit/css/uikit.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href='style/colors.css'>
@@ -28,7 +28,7 @@
               <img src="icons/miolli-logo-small.svg" alt="miolli">
             </a>
           </li>
-          <li class="topnav__item">
+          <li class="topnav__item disabled">
             <a class="topnav__link" href="configurator.html">twoja kompozycja</a>
           </li>
           <li class="topnav__item">
@@ -132,7 +132,7 @@ teraz:
           <li class="sidenav__item mobile-only">
             <a class="sidenav__link" href="prints.html">makaroniki z nadrukiem</a>
           </li>
-          <li class="sidenav__item">
+          <li class="sidenav__item disabled">
             <a class="sidenav__link" href="configurator.html">konfigurator on-line</a>
           </li>
           <li class="sidenav__item" >
@@ -179,165 +179,35 @@ teraz:
         </form>
       </div>
     </div>
-    <main class="main">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ul class="breadcrumb__list">
-          <li class="breadcrumb__item">
-            <svg class="breadcrumb__home">
-              <use href="#home"></use>
-            </svg>
-            <a class="breadcrumb__link" href="index.html">strona główna</a>
-          </li>
-          <li class="breadcrumb__item">
-            <svg class="breadcrumb__arrow">
-              <use href="#breadcrumbArrow"></use>
-            </svg>
-            <a class="breadcrumb__link" href="sets.html">gotowe sety makaroników</a>
-          </li>
-          <li class="breadcrumb__item disabled">
-            <svg class="breadcrumb__arrow">
-              <use href="#breadcrumbArrow"></use>
-            </svg>
-            <a class="breadcrumb__link" href="#" aria-current="location">set na lato</a>
-          </li>
+    <main class="main main_constructor">
+      <div class="constructor">
+        <h1 class="constructor__title">skomponuj swoje pudełko</h1>
+        <ul class="progressbar">
+          <li class="active">wybierz rozmiar</li>
+          <li>wybierz smaki</li>
+          <li>dodaj nadruk</li>
+          <li>dodaj do koszyka</li>
         </ul>
-      </nav>
-      <div class="set set_single">
-        <aside class="set__slideshow">
-          <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slider>
-            <ul class="uk-slider-items uk-child-width-1-1">
-              <li>
-                <img src="images/set-1.png" width="454" height="682" alt="">
-              </li>
-              <li>
-                <img src="images/set-2.png" width="454" height="682" alt="">
-              </li>
-              <li>
-                <img src="images/set-3.png" width="454" height="682" alt="">
-              </li>
-            </ul>
-            <div class="set__counter">
-              <a class="uk-position-out uk-position-small button_arrow" href="#" uk-slider-item="previous">
-                <svg class="arrow-icon">
-                  <use href="#west"></use>
-                </svg>
-              </a>
-                <span data-total="3" class="current">1</span>
-              <a class="uk-position-out uk-position-small button_arrow" href="#" uk-slider-item="next">
-                <svg class="arrow-icon">
-                  <use href="#east"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </aside>
-        <div class="set__content">
-          <h1 class="set__title">zestaw na lato</h1>
-          <div class="price">
-            <p class="price__copy">
-              <span data-integer>34</span> ,-
-            </p>
-            <p class="price__details"> cena za <span data-quantity>6</span> sztuk </p>
-          </div>
-          <ul class="set__list" aria-label="Smaki:">
-            <li class="set__item">2xlimonka</li>
-            <li class="set__item">3xcytryna i mięta</li>
-            <li class="set__item">1xtruskawka</li>
-            <li class="set__item">3xszczaw</li>
-          </ul>
-          <p class="set__details">
-            <b>opis:</b> Donec tincidunt diam quis lectus feugiat, sed rutrum tortor elementum
-          </p>
-          <fieldset class="boxsize">
-            <legend>
-              <b>wybierz wielkość pudełka: </b>
-            </legend>
-            <p>
-              <label for="boxsize">S</label>
-              <input type="number" id="boxsize" readonly min="6" max="24" value="6" step="6">
-              <i>szt.</i>
-              <button class="arrow-up"></button>
-              <button class="arrow-down"></button>
-            </p>
-          </fieldset>
-          <fieldset class="boxcount">
-            <legend>
-              <b>wybierz ilość pudełek: </b>
-            </legend>
-            <p>
-              <input type="number" id="boxcount" readonly min="1" max="99" value="1" step="1">
-              <i>szt.</i>
-              <button class="arrow-up"></button>
-              <button class="arrow-down"></button>
-            </p>
-          </fieldset>
-          <a class="button button_size_m button_width_x2 button_secondary" href="">kup teraz</a>
+        <div class="progressbar_mobile">
+          <p>1/4</p>
+          <p>wybierz rozmiar</p>
         </div>
+        <fieldset class="boxselect">
+          <p>
+            <input id="6" type="radio" name="boxsize">
+          <label for="6">6 szt</label>
+            </p>
+          <p>
+            <input id="12" type="radio" name="boxsize">
+          <label for="12">12 szt</label>
+          </p>
+          <p>
+            <input id="24" type="radio" name="boxsize">
+          <label for="24">24 szt</label>
+          </p>
+        </fieldset>
       </div>
     </main>
-    <section class="section flavor flavor_change">
-      <h2 class="title title_set">personalizuj!</h2>
-      <p class="subtitle">Nie lubisz któregoś ze smaków? wymień je!</p>
-      <div class="flex-row">
-        <div class="card card_v">
-          <img class="card__image" src="images/czekolada-wisnia.png" alt="czekolada
-          i wiśnia">
-          <hr>
-          <h4 class="card__name">czekolada 
-            i wiśnia</h4>
-            <button class="card__button button button_size_s button_outlined_primary">Zmień</button>
-        </div>
-        <div class="card card_v">
-          <img class="card__image" src="images/pistacja-z-limonka.png" alt="pistacja
-          z limonkąl">
-          <hr>
-          <h4 class="card__name">pistacja
-            z limonką</h4>
-            <button class="card__button button button_size_s button_outlined_primary">Zmień</button>
-        </div>
-        <div class="card card_v">
-          <img class="card__image" src="images/rozowa-roza.png" alt="różowa
-          róża">
-          <hr>
-          <h4 class="card__name">różowa
-            róża</h4>
-            <button class="card__button button button_size_s button_outlined_primary">Zmień</button>
-        </div>
-        <div class="card card_v">
-          <img class="card__image" src="images/slony-karmel.png" alt="slony karmel">
-          <hr>
-          <h4 class="card__name">słony karmel</h4>
-            <button class="card__button button button_size_s button_outlined_primary">Zmień</button>
-        </div>
-        <div class="card card_v">
-          <img class="card__image" src="images/whisky-wanilia.png" alt="whisky
-          i wanilia">
-          <hr>
-          <h4 class="card__name">whisky
-            i wanilia</h4>
-            <button class="card__button button button_size_s button_outlined_primary">Zmień</button>
-        </div>
-        <div class="card card_v">
-          <img class="card__image" src="images/pistacja-z-limonka.png" alt="pistacja
-          z limonkąl">
-          <hr>
-          <h4 class="card__name">pistacja
-            z limonką</h4>
-            <button class="card__button button button_size_s button_outlined_primary">Zmień</button>
-        </div>
-      </div>
-      <a class="button button_size_m button_width_x2 button_secondary" href="">Gotowe! dodaj do koszyka</a>
-    </section>
-    <section class="uno">
-      <div class="uno__content">
-        <h2 class="uno__title">dodaj wyjątkowości
-          swojemu wydarzeniu
-          z Miolli</h2>
-          <hr>
-          <p class="uno__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam, diam ut maximus suscipit, lectus enim interdum turpis, et scelerisque neque est in diam. Aliquam gravida dapibus urna sit amet bibendum. Pellentesque tristique massa dictum quam mattis, at laoreet augue gravida.</p>
-          <a class="uno__button button button_size_l button_outlined" href="">konfiguruj zamówienie</a>
-      </div>
-    </section>
     <footer class="footer">
       <nav>
         <ul class="footer__list">
@@ -353,7 +223,7 @@ teraz:
           <li class="footer__item">
             <a href="prints.html" class="footer__link">makaroniki z nadrukiem</a>
           </li>
-          <li class="footer__item">
+          <li class="footer__item disabled">
            <a href="configurator.html " class="footer__link">twoja kompozycja</a>
           </li>
           <li class="footer__item">
@@ -407,6 +277,9 @@ teraz:
       </symbol>
       <symbol id="sort" viewBox="0 0 1024 1024">
         <path d="M128 768h256v-85.333333H128v85.333333z m0-512v85.333333h768v-85.333333H128z m0 298.666667h512v-85.333334H128v85.333334z" />
+      </symbol>
+      <symbol id="like" viewBox="-4 0 32 32">
+        <path d="M18.188 6.094c5.188 0 6.906 6 5.094 9.281-2.781 5.094-11.281 10.5-11.281 10.5s-8.531-5.406-11.281-10.5c-1.813-3.281-0.125-9.281 5.094-9.281 4.813 0 6.031 4.156 6.188 4.781 0.156-0.625 1.375-4.781 6.188-4.781z"/>
       </symbol>
       
     </svg>
@@ -526,31 +399,6 @@ teraz:
           event.preventDefault();
           sendMessage();
         }
-      });
-
-      document.querySelectorAll('fieldset').forEach(elem => elem.addEventListener('click', function(e) {
-			let input = this.querySelector('input');
-      let label = this.querySelector('label')
-			if(e.target === this.querySelector('.arrow-up')) {
-				input.stepUp();
-				if (label) label.textContent = input.value > 12 ? 'L' : 'M';
-			}
-			if(e.target === this.querySelector('.arrow-down')) {
-				input.stepDown();
-				if (label) label.textContent = input.value > 12 ? 'L' : input.value == 12 ? 'M' : 'S';
-			}
-		}))
-
-      const set = document.querySelector('[uk-slider]');
-      const setCount = set.querySelector('.current');
-      setCount.dataset.total = set.querySelector('.uk-slider-items').children.length;
-      UIkit.util.on('[uk-slider]', 'itemshown', () => {
-        set.querySelectorAll('.uk-slider-items li').forEach( (item, index) => {
-         setTimeout(() => {
-          item.classList.contains('uk-active') ?
-          setCount.textContent = ++index : '';
-         }, 100)
-        })
       });
 
       document.querySelector('#switch').addEventListener('change', () => {
