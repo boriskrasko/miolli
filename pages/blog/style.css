@@ -450,11 +450,12 @@
 
 .right {
   float: right;
-  margin: 25px 5% 25px 5%;
+  margin: 25px 5%;
 }
 
 .left {
   float: left;
+  margin: 25px 5%;
 }
 
 .center {
@@ -465,8 +466,17 @@
   padding: 0 5% 0 10%;
 }
 
-
 .blog-article__body > p {
   margin: 25px 0;
 }
 
+@media (max-width: 762px) {
+  .right, .left {
+    float: none;
+    width: 100%;
+    margin: 25px 0;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
