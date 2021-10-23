@@ -1900,6 +1900,7 @@ input.set__viewer {
 .set_single {
   display: flex;
   justify-content: center;
+  margin-bottom: 64px;
 }
 
 .set__slideshow {
@@ -2150,4 +2151,73 @@ input[type=number]::-webkit-outer-spin-button {
 .flavor_change a.button {
   margin: 36px auto;
   padding: 20px 16px;
+}
+
+.print_row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 12%;
+  margin-top: 54px;
+}
+
+.card_print {
+  position: relative;
+  max-width: 190px;
+  overflow: hidden;
+}
+
+.card_print > * {
+  margin-bottom: 12px;
+}
+
+.card_print h4 {
+  font: 30px/30px var(--titleFont);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--pig-iron);
+}
+
+.card__print {
+  position: absolute;
+}
+
+.card_print > aside,
+.card_print > div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_print .card__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin: 4px;
+}
+
+.card_print .card__button_like {
+  width: 40px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.card_print label svg {
+  width: 24px;
+  height: 24px;
+  stroke: #d89898;
+  fill: #FFFFFF;
+}
+
+.card_print label.card__button:hover {
+  background-color: transparent;
+}
+
+.card_print input:checked ~ label svg,
+.card_print input:checked ~ label {
+  background-color: #FFFFFF;
+  fill: #d89898;
 }
