@@ -8,8 +8,10 @@
 }
 
 .breadcrumb {
-  max-width: calc(var(--content) - 9.375rem);
+  width: 100%;
+  max-width: var(--content);
   margin: 1.8rem auto;
+  padding: 0 22px;
 }
 
 .breadcrumb__list {
@@ -59,6 +61,7 @@
   display: inline-flex;
   justify-content: center;
   margin: 0 auto;
+  padding: 0 11px;
   flex-wrap: wrap;
 }
 
@@ -178,24 +181,6 @@
   align-items: center;
 }
 
-.set-card__button {
-  font: normal 14px/14px var(--contentFont);
-  display: flex;
-  min-width: 137px;
-  min-height: 40px;
-  padding: 8px 16px;
-  text-align: center;
-  letter-spacing: .2em;
-  color: var(--parrot-pink);
-  border: 1px solid var(--parrot-pink);
-  justify-content: center;
-  align-items: center;
-}
-
-.set-card__button:hover {
-  color: var(--outer-space);
-  border-color: var(--outer-space);
-}
 
 @media (max-width: 500px) {
   .set-card {
