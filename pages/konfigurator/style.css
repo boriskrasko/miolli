@@ -160,7 +160,7 @@ main {
   background-image: url(../../assets/images/conf-bg.png);
   background-repeat: no-repeat;
   background-position: top right;
-  background-size: 100%;
+  background-size: cover;
   align-items: center;
 }
 
@@ -396,7 +396,8 @@ main {
   width: 100%;
   margin-top: 78px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  position: relative;
 }
 
 @media (max-width: 500px) {
@@ -448,7 +449,6 @@ main {
 
 .flavor-choice__body {
   max-width: 37.5rem;
-  /*height: 31.7rem;*/
   padding-right: 10px;
 }
 
@@ -1002,6 +1002,8 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   column-gap: 9%;
+  position: absolute;
+  z-index: 9;
 }
 
 .print__result-preview {
@@ -1108,6 +1110,7 @@ input.button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .select-font__item>* {
@@ -1170,15 +1173,32 @@ input.button {
   background: url("../../assets/icons/full-color.svg");
 }
 
+.input-file-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 32px;
+}
+
 .input-file {
-  display: inline-block;
-  min-height: 32px;
+  position: absolute;
+  bottom: 0;
+  height: 42px;
   min-width: 200px;
+  opacity: 0;
+  z-index: 2;
+}
+
+.mask-input-file {
+  display: inline-flex;
+  align-items: center;
+  height: 42px;
+  min-width: 280px;
   border: none;
   outline: none;
   border-bottom: 1px solid #000;
   padding: 0 10px;
-  margin-top: 10px;
+  opacity: 1;
 }
 
 .input-file~.button {

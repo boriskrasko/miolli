@@ -233,6 +233,94 @@
             </ul>
           </div>
           <div class="configurator__body">
+            <div class="print__modal">
+            <div class="print__result-preview">
+              <div class="print__result-image">
+                <div class="print__cookie-image">
+                  <img src="../../assets/images/conf-4-modified.png">
+                </div>
+                <p class="print__text h5">Dla ukochanego Tomka</p>
+              </div>
+              <input type="range" id="zoom" name="vol" min="0" max="25">
+              <p class="print__result-copy paragraph_upper">tak wyglądać będzie twój makaronik</p>
+            </div>
+             <div class="print__selection-bar">
+              <p class="paragraph">Wybierz typ nadruku</p>
+              <input class="button button-outlined" type="button" name="" value="Wpisz swój text"><br>
+              <input class="button button-outlined" type="button" name="" value="Dodaj swój plik graficzny">
+              <form class="select-font-form">
+                <p class="paragraph">Wybierz kolor tekstu</p>
+                <div class="select-font-color">
+                  <input class="input-font-color" type="color" id="color" name="color" value="#338888">
+                  <button class="button button-outlined button_size_s">Zmień</button><br>
+                </div>
+                <!-- <p class="paragraph" for="color">wybierz z palety</p> -->
+                <p class="paragraph">Firma miolli zastrzega sobie ….</p>
+                <p class="paragraph">Wpisz tekst</p>
+                <div>
+                  <input class="input-text" type="text" name="" placeholder="Dla ukochanego Tomka">
+                  <button class="button button-outlined button_size_s">gotowe</button>
+                </div>
+                <p class="paragraph">Wybierz czcionkę</p>
+                <div class="select-font">
+                  <label class="select-font__item">
+                     <span for="font_1">Mm</span>
+                    <input id="font_1" type="radio" name="font">
+                  </label>
+                  <label class="select-font__item">
+                     <span for="font_2">Mm</span>
+                    <input id="font_2" type="radio" name="font">
+                  </label>
+                  <label class="select-font__item">
+                     <span for="font_3">Mm</span>
+                    <input id="font_3" type="radio" name="font">
+                  </label>
+                  <label class="select-font__item">
+                     <span for="font_4">Mm</span>
+                    <input id="font_4" type="radio" name="font">
+                  </label>
+                </div>
+                <p class="paragraph">Na ilu makaronikach chcesz umieścić nadruk dedykowany?*</p>
+                <div class="quantity box-count">
+                  <input id="boxCount" name="boxCount" type="text" readonly value="6">
+                  <p class="smth">szt.</p>
+                  <div class="quantity__btns">
+                    <button class="button">
+                      <span class="material-icons">arrow_drop_up</span>
+                    </button>
+                    <button class="button">
+                      <span class="material-icons">arrow_drop_down</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <form class="select-font-form">
+                <p class="paragraph">Firma miolli zastrzega sobie ….</p>
+                <p class="paragraph">Wybierz rodzaj nadruku</p>
+                <div class="select-color">
+                  <label class="select-color__item">
+                    <input id="blackColor" type="radio" name="color">
+                    <span class="color-box"></span>
+                    <span class="paragraph_upper" for="blackColor">czarny</span>
+                  </label>
+                  <label class="select-color__item">
+                    <input id="fullColor" type="radio" name="color">
+                    <span class="color-box color-box_fullColor"></span>
+                    <span class="paragraph_upper" for="fullColor">full kolor</span>
+                  </label>
+                </div>
+                <p class="paragraph">Dodaj nadruk w wersji png, pdf lub cdr</p>
+                <div class="input-file-container">
+                 <p>
+                    <input class="input-file" type="file" name="">
+                    <div class="mask-input-file paragraph">Nie wybrano pliku</div>
+                 </p>
+                  <button class="button button-outlined button_size_s">dodaj plik</button>
+                </div>
+              </form>
+              <button class="print-choice__button button button-outlined button_size_m">GOTOWE! PRZEJDŹ DALEJ</button>
+            </div>
+          </div>
             <div class="configurator__asside">
               <div class="cookie-box"></div>
             </div>
@@ -401,13 +489,14 @@
                   </div>
                 </section>
                 <div class="print-choice__footer">
-                  <a href="step-3-1.html" class="print-choice__button button button-outlined button_size_l">dodaj swój nadruk</a>
+                  <button class="print-choice__button button button-outlined button_size_l">dodaj swój nadruk</button>
                   <a href="step-4.html" class="print-choice__button button button-outlined button_size_l">GOTOWE! PRZEJDŹ DALEJ</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </main>
     <footer class="footer">
       <nav class="footer-nav" aria-label="footnav">

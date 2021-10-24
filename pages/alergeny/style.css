@@ -9,8 +9,9 @@ main {
 
 .breadcrumb {
   width: 100%;
-  max-width: var(--content);
+  max-width: calc(var(--content) - 118px);
   margin: 1.8rem auto;
+  padding: 0 22px;
 }
 
 .breadcrumb__list {
