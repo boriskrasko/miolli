@@ -361,6 +361,13 @@
   }
 }
 
+@media screen and (max-width: 415px) { 
+  .flavor__item {
+    width: 94px;
+    height: 94px;
+  }
+}
+
 @media screen and (max-width: 385px) {
   .topnav__item_logo,
   .topnav__item_logo .topnav__link {
