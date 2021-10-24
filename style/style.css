@@ -2370,11 +2370,11 @@ label[for="favorite"]::after {
   }
 }
 
-.main_constructor {
+.main_configurator {
   padding: 32px;
 }
 
-.constructor {
+.configurator {
   position: relative;
   width: 100%;
   min-height: 90vh;
@@ -2383,10 +2383,10 @@ label[for="favorite"]::after {
   background-position: -1000px -700px;
   background-size: cover;
   transition: 0.4s background-color;
-  padding: 82px 5% 0;
+  padding: 82px 5% 41px;
 }
 
-.constructor__title {
+.configurator__title {
   max-width: 720px;
   font: 94px/90px var(--titleFont);
   text-align: center;
@@ -2523,6 +2523,12 @@ label[for="favorite"]::after {
   color: #000000;
 }
 
+.configurator__button {
+  display: block !important;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
 .scrollbox {
   position: relative;
   max-width: 540px;
@@ -2620,13 +2626,13 @@ label[for="favorite"]::after {
   opacity: 0;
 }
 
-.flavor__item input:checked~.material-icons::after {
+.flavor__item input:checked ~ .material-icons::after {
   content: 'check';
   background-color: transparent;
   color: #FFFFFF;
 }
 
-.flavor__item input:checked~.marker {
+.flavor__item input:checked ~ .marker {
   background-color: #68ba8e;
 }
 
@@ -2638,4 +2644,127 @@ label[for="favorite"]::after {
     max-width: 500px;
     margin: 0 auto;
   }
+}
+
+.add-print {
+  clear: left;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 82px 0;
+}
+
+.add-print__box {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.add-print__content {
+  max-width: 50%;
+}
+
+.add-print__content > p {
+  font: 18px/25px var(--contentFont);
+  color: #000000;
+}
+
+@media screen and (max-width: 860px) {
+  .add-print {
+    flex-direction: column;
+  }
+  .add-print__content {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+.add-print__title {
+  text-transform: uppercase;
+  background-color: #FCDAD1;
+  display: inline;
+  letter-spacing: 0.1em;
+  padding: 8px 12px;
+}
+
+.add-print p {
+  margin-left: 12px;
+}
+
+.add-print .filter {
+  display: flex;
+}
+
+.add-print .dropdown {
+  margin-top: 24px;
+  display: flex;
+  align-items: baseline;
+}
+
+.variants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.variant__item {
+  position: relative;
+  width: 135px;
+  height: 135px;
+  margin: 5px 18px 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.variant__image {
+  max-width: 135px;
+}
+
+.variant__item input {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  color: #f0beae;
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.16);
+}
+
+.variant__print {
+  position: absolute;
+  width: 70%;
+}
+
+.variant__item input {
+  z-index: 2;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.variant__item input:checked ~ .material-icons::after {
+  content: 'check';
+  background-color: transparent;
+  color: #FFFFFF;
+}
+
+.variant__item input:checked ~ .marker {
+  background-color: #68ba8e;
+}
+
+.add-print .price {
+  margin-bottom: 24px;
+  box-shadow: none;
 }

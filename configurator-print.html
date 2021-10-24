@@ -10,6 +10,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='style/common.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/media.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="uikit/js/uikit.min.js"></script>
   </head>
   <body>
@@ -184,29 +185,150 @@ teraz:
         <h1 class="configurator__title">skomponuj swoje pudełko</h1>
         <ul class="progressbar">
           <li class="active">wybierz rozmiar</li>
-          <li>wybierz smaki</li>
-          <li>dodaj nadruk</li>
+          <li class="active">wybierz smaki</li>
+          <li class="active">dodaj nadruk</li>
           <li>dodaj do koszyka</li>
         </ul>
         <div class="progressbar_mobile">
-          <p>1/4</p>
-          <p>wybierz rozmiar</p>
+          <p>3/4</p>
+          <p>dodaj nadruk</p>
         </div>
-        <fieldset class="boxselect">
-          <p>
-            <input id="6" type="radio" name="boxsize">
-            <label for="6">6 szt</label>
-          </p>
-          <p>
-            <input id="12" type="radio" name="boxsize">
-            <label for="12">12 szt</label>
-          </p>
-          <p>
-            <input id="24" type="radio" name="boxsize">
-            <label for="24">24 szt</label>
-          </p>
-        </fieldset>
-        <a class="configurator__button button button_size_m button_outlined" href="configurator-flavor.html">GOTOWE! PRZEJDŹ DALEJ</a>
+        <div class="add-print">
+          <img class="add-print__box" src="images/box.png" alt="">
+          <div class="add-print__content">
+            <div class="price">
+            <p class="price__copy">
+              <span data-integer>34</span> ,-
+            </p>
+            <p class="price__details">bieżąca cena</p>
+          </div>
+            <h5 class="add-print__title">DODAJ NADRUK</h5>
+            <p>Kliknij w nadruk lub przeciągnij go do pudełka.
+              Chcesz dostać dedykowany nadruk kliknij tutaj </p>
+            <p>Ważne! Nadruki wyglądają najlepiej na jasnych makaronikach. 
+              Firma Miolli zastrzega sobie prawo do za druku tych makaroników
+              na których projekt wyglądać będzie najlepiej</p>
+            <p>Nie chcesz nadruku? Kliknij tutaj</p>
+            </p>
+            <h5 class="add-print__title">nasza baza nadruków:</h5>
+            <div class="dropdown dropdown_sort">
+              <p>Wybierz kategorię nadruków:</p>
+              <div class="dropdown__select">
+                <div class="dropdown__item-current">
+                  <p class="dropdown__text-current">najpopularniejsze</p>
+                  <button class="arrow"></button>
+                </div>
+                <ul class="options">
+                  <li class="option selected">
+                    <p class="option__text">najpopularniejsze</p>
+                  </li>
+                  <li class="option">
+                    <p class="option__text">po cene</p>
+                  </li>
+                  <li class="option">
+                    <p class="option__text">po nazwie</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p>Najczęściej wybierane kategorie:</p>
+            <div class="filter">
+              <div class="filter__list">
+                <input id="id1" type="checkbox">
+                <label for="id1" class="filter__item">dzień mamy</label>
+                <input id="id2" type="checkbox">
+                <label for="id2" class="filter__item">dla zakochanych</label>
+                <input id="id3" type="checkbox">
+                <label for="id3" class="filter__item">dla dzieci</label>
+                <input id="id4" type="checkbox">
+                <label for="id4" class="filter__item">na urodziny</label>
+                <input id="id5" type="checkbox">
+                <label for="id5" class="filter__item">wielkanoc</label>
+                <input id="id6" type="checkbox">
+                <label for="id6" class="filter__item">dzień taty</label>
+              </div>
+            </div>
+            <div class="scrollbox">
+              <div class="scrollbox__container">
+                <ul class="variants">
+                  <li class="variant__item">
+                    <img class="variant__image" src="images/print-1.png" alt="print">
+                    <img class="variant__print" src="icons/print-love-1.svg" alt="print">
+                    <input type="checkbox">
+                    <label class="marker material-icons"></label>
+                  </li>
+                  <li class="variant__item">
+                    <img class="variant__image" src="images/print-2.png" alt="print">
+                    <img class="variant__print" src="icons/print-love-2.svg" alt="print">
+                    <input type="checkbox">
+                    <label class="marker material-icons"></label>
+                  </li>
+                  <li class="variant__item">
+                    <img class="variant__image" src="images/print-1.png" alt="print">
+                    <img class="variant__print" src="icons/print-love-1.svg" alt="print">
+                    <input type="checkbox">
+                    <label class="marker material-icons"></label>
+                  </li>
+                  <li class="variant__item">
+                    <img class="variant__image" src="images/print-2.png" alt="print">
+                    <img class="variant__print" src="icons/print-love-2.svg" alt="print">
+                    <input type="checkbox">
+                    <label class="marker material-icons"></label>
+                  </li>
+                  <li class="variant__item">
+                    <img class="variant__image" src="images/print-1.png" alt="print">
+                    <img class="variant__print" src="icons/print-love-1.svg" alt="print">
+                    <input type="checkbox">
+                    <label class="marker material-icons"></label>
+                  </li>
+                  <li class="variant__item">
+                    <img class="variant__image" src="images/print-2.png" alt="print">
+                    <img class="variant__print" src="icons/print-love-2.svg" alt="print">
+                    <input type="checkbox">
+                    <label class="marker material-icons"></label>
+                  </li>
+                  <li class="variant__item">
+                    <img class="variant__image" src="images/print-1.png" alt="print">
+                    <img class="variant__print" src="icons/print-love-1.svg" alt="print">
+                    <input type="checkbox">
+                    <label class="marker material-icons"></label>
+                  </li>
+                  <li class="variant__item">
+                    <img class="variant__image" src="images/print-2.png" alt="print">
+                    <img class="variant__print" src="icons/print-love-2.svg" alt="print">
+                    <input type="checkbox">
+                    <label class="marker material-icons"></label>
+                  </li>
+                  <li class="variant__item">
+                    <img class="variant__image" src="images/print-1.png" alt="print">
+                    <img class="variant__print" src="icons/print-love-1.svg" alt="print">
+                    <input type="checkbox">
+                    <label class="marker material-icons"></label>
+                  </li>
+                  <li class="variant__item">
+                    <img class="variant__image" src="images/print-2.png" alt="print">
+                    <img class="variant__print" src="icons/print-love-2.svg" alt="print">
+                    <input type="checkbox">
+                    <label class="marker material-icons"></label>
+                  </li>
+                  <li class="variant__item">
+                    <img class="variant__image" src="images/print-1.png" alt="print">
+                    <img class="variant__print" src="icons/print-love-1.svg" alt="print">
+                    <input type="checkbox">
+                    <label class="marker material-icons"></label>
+                  </li>
+                  <li class="variant__item">
+                    <img class="variant__image" src="images/print-2.png" alt="print">
+                    <img class="variant__print" src="icons/print-love-2.svg" alt="print">
+                    <input type="checkbox">
+                    <label class="marker material-icons"></label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a class="configurator__button button button_size_m button_outlined" href="">GOTOWE! PRZEJDŹ DALEJ</a>
+          </div>
+        </div>
       </div>
     </main>
     <footer class="footer">
