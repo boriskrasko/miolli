@@ -21,4 +21,125 @@
   --pastel-pink: #DDA5A5; 
   --parrot-pink: #D89898; 
   --dark-sky-blue: #86B6C7;
+  --dark-coral: #CE5445;
+}
+
+.white-chocolate {
+  color: var(--white-chocolate);
+}
+
+.desert-sand {
+  color: var(--desert-sand);
+}
+
+.desert-sand.button-contained {
+  background-color: var(--desert-sand);
+  border-color: var(--desert-sand);
+  color: #fff;
+}
+
+.desert-sand.button-contained:hover {
+  background-color: #7B6D5C;
+  border-color: #998874;
+  color: #fff;
+}
+
+.desert-sand.button-contained:active {
+  background-color: #AD9982;
+  border-color: #998874;
+}
+
+.dark-vanilla {
+  color: var(--dark-vanilla);
+}
+
+.dark-vanilla-fill {
+  background-color: var(--dark-vanilla);
+  color: #fff;
+}
+
+.dark-vanilla.button-contained {
+  background-color: var(--dark-vanilla);
+  border-color: var(--dark-vanilla);
+  color: #fff;
+}
+
+.dark-vanilla.button-contained:hover {
+  background-color: #99817A;
+  color: #fff;
+}
+
+.dark-vanilla.button-outlined {
+  outline-color: var(--dark-vanilla);
+  color: var(--dark-vanilla);
+}
+
+.pastel-pink {
+  color: var(--pastel-pink);
+}
+
+.pastel-pink-fill {
+  background-color: var(--pastel-pink);
+  color: #fff;
+}
+
+.parrot-pink {
+  color: var(--parrot-pink);
+}
+
+.parrot-pink-fill {
+  background-color: var(--parrot-pink);
+  color: #fff;
+}
+
+.parrot-pink.button-outlined {
+  color: var(--parrot-pink);
+  outline-color: var(--parrot-pink);
+}
+
+.parrot-pink.button-outlined:hover {
+  color: #996B6B;
+  outline-color: #996B6B;
+}
+
+.parrot-pink.button-contained {
+  background-color: var(--parrot-pink);
+  border-color: var(--parrot-pink);
+  color: #fff;
+}
+
+.parrot-pink.button-contained:hover {
+  background-color: #996B6B;
+}
+
+.parrot-pink.button-contained:active{
+  background-color: #996B6B;
+  border-color: var(--parrot-pink);
+  color: #fff;
+}
+
+
+.dark-coral {
+  color: var(--dark-coral);
+}
+
+.dark-coral-fill,
+.dark-coral.button-contained {
+  background-color: var(--dark-coral);
+  border-color: var(--dark-coral);
+  color: #fff;
+}
+
+.dark-coral.button-contained:hover {
+  background-color: #993E32;
+  color: #fff;
+}
+
+.dark-coral.button-contained:active {
+  background-color: #C45041;
+  border-color: #993E32;
+}
+
+.rosy-brown {
+  color: var(--rosy-brown);
 }

@@ -14,7 +14,7 @@
   --basicFont: 'Roboto', sans-serif;
 
   /* Width, margins & paddings */
-  --max: 1440px;
+  --max: 1366px;
   --content: 1366px;
   --min: 320px;
   --border: 1px solid #ddd;
@@ -114,9 +114,14 @@ a {
   outline: 1px solid #000;
 }
 
+.button-outlined:hover {
+  outline: 1px solid #6E4C4C;
+  color: #6E4C4C;
+}
+
 .button-outlined:active {
-  outline: 1px solid #777;
-  color: #777;
+  outline: 1px solid #6E4C4C;
+  color: #6E4C4C;
 }
 
 .button-contained {
@@ -359,6 +364,11 @@ a {
   text-transform: lowercase;
 }
 
+.thin {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+}
+
 
 
 /*underlines*/
@@ -439,7 +449,7 @@ z nadrukiem of topbar menu*/
 
 .printing__vertical-border {
   width: 1px;
-  height: 72%;
+  height: 15rem;
   background: var(--dark-vanilla);
   align-self: center;
 }
@@ -1207,7 +1217,7 @@ z nadrukiem of topbar menu*/
   visibility: visible;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .main-nav .hidden {
     display: flex;
   }
@@ -1384,6 +1394,7 @@ z nadrukiem of topbar menu*/
   width: 100%;
   background: #000;
   z-index: 0;
+  clear: both;
 }
 
 .footer-nav {

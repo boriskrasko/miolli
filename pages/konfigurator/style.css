@@ -668,7 +668,7 @@ main {
 
 .print-choice__filter {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -676,7 +676,8 @@ main {
   font: normal 12px/10px var(--contentFont);
   display: flex;
   min-width: 90px;
-  max-height: 31px;
+  max-height: 30px;
+  margin: 1px 0;
 }
 
 .print-choice__filter_body {

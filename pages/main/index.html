@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
-    <!-- chat -->
     <div class="chat">
       <input type="checkbox">
       <button class="chat__button">
@@ -58,7 +57,7 @@
                 <li class="topnav__item_cart topnav__item_hasChild">
                   <a href="../koszyk/index.html" class="topnav__link">
                   <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
-                  <span class="topnav__item_cart_counter inner">14</span>
+                  <span class="topnav__item_cart_counter inner">4</span>
                   </a>
                   <div class="cart-preview">
                     <div class="cart-preview__item">
@@ -91,9 +90,24 @@
                         </ul>
                       </div>
                     </div>
+                    <div class="cart-preview__item">
+                      <figure class="cart-preview__figure">
+                        <img class="cart-preview__image" src="../../assets/images/set-01.png" alt="set">
+                      </figure>
+                      <div class="cart-preview__body">
+                        <div class="cart-preview__heading">
+                          <h6 class="cart-preview__name h6">set na lato</h6>
+                        </div>
+                        <ul class="cart-preview__description">
+                          <li class="cart-preview__description-item">ilość:<span class="cart-preview__quantity">2</span></li>
+                          <li class="cart-preview__description-item">cena:<span class="cart-preview__price">27</span></li>
+                          <li class="cart-preview__description-item">suma:<span class="cart-preview__cost">54</span></li>
+                        </ul>
+                      </div>
+                    </div>
                     <div class="cart-preview__footer">
                       <a href="../koszyk/index.html" class="cart-preview__remainder">i jeszcze <span class="rest">1</span> ...</a>
-                      <a href="../koszyk/index.html" class="cart-preview__button button button-contained button-contained_dark-vanilla button_size_m">przejdź do koszyka</a>
+                      <a href="../koszyk/index.html" class="cart-preview__button button button-contained dark-vanilla button_size_m">przejdź do koszyka</a>
                     </div>
                   </div>
                 </li>
@@ -104,7 +118,7 @@
                 </li>
                 <li class="topnav__item topnav__item_hasChild">
                   <a href="../nadruki/index.html" class="topnav__link">makaroniki&nbsp;z nadrukiem
-                  <span class="material-icons">south</span>
+                  <span class="material-icons thin">south</span>
                   </a>
                   <div class="printing">
                     <figure class="printing__figure">
@@ -133,7 +147,7 @@
                         </li>
                         <li class="printing__item printing__item_underline">
                           <a href="../nadruki/index.html" class="printing__link">dedykowany nadruk</a>
-                          <span class="material-icons">east</span>
+                          <span class="material-icons thin">east</span>
                         </li>
                       </ul>
                     </nav>
@@ -191,7 +205,7 @@
           <img class="brand-name" src="../../assets/icons/miolli.svg" alt="miolli">
           <span class="brand-tagline uppercase">smak inspiracji</span>
         </div>
-        <button class="button_sticky button button-contained button-contained_parrot-pink button_rounded desktop-only">
+        <button class="button_sticky button button-contained dark-coral button_rounded desktop-only">
           <img class="heart-icon" src="../../assets/icons/heart.svg" alt="heart">
           pamiętasz? niedługo dzień ...!
           <span class="button_sticky__call-to-action">zamów zestaw</span>
@@ -206,19 +220,19 @@
       <section class="inspiration" id="inspiration">
         <div class="inspiration__content">
           <div class="inspiration__header">
-            <h2 class="inspiration__title h2 txt-color_pastel-pink">słodkie inspiracje</h2>
+            <h2 class="inspiration__title h2 pastel-pink">słodkie inspiracje</h2>
             <hr class="inspiration__underline underline_heading fill_white_chocolate ">
             <p class="inspiration__subtitle paragraph_upper">
               czyli jakie smaki dostępne są dziś w miolli
             </p>
           </div>
           <div class="inspiration__body">
-            <button class="button button-contained button-contained_desert-sand button_rounded viewer-toggle inspiration__button_rounded desktop-only">
+            <button class="inspiration__button_rounded button button-contained desert-sand button_rounded viewer-toggle desktop-only">
             <span>filtruj po smakach sezonowych</span>
             </button>
             <div class="inspiration__stack">
               <button class="inspiration__button_arrow">
-              <span class="material-icons txt-color_pastel-pink">west</span>
+              <span class="material-icons pastel-pink thin">west</span>
               </button>
               <div class="stack stack--horizontal flavor-stack">
                 <div class="card-flavor">
@@ -331,13 +345,13 @@
                 </div>
               </div>
               <button class="inspiration__button_arrow">
-              <span class="material-icons txt-color_pastel-pink">east</span>
+              <span class="material-icons pastel-pink thin">east</span>
               </button>
             </div>
           </div>
           <footer class="inspiration__footer">
             <div class="inspiration__actions">
-              <a href="../konfigurator/index.html" class="inspiration__button button button-outlined button-outlined_parrot-pink button_size_l">
+              <a href="../konfigurator/index.html" class="inspiration__button button button-outlined parrot-pink button_size_l">
               stwórz swoją kompozycję
               </a>
             </div>
@@ -347,7 +361,7 @@
       <section class="composition">
         <div class="composition__content">
           <header class="composition__header">
-            <h2 class="composition__title h2 txt-color_pastel-pink">
+            <h2 class="composition__title h2 pastel-pink">
               spróbuj <br>czegoś nowego!
             </h2>
             <hr class="composition__underline underline_heading">
@@ -356,29 +370,29 @@
             </h3>
           </header>
           <div class="composition__body">
-            <button class="button button-contained button-contained_parrot-pink button_rounded viewer-toggle  composition__button_rounded desktop-only">
-            <span>KLIKNIJ<br> BY ZMIENIĆ WIDOK</span>
-            <span class="material-icons">call_to_action</span>
-            </button>
             <input class="viewer-toggle desktop-only" type="checkbox">
+            <button class="composition__button_rounded button button-contained parrot-pink button_rounded viewer-toggle desktop-only">
+            <span>KLIKNIJ<br> BY ZMIENIĆ WIDOK</span>
+            <span class="material-icons"></span>
+            </button>
             <div class="composition__set-stack">
               <button class="composition__button_arrow">
-              <span class="material-icons txt-color_pastel-pink">west</span>
+              <span class="material-icons pastel-pink thin">west</span>
               </button>
               <article class="set-block">
                 <div class="set-block__header">
                   <div class="set-block__figure">
                     <picture>
                       <source srcset="../../assets/images/set-1.png" media="(max-width: 576px)">
-                      <img src="https://satyr.io/1024x768?text=Miolli Set" alt="" class="set-block__image">
-                      <!-- <img src="../../assets/images/composition.png" alt="" class="set-block__image"> -->
+                      <!-- <img src="https://satyr.io/1024x768?text=Miolli Set" alt="" class="set-block__image"> -->
+                      <img src="../../assets/images/composition.png" alt="" class="set-block__image">
                     </picture>
                   </div>
                 </div>
                 <div class="set-block__body">
                   <div class="set-block__nav-control">
                     <button class="set-block__arrow">
-                    <span class="material-icons txt-color_pastel-pink">
+                    <span class="material-icons pastel-pink thin">
                     west
                     </span>
                     </button>
@@ -388,7 +402,7 @@
                       <span class="set-block__total-count">5</span>
                     </div>
                     <button class="set-block__arrow">
-                    <span class="material-icons txt-color_pastel-pink">
+                    <span class="material-icons pastel-pink thin">
                     east
                     </span>
                     </button>
@@ -418,7 +432,7 @@
                   </div>
                   <div class="set-card__nav-control">
                     <button class="set-card__arrow">
-                    <span class="material-icons txt-color_pastel-pink">
+                    <span class="material-icons pastel-pink thin">
                     west
                     </span>
                     </button>
@@ -428,7 +442,7 @@
                       <span class="set-card__total-count">5</span>
                     </div>
                     <button class="set-card__arrow">
-                    <span class="material-icons txt-color_pastel-pink">
+                    <span class="material-icons pastel-pink thin">
                     east
                     </span>
                     </button>
@@ -444,7 +458,127 @@
                   </div>
                   <footer class="set-card__footer">
                     <div class="set-card__actions">
-                      <a href="../zestaw/index.html" class="set_card_buttonset-block__button button button-outlined button-outlined_parrot-pink button_size_m">
+                      <a href="../zestaw/index.html" class="set-card__button button button-outlined parrot-pink button_size_s">
+                      <span class="uppercase">kup</span>
+                      </a>
+                    </div>
+                  </footer>
+                </article>
+                <article class="set-card">
+                  <div class="set-card__header">
+                    <div class="set-card__figure">
+                      <img src="../../assets/images/set-2.png" alt="" class="card__image">
+                    </div>
+                  </div>
+                  <div class="set-card__nav-control">
+                    <button class="set-card__arrow">
+                    <span class="material-icons pastel-pink thin">
+                    west
+                    </span>
+                    </button>
+                    <div class="set-card__counter">
+                      <span class="set-card__current-number">1</span>
+                      <span class="set-card__сounter-delimiter">/</span>
+                      <span class="set-card__total-count">5</span>
+                    </div>
+                    <button class="set-card__arrow">
+                    <span class="material-icons pastel-pink thin">
+                    east
+                    </span>
+                    </button>
+                  </div>
+                  <div class="set-card__body">
+                    <h2 class="set-card__title uppercase">set na lato</h2>
+                    <p class="set-card__copy uppercase">
+                      2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
+                    </p>
+                    <p class="set-card__copy price uppercase">
+                      34,-
+                    </p>
+                  </div>
+                  <footer class="set-card__footer">
+                    <div class="set-card__actions">
+                      <a href="../zestaw/index.html" class="set-card__button button button-outlined parrot-pink button_size_s">
+                      <span class="uppercase">kup</span>
+                      </a>
+                    </div>
+                  </footer>
+                </article>
+                <article class="set-card">
+                  <div class="set-card__header">
+                    <div class="set-card__figure">
+                      <img src="../../assets/images/set-3.png" alt="" class="card__image">
+                    </div>
+                  </div>
+                  <div class="set-card__nav-control">
+                    <button class="set-card__arrow">
+                    <span class="material-icons pastel-pink thin">
+                    west
+                    </span>
+                    </button>
+                    <div class="set-card__counter">
+                      <span class="set-card__current-number">1</span>
+                      <span class="set-card__сounter-delimiter">/</span>
+                      <span class="set-card__total-count">5</span>
+                    </div>
+                    <button class="set-card__arrow">
+                    <span class="material-icons pastel-pink thin">
+                    east
+                    </span>
+                    </button>
+                  </div>
+                  <div class="set-card__body">
+                    <h2 class="set-card__title uppercase">set na lato</h2>
+                    <p class="set-card__copy uppercase">
+                      2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
+                    </p>
+                    <p class="set-card__copy price uppercase">
+                      34,-
+                    </p>
+                  </div>
+                  <footer class="set-card__footer">
+                    <div class="set-card__actions">
+                      <a href="../zestaw/index.html" class="set-card__button button button-outlined parrot-pink button_size_s">
+                      <span class="uppercase">kup</span>
+                      </a>
+                    </div>
+                  </footer>
+                </article>
+                <article class="set-card">
+                  <div class="set-card__header">
+                    <div class="set-card__figure">
+                      <img src="../../assets/images/set-4.png" alt="" class="card__image">
+                    </div>
+                  </div>
+                  <div class="set-card__nav-control">
+                    <button class="set-card__arrow">
+                    <span class="material-icons pastel-pink thin">
+                    west
+                    </span>
+                    </button>
+                    <div class="set-card__counter">
+                      <span class="set-card__current-number">1</span>
+                      <span class="set-card__сounter-delimiter">/</span>
+                      <span class="set-card__total-count">5</span>
+                    </div>
+                    <button class="set-card__arrow">
+                    <span class="material-icons pastel-pink thin">
+                    east
+                    </span>
+                    </button>
+                  </div>
+                  <div class="set-card__body">
+                    <h2 class="set-card__title uppercase">set na lato</h2>
+                    <p class="set-card__copy uppercase">
+                      2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
+                    </p>
+                    <p class="set-card__copy price uppercase">
+                      34,-
+                    </p>
+                  </div>
+                  <footer class="set-card__footer">
+                    <div class="set-card__actions">
+                      <a href="../zestaw/index.html" class="set-card__button button button-outlined parrot-pink button_size_s">
                       <span class="uppercase">kup</span>
                       </a>
                     </div>
@@ -458,7 +592,7 @@
                   </div>
                   <div class="set-card__nav-control">
                     <button class="set-card__arrow">
-                    <span class="material-icons txt-color_pastel-pink">
+                    <span class="material-icons pastel-pink thin">
                     west
                     </span>
                     </button>
@@ -468,7 +602,7 @@
                       <span class="set-card__total-count">5</span>
                     </div>
                     <button class="set-card__arrow">
-                    <span class="material-icons txt-color_pastel-pink">
+                    <span class="material-icons pastel-pink thin">
                     east
                     </span>
                     </button>
@@ -484,7 +618,7 @@
                   </div>
                   <footer class="set-card__footer">
                     <div class="set-card__actions">
-                      <a href="../zestaw/index.html" class="set_card_buttonset-block__button button button-outlined button-outlined_parrot-pink button_size_m">
+                      <a href="../zestaw/index.html" class="set-card__button button button-outlined parrot-pink button_size_s">
                       <span class="uppercase">kup</span>
                       </a>
                     </div>
@@ -493,12 +627,12 @@
                 <article class="set-card">
                   <div class="set-card__header">
                     <div class="set-card__figure">
-                      <img src="../../assets/images/set-1.png" alt="" class="card__image">
+                      <img src="../../assets/images/set-2.png" alt="" class="card__image">
                     </div>
                   </div>
                   <div class="set-card__nav-control">
                     <button class="set-card__arrow">
-                    <span class="material-icons txt-color_pastel-pink">
+                    <span class="material-icons pastel-pink thin">
                     west
                     </span>
                     </button>
@@ -508,7 +642,7 @@
                       <span class="set-card__total-count">5</span>
                     </div>
                     <button class="set-card__arrow">
-                    <span class="material-icons txt-color_pastel-pink">
+                    <span class="material-icons pastel-pink thin">
                     east
                     </span>
                     </button>
@@ -524,87 +658,7 @@
                   </div>
                   <footer class="set-card__footer">
                     <div class="set-card__actions">
-                      <a href="../zestaw/index.html" class="set_card_buttonset-block__button button button-outlined button-outlined_parrot-pink button_size_m">
-                      <span class="uppercase">kup</span>
-                      </a>
-                    </div>
-                  </footer>
-                </article>
-                <article class="set-card">
-                  <div class="set-card__header">
-                    <div class="set-card__figure">
-                      <img src="../../assets/images/set-1.png" alt="" class="card__image">
-                    </div>
-                  </div>
-                  <div class="set-card__nav-control">
-                    <button class="set-card__arrow">
-                    <span class="material-icons txt-color_pastel-pink">
-                    west
-                    </span>
-                    </button>
-                    <div class="set-card__counter">
-                      <span class="set-card__current-number">1</span>
-                      <span class="set-card__сounter-delimiter">/</span>
-                      <span class="set-card__total-count">5</span>
-                    </div>
-                    <button class="set-card__arrow">
-                    <span class="material-icons txt-color_pastel-pink">
-                    east
-                    </span>
-                    </button>
-                  </div>
-                  <div class="set-card__body">
-                    <h2 class="set-card__title uppercase">set na lato</h2>
-                    <p class="set-card__copy uppercase">
-                      2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
-                    </p>
-                    <p class="set-card__copy price uppercase">
-                      34,-
-                    </p>
-                  </div>
-                  <footer class="set-card__footer">
-                    <div class="set-card__actions">
-                      <a href="../zestaw/index.html" class="set_card_buttonset-block__button button button-outlined button-outlined_parrot-pink button_size_m">
-                      <span class="uppercase">kup</span>
-                      </a>
-                    </div>
-                  </footer>
-                </article>
-                <article class="set-card">
-                  <div class="set-card__header">
-                    <div class="set-card__figure">
-                      <img src="../../assets/images/set-1.png" alt="" class="card__image">
-                    </div>
-                  </div>
-                  <div class="set-card__nav-control">
-                    <button class="set-card__arrow">
-                    <span class="material-icons txt-color_pastel-pink">
-                    west
-                    </span>
-                    </button>
-                    <div class="set-card__counter">
-                      <span class="set-card__current-number">1</span>
-                      <span class="set-card__сounter-delimiter">/</span>
-                      <span class="set-card__total-count">5</span>
-                    </div>
-                    <button class="set-card__arrow">
-                    <span class="material-icons txt-color_pastel-pink">
-                    east
-                    </span>
-                    </button>
-                  </div>
-                  <div class="set-card__body">
-                    <h2 class="set-card__title uppercase">set na lato</h2>
-                    <p class="set-card__copy uppercase">
-                      2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw
-                    </p>
-                    <p class="set-card__copy price uppercase">
-                      34,-
-                    </p>
-                  </div>
-                  <footer class="set-card__footer">
-                    <div class="set-card__actions">
-                      <a href="../zestaw/index.html" class="set_card_buttonset-block__button button button-outlined button-outlined_parrot-pink button_size_m">
+                      <a href="../zestaw/index.html" class="set-card__button button button-outlined parrot-pink button_size_s">
                       <span class="uppercase">kup</span>
                       </a>
                     </div>
@@ -612,7 +666,7 @@
                 </article>
               </div>
               <button class="composition__button_arrow">
-              <span class="material-icons txt-color_pastel-pink">east</span>
+              <span class="material-icons pastel-pink thin">east</span>
               </button>
             </div>
           </div>
@@ -635,7 +689,7 @@
                 </li>
                 <li class="box-composing__item">
                   <span class="box-composing__point">2</span>
-                  <p class="box-composing__copy paragraph_upper">wybierz ulubione smaki/
+                  <p class="box-composing__copy paragraph_upper">wybierz ulubione smaki
                   </p>
                 </li>
                 <li class="box-composing__item">
@@ -759,7 +813,7 @@
             <form class="newsletter__form">
               <div class="input-group">
                 <input type="email" id="email" required placeholder="podaj swój e-mail">
-                <button class="newsletter__button_submit button button-outlined  " type="submit" name="button" title="zapisz się">
+                <button class="newsletter__button_submit button button-outlined" type="submit" name="button" title="zapisz się">
                 zapisz się
                 </button>
               </div>
@@ -791,16 +845,16 @@
                       </div>
                       <ul class="options">
                         <li class="option selected">
-                          <p class="option__text">warszawa</p>
+                          <p class="option__text">Warszawa</p>
                         </li>
                         <li class="option">
-                          <p class="option__text">kraków</p>
+                          <p class="option__text">Kraków</p>
                         </li>
                         <li class="option">
-                          <p class="option__text">sosnowiec</p>
+                          <p class="option__text">Sosnowiec</p>
                         </li>
                         <li class="option">
-                          <p class="option__text">suwałki</p>
+                          <p class="option__text">Suwałki</p>
                         </li>
                       </ul>
                     </div>

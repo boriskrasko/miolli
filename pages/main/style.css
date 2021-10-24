@@ -13,7 +13,7 @@
 }
 
 .topnav {
-  width: auto;
+  width: max-content;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
   background: #fff;
 }
@@ -64,7 +64,6 @@
 .brand-tagline {
   font-family: var(--contentFont);
   font-size: 1.5625em;
-  text-transform: uppercase;
   letter-spacing: .2em;
   position: absolute;
   bottom: 0;
@@ -103,7 +102,6 @@
   font: 0.8125rem/1.0625rem var(--contentFont);
   min-width: 9.9375rem;
   min-height: 9.9375rem;
-  background-color: #CE5445;
   text-transform: uppercase;
 }
 
@@ -185,7 +183,8 @@
 }
 
 .inspiration__button_arrow {
-  margin: 15% 5px 0;
+  margin: 0 5px;
+  height: 13.125rem;
   transition: 0.1s color ease-in-out;
 }
 
@@ -194,7 +193,7 @@
 }
 
 .inspiration__button_arrow .material-icons {
-  font-size: 27px;
+  font-size: 34px;
 }
 
 .inspiration .viewer-toggle {
@@ -208,6 +207,7 @@
 .inspiration__stack {
   display: flex;
   align-items: flex-start;
+  padding: 0 5px;
 }
 
 .stack {
@@ -302,9 +302,8 @@
     line-height: 18px;
     padding: 1.625rem 15%;
   }
-  .inspiration .btn-arrow {
-    font-size: 27px;
-    margin: 34px 0 0;
+  .inspiration__button_arrow {
+    height: 127px;
   }
   .inspiration__footer {
     margin: 67px 0 0;
@@ -386,7 +385,7 @@
 }
 
 .composition__button_arrow .material-icons {
-  font-size: 27px;
+  font-size: 34px;
   transition: 0.1s color ease-in-out;
 }
 
@@ -397,7 +396,7 @@
 .composition .viewer-toggle {
   position: absolute;
   z-index: 1;
-  bottom: -6.9375rem;
+  bottom: -8rem;
   left: 39px;
   cursor: pointer;
   justify-content: center;
@@ -407,18 +406,36 @@
   width: 111px;
   height: 111px;
   opacity: 0;
+  z-index: 2;
 }
 
-.composition input:checked~.composition__set-stack .stack {
-  display: none;
+.composition__button_rounded .material-icons:before {
+  content: "call_to_action";
+}
+
+.composition input:hover~.composition__button_rounded {
+  background-color: #996B6B;
 }
 
 .composition input:checked~.composition__set-stack .set-block {
   display: block;
 }
 
+.composition input:checked~.composition__set-stack .stack {
+  display: none;
+}
+
+
+.composition input:checked~.composition__button_rounded .material-icons:before {
+  content: "apps";
+}
+
+
 .composition__set-stack {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
+  justify-content: center;
   align-items: flex-start;
 }
 
@@ -428,7 +445,7 @@
 
 .composition .stack--horizontal {
   overflow: hidden;
-  height: 700px;
+  height: 695px;
   justify-content: space-around;
 }
 
@@ -504,9 +521,13 @@
   color: #996B6B;
 }
 
+.composition__button_rounded {
+  font-size: 10px;
+}
+
 @media (max-width: 576px) {
   .composition .stack--horizontal {
-    height: 725px;
+    height: 720px;
   }
   .composition__button_arrow {
     display: none;
@@ -1060,6 +1081,19 @@
   color: #000;
 }
 
+.causes__button_arrow {
+  height: 50%;
+}
+
+.causes__button_arrow:hover .material-icons {
+  filter: brightness(50%);
+  border-color: transparent;
+}
+
+.causes__button_arrow .material-icons {
+  font-size: 34px;
+}
+
 @media screen and (max-width: 768px) {
   .causes__button_arrow {
     display: none;
@@ -1127,6 +1161,7 @@
 
 .newsletter__form .input-group {
   display: flex;
+  align-items: center;
 }
 
 .newsletter__form input {
@@ -1134,7 +1169,7 @@
   display: flex;
   width: 100%;
   min-width: 447px;
-  height: 65px;
+  height: 67px;
   padding-left: 64px;
   letter-spacing: .1em;
   border: 1px solid #444;
@@ -1159,6 +1194,11 @@
   height: 65px;
   color: #fff;
   background: #000;
+}
+
+.newsletter__button_submit:hover {
+  background-color: #222;
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
@@ -1215,6 +1255,7 @@ area {
 .map__content {
   max-width: var(--max);
   margin: 0 auto;
+  padding-bottom: 40px;
 }
 
 .map__asside {
