@@ -933,6 +933,16 @@ main {
   width: 136px;
 }
 
+.quantity input::-webkit-outer-spin-button,
+.quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .quantity input,
 .quantity p {
   font: normal 18px/25px var(--contentFont);
@@ -1013,8 +1023,9 @@ main {
 
 .modal__close.button {
   position: absolute;
-  right: 1.4rem;
-  top: 1.4rem;
+  margin: 0;
+  right: 0;
+  top: 8px;
 }
 
 .modal__close.button:hover {
