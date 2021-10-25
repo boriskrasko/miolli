@@ -14,17 +14,17 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
   </head>
-  <body>
-    <header class="header header_homepage">
-      <input id="switch" class="switch" type="checkbox">
+  <body class="homepage">
+    <header class="header">
+      <input id="switch" class="switch header__switch" type="checkbox">
       <label for="switch">
         <span></span>
         <span></span>
         <span></span>
       </label>
-      <nav class="topnav">
-        <ul class="topnav__list">
-          <li class="topnav__item_logo">
+      <nav class="topnav topnav_homepage">
+        <ul class="topnav__list topnav__list_homepage">
+          <li class="topnav__logo topnav__logo_homepage">
             <a class="topnav__link" href="index.html">
               <img src="icons/miolli-logo.svg" alt="miolli">
               <img src="icons/miolli-logo-small.svg" alt="miolli">
@@ -42,38 +42,38 @@
                 <use href="#bottom"></use>
               </svg>
             </a>
-            <div class="topnav__dropdown template">
-              <div class="template__block">
-                <a class="template__link" href="">wszystkie okazje</a>
+            <div class="topnav-print topnav__dropdown">
+              <div class="topnav-print__block">
+                <a class="topnav-print__link" href="">wszystkie okazje</a>
                 najpopularniejsze<br>
 teraz:
-                <ul class="template__list">
-                  <li class="template__item">
-                    <a class="template__link" href="">dzień mamy</a>
+                <ul class="topnav-print__list">
+                  <li class="topnav-print__item">
+                    <a class="topnav-print__link" href="">dzień mamy</a>
                   </li>
-                  <li class="template__item">
-                    <a class="template__link" href="">dzień dziecka</a>
+                  <li class="topnav-print__item">
+                    <a class="topnav-print__link" href="">dzień dziecka</a>
                   </li>
-                  <li class="template__item">
-                    <a class="template__link" href="">dzień taty</a>
+                  <li class="topnav-print__item">
+                    <a class="topnav-print__link" href="">dzień taty</a>
                   </li>
                 </ul>
-                <a class="template__link underline" href=""><span>dedykowany nadruk</span> 
+                <a class="topnav-print__link underline" href=""><span>dedykowany nadruk</span> 
                   <img src="icons/arrow-next_victoriana.svg" alt="arrow-next">
                 </a>
               </div>
-              <div class="template__preview">
+              <div class="topnav-print__preview">
                 <img src="images/slony-karmel.png" alt="slony-karmel">
-                <img class="template__image" src="icons/miolli-logo-small.svg" alt="miolli logo">
+                <img class="topnav-print__image" src="icons/miolli-logo-small.svg" alt="miolli logo">
               </div>
             </div>
           </li>
-          <li class="topnav__item like-button">
+          <li class="topnav__item topnav__item_button">
             <a class="topnav__link" href="">
               <img src="icons/user.svg" alt="user">
             </a>
           </li>
-          <li class="topnav__item like-button hasChild">
+          <li class="topnav__item topnav__item_button hasChild">
             <a class="topnav__link" href="">
               <img src="icons/cart.svg" alt="cart">
             </a>

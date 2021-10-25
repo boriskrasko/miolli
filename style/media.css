@@ -165,11 +165,11 @@
 }
 
 @media screen and (max-width: 500px) {
-  .header_homepage .topnav__list {
+  .topnav__list_homepage {
     width: calc(100% - 78px);
   }
   
-  .header_homepage .topnav__item_logo {
+  .topnav__logo {
     display: flex;
   }
   .brand {
@@ -369,24 +369,24 @@
 }
 
 @media screen and (max-width: 385px) {
-  .topnav__item_logo,
-  .topnav__item_logo .topnav__link {
+  .topnav__logo,
+  .topnav__logo .topnav__link {
     position: relative;
     height: 78px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .topnav__item_logo img {
+  .topnav__logo img {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .topnav__item_logo img[src="icons/miolli-logo-small.svg"] {
+  .topnav__logo img[src="icons/miolli-logo-small.svg"] {
     display: flex;
   }
-  .topnav__item_logo img[src="icons/miolli-logo.svg"] {
+  .topnav__logo img[src="icons/miolli-logo.svg"] {
     display: none;
   }
 }

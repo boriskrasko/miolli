@@ -2,28 +2,6 @@
   --switch: transform 0.1s cubic-bezier(0.77, 0.2, 0.05, 1), background-color 0.1s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.15s ease;
 }
 
-/* brand tagline */
-.brand {
-  max-width: 540px;
-  max-height: 320px;
-  margin: 0 auto;
-}
-
-.brand__name {
-  width: 100%;
-}
-
-.brand__tagline {
-  position: relative;
-  left: 15%;
-  bottom: 40px;
-  font-family: var(--contentFont);
-  font-size: 1.5em;
-  letter-spacing: 0.2em;
-  color: #FFFFFF;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-}
-
 .header {
   position: sticky;
   top: 0;
@@ -33,11 +11,19 @@
   height: 0;
 }
 
-.switch {
+.header__switch,
+.header__switch + label {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 99;
+}
+
+.header__switch + label {
+  z-index: 1;
+}
+
+.switch {
   display: block;
   width: 78px;
   height: 78px;
@@ -45,11 +31,7 @@
   cursor: pointer;
 }
 
-.switch ~ label {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
+.switch + label {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -90,7 +72,7 @@
   height: 78px;
 }
 
-.header_homepage .topnav {
+.topnav_homepage {
   visibility: hidden;
 }
 
@@ -108,7 +90,7 @@
   background-color: #FFFFFF;
 }
 
-.header_homepage .topnav__list {
+.topnav__list_homepage {
   width: max-content;
 }
 
@@ -127,17 +109,17 @@
   display: none;
 }
 
-.topnav__item_logo {
+.topnav__logo {
   position: absolute;
   left: 0;
   background-color: #FFFFFFFE;
 }
 
-.header_homepage .topnav__item_logo {
+.topnav__logo_homepage {
   display: none;
 }
 
-.topnav__item_logo img[src="icons/miolli-logo-small.svg"] {
+.topnav__logo img[src="icons/miolli-logo-small.svg"] {
   display: none;
 }
 
@@ -171,7 +153,7 @@
   fill: transparent;
 }
 
-.like-button {
+.topnav__item_button {
   z-index: 99;
   display: flex;
   justify-content: center;
@@ -181,11 +163,11 @@
   background-color: var(--nav-menu-fill);
 }
 
-.like-button:hover img {
+.topnav__item_button:hover img {
   transition: color 0.1s ease-out;
 }
 
-.like-button:hover > * {
+.topnav__item_button:hover > * {
   opacity: 0.7;
 }
 
@@ -219,7 +201,7 @@
 }
 
 .sidenav__link {
-  font: 14px/18px'Monument Grotesk', sans-serif;
+  font: 14px/18px 'Monument Grotesk', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #FFFFFF;
@@ -246,7 +228,7 @@
   display: inline-flex;
   align-items: center;
   padding: 8px 8px 16px 24px;
-  font: 14px/18px'Monument Grotesk', sans-serif;
+  font: 14px/18px 'Monument Grotesk', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--nav-menu-text);
@@ -265,8 +247,6 @@
   top: 78px;
   right: -78px;
   z-index: 99;
-  display: flex;
-  background-color: #FFFFFF;
   box-shadow: 0 0 0.5px 0.2px rgba(0, 0, 0, 0.17);
   visibility: hidden;
   opacity: 0;
@@ -278,41 +258,43 @@
   opacity: 1;
 }
 
-.template {
+.topnav-print {
+  display: flex;
   justify-content: space-between;
   width: 614px;
   height: 312px;
   padding: 24px 46px;
+  background-color: #FFFFFF;
 }
 
-.template > div {
+.topnav-print > div {
   width: 50%;
   height: 100%;
 }
 
-.template > div:first-child {
+.topnav-print > div:first-child {
   border-right: 1px solid var(--victoriana);
 }
 
-.template__block {
+.topnav-print__block {
   font: 14px/18px'Monument Grotesk', sans-serif;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--nav-menu-text);
 }
 
-.template__list {
+.topnav-print__list {
   padding: 12px 10px;
 }
 
-.template__item {
+.topnav-print__item {
   position: relative;
   display: flex;
   align-items: center;
   padding: 0 20px;
 }
 
-.template__item::before {
+.topnav-print__item::before {
   position: absolute;
   top: 3.2px;
   left: 0;
@@ -324,35 +306,31 @@
   content: '\2022';
 }
 
-.template__link {
+.topnav-print__link {
   display: flex;
-  margin: 16px 0;
-  font: 14px/18px'Monument Grotesk', sans-serif;
+  margin: 8px 0;
+  font: 14px/18px 'Monument Grotesk', sans-serif;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--nav-menu-text);
 }
 
-.template__link.underline span {
+.topnav-print__link.underline span {
   border-bottom: 1px solid var(--victoriana);
 }
 
-.template__link img {
+.topnav-print__link img {
   margin: 4px 8px;
 }
 
-.template__item .template__link {
-  margin: 8px 0;
-}
-
-.template__preview {
+.topnav-print__preview {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.template__image {
+.topnav-print__image {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
@@ -362,6 +340,7 @@
   width: 400px;
   height: 600px;
   padding: 0 48px;
+  background-color: #FFFFFF;
 }
 
 .topnav-cart__list {
@@ -432,6 +411,27 @@
   background-image: url(../images/diana-polekhina-startscreen.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.brand {
+  max-width: 540px;
+  max-height: 320px;
+  margin: 0 auto;
+}
+
+.brand__name {
+  width: 100%;
+}
+
+.brand__tagline {
+  position: relative;
+  left: 15%;
+  bottom: 40px;
+  font-family: var(--contentFont);
+  font-size: 1.5em;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .label {
