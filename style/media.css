@@ -1,29 +1,29 @@
 @media screen and (max-width: 1200px) {
-  .flavor__filter {
+  .available-flavors__filter {
     width: 100px;
     height: 100px;
     padding: 9px;
     font: 9px/14px var(--contentFont);
   }
-  .card_v img {
+  .available-flavors img {
     width: 170px;
   }
 }
 
 @media screen and (max-width: 960px) {
-  .section .title {
+  .section__title {
     font: 84px/90px var(--titleFont);
   }
-  .flavor__filter {
+  .available-flavors__filter {
     width: 90px;
     height: 90px;
     padding: 8px;
     font: 8px/13px var(--contentFont);
   }
-  .card_v img {
+  .available-flavors img {
     width: 160px;
   }
-  .set__viewer {
+  .available-sets__viewer {
     display: none;
   }
   .box {
@@ -80,19 +80,19 @@
 }
 
 @media screen and (max-width: 760px) {
-  .section .title, .print__title, .set__title, .configurator__title  {
+  .section__title, .print__title, .set__title, .configurator__title  {
     font: 64px/70px var(--titleFont);
   }
-  .flavor__filter {
+  .available-flavors__filter {
     width: 80px;
     height: 80px;
     padding: 8px;
     font: 7px/12px var(--contentFont);
   }
-  .card_v img {
+  .available-flavors img {
     width: 160px;
   }
-   .box {
+  .box {
     margin-top: 30%;
   }
   .box__content {
@@ -103,25 +103,25 @@
     min-width: 280px;
     transform: rotate(0deg);
   }
-  .card_s img {
+  .card-set img {
     width: 270px;
     height: 400px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   } 
-  .sets .set__counter {
+  .available-sets__counter {
     position: absolute;
     top: 440px;
     left: 50%;
     transform: translateX(-50%);
   }
-  .set__counter .current::after {
+  .available-sets__counter .current::after {
     font: 16px/20px var(--contentFont);
     content: ' / ' attr(data-total);
   }
   a[uk-slider-item] img {
     width: 26px;
   }
-  .sets a[uk-slider-item] img {
+  .available-sets a[uk-slider-item] img {
     width: 21px;
   }
   .reason__content::before {
@@ -168,7 +168,6 @@
   .topnav__list_homepage {
     width: calc(100% - 78px);
   }
-  
   .topnav__logo {
     display: flex;
   }
@@ -195,25 +194,25 @@
   .section {
     padding: 44px 0 8px 0;
   }
-  .section .title, .box__title, .uno__title, .print__title, .set__title, .configurator__title {
+  .section__title, .box__title, .uno__title, .print__title, .set__title, .configurator__title {
     margin-bottom: 4px;
     font: 50px/60px var(--titleFont);
   }
-  .section .subtitle {
+  .section__subtitle {
     max-width: 272px;
     font: 14px/25px var(--contentFont);
   }
-  .section .title ~ hr {
+  .section__title ~ hr {
     display: none;
   }
-  .card_v h4 {
+  .available-flavors h4 {
     max-width: 100px;
     font: 14px/17px var(--contentFont);
   }
-  .card_v img {
+  .available-flavors img {
     width: 150px;
   }
-  .flavor a[uk-slider-item] {
+  .available-flavors a[uk-slider-item] {
     width: 24px;
     height: 100%;
     padding: 70px 0;
@@ -225,24 +224,24 @@
     padding: 16px 23px;
     font: 13px/20px var(--contentFont);
   }
-  .section__slider {
+  .available-flavors__slider {
     min-height: 200px;
   }
-  .label, .flavor__filter{
+  .label, .available-flavors__filter{
     display: none;
   }
-  .card_s img {
+  .card-set img {
     width: 260px;
     height: 380px;
   }
-  .card_s .card__button {
+  .card-set .card__button {
     margin-top: 20px;
     font: 16px/27px var(--contentFont);
   }
-  .card_s img {
+  .card-set img {
     margin-bottom: 40px;
   } 
-  .sets .set__counter {
+  .available-sets__counter {
     top: 414px;
   }
   .box__list {
