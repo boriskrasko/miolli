@@ -20,7 +20,7 @@
 }
 
 .header__switch + label {
-  z-index: 1;
+  z-index: 1; 
 }
 
 .switch {
@@ -1780,7 +1780,7 @@ input.available-sets__viewer {
   height: 8px;
 }
 
-.cards {
+.cards-grid {
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -1788,12 +1788,12 @@ input.available-sets__viewer {
   column-gap: 4%;
 }
 
-.cards > * {
+.cards-grid > * {
   position: relative;
   margin: 36px 0;
 }
 
-.cards .card-set img {
+.cards-grid .card-set img {
   margin-bottom: 32px;
 }
 
@@ -2154,7 +2154,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .flex-row > .card {
-  margin: 12px;
+  margin: 12px 24px;
 }
 
 .card__button {
