@@ -11,10 +11,10 @@
     <div class="chat">
       <input type="checkbox">
       <button class="chat__button">
-        <i class="chat__icon">
-        <span></span>
-        <span></span>
-        </i>
+      <i class="chat__icon">
+      <span></span>
+      <span></span>
+      </i>
       </button>
       <div class="chat-popup" id="chatForm">
         <div class="chat-popup__heading">
@@ -195,7 +195,7 @@
               </li>
               <li class="breadcrumb__item">
                 <span class="breadcrumb__icon material-icons">east</span>
-                <a class="breadcrumb__link" href="#">twoje konto</a>
+                <a class="breadcrumb__link breadcrumb__link_start" href="#">twoje konto</a>
               </li>
             </ul>
           </nav>
@@ -203,15 +203,103 @@
             <h2 class="account__title h2">Hello <span class="account-name">Marta</span>!</h2>
           </div>
           <div class="account__menu">
-            <a href="dane.html" class="menu__item">twoje dane</a>
-            <a href="adresy.html" class="menu__item">adresy</a>
-            <button class="menu__item">archiwum zamówień</button>
-            <button class="menu__item">kody rabatowe</button>
-            <button class="menu__item">ulubione</button>
-            <button class="menu__item">faktury</button>
+            <div class="tabs">
+              <ul class="tabs__list tabs__list_start" role="tablist">
+                <li class="tabs__item" role="presentation">
+                  <input class="tabs__input" type="radio" name="tab">
+                  <a href="#A" class="tabs__link" id="tab-A" role="tab" aria-controls="A" aria-selected="true" tabindex="0">twoje dane</a>
+                  <div id="A" class="tabs__section" role="tabpanel" aria-labelledby="tab-A" aria-hidden="true">
+                    <div class="tabs__body">
+                      <div class="account__data">
+                        <form class="user-data-form">
+                          <div class="fields paragraph_upper">
+                            <label class="field">
+                            <span class="field__label" for="firstname">Imię i nazwisko:</span>
+                            <input class="field__input" type="text" id="firstname" value="">
+                            </label>
+                            <label class="field">
+                            <span class="field__label" for="email">Email:</span>
+                            <input class="field__input" type="text" id="email">
+                            </label>
+                            <label class="field">
+                            <span class="field__label" for="lastname">Hasło</span>
+                            <input class="field__input" type="password" id="password" value="">
+                            </label>
+                          </div>
+                          <button class="change-pass paragraph_upper">zmień hasło</button>
+                          <button type="button" class="button button-outlined button_size_m">zapisz</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tabs__item" role="presentation">
+                  <input class="tabs__input" type="radio" name="tab">
+                  <a href="#B" class="tabs__link" id="tab-B" role="tab" aria-controls="B" aria-selected="false" tabindex="-1">adresy</a>
+                  <section id="B" class="tabs__section" role="tabpanel" aria-labelledby="tab-B" aria-hidden="true">
+                    <div class="tabs__body">
+                      <div class="account__data">
+                        <form class="user-data-form">
+                          <pre class="paragraph_upper">
+adres domowy: 
+
+Umie nazwisko
+ulina
+kod i miasto
+
+adres domowy: 
+
+Umie nazwisko
+ulina
+kod i miasto
+                          </pre>
+                        </form>
+                      </div>
+                    </div>
+                  </section>
+                </li>
+                <li class="tabs__item" role="presentation">
+                  <input class="tabs__input" type="radio" name="tab">
+                  <a href="#C" class="tabs__link" id="tab-C" role="tab" aria-controls="C" aria-selected="false" tabindex="-1">archiwum zamówień</a>
+                  <section id="C" class="tabs__section" role="tabpanel" aria-labelledby="tab-C" aria-hidden="true">
+                    <div class="tabs__body">
+                      Content of section C
+                    </div>
+                  </section>
+                </li>
+                <li class="tabs__item" role="presentation">
+                  <input class="tabs__input" type="radio" name="tab">
+                  <a href="#D" class="tabs__link" id="tab-D" role="tab" aria-controls="D" aria-selected="false" tabindex="-1">kody rabatowe</a>
+                  <section id="D" class="tabs__section" role="tabpanel" aria-labelledby="tab-D" aria-hidden="true">
+                    <div class="tabs__body">
+                      Content of section D
+                    </div>
+                  </section>
+                </li>
+                <li class="tabs__item" role="presentation">
+                  <input class="tabs__input" type="radio" name="tab">
+                  <a href="#E" class="tabs__link" id="tab-E" role="tab" aria-controls="E" aria-selected="false" tabindex="-1">ulubione</a>
+                  <section id="E" class="tabs__section" role="tabpanel" aria-labelledby="tab-E" aria-hidden="true">
+                    <div class="tabs__body">
+                      Content of section E
+                    </div>
+                  </section>
+                </li>
+                <li class="tabs__item" role="presentation">
+                  <input class="tabs__input" type="radio" name="tab">
+                  <a href="#F" class="tabs__link" id="tab-F" role="tab" aria-controls="F" aria-selected="false" tabindex="-1">faktury</a>
+                  <section id="F" class="tabs__section" role="tabpanel" aria-labelledby="tab-F" aria-hidden="true">
+                    <div class="tabs__body">
+                      Content of section F
+                    </div>
+                  </section>
+                </li>
+              </ul>
+            </div>
+            <a href="../koszyk/login.html" type="button" class="button sign-out">wyloguj</a>
           </div>
         </div>
-      </div>
+      </div> 
     </main>
     <footer class="footer">
       <nav class="footer-nav" aria-label="footnav">
@@ -249,5 +337,26 @@
         </ul>
       </nav>
     </footer>
+    <script>
+      const tabsList = document.querySelector('.tabs__list');
+      const tabsItem = document.querySelectorAll('.tabs__item');
+      const tabsInput = document.querySelectorAll('.tabs__item input');
+      const breadcrumbLink = document.querySelector('.breadcrumb__link_start');
+      const signOut = document.querySelector('.sign-out');
+
+      for (let i = 0; i < tabsItem.length; i++) {
+        tabsItem[i].addEventListener('click', () => {
+          tabsList.classList.remove('tabs__list_start');
+          signOut.style.display = 'none';
+        })
+      }
+      breadcrumbLink.addEventListener('click', () => {
+        for (let i = 0; i < tabsInput.length; i++) {
+          tabsInput[i].checked = false;
+          tabsList.classList.add('tabs__list_start');
+          signOut.style.display = 'block';
+        }
+      })
+    </script>
   </body>
 </html>

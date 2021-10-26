@@ -1005,7 +1005,7 @@ main {
 .print__modal {
   width: 100%;
   max-width: 1025px;
-  min-height: 1107px;
+  min-height: 400px;
   background: #fff;
   padding: 6%;
   border: 20px solid var(--dark-vanilla);
