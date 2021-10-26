@@ -231,6 +231,13 @@ fieldset {
   min-width: 324px;
 }
 
+.field__buyer-type {
+  display: flex;
+  flex-direction: column;
+  min-width: 324px;
+  align-items: center;
+}
+
 .field__input {
   height: 65px;
   border: 1px solid #777;
@@ -274,6 +281,14 @@ fieldset {
   align-items: center;
   flex-wrap: wrap;
   border: none;
+}
+
+input[value="company"]:checked ~ .private {
+  display: none;
+}
+
+input[value="private"]:checked ~ .company {
+  display: none;
 }
 
 .buyer-type label {

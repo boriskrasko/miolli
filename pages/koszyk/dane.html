@@ -194,24 +194,25 @@
       <div class="cart__body">
         <form class="shipping-form">
           <div class="fields paragraph_upper">
-          <fieldset class="buyer-type">
-            <legend class="hidden">private or company</legend>
-            <label>
-               <input type="radio" name="buyer-type" value="private">
-               <span>osoba prywatna</span>
-            </label>
-            <label>
-              <input type="radio" name="buyer-type" value="company">
-              <span>firma</span>
-            </label>
-          </fieldset>
-          <label class="field">
+            <input id="private" type="radio" name="buyer-type" value="private" checked>
+            <label class="field__buyer-type" for="private">osoba prywatna</label>
+            <input id="company" type="radio" name="buyer-type" value="company">
+            <label class="field__buyer-type" for="company">firma</label>
+          <label class="field private">
             <span class="field__label" for="firstname">Imię:</span>
             <input class="field__input" type="text" id="firstname" value="">
           </label>
-          <label class="field field_short">
+          <label class="field field_short private">
             <span class="field__label" for="lastname">Nazwisko:</span>
             <input class="field__input" type="text" id="lastname" value="">
+          </label>
+          <label class="field company">
+            <span class="field__label" for="companyname">Nazwa firmy:</span>
+            <input class="field__input" type="text" id="companytname" value="">
+          </label>
+          <label class="field field_short company">
+            <span class="field__label" for="nip">NIP:</span>
+            <input class="field__input" type="text" id="nip" value="">
           </label>
           <label class="field field_wide">
             <span class="field__label" for="address">Adres:</span>
