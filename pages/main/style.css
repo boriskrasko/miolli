@@ -12,15 +12,25 @@
   opacity: 1;
 }
 
-.topnav {
-  width: max-content;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+
+.topnav__list {
+ /* box-shadow: 0 3px 6px -3px rgba(0, 0, 0, .16);*/
   background: #fff;
 }
 
 @media (min-width: 576px) {
   .topbar__logo {
     display: none;
+  }
+
+  .topnav__list {
+    box-shadow: 0 3px 6px -3px rgba(0, 0, 0, .16);
+    background: #fff;
+  }
+
+  .topnav {
+    width: auto;
+    max-width: 100%;
   }
 
   .topbar {
@@ -225,6 +235,7 @@
   height: 20rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .card-flavor {
@@ -235,6 +246,7 @@
   height: 18.625rem;
   margin: 0.5625rem;
   justify-content: center;
+  transition: 0.4s all;
 }
 
 .card-flavor__header {
@@ -436,11 +448,12 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-start;s
 }
 
 .composition .stack {
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .composition .stack--horizontal {
