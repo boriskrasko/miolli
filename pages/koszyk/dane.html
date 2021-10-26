@@ -196,16 +196,18 @@
           <div class="fields paragraph_upper">
           <fieldset class="buyer-type">
             <legend class="hidden">private or company</legend>
-            <label>
-               <input type="radio" name="buyer-type" value="private">
-               <span>osoba prywatna</span>
+            <label class="container">osoba prywatna
+              <input class="chk-private" type="radio" name="buyer-type" value="private" checked>
+              <span class="checkmark"></span>
             </label>
-            <label>
-              <input type="radio" name="buyer-type" value="company">
-              <span>firma</span>
+            <label class="container">firma
+              <input class="chk-company" type="radio" name="buyer-type" value="company">
+              <span class="checkmark"></span>
             </label>
           </fieldset>
-          <label class="field">
+          <fieldset class="private-block">
+            <legend class="hidden">osoba prywatna</legend>
+            <label class="field">
             <span class="field__label" for="firstname">Imię:</span>
             <input class="field__input" type="text" id="firstname" value="">
           </label>
@@ -213,6 +215,18 @@
             <span class="field__label" for="lastname">Nazwisko:</span>
             <input class="field__input" type="text" id="lastname" value="">
           </label>
+          </fieldset>
+          <fieldset class="company-block off">
+            <legend class="hidden">firma</legend>
+            <label class="field">
+            <span class="field__label" for="companyname">Nazwa firmy:</span>
+            <input class="field__input" type="text" id="companyname" value="">
+          </label>
+          <label class="field field_short">
+            <span class="field__label" for="nip">NIP:</span>
+            <input class="field__input" type="text" id="nip" value="">
+          </label>
+          </fieldset>
           <label class="field field_wide">
             <span class="field__label" for="address">Adres:</span>
             <input class="field__input" type="text" id="address">
@@ -298,5 +312,13 @@
         </ul>
       </nav>
     </footer>
+    <script>
+      document.querySelector('.chk-company').addEventListener('change', toggleInput);
+      document.querySelector('.chk-private').addEventListener('change', toggleInput);
+      function toggleInput() {
+      document.querySelector('.company-block').classList.toggle('off');
+      document.querySelector('.private-block').classList.toggle('off');
+    }
+    </script>
   </body>
 </html>
