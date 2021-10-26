@@ -2,7 +2,7 @@
 @import 'fonts.css';
 
 * {
-  /*border: var(--border);*/
+  border: var(--border);
 }
 
 :root {
@@ -728,7 +728,7 @@ z nadrukiem of topbar menu*/
   .main-nav__link {
     justify-content: center;
     text-align: center;
-    padding: auto 0.875rem;
+    padding: 0.5rem 0.75rem;
   }
 }
 
@@ -863,7 +863,7 @@ z nadrukiem of topbar menu*/
 @media (max-width: 500px) {
   .topbar__logo {
     min-width: 4.875rem;
-    padding: 0 0 0 0.9375rem;
+    padding: 0 0.9375rem;
   }
 }
 

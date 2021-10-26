@@ -12,15 +12,25 @@
   opacity: 1;
 }
 
-.topnav {
-  width: max-content;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+
+.topnav__list {
+ /* box-shadow: 0 3px 6px -3px rgba(0, 0, 0, .16);*/
   background: #fff;
 }
 
 @media (min-width: 576px) {
   .topbar__logo {
     display: none;
+  }
+
+  .topnav__list {
+    box-shadow: 0 3px 6px -3px rgba(0, 0, 0, .16);
+    background: #fff;
+  }
+
+  .topnav {
+    width: auto;
+    max-width: 100%;
   }
 
   .topbar {
