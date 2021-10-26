@@ -194,26 +194,39 @@
       <div class="cart__body">
         <form class="shipping-form">
           <div class="fields paragraph_upper">
-            <input id="private" type="radio" name="buyer-type" value="private" checked>
-            <label class="field__buyer-type" for="private">osoba prywatna</label>
-            <input id="company" type="radio" name="buyer-type" value="company">
-            <label class="field__buyer-type" for="company">firma</label>
-          <label class="field private">
+          <fieldset class="buyer-type">
+            <legend class="hidden">private or company</legend>
+            <label class="container">osoba prywatna
+              <input class="chk-private" type="radio" name="buyer-type" value="private" checked>
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">firma
+              <input class="chk-company" type="radio" name="buyer-type" value="company">
+              <span class="checkmark"></span>
+            </label>
+          </fieldset>
+          <fieldset class="private-block">
+            <legend class="hidden">osoba prywatna</legend>
+            <label class="field">
             <span class="field__label" for="firstname">Imię:</span>
             <input class="field__input" type="text" id="firstname" value="">
           </label>
-          <label class="field field_short private">
+          <label class="field field_short">
             <span class="field__label" for="lastname">Nazwisko:</span>
             <input class="field__input" type="text" id="lastname" value="">
           </label>
-          <label class="field company">
+          </fieldset>
+          <fieldset class="company-block off">
+            <legend class="hidden">firma</legend>
+            <label class="field">
             <span class="field__label" for="companyname">Nazwa firmy:</span>
-            <input class="field__input" type="text" id="companytname" value="">
+            <input class="field__input" type="text" id="companyname" value="">
           </label>
-          <label class="field field_short company">
+          <label class="field field_short">
             <span class="field__label" for="nip">NIP:</span>
             <input class="field__input" type="text" id="nip" value="">
           </label>
+          </fieldset>
           <label class="field field_wide">
             <span class="field__label" for="address">Adres:</span>
             <input class="field__input" type="text" id="address">
@@ -299,5 +312,13 @@
         </ul>
       </nav>
     </footer>
+    <script>
+      document.querySelector('.chk-company').addEventListener('change', toggleInput);
+      document.querySelector('.chk-private').addEventListener('change', toggleInput);
+      function toggleInput() {
+      document.querySelector('.company-block').classList.toggle('off');
+      document.querySelector('.private-block').classList.toggle('off');
+    }
+    </script>
   </body>
 </html>

@@ -10,6 +10,18 @@ fieldset {
   border: none;
 }
 
+.company-block,
+.private-block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.off {
+  display: none;
+}
+
 .cart {
   width: 100%;
   max-width: var(--content);
@@ -210,6 +222,60 @@ fieldset {
 
 /*dane do wysyłki*/
 
+.container {
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-font__item .checkmark {
+  top: 26px;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #000;
+}
+
 .shipping-form {
   display: flex;
   flex-direction: column;
@@ -229,13 +295,6 @@ fieldset {
   display: flex;
   flex-direction: column;
   min-width: 324px;
-}
-
-.field__buyer-type {
-  display: flex;
-  flex-direction: column;
-  min-width: 324px;
-  align-items: center;
 }
 
 .field__input {
@@ -283,20 +342,13 @@ fieldset {
   border: none;
 }
 
-input[value="company"]:checked ~ .private {
-  display: none;
-}
-
-input[value="private"]:checked ~ .company {
-  display: none;
-}
-
 .buyer-type label {
   width: 224px;
   height: 65px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 0 0 0 40px;
 }
 
 .buyer-type span {
@@ -552,5 +604,5 @@ justify-content: center;
   }
   .pay__method > * {
     margin: 8px 8px;
-}
+  }
 }
