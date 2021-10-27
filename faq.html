@@ -2,16 +2,13 @@
 <html lang="pl">
   <head>
     <meta charset='utf-8'>
-    <title>Miolli | Online konstruktor</title>
+    <title>Miolli | FAQ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="uikit/css/uikit.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href='style/colors.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/fonts.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/common.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/media.css'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="uikit/js/uikit.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -29,14 +26,14 @@
               <img src="icons/miolli-logo-small.svg" alt="miolli">
             </a>
           </li>
-          <li class="topnav__item disabled">
+          <li class="topnav__item">
             <a class="topnav__link" href="configurator.html">twoja kompozycja</a>
           </li>
           <li class="topnav__item">
             <a class="topnav__link" href="sets.html">gotowe sety makaroników</a>
           </li>
           <li class="topnav__item hasChild">
-            <a class="topnav__link" href="prints.html">makaroniki z nadrukiem
+            <a class="topnav__link" href="">makaroniki z nadrukiem
               <svg class="arrow">
                 <use href="#bottom"></use>
               </svg>
@@ -121,7 +118,7 @@ teraz:
           <li class="sidenav__item">
             <a class="sidenav__link" href="">blog</a>
           </li>
-          <li class="sidenav__item">
+          <li class="sidenav__item disabled">
             <a class="sidenav__link" href="faq.html">faq</a>
           </li>
           <li class="sidenav__item">
@@ -131,9 +128,9 @@ teraz:
             <a class="sidenav__link" href="sets.html">gotowe sety</a>
           </li>
           <li class="sidenav__item mobile-only">
-            <a class="sidenav__link" href="prints.html">makaroniki z nadrukiem</a>
+            <a class="sidenav__link" href="#">makaroniki z nadrukiem</a>
           </li>
-          <li class="sidenav__item disabled">
+          <li class="sidenav__item">
             <a class="sidenav__link" href="configurator.html">konfigurator on-line</a>
           </li>
           <li class="sidenav__item" >
@@ -180,156 +177,67 @@ teraz:
         </form>
       </div>
     </div>
-    <main class="main main_configurator">
-      <div class="configurator">
-        <h1 class="configurator__title">skomponuj swoje pudełko</h1>
-        <ul class="progressbar">
-          <li class="active">wybierz rozmiar</li>
-          <li class="active">wybierz smaki</li>
-          <li class="active">dodaj nadruk</li>
-          <li>dodaj do koszyka</li>
+    <main class="main">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item">
+            <svg class="breadcrumb__home">
+              <use href="#home"></use>
+            </svg>
+            <a class="breadcrumb__link" href="index.html">strona główna</a>
+          </li>
+          <li class="breadcrumb__item disabled">
+            <svg class="breadcrumb__arrow">
+              <use href="#breadcrumbArrow"></use>
+            </svg>
+            <a class="breadcrumb__link" href="#" aria-current="location">faq</a>
+          </li>
         </ul>
-        <div class="progressbar_mobile">
-          <p>3/4</p>
-          <p>dodaj nadruk</p>
-        </div>
-        <div class="add-print">
-          <img class="add-print__box" src="images/box.png" alt="">
-          <div class="add-print__content">
-            <div class="price">
-            <p class="price__copy">
-              <span data-integer>34</span> ,-
+      </nav>
+      <section class="section faq">
+      <h1 class="section__title">FAQ</h1>
+      <hr>
+      <p class="section__subtitle">czyli wszystko co powinieneś wiedzieć o makaronikach i nie tylko!</h4>
+      <div class="faq__items">
+        <ul class="faq__list">
+          <li>
+            <input type="checkbox">
+            <h4 class="faq__question">Czy makaroniki mają gluten?</h4>
+            <p class="read faq__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquamposuere sit amet.
             </p>
-            <p class="price__details">bieżąca cena</p>
-          </div>
-            <h5 class="add-print__title">DODAJ NADRUK</h5>
-            <p>Kliknij w nadruk lub przeciągnij go do pudełka.
-              Chcesz dostać dedykowany nadruk kliknij tutaj </p>
-            <p>Ważne! Nadruki wyglądają najlepiej na jasnych makaronikach. 
-              Firma Miolli zastrzega sobie prawo do za druku tych makaroników
-              na których projekt wyglądać będzie najlepiej</p>
-            <p>Nie chcesz nadruku? Kliknij tutaj</p>
+          </li>
+          <li>
+            <input type="checkbox">
+            <h4 class="faq__question">Czy makaroniki mają gluten?</h4>
+            <p class="read faq__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquamposuere sit amet.
             </p>
-            <h5 class="add-print__title">nasza baza nadruków:</h5>
-            <div class="dropdown dropdown_sort">
-              <p>Wybierz kategorię nadruków:</p>
-              <div class="dropdown__select">
-                <div class="dropdown__item-current">
-                  <p class="dropdown__text-current">najpopularniejsze</p>
-                  <button class="arrow"></button>
-                </div>
-                <ul class="options">
-                  <li class="option selected">
-                    <p class="option__text">najpopularniejsze</p>
-                  </li>
-                  <li class="option">
-                    <p class="option__text">po cene</p>
-                  </li>
-                  <li class="option">
-                    <p class="option__text">po nazwie</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <p>Najczęściej wybierane kategorie:</p>
-            <div class="filter">
-              <div class="filter__list">
-                <input id="id1" type="checkbox">
-                <label for="id1" class="filter__item">dzień mamy</label>
-                <input id="id2" type="checkbox">
-                <label for="id2" class="filter__item">dla zakochanych</label>
-                <input id="id3" type="checkbox">
-                <label for="id3" class="filter__item">dla dzieci</label>
-                <input id="id4" type="checkbox">
-                <label for="id4" class="filter__item">na urodziny</label>
-                <input id="id5" type="checkbox">
-                <label for="id5" class="filter__item">wielkanoc</label>
-                <input id="id6" type="checkbox">
-                <label for="id6" class="filter__item">dzień taty</label>
-              </div>
-            </div>
-            <div class="scrollbox">
-              <div class="scrollbox__container">
-                <ul class="variants">
-                  <li class="variant__item">
-                    <img class="variant__image" src="images/print-1.png" alt="print">
-                    <img class="variant__print" src="icons/print-love-1.svg" alt="print">
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="variant__item">
-                    <img class="variant__image" src="images/print-2.png" alt="print">
-                    <img class="variant__print" src="icons/print-love-2.svg" alt="print">
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="variant__item">
-                    <img class="variant__image" src="images/print-1.png" alt="print">
-                    <img class="variant__print" src="icons/print-love-1.svg" alt="print">
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="variant__item">
-                    <img class="variant__image" src="images/print-2.png" alt="print">
-                    <img class="variant__print" src="icons/print-love-2.svg" alt="print">
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="variant__item">
-                    <img class="variant__image" src="images/print-1.png" alt="print">
-                    <img class="variant__print" src="icons/print-love-1.svg" alt="print">
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="variant__item">
-                    <img class="variant__image" src="images/print-2.png" alt="print">
-                    <img class="variant__print" src="icons/print-love-2.svg" alt="print">
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="variant__item">
-                    <img class="variant__image" src="images/print-1.png" alt="print">
-                    <img class="variant__print" src="icons/print-love-1.svg" alt="print">
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="variant__item">
-                    <img class="variant__image" src="images/print-2.png" alt="print">
-                    <img class="variant__print" src="icons/print-love-2.svg" alt="print">
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="variant__item">
-                    <img class="variant__image" src="images/print-1.png" alt="print">
-                    <img class="variant__print" src="icons/print-love-1.svg" alt="print">
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="variant__item">
-                    <img class="variant__image" src="images/print-2.png" alt="print">
-                    <img class="variant__print" src="icons/print-love-2.svg" alt="print">
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="variant__item">
-                    <img class="variant__image" src="images/print-1.png" alt="print">
-                    <img class="variant__print" src="icons/print-love-1.svg" alt="print">
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="variant__item">
-                    <img class="variant__image" src="images/print-2.png" alt="print">
-                    <img class="variant__print" src="icons/print-love-2.svg" alt="print">
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <a class="configurator__button button button_size_m button_outlined" href="">GOTOWE! PRZEJDŹ DALEJ</a>
-          </div>
-        </div>
+          </li>
+          <li>
+            <input type="checkbox">
+            <h4 class="faq__question">Czy makaroniki mają gluten?</h4>
+            <p class="read faq__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquamposuere sit amet.
+            </p>
+          </li>
+          <li>
+            <input type="checkbox">
+            <h4 class="faq__question">Czy makaroniki mają gluten?</h4>
+            <p class="read faq__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquamposuere sit amet.
+            </p>
+          </li>
+          <li>
+            <input type="checkbox">
+            <h4 class="faq__question">Czy makaroniki mają gluten?</h4>
+            <p class="read faq__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum dapibus vehicula. Nam fermentum fermentum ligula, vel faucibus neque tincidunt ac. Aliquam nec nibh in ante aliquam ultricies interdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquamposuere sit amet.
+            </p>
+          </li>
+        </ul>
       </div>
+      </section>
     </main>
     <footer class="footer">
       <nav>
@@ -344,15 +252,15 @@ teraz:
             <a href="" class="footer__link">o nas</a>
           </li>
           <li class="footer__item">
-            <a href="prints.html" class="footer__link">makaroniki z nadrukiem</a>
+            <a href="" class="footer__link">makaroniki z nadrukiem</a>
           </li>
-          <li class="footer__item disabled">
+          <li class="footer__item">
            <a href="configurator.html " class="footer__link">twoja kompozycja</a>
           </li>
           <li class="footer__item">
             <a href="" class="footer__link">alergeny</a>
           </li>
-          <li class="footer__item">
+          <li class="footer__item disabled">
             <a href="faq.html" class="footer__link">faq</a>
           </li>
           <li class="footer__item">
@@ -521,6 +429,30 @@ teraz:
         if (event.key === 'Enter') {
           event.preventDefault();
           sendMessage();
+        }
+      });
+
+      // Dropdown
+      for (const dropdown of document.querySelectorAll('.dropdown')) {
+        dropdown.addEventListener('click', function () {
+          this.querySelector('.dropdown__select').classList.toggle('opened');
+        })
+      }
+      for (const option of document.querySelectorAll('.option')) {
+        option.addEventListener('click', function () {
+          if (!this.classList.contains('selected')) {
+            this.parentNode.querySelector('.option.selected').classList.remove('selected');
+            this.classList.add('selected');
+            this.closest('.dropdown__select').querySelector('.dropdown__item-current p').textContent = this.textContent;
+            changeMap(document.querySelector('.selected').dataset.location.split(', '));
+          }
+        })
+      }
+      window.addEventListener('click', function (e) {
+        for (const select of document.querySelectorAll('.dropdown__select')) {
+          if (!select.contains(e.target)) {
+            select.classList.remove('opened');
+          }
         }
       });
 

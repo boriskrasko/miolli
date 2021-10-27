@@ -195,7 +195,7 @@
     padding: 44px 0 8px 0;
   }
   .section__title, .box__title, .uno__title, .print__title, .set__title, .configurator__title {
-    margin-bottom: 4px;
+    margin-bottom: 24px;
     font: 50px/60px var(--titleFont);
   }
   .section__subtitle {
