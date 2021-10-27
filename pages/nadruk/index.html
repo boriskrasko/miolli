@@ -1,541 +1,452 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miolli | Zestaw</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head>
-<body>
-  <div class="chat">
-    <input type="checkbox">
-    <button class="chat__button">
-      <i class="chat__icon">
-        <span></span>
-        <span></span>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miolli | Zestaw</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <div class="chat">
+      <input type="checkbox">
+      <button class="chat__button">
+        <i class="chat__icon">
+          <span></span>
+          <span></span>
         </i>
-    </button>
-    <div class="chat-popup" id="chatForm">
-      <div class="chat-popup__heading">
-        <img class="chat-popup__logo" src="../../assets/icons/logo-min.svg" alt="logo">
-        <h5>porozmawiaj z miolli</h5>
-      </div>
-      <div class="chat-popup__history">
-        <p><span class="paragraph_upper">Obecnie nie jesteśmy dostępni on-line</span>
-          <br>
-          <span class="paragraph">Zostaw nam wiadomość lub zadzwoń pod numer XXX XXX XXX</span>
-        </p>
-      </div>
-      <form action="/" class="chat-popup__form">
-        <textarea class="chat-popup__textarea" placeholder="Wpisz swoją wiadomość" name="meassege"></textarea>
-        <button type="submit" class="chat__button_submit button-contained_dark-vanilla">
-          <img src="../../assets/icons/send.svg" alt="send">
-        </button>
-      </form>
-    </div>
-  </div>
-  <header class="header">
-    <div class="header-menu">
-      <input class="checkbox-toggle-menu" type="checkbox">
-      <button class="button button-toggle-menu">
-        <span></span>
-        <span></span>
-        <span></span>
       </button>
-      <div class="header-menu_inner">
-        <div class="topbar">
-          <div class="topbar__logo">
-            <a href="../main/index.html" title="Miolli">
-              <picture>
-                <source srcset="../../assets/icons/logo.svg" media="(min-width: 320px)">
-                <img src="../../assets/icons/logo-min.svg" alt="logo">
-              </picture>
-            </a>
-          </div>
-          <nav class="topnav" aria-label="Topnav">
-            <ul class="topnav__list">
-              <li class="topnav__item_cart topnav__item_hasChild">
-                <a href="../koszyk/index.html" class="topnav__link">
-                  <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
-                  <span class="topnav__item_cart_counter inner">14</span>
-                </a>
-                <div class="cart-preview">
-                  <div class="cart-preview__item">
-                    <figure class="cart-preview__figure">
-                      <img class="cart-preview__image" src="../../assets/images/set-01.png" alt="set">
-                    </figure>
-                    <div class="cart-preview__body">
-                      <div class="cart-preview__heading">
-                        <h6 class="cart-preview__name h6">set na lato</h6>
-                      </div>
-                      <ul class="cart-preview__description">
-                        <li class="cart-preview__description-item">ilość:<span class="cart-preview__quantity">2</span></li>
-                        <li class="cart-preview__description-item">cena:<span class="cart-preview__price">27</span></li>
-                        <li class="cart-preview__description-item">suma:<span class="cart-preview__cost">54</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="cart-preview__item">
-                    <figure class="cart-preview__figure">
-                      <img class="cart-preview__image" src="../../assets/images/set-01.png" alt="set">
-                    </figure>
-                    <div class="cart-preview__body">
-                      <div class="cart-preview__heading">
-                        <h6 class="cart-preview__name h6">set na lato</h6>
-                      </div>
-                      <ul class="cart-preview__description">
-                        <li class="cart-preview__description-item">ilość:<span class="cart-preview__quantity">2</span></li>
-                        <li class="cart-preview__description-item">cena:<span class="cart-preview__price">27</span></li>
-                        <li class="cart-preview__description-item">suma:<span class="cart-preview__cost">54</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="cart-preview__footer">
-                    <a href="../koszyk/index.html" class="cart-preview__remainder">i jeszcze <span class="rest">1</span> ...</a>
-                    <a href="../koszyk/index.html" class="cart-preview__button button button-contained button-contained_dark-vanilla button_size_m">przejdź do koszyka</a>
-                  </div>
-                </div>
-              </li>
-              <li class="topnav__item_user">
-                <a href="../user/index.html" class="topnav__link">
-                  <img class="topnav__link_icon" src="../../assets/icons/user.svg" alt="user">
-                </a>
-              </li>
-              <li class="topnav__item topnav__item_hasChild">
-                <a href="../nadruki/index.html" class="topnav__link">makaroniki&nbsp;z nadrukiem
-                  <span class="material-icons">south</span>
+      <div class="chat-popup" id="chatForm">
+        <div class="chat-popup__heading">
+          <img class="chat-popup__logo" src="../../assets/icons/logo-min.svg" alt="logo">
+          <h5>porozmawiaj z miolli</h5>
+        </div>
+        <div class="chat-popup__history">
+          <p>
+            <span class="paragraph_upper">Obecnie nie jesteśmy dostępni on-line</span>
+            <br>
+            <span class="paragraph">Zostaw nam wiadomość lub zadzwoń pod numer XXX XXX XXX</span>
+          </p>
+        </div>
+        <form action="/" class="chat-popup__form">
+          <textarea class="chat-popup__textarea" placeholder="Wpisz swoją wiadomość" name="meassege"></textarea>
+          <button type="submit" class="chat__button_submit button-contained_dark-vanilla">
+            <img src="../../assets/icons/send.svg" alt="send">
+          </button>
+        </form>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header-menu">
+        <input class="checkbox-toggle-menu" type="checkbox">
+        <button class="button button-toggle-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header-menu_inner">
+          <div class="topbar">
+            <div class="topbar__logo">
+              <a href="../main/index.html" title="Miolli">
+                <picture>
+                  <source srcset="../../assets/icons/logo.svg" media="(min-width: 320px)">
+                  <img src="../../assets/icons/logo-min.svg" alt="logo">
+                </picture>
+              </a>
+            </div>
+            <nav class="topnav" aria-label="Topnav">
+              <ul class="topnav__list">
+                <li class="topnav__item_cart topnav__item_hasChild">
+                  <a href="../koszyk/index.html" class="topnav__link">
+                    <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
+                    <span class="topnav__item_cart_counter inner">14</span>
                   </a>
-                <div class="printing">
-                  <figure class="printing__figure">
-                    <img src="https://satyr.io/200x200?text=IMAGE" alt="" class="printing__image">
-                    <img src="https://satyr.io/100x100?text=print" alt="" class="printing__image_print" style="opacity: 0.5">
-                  </figure>
-                  <span class="printing__vertical-border"></span>
-                  <nav class="printing__nav" aria-label="Printing">
-                    <ul class="printing__list printing__list_external">
-                      <li class="printing__item">
-                        <a href="../nadruki/index.html" class="printing__link">wszystkie okazje</a>
-                      </li>
-                      <li>
-                        <p>najpopularniejsze teraz:</p>
-                        <ul class="printing__list printing__list_internal">
-                          <li class="printing__item">
-                            <a href="../nadruki/index.html" class="printing__link">dzień mamy</a>
+                  <div class="cart-preview">
+                    <div class="cart-preview__item">
+                      <figure class="cart-preview__figure">
+                        <img class="cart-preview__image" src="../../assets/images/set-01.png" alt="set">
+                      </figure>
+                      <div class="cart-preview__body">
+                        <div class="cart-preview__heading">
+                          <h6 class="cart-preview__name h6">set na lato</h6>
+                        </div>
+                        <ul class="cart-preview__description">
+                          <li class="cart-preview__description-item">ilość: <span class="cart-preview__quantity">2</span>
                           </li>
-                          <li class="printing__item">
-                            <a href="../nadruki/index.html" class="printing__link">dzień dziecka</a>
+                          <li class="cart-preview__description-item">cena: <span class="cart-preview__price">27</span>
                           </li>
-                          <li class="printing__item">
-                            <a href="../nadruki/index.html" class="printing__link">dzień taty</a>
+                          <li class="cart-preview__description-item">suma: <span class="cart-preview__cost">54</span>
                           </li>
                         </ul>
-                      </li>
-                      <li class="printing__item printing__item_underline">
-                        <a href="../nadruki/index.html" class="printing__link">dedykowany nadruk</a>
-                        <span class="material-icons">east</span>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
+                      </div>
+                    </div>
+                    <div class="cart-preview__item">
+                      <figure class="cart-preview__figure">
+                        <img class="cart-preview__image" src="../../assets/images/set-01.png" alt="set">
+                      </figure>
+                      <div class="cart-preview__body">
+                        <div class="cart-preview__heading">
+                          <h6 class="cart-preview__name h6">set na lato</h6>
+                        </div>
+                        <ul class="cart-preview__description">
+                          <li class="cart-preview__description-item">ilość: <span class="cart-preview__quantity">2</span>
+                          </li>
+                          <li class="cart-preview__description-item">cena: <span class="cart-preview__price">27</span>
+                          </li>
+                          <li class="cart-preview__description-item">suma: <span class="cart-preview__cost">54</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-preview__footer">
+                      <a href="../koszyk/index.html" class="cart-preview__remainder">i jeszcze <span class="rest">1</span> ... </a>
+                      <a href="../koszyk/index.html" class="cart-preview__button button button-contained button-contained_dark-vanilla button_size_m">przejdź do koszyka</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="topnav__item_user">
+                  <a href="../user/index.html" class="topnav__link">
+                    <img class="topnav__link_icon" src="../../assets/icons/user.svg" alt="user">
+                  </a>
+                </li>
+                <li class="topnav__item topnav__item_hasChild">
+                  <a href="../nadruki/index.html" class="topnav__link">makaroniki&nbsp;z nadrukiem <span class="material-icons">south</span>
+                  </a>
+                  <div class="printing">
+                    <figure class="printing__figure">
+                      <img src="https://satyr.io/200x200?text=IMAGE" alt="" class="printing__image">
+                      <img src="https://satyr.io/100x100?text=print" alt="" class="printing__image_print" style="opacity: 0.5">
+                    </figure>
+                    <span class="printing__vertical-border"></span>
+                    <nav class="printing__nav" aria-label="Printing">
+                      <ul class="printing__list printing__list_external">
+                        <li class="printing__item">
+                          <a href="../nadruki/index.html" class="printing__link">wszystkie okazje</a>
+                        </li>
+                        <li>
+                          <p>najpopularniejsze teraz:</p>
+                          <ul class="printing__list printing__list_internal">
+                            <li class="printing__item">
+                              <a href="../nadruki/index.html" class="printing__link">dzień mamy</a>
+                            </li>
+                            <li class="printing__item">
+                              <a href="../nadruki/index.html" class="printing__link">dzień dziecka</a>
+                            </li>
+                            <li class="printing__item">
+                              <a href="../nadruki/index.html" class="printing__link">dzień taty</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="printing__item printing__item_underline">
+                          <a href="../nadruki/index.html" class="printing__link">dedykowany nadruk</a>
+                          <span class="material-icons">east</span>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </li>
+                <li class="topnav__item">
+                  <a href="../zestawy/index.html" class="topnav__link">gotowe sety makaroników</a>
+                </li>
+                <li class="topnav__item">
+                  <a href="../konfigurator/index.html" class="topnav__link">twoja kompozycja</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <nav class="main-nav" aria-label="Main">
+            <ul class="main-nav__list">
+              <li class="main-nav__item hidden">
+                <a href="../konfigurator/index.html" class="main-nav__link ">twoja kompozycja</a>
               </li>
-              <li class="topnav__item">
-                <a href="../zestawy/index.html" class="topnav__link">gotowe sety makaroników</a>
+              <li class="main-nav__item hidden">
+                <a href="../zestawy/index.html" class="main-nav__link">gotowe sety makaroników</a>
               </li>
-              <li class="topnav__item">
-                <a href="../konfigurator/index.html" class="topnav__link">twoja kompozycja</a>
+              <li class="main-nav__item hidden">
+                <a href="../nadruki/index.html" class="main-nav__link">makaroniki z nadrukiem</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../o-nas/index.html" class="main-nav__link">o nas</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../blog/index.html" class="main-nav__link">blog</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../konfigurator/index.html" class="main-nav__link">konfigurator on-line</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../oferta/index.html" class="main-nav__link">oferta dla kawiarni</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="../oferta-eventowa/index.html" class="main-nav__link">oferta eventowa</a>
+              </li>
+              <li class="main-nav__item hidden">
+                <a href="../biznes/index.html" class="main-nav__link">miolli dla biznesu</a>
               </li>
             </ul>
           </nav>
-        </div>
-        <nav class="main-nav" aria-label="Main">
-          <ul class="main-nav__list">
-            <li class="main-nav__item hidden">
-              <a href="../konfigurator/index.html" class="main-nav__link ">twoja kompozycja</a>
-            </li>
-            <li class="main-nav__item hidden">
-              <a href="../zestawy/index.html" class="main-nav__link">gotowe sety makaroników</a>
-            </li>
-            <li class="main-nav__item hidden">
-              <a href="../nadruki/index.html" class="main-nav__link">makaroniki z nadrukiem</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="../o-nas/index.html" class="main-nav__link">o nas</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="../blog/index.html" class="main-nav__link">blog</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="../konfigurator/index.html" class="main-nav__link">konfigurator on-line</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="../oferta/index.html" class="main-nav__link">oferta dla kawiarni</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="../oferta-eventowa/index.html" class="main-nav__link">oferta eventowa</a>
-            </li>
-            <li class="main-nav__item hidden">
-              <a href="../biznes/index.html" class="main-nav__link">miolli dla biznesu</a>
-            </li>
-          </ul>
-        </nav>
-        <a class="button_business-offer button button-contained button-contained_dark-vanilla" href="../biznes/index.html">miolli<br>dla biznesu
-          <span class="material-icons">north_east</span>
+          <a class="button_business-offer button button-contained button-contained_dark-vanilla" href="../biznes/index.html">miolli <br>dla biznesu <span class="material-icons">north_east</span>
           </a>
-      </div>
-    </div>
-  </header>
-  <main class="main">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <ul class="breadcrumb__list uppercase">
-        <li class="breadcrumb__item">
-          <img src="../../assets/icons/home.svg" alt="&#8962;">
-          <a class="breadcrumb__link" href="../main/index.html">strona główna</a>
-        </li>
-        <li class="breadcrumb__item">
-          <span class="breadcrumb__icon material-icons">east</span>
-          <a class="breadcrumb__link" href="../nadruki/index.html">nadruki</a>
-        </li>
-        <li class="breadcrumb__item">
-          <span class="breadcrumb__icon material-icons">east</span>
-          <a class="breadcrumb__link" href="#">pojedynczy nadruk</a>
-        </li>
-      </ul>
-    </nav>
-    <article class="set-block">
-      <div class="set-block__aside">
-        <figure class="set-block__figure">
-          <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="set-block__image">
-          <span class="set-block__print">
-            <img src="../../assets/icons/logo.svg" alt="" class="set-block__image_print">
-          </span>
-        </figure>
-      </div>
-      <div class="set-block__content">
-        <div class="set-block__header">
-          <div class="set-block__heading">
-            <h2 class="set-block__title h2">i love you</h2>
-            <div class="price-tag">
-              <p class="price-tag__copy price h2">
-                <span data-integer>34</span> ,-
-              </p>
-              <p class="price-tag__copy details">
-                cena
-                <br> za <span data-quantity>6</span> sztuk
-              </p>
-            </div>
-          </div>
-          <div class="add-to-favorite">
-            <button class="button">
-              <!-- <span class="material-icons">favorite</span> -->
-              <span class="material-icons">favorite_border</span>
-            </button>
-            <p class="add-to-favorite__copy uppercase">dodaj wzór do ulubionych</p>
-          </div>
         </div>
-        <div class="set-block__body">
-
-          <p class="set-block__copy">
-            <b>wybierz wielkość pudełka:</b>
-          </p>
-          <div class="quantity box-size">
-            <span class="box-size-label">S</span>
-            <input id="boxSize" name="boxSize" type="text" readonly value="6">
-            <p class="smth">szt.</p>
-            <div class="quantity__btns">
-              <button class="button">
-                <span class="material-icons">arrow_drop_up</span>
-              </button>
-              <button class="button">
-                <span class="material-icons">arrow_drop_down</span>
-              </button>
-            </div>
+      </div>
+    </header>
+    <main class="main">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ul class="breadcrumb__list uppercase">
+          <li class="breadcrumb__item">
+            <img src="../../assets/icons/home.svg" alt="&#8962;">
+            <a class="breadcrumb__link" href="../main/index.html">strona główna</a>
+          </li>
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__icon material-icons">east</span>
+            <a class="breadcrumb__link" href="../nadruki/index.html">nadruki</a>
+          </li>
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__icon material-icons">east</span>
+            <a class="breadcrumb__link" href="#">pojedynczy nadruk</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="print-block">
+        <div class="print-block__content">
+          <div class="print-block__figure">
+            <img src="../../assets/images/for-print.png" alt="" class="print-block__image">
+            <img src="../../assets/icons/logo.svg" alt="" class="print-block__image_print">
           </div>
-          <div class="change-flavor">
-            <p class="set-block__copy">
-              <b>Wyberz smaki:</b>
-            </p>
-            <br>
-            <div class="change-flavor_current-flavor">
-              <span class="change-flavor__number">1.</span>
-              <div class="dropdown">
-                <div class="dropdown__select">
-                  <div class="dropdown__item-current">
-                    <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="dropdown__image_current">
-                    <p class="dropdown__text-current">limonka</p>
-                    <button class="dropdown__arrow">
-                      <span class="material-icons">arrow_drop_down</span>
-                    </button>
-                  </div>
-                  <ul class="options">
-                    <li class="option selected">
-                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="option__image">
-                      <p class="option__text">limonka</p>
-                    </li>
-                    <li class="option">
-                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="option__image">
-                      <p class="option__text">limonka lorem lorem</p>
-                    </li>
-                    <li class="option">
-                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="option__image">
-                      <p class="option__text">limonka</p>
-                    </li>
-                    <li class="option">
-                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="option__image">
-                      <p class="option__text">limonka</p>
-                    </li>
-                    <li class="option">
-                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="option__image">
-                      <p class="option__text">limonka</p>
-                    </li>
-                    <li class="option">
-                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="option__image">
-                      <p class="option__text">limonka i limonka i limonka</p>
-                    </li>
-                  </ul>
-                </div>
+          <div class="print-block__description">
+            <div class="print-block__heading">
+              <h2 class="print-block__title h2 parrot-pink">i love you</h2>
+              <div class="price-tag">
+                <p class="price-tag__copy price h2">
+                  <span data-integer>34</span> ,-
+                </p>
+                <p class="price-tag__copy details"> cena <br> za <span data-quantity>6</span> sztuk </p>
+              </div>
+              <br>
+              <div class="add-to-favorite">
+                <button class="button">
+                  <!-- <span class="material-icons">favorite</span> -->
+                  <span class="material-icons">favorite_border</span>
+                </button>
+                <p class="add-to-favorite__copy uppercase">dodaj wzór do ulubionych</p>
               </div>
             </div>
-            <div class="change-flavor_current-flavor">
-              <span class="change-flavor__number">2.</span>
-              <div class="dropdown">
-                <div class="dropdown__select">
-                  <div class="dropdown__item-current">
-                    <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="dropdown__image_current">
-                    <p class="dropdown__text-current">limonka</p>
-                    <button class="dropdown__arrow">
-                      <span class="material-icons">arrow_drop_down</span>
-                    </button>
-                  </div>
-                  <ul class="options">
-                    <li class="option selected">
-                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="option__image">
-                      <p class="option__text">limonka</p>
-                    </li>
-                    <li class="option">
-                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="option__image">
-                      <p class="option__text">limonka</p>
-                    </li>
-                    <li class="option">
-                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="option__image">
-                      <p class="option__text">limonka</p>
-                    </li>
-                    <li class="option">
-                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="option__image">
-                      <p class="option__text">limonka</p>
-                    </li>
-                    <li class="option">
-                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="option__image">
-                      <p class="option__text">limonka</p>
-                    </li>
-                    <li class="option">
-                      <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="option__image">
-                      <p class="option__text">limonka</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="set-block__copy">
-            <b>wybierz ilość pudełek:</b>
-          </p>
-          <div class="quantity box-count">
-            <input id="boxCount" name="boxCount" type="text" readonly value="1">
-            <p class="smth">szt.</p>
-            <div class="quantity__btns">
-              <button class="button">
-                <span class="material-icons">arrow_drop_up</span>
-              </button>
-              <button class="button">
-                <span class="material-icons">arrow_drop_down</span>
-              </button>
+            <div class="print-block__body">
+              <form class="paragraph_upper">
+                <fieldset>
+                  <legend>
+                    <b>wybierz wielkość pudełka:</b>
+                  </legend>
+                  <label class="quantity box-size">
+                    <span class="box-size-label">S</span>
+                    <input id="boxSize" name="boxSize" type="number" readonly value="6">
+                    <span class="smth">szt.</span>
+                    <div class="quantity__btns">
+                      <button type="button" class="button">
+                        <span class="material-icons">arrow_drop_up</span>
+                      </button>
+                      <button type="button" class="button">
+                        <span class="material-icons">arrow_drop_down</span>
+                      </button>
+                    </div>
+                  </label>
+                </fieldset>
+                <fieldset>
+                  <legend>
+                    <b>wybierz smaki:</b>
+                  </legend>
+                  <br>1 <br> 2 <br> 3 <br> 4 <br> 5 <br> 6 <br>
+                </fieldset>
+                <br>
+                <fieldset>
+                  <legend>
+                    <b>wybierz ilość pudełek:</b>
+                  </legend>
+                  <label class="quantity box-count">
+                    <input id="boxCount" name="boxCount" type="number" readonly value="2">
+                    <span class="smth">szt.</span>
+                    <div class="quantity__btns">
+                      <button type="button" class="button">
+                        <span class="material-icons">arrow_drop_up</span>
+                      </button>
+                      <button type="button" class="button">
+                        <span class="material-icons">arrow_drop_down</span>
+                      </button>
+                    </div>
+                  </label>
+                </fieldset>
+                <button type="submit" class="print-block__button button button-contained dark-vanilla button_size_m">
+                  <span class="button__body">kup teraz</span>
+                </button>
+              </form>
             </div>
           </div>
         </div>
-        <footer class="set-block__footer">
-          <div class="set-block__actions">
-            <a href="#" class="set-block__button">
-              <span class="button__body">kup teraz</span>
-            </a>
+      </div>
+      <section class="personalize">
+        <article class="personalize__content">
+          <header class="personalize__header">
+            <h2 class="personalize__title h2">masz ochotę na więcej?</h2>
+          </header>
+          <div class="personalize__boby">
+            <div class="stack stack--horizontal">
+              <article class="card print">
+                <div class="card__header">
+                  <div class="card__figure">
+                    <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="card__image">
+                    <span class="card__image card__print">
+                      <img src="../../assets/icons/logo.svg" alt="" class="card__image">
+                    </span>
+                  </div>
+                </div>
+                <div class="card__body">
+                  <h4 class="card__title uppercase">i love you</h4>
+                </div>
+                <footer class="block__footer">
+                  <div class="block__actions">
+                    <a href="../nadruk/index.html" class="button button-outlined parrot-pink button_size_s">
+                      <span class="button__body uppercase">zamów</span>
+                    </a>
+                    <button class="button button-outlined parrot-pink button_size_s">
+                      <span class="material-icons">favorite</span>
+                      <!-- <span class="material-icons">favorite_border</span> -->
+                    </button>
+                  </div>
+                </footer>
+              </article>
+              <article class="card print">
+                <div class="card__header">
+                  <div class="card__figure">
+                    <img src="../../assets/images/slony-karmel.png" alt="" class="card__image">
+                    <span class="card__image card__print">
+                      <img src="../../assets/icons/logo.svg" alt="" class="card__image">
+                    </span>
+                  </div>
+                </div>
+                <div class="card__body">
+                  <h4 class="card__title uppercase">i love you</h4>
+                </div>
+                <footer class="block__footer">
+                  <div class="block__actions">
+                    <a href="../nadruk/index.html" class="button button-outlined parrot-pink button_size_s">
+                      <span class="button__body uppercase">zamów</span>
+                    </a>
+                    <button class="button button-outlined parrot-pink button_size_s">
+                      <span class="material-icons">favorite</span>
+                      <!-- <span class="material-icons">favorite_border</span> -->
+                    </button>
+                  </div>
+                </footer>
+              </article>
+              <article class="card print">
+                <div class="card__header">
+                  <div class="card__figure">
+                    <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="card__image">
+                    <span class="card__image card__print">
+                      <img src="../../assets/icons/logo.svg" alt="" class="card__image">
+                    </span>
+                  </div>
+                </div>
+                <div class="card__body">
+                  <h4 class="card__title uppercase">i love you</h4>
+                </div>
+                <footer class="block__footer">
+                  <div class="block__actions">
+                    <a href="../nadruk/index.html" class="button button-outlined parrot-pink button_size_s">
+                      <span class="button__body uppercase">zamów</span>
+                    </a>
+                    <button class="button button-outlined parrot-pink button_size_s">
+                      <span class="material-icons">favorite</span>
+                      <!-- <span class="material-icons">favorite_border</span> -->
+                    </button>
+                  </div>
+                </footer>
+              </article>
+              <article class="card print">
+                <div class="card__header">
+                  <div class="card__figure">
+                    <img src="../../assets/images/slony-karmel.png" alt="" class="card__image">
+                    <span class="card__image card__print">
+                      <img src="../../assets/icons/logo.svg" alt="" class="card__image">
+                    </span>
+                  </div>
+                </div>
+                <div class="card__body">
+                  <h4 class="card__title uppercase">i love you</h4>
+                </div>
+                <footer class="block__footer">
+                  <div class="block__actions">
+                    <a href="../nadruk/index.html" class="button button-outlined parrot-pink button_size_s">
+                      <span class="button__body uppercase">zamów</span>
+                    </a>
+                    <button class="button button-outlined parrot-pink button_size_s">
+                      <span class="material-icons">favorite</span>
+                      <!-- <span class="material-icons">favorite_border</span> -->
+                    </button>
+                  </div>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="uniqueness">
+        <div class="uniqueness__header_mask">
+          <header class="uniqueness__header">
+            <h3 class="uniqueness__title h3">dodaj wyjątkowości swojemu wydarzeniu z Miolli</h3>
+          </header>
+        </div>
+        <div class="uniqueness__body">
+          <hr class="uniqueness__underline underline">
+          <p class="uniqueness__copy paragraph_upper"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam, diam ut maximus suscipit, lectus enim interdum turpis, et scelerisque neque est in diam. Aliquam gravida dapibus urna sit amet bibendum. Pellentesque tristique massa dictum quam mattis, at laoreet augue gravida. Duis eget dapibus sem. </p>
+        </div>
+        <footer class="uniqueness__footer">
+          <div class="uniqueness__actions">
+            <a href="../konfigurator/index.html" class="uniqueness__button button button-outlined button_size_l">więcej</a>
           </div>
         </footer>
-      </div>
-    </article>
-    <section class="personalize">
-      <article class="personalize__content">
-        <header class="personalize__header">
-          <h2 class="personalize__title h2">masz ochotę na więcej?</h2>
-        </header>
-        <div class="personalize__boby">
-
-          <div class="stack stack--horizontal">
-            <article class="card print">
-              <div class="card__header">
-                <div class="card__figure">
-                  <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="card__image">
-                  <span class="card__image card__print">
-                      <img src="../../assets/icons/logo.svg" alt="" class="card__image">
-                      </span>
-                </div>
-                <a class="card__link" href="../nadruki/index.html"></a>
-              </div>
-              <div class="card__body">
-                <h4 class="card__title uppercase">i love you</h4>
-              </div>
-              <footer class="block__footer">
-                <div class="block__actions">
-                  <button class="button">
-                    <span class="button__body uppercase">zamów</span>
-                  </button>
-                  <button class="button">
-                    <span class="material-icons">favorite</span>
-                    <!-- <span class="material-icons">favorite_border</span> -->
-                  </button>
-                </div>
-              </footer>
-            </article>
-
-            <article class="card print">
-              <div class="card__header">
-                <div class="card__figure">
-                  <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="card__image">
-                  <span class="card__image card__print">
-                      <img src="../../assets/icons/logo.svg" alt="" class="card__image">
-                      </span>
-                </div>
-                <a class="card__link" href="../nadruki/index.html"></a>
-              </div>
-              <div class="card__body">
-                <h4 class="card__title uppercase">i love you</h4>
-              </div>
-              <footer class="block__footer">
-                <div class="block__actions">
-                  <button class="button">
-                    <span class="button__body uppercase">zamów</span>
-                  </button>
-                  <button class="button">
-                    <span class="material-icons">favorite</span>
-                    <!-- <span class="material-icons">favorite_border</span> -->
-                  </button>
-                </div>
-              </footer>
-            </article>
-            <article class="card print">
-              <div class="card__header">
-                <div class="card__figure">
-                  <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="card__image">
-                  <span class="card__image card__print">
-                      <img src="../../assets/icons/logo.svg" alt="" class="card__image">
-                      </span>
-                </div>
-                <a class="card__link" href="../nadruki/index.html"></a>
-              </div>
-              <div class="card__body">
-                <h4 class="card__title uppercase">i love you</h4>
-              </div>
-              <footer class="block__footer">
-                <div class="block__actions">
-                  <button class="button">
-                    <span class="button__body uppercase">zamów</span>
-                  </button>
-                  <button class="button">
-                    <span class="material-icons">favorite</span>
-                    <!-- <span class="material-icons">favorite_border</span> -->
-                  </button>
-                </div>
-              </footer>
-            </article>
-
-            <article class="card print">
-              <div class="card__header">
-                <div class="card__figure">
-                  <img src="../../assets/images/pistacja-z-limonka.png" alt="" class="card__image">
-                  <span class="card__image card__print">
-                      <img src="../../assets/icons/logo.svg" alt="" class="card__image">
-                      </span>
-                </div>
-                <a class="card__link" href="../nadruki/index.html"></a>
-              </div>
-              <div class="card__body">
-                <h4 class="card__title uppercase">i love you</h4>
-              </div>
-              <footer class="block__footer">
-                <div class="block__actions">
-                  <button class="button">
-                    <span class="button__body uppercase">zamów</span>
-                  </button>
-                  <button class="button">
-                    <span class="material-icons">favorite</span>
-                    <!-- <span class="material-icons">favorite_border</span> -->
-                  </button>
-                </div>
-              </footer>
-            </article>
-          </div>
-        </div>
-      </article>
-    </section>
-    <section class="uniqueness">
-      <div class="uniqueness__header_mask">
-        <header class="uniqueness__header">
-          <h3 class="uniqueness__title h3">dodaj wyjątkowości swojemu wydarzeniu z Miolli</h3>
-        </header>
-      </div>
-      <div class="uniqueness__body">
-        <hr class="uniqueness__underline underline">
-        <p class="uniqueness__copy paragraph_upper">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam, diam ut maximus suscipit, lectus enim interdum turpis, et scelerisque neque est in diam. Aliquam gravida dapibus urna sit amet bibendum. Pellentesque tristique massa dictum quam mattis, at laoreet augue gravida. Duis eget dapibus sem.
-        </p>
-      </div>
-      <footer class="uniqueness__footer">
-        <div class="uniqueness__actions">
-          <a href="../konfigurator/index.html" class="uniqueness__button button button-outlined button_size_l">więcej</a>
-        </div>
-      </footer>
-      <a href="#" class="button button-swipe">
-        <span class="button-swipe__item dot"></span>
-        <span class="button-swipe__item dot"></span>
-        <span class="button-swipe__item dot"></span>
-      </a>
-    </section>
-  </main>
-  <footer class="footer">
-    <nav class="footer-nav" aria-label="footnav">
-      <ul class="footer-nav__list">
-        <li class="footer-nav__item">
-          <a href="../biznes/index.html" class="footer-nav__link">dla biznesu</a>
-        </li>
-        <li class="footer-nav__item">
-          <a href="../zestawy/index.html" class="footer-nav__link">gotowe sety</a>
-        </li>
-        <li class="footer-nav__item">
-          <a href="../o-nas/index.html" class="footer-nav__link">o nas</a>
-        </li>
-        <li class="footer-nav__item">
-          <a href="../nadruki/index.html" class="footer-nav__link">makaroniki z nadrukiem</a>
-        </li>
-        <li class="footer-nav__item">
-          <a href="../konfigurator/index.html" class="footer-nav__link">twoja kompozycja</a>
-        </li>
-        <li class="footer-nav__item">
-          <a href="../alergeny/index.html" class="footer-nav__link">alergeny</a>
-        </li>
-        <li class="footer-nav__item">
-          <a href="../faq/index.html" class="footer-nav__link">faq</a>
-        </li>
-        <li class="footer-nav__item">
-          <a href="../blog/index.html" class="footer-nav__link">blog</a>
-        </li>
-        <li class="footer-nav__item">
-          <a href="../kontakt/index.html" class="footer-nav__link">kontakt</a>
-        </li>
-        <li class="footer-nav__item">
-          <a href="#" class="footer-nav__link"></a>
-        </li>
-      </ul>
-    </nav>
-  </footer>
-</body>
+        <a href="#inspiration" class="button button-swipe">
+          <span class="button-swipe__item dot"></span>
+          <span class="button-swipe__item dot"></span>
+          <span class="button-swipe__item dot"></span>
+        </a>
+      </section>
+    </main>
+    <footer class="footer">
+      <nav class="footer-nav" aria-label="footnav">
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item">
+            <a href="../biznes/index.html" class="footer-nav__link">dla biznesu</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../zestawy/index.html" class="footer-nav__link">gotowe sety</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../o-nas/index.html" class="footer-nav__link">o nas</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../nadruki/index.html" class="footer-nav__link">makaroniki z nadrukiem</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../konfigurator/index.html" class="footer-nav__link">twoja kompozycja</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../alergeny/index.html" class="footer-nav__link">alergeny</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../faq/index.html" class="footer-nav__link">faq</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../blog/index.html" class="footer-nav__link">blog</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="../kontakt/index.html" class="footer-nav__link">kontakt</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link"></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
 </html>
