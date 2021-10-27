@@ -1,4 +1,4 @@
-@import '../../assets/styles/main.css';
+@import "../../assets/styles/main.css";
 
 main {
   position: relative;
@@ -13,9 +13,9 @@ body {
 
 .breadcrumb {
   width: 100%;
-  max-width: calc(var(--content) - 118px);
+  max-width: calc(var(--content) - 78px);
   margin: 1.8rem auto;
-  padding: 0 22px;
+  padding: 0 11px;
 }
 
 .breadcrumb__list {
@@ -30,7 +30,7 @@ body {
   align-items: center;
 }
 
-.breadcrumb__item>* {
+.breadcrumb__item > * {
   margin: 0 0.25rem;
 }
 
@@ -41,7 +41,7 @@ body {
 
 .breadcrumb__link {
   font: normal 0.625rem/12px var(--contentFont);
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   color: var(--outer-space);
 }
 
@@ -76,7 +76,7 @@ body {
   justify-content: center;
 }
 
-.our-flavors__container>div {
+.our-flavors__container > div {
   display: flex;
   flex-direction: column;
   max-width: 522px;
@@ -113,7 +113,7 @@ body {
   font-size: 16px;
   line-height: 25px;
   margin: 25px 0 0;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 
 .our-flavors__button {
@@ -123,7 +123,7 @@ body {
   left: 0;
   width: 243px;
   height: 51px;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #fff;
   border: 1px solid #b6c5a8;
@@ -136,7 +136,8 @@ body {
   height: calc(100vh - 78px);
   min-height: 490px;
   max-height: 685px;
-  color: #b6c5a8 z-index: 999;
+  color: #b6c5a8;
+  z-index: 99;
   justify-content: center;
   align-items: center;
 }
@@ -198,12 +199,12 @@ body {
     padding: 0 2%;
   }
 
-  .our-flavors__button  {
+  .our-flavors__button {
     position: relative;
     margin: 0 auto;
   }
 }
- @media screen and (max-width: 412px) {
+@media screen and (max-width: 412px) {
   .number {
     top: auto;
     right: -20px;
@@ -218,4 +219,4 @@ body {
   .our-flavors__button_arow {
     display: none;
   }
- }
+}
