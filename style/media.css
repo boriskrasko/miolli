@@ -358,6 +358,9 @@
   .boxselect {
     padding: 41px 0;
   }
+  .own-print {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 415px) { 
