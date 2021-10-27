@@ -2062,6 +2062,7 @@ input[type=number]::-webkit-outer-spin-button {
   border: none;
   outline: none;
   text-align: right;
+  background-color: transparent;
 }
 
 .boxsize,
@@ -2543,7 +2544,7 @@ label[for="favorite"]::after {
 .configurator__button {
   display: block !important;
   max-width: 320px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 }
 
 .scrollbox {
@@ -2786,6 +2787,44 @@ label[for="favorite"]::after {
   box-shadow: none;
 }
 
+.add-to-cart {
+  clear: left;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 82px 0;
+}
+
+.add-to-cart__box {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.add-to-cart__content {
+  min-width: 50%;
+}
+
+.add-to-cart__content > p,
+.add-to-cart__content legend {
+  font: 18px/25px var(--contentFont);
+  color: #000000;
+}
+
+.add-to-cart__content legend {
+  text-transform: lowercase;
+  letter-spacing: 0;
+}
+
+.configurator__btns {
+  display: flex;
+}
+
+.configurator__btns .button {
+  margin: 0 24px 40px 0;
+}
+
+/* FAQ */
 .faq {
   display: flex;
   flex-direction: column;

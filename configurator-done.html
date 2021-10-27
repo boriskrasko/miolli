@@ -182,213 +182,39 @@ teraz:
     </div>
     <main class="main main_configurator">
       <div class="configurator">
-        <h1 class="configurator__title">skomponuj swoje pudełko</h1>
+        <h1 class="configurator__title">gotowe!</h1>
         <ul class="progressbar">
           <li class="active">wybierz rozmiar</li>
           <li class="active">wybierz smaki</li>
-          <li>dodaj nadruk</li>
-          <li>dodaj do koszyka</li>
+          <li class="active">dodaj nadruk</li>
+          <li class="active">dodaj do koszyka</li>
         </ul>
         <div class="progressbar_mobile">
-          <p>2/4</p>
-          <p>wybierz smaki</p>
+          <p>4/4</p>
+          <p>dodaj do koszyka</p>
         </div>
-        <div class="add-flavor">
-          <img class="add-flavor__box" src="images/box.png" alt="">
-          <div class="add-flavor__content">
-            <p>WYBIERZ SMAKI</p>
-            <p>Kliknij w smak lub przeciągnij go do pudełka</p>
-            <p>Nie chcesz tracić czasu na konfigurację?<br>
-              Kliknij tutaj i LOSUJ SMAKI!</p>
+        <div class="add-to-cart">
+          <img class="add-to-cart__box" src="images/box.png" alt="">
+          <div class="add-to-cart__content">
+            <p class="uppercase">Super!</p>
+            <p>Skonfigurowałeś swoje pierwsze pudełko!</p>
+            <fieldset class="boxcount">
+              <legend>
+                Ile takich pudełek potrzebujesz?
+              </legend>
+              <p>
+                <input type="number" id="boxcount" readonly min="1" max="99" value="1" step="1">
+                <i>szt.</i>
+                <button class="arrow-up"></button>
+                <button class="arrow-down"></button>
+              </p>
+            </fieldset>
+
+            <p>Chcesz skonfigurować kolejne pudełko?</p>
+            <p class="configurator__btns">
+              <a class="configurator__button button button_size_m button_outlined" href="configurator.html">tak!</a>
+              <a class="configurator__button button button_size_m button_outlined" href="cart.html">nie, idę do koszyka</a>
             </p>
-            <p>DOSTĘPNY SMAKI</p>
-            <div class="scrollbox">
-              <div class="scrollbox__container">
-                <ul class="flavor__list">
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-1.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-2.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-3.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-4.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-5.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-1.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-2.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-3.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-4.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-5.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-1.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-2.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-3.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-4.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-5.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-1.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-2.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-3.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-4.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-5.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-1.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-2.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-3.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-4.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-5.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-1.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-2.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-3.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-4.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                  <li class="flavor__item">
-                    <img class="flavor__image" src="images/flavor-5.png" alt="flavor">
-                    <p class="flavor__copy">whisky i wanilia</p>
-                    <input type="checkbox">
-                    <label class="marker material-icons"></label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <a class="configurator__button button button_size_m button_outlined" href="configurator-print.html">GOTOWE! PRZEJDŹ DALEJ</a>
           </div>
         </div>
       </div>
