@@ -891,7 +891,7 @@ hr {
 
 .flavor-card__name {
   max-width: 120px;
-  margin: 0 auto;
+  margin: 0 auto 24px;
   padding: 0;
   font: 16px/19px var(--contentFont);
   letter-spacing: 0.1em;
@@ -2153,7 +2153,7 @@ input[type=number]::-webkit-outer-spin-button {
   column-gap: 0 !important;
 }
 
-.flex-row > .card {
+.flex-row > [class*="card"]  {
   margin: 12px 24px;
 }
 
@@ -2172,25 +2172,21 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 20px 16px;
 }
 
-.print_row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.cards-grid_print {
   column-gap: 12%;
-  margin-top: 54px;
 }
 
-.card_print {
+.card-print {
   position: relative;
   max-width: 190px;
   overflow: hidden;
 }
 
-.card_print > * {
+.card-print > * {
   margin-bottom: 12px;
 }
 
-.card_print h4 {
+.card-print h4 {
   font: 30px/30px var(--titleFont);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -2202,15 +2198,15 @@ input[type=number]::-webkit-outer-spin-button {
   position: absolute;
 }
 
-.card_print > aside,
-.card_print > div {
+.card-print > aside,
+.card-print > div {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card_print .card__button {
+.card-print .card__button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -2218,25 +2214,25 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 4px;
 }
 
-.card_print .card__button_like {
+.card-print .card__button_like {
   width: 40px;
   padding: 0;
   cursor: pointer;
 }
 
-.card_print label svg {
+.card-print label svg {
   width: 24px;
   height: 24px;
   stroke: #d89898;
   fill: #FFFFFF;
 }
 
-.card_print label.card__button:hover {
+.card-print label.card__button:hover {
   background-color: transparent;
 }
 
-.card_print input:checked ~ label svg,
-.card_print input:checked ~ label {
+.card-print input:checked ~ label svg,
+.card-print input:checked ~ label {
   background-color: #FFFFFF;
   fill: #d89898;
 }
@@ -2589,7 +2585,7 @@ label[for="favorite"]::after {
   }
 }
 
-.flavor {
+.flavor__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
