@@ -199,17 +199,28 @@
 
 .quantity {
   display: inline-flex;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000000;
   align-items: center;
   min-width: 136px;
   margin: 15px 0 32px;
+  transition: 0.5s all;
+}
+
+.quantity:hover .box-size-label {
+  color: var(--dark-vanilla);
+  border-color: var(--dark-vanilla);
+}
+
+.quantity:hover {
+  border-bottom-color: var(--dark-vanilla);
 }
 
 .quantity input {
   font: normal 18px/25px var(--contentFont);
   width: 30px;
+  margin: 0 5px;
   text-align: center;
-  color: #000;
+  color: #000000;
   background: transparent;
   border: none;
   outline: none;
@@ -223,11 +234,21 @@
   align-items: stretch;
 }
 
+.quantity__btns .button {
+  overflow: hidden;
+  height: 20px;
+}
+
 .quantity__btns .material-icons {
+  height: 20px;
   font-size: 30px;
   line-height: 18px;
   display: flex;
   align-items: center;
+}
+
+.quantity__btns .material-icons:hover {
+  color: #777;
 }
 
 .box-size-label {
@@ -235,10 +256,11 @@
   display: flex;
   min-width: 28px;
   min-height: 28px;
-  border: 1px solid #000;
+  border: 1px solid #000000;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  transition: 0.5s all;
 }
 
 .personalize {

@@ -88,7 +88,7 @@
 
 .quantity__btns .material-icons {
   height: 20px;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 18px;
   display: flex;
   align-items: center;
@@ -309,50 +309,6 @@
   .print-block__content {
     flex-wrap: wrap;
   }
-}
-
-.quantity {
-  display: flex;
-  border-bottom: 1px solid #000000;
-  align-items: center;
-  width: 136px;
-}
-
-.quantity input,
-.quantity p {
-  font: normal 18px/25px var(--contentFont);
-  width: 30px;
-  text-align: center;
-  color: #000000;
-  border: none;
-  outline: none;
-}
-
-.quantity__btns {
-  display: flex;
-  flex-direction: column;
-  height: 40px;
-  margin: 0 0 0 10px;
-  justify-content: center;
-  align-items: stretch;
-}
-
-.quantity__btns .material-icons {
-  font-size: 30px;
-  line-height: 18px;
-  display: flex;
-  align-items: center;
-}
-
-.box-size-label {
-  font: normal 18px/18px var(--contentFont);
-  display: flex;
-  min-width: 28px;
-  min-height: 28px;
-  border: 1px solid #000000;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
 }
 
 .personalize {

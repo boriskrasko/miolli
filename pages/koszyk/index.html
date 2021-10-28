@@ -59,7 +59,7 @@
                 <li class="topnav__item_cart topnav__item_hasChild">
                   <a href="../koszyk/index.html" class="topnav__link">
                     <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
-                    <span class="topnav__item_cart_counter inner">14</span>
+                    <span class="topnav__item_cart_counter inner">4</span>
                   </a>
                   <div class="cart-preview">
                     <div class="cart-preview__item">
@@ -230,7 +230,7 @@
                     <span>suma</span>
                     <span class="cost">68</span> ,-
                   </div>
-                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'" class="cart__item-clear">
+                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'; document.querySelector('.topnav__item_cart_counter').textContent -= 1; checkCartCount()" class="cart__item-clear">
                     <span class="paragraph_upper">usuń</span>
                     <span class="material-icons">clear</span>
                   </button>
@@ -268,7 +268,7 @@
                     <span>suma</span>
                     <span class="cost">68</span> ,-
                   </div>
-                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'" class="cart__item-clear">
+                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'; document.querySelector('.topnav__item_cart_counter').textContent -= 1; checkCartCount()" class="cart__item-clear">
                     <span class="paragraph_upper">usuń</span>
                     <span class="material-icons">clear</span>
                   </button>
@@ -306,7 +306,7 @@
                     <span>suma</span>
                     <span class="cost">68</span> ,-
                   </div>
-                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'" class="cart__item-clear">
+                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'; document.querySelector('.topnav__item_cart_counter').textContent -= 1; checkCartCount()" class="cart__item-clear">
                     <span class="paragraph_upper">usuń</span>
                     <span class="material-icons">clear</span>
                   </button>
@@ -344,7 +344,7 @@
                     <span>suma</span>
                     <span class="cost">68</span> ,-
                   </div>
-                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'" class="cart__item-clear">
+                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'; document.querySelector('.topnav__item_cart_counter').textContent -= 1; checkCartCount()" class="cart__item-clear">
                     <span class="paragraph_upper">usuń</span>
                     <span class="material-icons">clear</span>
                   </button>
@@ -396,5 +396,15 @@
         </ul>
       </nav>
     </footer>
+    <script>
+      document.querySelector('.cart__footer').children[1].style.display = 'none';
+      let checkCartCount = () => {
+        if (document.querySelector('.topnav__item_cart_counter').textContent == '0') {
+          document.querySelector('.topnav__item_cart_counter').textContent = '';
+          document.querySelector('.cart__footer').children[0].style.display = 'none';
+          document.querySelector('.cart__footer').children[1].style.display = 'inline-flex';
+        }
+      }
+    </script>
   </body>
 </html>
