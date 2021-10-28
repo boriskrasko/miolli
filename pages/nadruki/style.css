@@ -170,10 +170,12 @@
 }
 
 .print .card__title {
-  font: normal 30px/20px var(--titleFont);
+  font: normal 30px/32px var(--titleFont);
   text-align: center;
   letter-spacing: 0;
   color: var(--outer-space);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .print .block__actions {
@@ -227,16 +229,7 @@
     width: 114px;
   }
   .print .card__title {
-    font: normal 20px/13px var(--titleFont);
-  }
-  .print .block__actions {
-    width: 104px;
-  }
-  .print .button {
-    font: normal 10px/10px var(--contentFont);
-    min-width: 29px;
-    min-height: 28px;
-    padding: 2px 6px;
+    font: normal 20px/30px var(--titleFont);
   }
 }
 
@@ -449,13 +442,13 @@
 .dropdown {
   user-select: none;
   background: transparent;
-  width: 160px;
+  min-width: 160px;
 }
 
 .dropdown__select {
   position: relative;
   display: flex;
-  width: 160px;
+  min-width: 160px;
   flex-direction: column;
   border-bottom: 1px solid #000;
 }
@@ -493,6 +486,13 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   padding-right: 20px;
+}
+
+.option p,
+.dropdown__item-current p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .option {

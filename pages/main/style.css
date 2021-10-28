@@ -295,13 +295,6 @@
 }
 
 @media (max-width: 500px) {
-  .inspiration__content {
-    padding: 64px 0;
-  }
-  .inspiration__title {
-    font-size: 50px;
-    line-height: 48px;
-  }
   .inspiration__underline {
     display: none;
   }
@@ -541,16 +534,12 @@
   .composition__button_arrow {
     display: none;
   }
-  .composition__title {
-    font-size: 50px;
-  }
   .set-card__nav-control {
     display: flex;
   }
   .composition__underline {
     display: none;
   }
-
   .composition__subtitle {
     padding: 1.625rem 2%;
   }

@@ -157,9 +157,12 @@
 }
 
 .set-card__title {
-  font: normal 30px/20px var(--titleFont);
+  font: normal 30px/32px var(--titleFont);
+  width: 100%;
   text-align: center;
   color: var(--quartz);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .set-card__copy {
@@ -189,7 +192,7 @@
     margin: 28px auto;
   }
   .set-card__title {
-    font: normal 20px/13px var(--titleFont);
+    font: normal 20px/22px var(--titleFont);
   }
   .set-card__copy {
     font: normal 11px/15px var(--contentFont);
@@ -198,7 +201,7 @@
     font: normal 20px/13px var(--titleFont);
   }
   .set-card__button {
-    font: normal 10px/10px var(--contentFont);
+    font: normal 14px/10px var(--contentFont);
     min-width: 91px;
     min-height: 26px;
   }
@@ -413,13 +416,13 @@
 .dropdown {
   user-select: none;
   background: transparent;
-  width: 160px;
+  min-width: 160px;
 }
 
 .dropdown__select {
   position: relative;
   display: flex;
-  width: 160px;
+  min-width: 160px;
   flex-direction: column;
   border-bottom: 1px solid #000;
 }
@@ -457,6 +460,13 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   padding-right: 20px;
+}
+
+.option p,
+.dropdown__item-current p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .option {
@@ -501,6 +511,7 @@
 .opened .dropdown__arrow {
   transform: rotate(-180deg);
 }
+
 
 @media screen and (max-width: 768px) {
   .filter {
