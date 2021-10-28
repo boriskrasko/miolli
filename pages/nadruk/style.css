@@ -50,11 +50,22 @@
   align-items: center;
   min-width: 136px;
   margin: 15px 0 32px;
+  transition: 0.5s all;
+}
+
+.quantity:hover .box-size-label {
+  color: var(--dark-vanilla);
+  border-color: var(--dark-vanilla);
+}
+
+.quantity:hover {
+  border-bottom-color: var(--dark-vanilla);
 }
 
 .quantity input {
   font: normal 18px/25px var(--contentFont);
   width: 30px;
+  margin: 0 5px;
   text-align: center;
   color: #000000;
   background: transparent;
@@ -70,11 +81,25 @@
   align-items: stretch;
 }
 
+.quantity__btns .button {
+  overflow: hidden;
+  height: 20px;
+}
+
 .quantity__btns .material-icons {
+  height: 20px;
   font-size: 30px;
   line-height: 18px;
   display: flex;
   align-items: center;
+}
+
+.quantity__btns .button:nth-child(even) {
+  color: #999;
+}
+
+.quantity__btns .material-icons:hover {
+  color: #777;
 }
 
 .box-size-label {
@@ -86,6 +111,7 @@
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  transition: 0.5s all;
 }
 
 .print-block {
@@ -136,11 +162,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50%;
 }
 
 .print-block__image {
   width: 100%;
-  /*max-width: 352px;*/
 }
 
 .print-block__image_print {
@@ -169,6 +195,39 @@
   border: 1px solid var(--parrot-pink);
   justify-content: center;
   align-items: center;
+}
+
+.add-to-favorite input {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.add-to-favorite .button .material-icons::before {
+  content: "favorite_border";
+}
+
+.add-to-favorite input:hover ~ .button {
+  border-color: #996b6b;
+  color: #996b6b;
+  transition: 0.2s all;
+}
+
+.add-to-favorite  input:checked ~ .button .material-icons::before {
+  content: "favorite";
+}
+
+.add-to-favorite__copy::before {
+  content: "dodaj wzór do ulubionych";
+}
+
+
+.add-to-favorite input:checked ~ .add-to-favorite__copy::before {
+  content: "w ulubionych";
 }
 
 .add-to-favorite__copy {
@@ -212,7 +271,7 @@
 
 .price-tag {
   position: absolute;
-  top: 0;
+  top: -28px;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -250,53 +309,6 @@
   .print-block__content {
     flex-wrap: wrap;
   }
-  .print-block__heading {
-    margin-top: 0;
-  }
-}
-
-.quantity {
-  display: flex;
-  border-bottom: 1px solid #000000;
-  align-items: center;
-  width: 136px;
-}
-
-.quantity input,
-.quantity p {
-  font: normal 18px/25px var(--contentFont);
-  width: 30px;
-  text-align: center;
-  color: #000000;
-  border: none;
-  outline: none;
-}
-
-.quantity__btns {
-  display: flex;
-  flex-direction: column;
-  height: 40px;
-  margin: 0 0 0 10px;
-  justify-content: center;
-  align-items: stretch;
-}
-
-.quantity__btns .material-icons {
-  font-size: 30px;
-  line-height: 18px;
-  display: flex;
-  align-items: center;
-}
-
-.box-size-label {
-  font: normal 18px/18px var(--contentFont);
-  display: flex;
-  min-width: 28px;
-  min-height: 28px;
-  border: 1px solid #000000;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
 }
 
 .personalize {
@@ -404,7 +416,6 @@
 .print .card__image {
   position: relative;
   width: 100%;
-  /*z-index: 0;*/
 }
 
 .print .card__print {
@@ -442,7 +453,33 @@
   display: flex;
   width: 144px;
   margin: 0 auto;
+  position: relative;
   justify-content: space-between;
+}
+
+.print .block__actions input {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.print .button .material-icons::before {
+  content: "favorite_border";
+}
+
+.print input:hover ~ .button {
+  border-color: #996b6b;
+  outline-color: #996b6b;
+  color: #996b6b;
+  transition: 0.2s all;
+}
+
+.print input:checked ~ .button .material-icons::before {
+  content: "favorite";
 }
 
 .print .button {
@@ -562,65 +599,95 @@
   cursor: pointer;
 }
 
-.change-flavor {
-  margin: 50px 0;
+.select-flavor {
+  counter-reset: step;
 }
 
-.change-flavor_current-flavor {
-  display: flex;
-  align-items: center;
-}
-
-.change-flavor_current-flavor > * {
-  margin: 0 10px;
-}
-
-.change-flavor__number {
-  font: 1.125rem/25px var(--contentFont);
-  width: 20px;
+.dropdown::before {
+  width: 28px;
+  align-self: flex-end;
+  content: counter(step);
+  counter-increment: step;
 }
 
 .dropdown {
-  background: #ffffff;
+  display: flex;
+  align-items: center;
+  min-width: 270px;
+  height: 40px;
   user-select: none;
+  background: transparent;
 }
 
 .dropdown__select {
-  width: 229px;
-  min-height: 34px;
+  min-width: 270px;
   position: relative;
   display: flex;
-  flex-direction: column;
   border-bottom: 1px solid #000000;
+}
+
+.option.selected {
+  display: none;
 }
 
 .options {
   position: absolute;
-  z-index: 1;
+  z-index: 9;
   top: 100%;
   right: 0;
   left: 0;
-  height: 0;
+  visibility: hidden;
   overflow: hidden;
-  transition: 0.4s all;
+  height: 0;
+  transition: 0.2s all;
   pointer-events: none;
   opacity: 0;
   background: #ffffff;
-  box-shadow: 0 0 2px 1px #2222;
+  box-shadow: 0 2px 2px 1px #bbbbbb;
 }
 
 .dropdown__select.opened .options {
-  /*visibility: visible;*/
+  height: auto;
+  visibility: visible;
   pointer-events: all;
   opacity: 1;
-  height: auto;
 }
 
 .option,
 .dropdown__item-current {
   position: relative;
   display: flex;
+  padding-right: 20px;
+  width: 270px;
   align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdown__item-current:hover .dropdown__arrow  {
+  color: var(--dark-vanilla);
+}
+
+.option {
+  margin: 10px 0;
+}
+
+.option p,
+.dropdown__item-current p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.option img,
+.dropdown__item-current img {
+  width: 38px;
+}
+
+.option__text:hover {
+  color: var(--dark-vanilla);
+  cursor: pointer;
 }
 
 .option__image,
@@ -631,33 +698,16 @@
 
 .option__text,
 .dropdown__text-current {
-  font: 18px/25px var(--contentFont);
+  font: 14px/25px var(--contentFont);
   margin: 0 10px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.option:hover {
-  cursor: pointer;
-  opacity: 0.8;
-  color: var(--dark-vanilla);
-}
-.option__text:hover {
-  color: var(--dark-vanilla);
-}
-
-.option.selected {
-  display: none;
 }
 
 .dropdown__arrow {
-  cursor: pointer;
-  position: absolute;
-  right: -7px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  right: 0;
 }
 
 .opened .dropdown__arrow {
@@ -674,4 +724,8 @@
   color: currentColor;
   pointer-events: none;
   text-decoration: none;
+}
+
+.x12, .x24 {
+  display: none;
 }
