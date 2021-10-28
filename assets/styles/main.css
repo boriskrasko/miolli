@@ -256,7 +256,7 @@ a {
   padding: 0.875rem 0.5625rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 490px) {
   .button_size_l,
   .button_size_m {
     font: normal 0.75rem/1.25rem var(--contentFont);
@@ -333,7 +333,7 @@ a {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 490px) {
   .h1,
   .h2,
   .h3 {
@@ -362,7 +362,7 @@ a {
   letter-spacing: 0.025em;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 490px) {
   .paragraph_upper_l {
     font: normal 1rem/25px var(--contentFont);
   }
@@ -872,7 +872,7 @@ z nadrukiem of topbar menu*/
   align-items: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 490px) {
   .topbar__logo {
     min-width: 4.875rem;
     padding: 0 0.9375rem;

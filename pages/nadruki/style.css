@@ -181,6 +181,32 @@
   width: 144px;
   margin: 0 auto;
   justify-content: space-between;
+  position: relative;
+}
+
+.print .block__actions input {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.print .button .material-icons::before {
+  content: "favorite_border";
+}
+
+.print input:hover ~ .button {
+  border-color: #996b6b;
+  outline-color: #996b6b;
+  color: #996b6b;
+  transition: 0.2s all;
+}
+
+.print input:checked ~ .button .material-icons::before {
+  content: "favorite";
 }
 
 .print .button {
@@ -423,13 +449,15 @@
 .dropdown {
   user-select: none;
   background: transparent;
-  border-bottom: 1px solid #000;
+  width: 160px;
 }
 
 .dropdown__select {
   position: relative;
   display: flex;
+  width: 160px;
   flex-direction: column;
+  border-bottom: 1px solid #000;
 }
 
 .options {
@@ -464,11 +492,17 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding-right: 20px;
 }
 
 .option {
   margin: 20px 0;
 }
+
+.option.selected {
+  display: none;
+}
+
 
 .option__text:hover {
   color: var(--dark-vanilla);
@@ -492,6 +526,12 @@
   justify-content: center;
   align-items: center;
   right: 10px;
+  position: absolute;
+  right: 0;
+}
+
+.dropdown__item-current:hover .dropdown__arrow  {
+  color: var(--dark-vanilla);
 }
 
 .opened .dropdown__arrow {

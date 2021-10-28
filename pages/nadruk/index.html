@@ -224,52 +224,849 @@
               </div>
               <br>
               <div class="add-to-favorite">
+                <input type="checkbox">
                 <button class="button">
-                  <!-- <span class="material-icons">favorite</span> -->
-                  <span class="material-icons">favorite_border</span>
+                  <span class="material-icons"></span>
                 </button>
-                <p class="add-to-favorite__copy uppercase">dodaj wzór do ulubionych</p>
+                <p class="add-to-favorite__copy uppercase"></p>
               </div>
             </div>
             <div class="print-block__body">
-              <form class="paragraph_upper">
-                <fieldset>
+              <form>
+                <fieldset class="paragraph_upper">
                   <legend>
                     <b>wybierz wielkość pudełka:</b>
                   </legend>
                   <label class="quantity box-size">
                     <span class="box-size-label">S</span>
-                    <input id="boxSize" name="boxSize" type="number" readonly value="6">
+                    <input id="boxSize" name="boxSize" type="number" readonly value="6" min="6" max="24">
                     <span class="smth">szt.</span>
                     <div class="quantity__btns">
-                      <button type="button" class="button">
+                      <button onclick="document.querySelector('.price-tag span').textContent *= (this.parentNode.parentNode.querySelector('input[type=number]').value <= 12) ? 2 : 1; this.parentNode.parentNode.querySelector('input[type=number]').value *= (this.parentNode.parentNode.querySelector('input[type=number]').value < 24) ? 2 : 1; this.parentNode.parentNode.querySelector('.box-size-label').textContent = (this.parentNode.parentNode.querySelector('input[type=number]').value <= 12) ? 'M' : 'L'; this.style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value < 24) ? '#000' : '#999'; document.querySelector('.x12').style.display = 'block'; document.querySelector('.x24').style.display = (this.parentNode.parentNode.querySelector('input[type=number]').value > 12) ? 'block' : 'none'; this.parentNode.children[1].style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 6) ? '#000' : '#999'; document.querySelector('.price-tag .details span').textContent = this.parentNode.parentNode.querySelector('input[type=number]').value * document.querySelector('.box-count input[type=number').value" type="button" class="button">
                         <span class="material-icons">arrow_drop_up</span>
                       </button>
-                      <button type="button" class="button">
+                      <button onclick="document.querySelector('.price-tag span').textContent /= (this.parentNode.parentNode.querySelector('input[type=number]').value >= 12) ? 2 : 1; this.parentNode.parentNode.querySelector('input[type=number]').value /= (this.parentNode.parentNode.querySelector('input[type=number]').value > 6) ? 2 : 1; this.parentNode.parentNode.querySelector('.box-size-label').textContent = (this.parentNode.parentNode.querySelector('input[type=number]').value > 6) ? 'M' : 'S'; this.style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 6) ? '#000' : '#999'; document.querySelector('.x24').style.display = 'none'; document.querySelector('.x12').style.display = (this.parentNode.parentNode.querySelector('input[type=number]').value < 12) ? 'none' : 'block'; this.parentNode.children[0].style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value < 24) ? '#000' : '#999'; document.querySelector('.price-tag .details span').textContent = this.parentNode.parentNode.querySelector('input[type=number]').value * document.querySelector('.box-count input[type=number]').value" type="button" class="button">
                         <span class="material-icons">arrow_drop_down</span>
                       </button>
                     </div>
                   </label>
                 </fieldset>
-                <fieldset>
-                  <legend>
+                <fieldset class="select-flavor">
+                  <legend class="paragraph_upper">
                     <b>wybierz smaki:</b>
                   </legend>
-                  <br>1 <br> 2 <br> 3 <br> 4 <br> 5 <br> 6 <br>
+                 <div class="x6">
+                    <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/for-print.png" alt="">
+                        <p class="dropdown__text-current">limonka</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option selected">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">Długa nazwaaaaaaaaaaaaaaaaaaaaaaa</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/whisky-wanilia.png" alt="">
+                        <p class="dropdown__text-current">whisky wanilia</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                        <p class="dropdown__text-current">pistacja z limonka</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/rozowa-roza.png" alt="">
+                        <p class="dropdown__text-current">różowa róża</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/whisky-wanilia.png" alt="">
+                        <p class="dropdown__text-current">whisky wanilia</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/slony-karmel.png" alt="">
+                        <p class="dropdown__text-current">słony karmel</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka czekoładowa</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                 </div>
+                  <div class="x12">
+                    <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/for-print.png" alt="">
+                        <p class="dropdown__text-current">limonka</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option selected">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">Długa nazwaaaaaaaaaaaaaaaaaaaaaaa</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/whisky-wanilia.png" alt="">
+                        <p class="dropdown__text-current">whisky wanilia</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                        <p class="dropdown__text-current">pistacja z limonka</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/rozowa-roza.png" alt="">
+                        <p class="dropdown__text-current">różowa róża</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/whisky-wanilia.png" alt="">
+                        <p class="dropdown__text-current">whisky wanilia</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/slony-karmel.png" alt="">
+                        <p class="dropdown__text-current">słony karmel</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka czekoładowa</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="x24">
+                    <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/for-print.png" alt="">
+                        <p class="dropdown__text-current">limonka</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option selected">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">Długa nazwaaaaaaaaaaaaaaaaaaaaaaa</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/whisky-wanilia.png" alt="">
+                        <p class="dropdown__text-current">whisky wanilia</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                        <p class="dropdown__text-current">pistacja z limonka</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/rozowa-roza.png" alt="">
+                        <p class="dropdown__text-current">różowa róża</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/whisky-wanilia.png" alt="">
+                        <p class="dropdown__text-current">whisky wanilia</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/slony-karmel.png" alt="">
+                        <p class="dropdown__text-current">słony karmel</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka czekoładowa</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/for-print.png" alt="">
+                        <p class="dropdown__text-current">limonka</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option selected">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">Długa nazwaaaaaaaaaaaaaaaaaaaaaaa</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/whisky-wanilia.png" alt="">
+                        <p class="dropdown__text-current">whisky wanilia</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                        <p class="dropdown__text-current">pistacja z limonka</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/rozowa-roza.png" alt="">
+                        <p class="dropdown__text-current">różowa róża</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/whisky-wanilia.png" alt="">
+                        <p class="dropdown__text-current">whisky wanilia</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown paragraph">
+                    <div class="dropdown__select">
+                      <div class="dropdown__item-current">
+                        <img src="../../assets/images/slony-karmel.png" alt="">
+                        <p class="dropdown__text-current">słony karmel</p>
+                        <button type="button" class="dropdown__arrow">
+                          <span class="material-icons">arrow_drop_down</span>
+                        </button>
+                      </div>
+                      <ul class="options">
+                        <li class="option">
+                          <img src="../../assets/images/for-print.png" alt="">
+                          <p class="option__text">limonka czekoładowa</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/whisky-wanilia.png" alt="">
+                          <p class="option__text">whisky wanilia</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/pistacja-z-limonka.png" alt="">
+                          <p class="option__text">pistacja z limonka</p>
+                        </li>
+                        <li class="option">
+                          <img src="../../assets/images/rozowa-roza.png" alt="">
+                          <p class="option__text">różowa róża</p>
+                        </li>
+                        <li class="option selected">
+                          <img src="../../assets/images/slony-karmel.png" alt="">
+                          <p class="option__text">słony karmel</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  </div>
                 </fieldset>
                 <br>
-                <fieldset>
+                <fieldset class="paragraph_upper">
                   <legend>
                     <b>wybierz ilość pudełek:</b>
                   </legend>
                   <label class="quantity box-count">
-                    <input id="boxCount" name="boxCount" type="number" readonly value="2">
+                    <input id="boxCount" name="boxCount" type="number" readonly value="1" min="1">
                     <span class="smth">szt.</span>
                     <div class="quantity__btns">
-                      <button type="button" class="button">
+                      <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp(); this.parentNode.children[1].style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 1) ? '#000' : '#999'; document.querySelector('.price-tag .details span').textContent = this.parentNode.parentNode.querySelector('input[type=number]').value * document.querySelector('.box-size input[type=number]').value; document.querySelector('.price-tag span').textContent = (this.parentNode.parentNode.querySelector('input[type=number]').value >= 1) ? 34 / 6 * document.querySelector('.price-tag .details span').textContent : 34" type="button" class="button">
                         <span class="material-icons">arrow_drop_up</span>
                       </button>
-                      <button type="button" class="button">
+                      <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown(); this.style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 1) ? '#000' : '#999'; document.querySelector('.price-tag .details span').textContent = this.parentNode.parentNode.querySelector('input[type=number]').value * document.querySelector('.box-size input[type=number]').value; document.querySelector('.price-tag span').textContent = (this.parentNode.parentNode.querySelector('input[type=number]').value >= 1) ? 34 / 6 * document.querySelector('.price-tag .details span').textContent : 34" type="button" class="button">
                         <span class="material-icons">arrow_drop_down</span>
                       </button>
                     </div>
@@ -307,9 +1104,9 @@
                     <a href="../nadruk/index.html" class="button button-outlined parrot-pink button_size_s">
                       <span class="button__body uppercase">zamów</span>
                     </a>
+                    <input type="checkbox">
                     <button class="button button-outlined parrot-pink button_size_s">
-                      <span class="material-icons">favorite</span>
-                      <!-- <span class="material-icons">favorite_border</span> -->
+                      <span class="material-icons"></span>
                     </button>
                   </div>
                 </footer>
@@ -327,13 +1124,13 @@
                   <h4 class="card__title uppercase">i love you</h4>
                 </div>
                 <footer class="block__footer">
-                  <div class="block__actions">
+                   <div class="block__actions">
                     <a href="../nadruk/index.html" class="button button-outlined parrot-pink button_size_s">
                       <span class="button__body uppercase">zamów</span>
                     </a>
+                    <input type="checkbox">
                     <button class="button button-outlined parrot-pink button_size_s">
-                      <span class="material-icons">favorite</span>
-                      <!-- <span class="material-icons">favorite_border</span> -->
+                      <span class="material-icons"></span>
                     </button>
                   </div>
                 </footer>
@@ -351,13 +1148,13 @@
                   <h4 class="card__title uppercase">i love you</h4>
                 </div>
                 <footer class="block__footer">
-                  <div class="block__actions">
+                   <div class="block__actions">
                     <a href="../nadruk/index.html" class="button button-outlined parrot-pink button_size_s">
                       <span class="button__body uppercase">zamów</span>
                     </a>
+                    <input type="checkbox" checked>
                     <button class="button button-outlined parrot-pink button_size_s">
-                      <span class="material-icons">favorite</span>
-                      <!-- <span class="material-icons">favorite_border</span> -->
+                      <span class="material-icons"></span>
                     </button>
                   </div>
                 </footer>
@@ -375,13 +1172,13 @@
                   <h4 class="card__title uppercase">i love you</h4>
                 </div>
                 <footer class="block__footer">
-                  <div class="block__actions">
+                   <div class="block__actions">
                     <a href="../nadruk/index.html" class="button button-outlined parrot-pink button_size_s">
                       <span class="button__body uppercase">zamów</span>
                     </a>
+                    <input type="checkbox">
                     <button class="button button-outlined parrot-pink button_size_s">
-                      <span class="material-icons">favorite</span>
-                      <!-- <span class="material-icons">favorite_border</span> -->
+                      <span class="material-icons"></span>
                     </button>
                   </div>
                 </footer>
@@ -448,5 +1245,29 @@
         </ul>
       </nav>
     </footer>
+    <script>
+      for (const dropdown of document.querySelectorAll('.dropdown')) {
+        dropdown.addEventListener('click', function() {
+          this.querySelector('.dropdown__select').classList.toggle('opened');
+        })
+      }
+      for (const option of document.querySelectorAll('.option')) {
+        option.addEventListener('click', function() {
+          if (!this.classList.contains('selected')) {
+            this.parentNode.querySelector('.option.selected').classList.remove('selected');
+            this.classList.add('selected');
+            this.closest('.dropdown__select').querySelector('.dropdown__item-current p').textContent = this.textContent;
+            this.closest('.dropdown__select').querySelector('.dropdown__item-current img').src = this.children[0].src;
+          }
+        })
+      }
+      window.addEventListener('click', function(e) {
+        for (const select of document.querySelectorAll('.dropdown__select')) {
+          if (!select.contains(e.target)) {
+            select.classList.remove('opened');
+          }
+        }
+      });
+    </script>
   </body>
 </html>
