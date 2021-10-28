@@ -256,7 +256,7 @@ a {
   padding: 0.875rem 0.5625rem;
 }
 
-@media (max-width: 490px) {
+/*@media (max-width: 490px) {
   .button_size_l,
   .button_size_m {
     font: normal 0.75rem/1.25rem var(--contentFont);
@@ -271,7 +271,7 @@ a {
     min-width: 6.125rem;
     padding: 0.3125rem 0.5625rem;
   }
-}
+}*/
 
 .button_rounded {
   font: normal 0.75rem/1.125rem var(--contentFontM);
@@ -1375,7 +1375,7 @@ z nadrukiem of topbar menu*/
   background: var(--dark-vanilla);
 }
 
-@media screen and (max-width: 540px) {
+/*@media screen and (max-width: 540px) {
   .btn-lg {
     padding: 17px 25px;
     font: normal 13px/13px var(--contentFont);
@@ -1383,7 +1383,7 @@ z nadrukiem of topbar menu*/
   .btn-sm {
     padding: 6px 8px;
   }
-}
+}*/
 
 @media screen and (max-width: 440px) {
   h2,
