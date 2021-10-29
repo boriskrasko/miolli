@@ -547,6 +547,7 @@ z nadrukiem of topbar menu*/
 
 .main-nav {
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   width: 14.625rem;
   height: calc(100% - 4.875rem);
   background: var(--black-olive);
