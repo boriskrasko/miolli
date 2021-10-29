@@ -2388,7 +2388,8 @@ label[for="favorite"]::after {
   }
 }
 
-.main_configurator {
+.main_configurator,
+.main_user {
   padding: 32px;
 }
 
@@ -3163,4 +3164,40 @@ input[type=file] {
 
 .select-image-style label {
  padding: 0 6px;
+}
+
+.main_user {
+  background-color: #FFECE6;
+  background-image: url(../images/mask.png);
+  background-position: -1000px -700px;
+  background-size: cover;
+  width: calc(100% - 64px);
+  margin: calc(78px + 32px) auto 32px;
+}
+
+.user {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.4s background-color;
+  padding: 82px 5% 41px;
+}
+
+.user__title {
+  max-width: 720px;
+  font: 94px/90px var(--titleFont);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.tabs {
+  display: flex;
+  column-gap: 24px;
+}
+
+.breadcrumb_user {
+  margin: 0;
 }

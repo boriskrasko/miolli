@@ -345,6 +345,10 @@
   .main_configurator {
     padding: 20px;
   }
+  .main_user {
+    width: calc(100% - 40px);
+    margin: calc(78px + 20px) auto 20px;
+  }
   .progressbar {
     display: none;
   }
