@@ -613,6 +613,13 @@
           }
         }
       });
+      const inputFileFake = document.querySelector('.input-file_fake span');
+      const inputFileTrue = document.querySelector('.input-file');
+      let getFileName = () => inputFileFake.textContent = inputFileTrue.files[0].name;
+      let resetFileName = () => {
+        inputFileFake.textContent = 'Nie wybrano pliku';
+        inputFileTrue.value = '';
+      };
     </script>
   </body>
 </html>
