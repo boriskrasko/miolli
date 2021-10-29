@@ -70,7 +70,7 @@
 }
 
 .dark-vanilla.button-outlined {
-  outline-color: var(--dark-vanilla);
+  border-color: var(--dark-vanilla);
   color: var(--dark-vanilla);
 }
 
@@ -94,12 +94,12 @@
 
 .parrot-pink.button-outlined {
   color: var(--parrot-pink);
-  outline-color: var(--parrot-pink);
+  border-color: var(--parrot-pink);
 }
 
 .parrot-pink.button-outlined:hover {
   color: #996B6B;
-  outline-color: #996B6B;
+  border-color: #996B6B;
 }
 
 .parrot-pink.button-contained {
@@ -117,7 +117,6 @@
   border-color: var(--parrot-pink);
   color: #fff;
 }
-
 
 .dark-coral {
   color: var(--dark-coral);

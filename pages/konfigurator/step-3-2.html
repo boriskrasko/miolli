@@ -193,11 +193,11 @@
     <main>
       <div class="configurator">
         <div class="configurator__content">
-           <nav class="breadcrumb" aria-label="Breadcrumb">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
             <ul class="breadcrumb__list uppercase">
               <li class="breadcrumb__item">
                 <span class="breadcrumb__icon material-icons">west</span>
-                <a class="breadcrumb__link" href="step-2.html">wróc</a>
+                <a class="breadcrumb__link paragraph_upper" href="step-2.html">wróc</a>
               </li>
             </ul>
           </nav>
@@ -233,300 +233,225 @@
             </ul>
           </div>
           <div class="configurator__body">
-            <div class="print__modal">
-              <button class="modal__close button">
-                <span class="button__body material-icons">close</span>
-              </button>
-            <div class="print__result-preview">
-              <div class="print__result-image">
-                <div class="print__cookie-image">
-                  <img src="../../assets/images/conf-4-modified.png">
-                </div>
-               <!--  <p class="print__text h5">Dla ukochanego Tomka</p> -->
-               <img class="print__image" src="../../assets/images/lego.png" alt="">
-              </div>
-              <input type="range" id="zoom" name="vol" min="0" max="25">
-              <p class="print__result-copy paragraph_upper">tak wyglądać będzie twój makaronik</p>
-            </div>
-             <div class="print__selection-bar">
-              <p class="paragraph">Wybierz typ nadruku</p>
-              <a href="step-3-1.html" class="selection-bar__button button button-outlined" type="button">Wpisz swój text</a><br>
-              <button class="selection-bar__button button button-outlined active" type="button">Dodaj swój plik graficzny</button>
-              <!-- <form class="select-font-form">
-                <div class="select-font-color">
-                  <label for="color" class="paragraph">Wybierz kolor tekstu</label>
-                  <input class="input-font-color" type="color" id="color" name="color" value="#338888">
-                  <button type="button" class="button button-outlined button_size_m">Zmień</button>
-                  <p class="paragraph" for="color">wybierz z palety</p>
-                </div>
-                <p class="paragraph">Firma miolli zastrzega sobie ….</p>
-                <div class="user-text">
-                  <label for="text" class="paragraph">Wpisz tekst</label>
-                  <p>
-                    <input id="text" class="input-text paragraph" type="text" name="" placeholder="Dla ukochanego Tomka">
-                    <button type="button" class="button button-outlined button_size_s">gotowe</button>
-                  </p>
-                </div>
-                <div class="select-font">
-                  <p class="paragraph">Wybierz czcionkę</p>
-                  <label class="container select-font__item">
-                    <span for="font_1" class="">Mm</span>
-                    <input id="font_1" type="radio" name="font">
-                    <span class="checkmark"></span>
-                  </label>
-                  <label class="container select-font__item">
-                    <span for="font_2" class="">Mm</span>
-                    <input id="font_2" type="radio" name="font">
-                    <span class="checkmark"></span>
-                  </label>
-                  <label class="container select-font__item">
-                    <span for="font_3" class="">Mm</span>
-                    <input id="font_3" type="radio" name="font">
-                    <span class="checkmark"></span>
-                  </label>
-                  <label class="container select-font__item">
-                    <span for="font_4" class="">Mm</span>
-                    <input id="font_4" type="radio" name="font">
-                    <span class="checkmark"></span>
-                  </label>
-                </div>
-                <div class="select-quantity">
-                  <p class="paragraph">Na ilu makaronikach chcesz umieścić nadruk dedykowany?*</p>
-                  <div class="quantity box-count">
-                    <div class="quantity__btns">
-                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" type="button" class="button">
-                        <span class="material-icons">arrow_drop_up</span>
-                      </button>
-                      <p class="smth">
-                        <input id="boxCount" name="boxCount" type="number" readonly value="6" min="1" max="6">
-                      szt.</p>
-                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" type="button" class="button">
-                        <span class="material-icons">arrow_drop_down</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </form> -->
-              <form class="select-image-form">
-                <div class="select-color">
-                  <fieldset>
-                    <legend class="paragraph">Wybierz rodzaj nadruku</legend>
-                    <label class="container select-color__item">
-                    <span class="color-box"></span>
-                    <span class="paragraph_upper" for="blackColor">czarny</span>
-                    <input id="blackColor" type="radio" name="color">
-                    <span class="checkmark"></span>
-                  </label>
-                  <label class="container select-color__item">
-                    <span class="color-box color-box_fullColor"></span>
-                    <span class="paragraph_upper" for="fullColor">full kolor</span>
-                    <input id="fullColor" type="radio" name="color">
-                    <span class="checkmark"></span>
-                  </label>
-                  </fieldset>
-                </div>
-                <div class="select-file">
-                  <p class="paragraph">Dodaj nadruk w wersji png, pdf lub cdr</p>
-                   <div class="input-file-container">
-                      <div class="input-file_fake paragraph"><span>Nie wybrano pliku</span>
-                        <button onclick="resetFileName()" type="button" class="button">
-                          <span class="button__body material-icons thin">close</span>
-                        </button>
+            <div class="print-modal">
+              <div class="print-modal__body">
+                <div>
+                  <div class="print-modal__preview">
+                    <div class="print-modal__image-container">
+                      <img src="../../assets/images/conf-4-modified.png" class="print-modal__image">
+                      <div class="print-modal__print-container">
+                        <p class="print-modal__print-text">Dla ukochanego Tomka</p>
+                        <img src="../../assets/images/lego.png" class="print-modal__print-image">
                       </div>
-                      <input onchange="getFileName()" class="input-file" type="file" accept=".png, .pdf, .cdr">
-                      <button type="button" class="button button-outlined button_size_s">dodaj plik</button>
-                   </div>
-                </div>
-                <div class="select-quantity">
-                  <p class="paragraph">Na ilu makaronikach chcesz umieścić nadruk dedykowany?*</p>
-                  <div class="quantity box-count">
-                    <div class="quantity__btns">
-                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" type="button" class="button">
-                        <span class="material-icons">arrow_drop_up</span>
-                      </button>
-                      <p class="smth">
-                        <input id="boxCount" name="boxCount" type="number" readonly value="6" min="1" max="6">
-                      szt.</p>
-                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" type="button" class="button">
-                        <span class="material-icons">arrow_drop_down</span>
-                      </button>
                     </div>
                   </div>
                 </div>
-              </form>
-              <a href="step-3-3.html" class="print-choice__button button button-outlined button_size_m">GOTOWE! PRZEJDŹ DALEJ</a>
-            </div>
-          </div>
-            <div class="configurator__asside">
-              <div class="cookie-box"></div>
-            </div>
-            <div class="print-choice">
-              <div class="print-choice__header">
-                <div class="print-choice__price">
-                  <span class="print-choice__price_number">200, - </span>
-                  <span class="print-choice__price_copy">bieżąca cena</span>
+                <div>
+                  <p class="paragraph">Super! <br>Dodaliśmy Twój nadruk </p>
+                  <br>
+                  <a href="step-3-1.html" class="print-choice__button button button-outlined button_size_m">chcesz dodać kolejny?</a>
+                  <a href="step-4.html" class="print-choice__button button button-outlined button_size_m">gotowe, idę dalej</a>
                 </div>
               </div>
-              <div class="print-choice__body">
-                <section class="print-choice__section">
-                  <div class="print-choice__heading">
-                    <h2 class="print-choice__subtitle paragraph_upper_l">dodaj nadruk</h2>
-                  </div>
-                  <div class="print-choice__paragraph">
-                    <p class="print-choice__copy paragraph"> Kliknij w nadruk by dodać go do pudełka. <br> Chcesz dostać dedykowany nadruk <a class="print-choice__copy_link" href="">kliknij tutaj</a>
-                    </p>
-                    <p class="print-choice__copy paragraph"> Ważne! Nadruki wyglądają najlepiej na jasnych makaronikach. Firma Miolli zastrzega sobie prawo do za druku tych makaroników na których projekt wyglądać będzie najlepiej </p>
-                    <p class="print-choice__copy paragraph"> Nie chcesz nadruku? <a class="print-choice__copy_link" href="step-4.html">Kliknij tutaj</a>
-                    </p>
-                  </div>
-                </section>
-                <section class="print-choice__section print-base">
-                  <div class="print-choice__heading">
-                    <h2 class="configurator__subtitle paragraph_upper_l">nasza baza nadruków</h2>
-                  </div>
-                  <div class="print-choice__paragraph">
-                    <div class="print-choice__filter">
-                      <p class="print-choice__copy paragraph"> Wybierz kategorię nadruków: </p>
-                      <div class="print-choice__filter_body">
-                        <div class="dropdown">
-                          <div class="dropdown__select">
-                            <div class="dropdown__item-current">
-                              <p class="dropdown__text-current">najpopularniejsze</p>
-                              <button class="dropdown__arrow">
-                                <span class="material-icons">arrow_drop_down</span>
-                              </button>
+            </div>
+            <div class="configurator-app">
+              <div class="configurator-app__body">
+                <div>
+                  <div class="configurator-app__cookie-box"></div>
+                </div>
+                <div>
+                  <div class="configurator-app__content">
+                    <div class="print-choice">
+                      <div class="print-choice__header">
+                        <div class="print-choice__price">
+                          <span class="print-choice__price_number">200, - </span>
+                          <span class="print-choice__price_copy">bieżąca cena</span>
+                        </div>
+                      </div>
+                      <div class="print-choice__body">
+                        <section class="print-choice__section">
+                          <div class="print-choice__heading">
+                            <h2 class="print-choice__subtitle paragraph_upper_l">dodaj nadruk</h2>
+                          </div>
+                          <div class="print-choice__paragraph">
+                            <p class="print-choice__copy paragraph">Kliknij w nadruk by dodać go do pudełka. <br> Chcesz dostać dedykowany nadruk <a class="print-choice__copy_link" href="">kliknij tutaj</a>
+                            </p>
+                            <p class="print-choice__copy paragraph"> Ważne! Nadruki wyglądają najlepiej na jasnych makaronikach. Firma Miolli zastrzega sobie prawo do za druku tych makaroników na których projekt wyglądać będzie najlepiej </p>
+                            <p class="print-choice__copy paragraph"> Nie chcesz nadruku? <a class="print-choice__copy_link" href="step-4.html">Kliknij tutaj</a>
+                            </p>
+                          </div>
+                        </section>
+                        <section class="print-choice__section print-base">
+                          <div class="print-choice__heading">
+                            <h2 class="configurator__subtitle paragraph_upper_l">nasza baza nadruków</h2>
+                          </div>
+                          <div class="print-choice__paragraph">
+                            <div class="print-choice__filter">
+                              <p class="print-choice__copy paragraph"> Wybierz kategorię nadruków: </p>
+                              <div class="print-choice__filter_body">
+                                <div class="dropdown">
+                                  <div class="dropdown__select">
+                                    <div class="dropdown__item-current">
+                                      <p class="dropdown__text-current">najpopularniejsze</p>
+                                      <button class="dropdown__arrow">
+                                        <span class="material-icons">arrow_drop_down</span>
+                                      </button>
+                                    </div>
+                                    <ul class="options">
+                                      <li class="option selected">
+                                        <p class="option__text">najpopularniejsze</p>
+                                      </li>
+                                      <li class="option">
+                                        <p class="option__text">option 2</p>
+                                      </li>
+                                      <li class="option">
+                                        <p class="option__text">option 3</p>
+                                      </li>
+                                      <li class="option">
+                                        <p class="option__text">option 4</p>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <button class="filter__button button button-outlined button_size_s"> wyberz </button>
+                              </div>
                             </div>
-                            <ul class="options">
-                              <li class="option selected">
-                                <p class="option__text">najpopularniejsze</p>
+                            <p class="print-choice__copy paragraph"> Najczęściej wybierane kategorie: </p>
+                            <div class="tagbar">
+                              <div class="stack stack--horizontal">
+                                <button type="button" value="" name="" class="stack__item button">
+                                  <span class="button__body uppercase">dzień mamy</span>
+                                </button>
+                                <button class="stack__item button">
+                                  <span class="button__body uppercase">dzień taty</span>
+                                </button>
+                                <button class="stack__item button">
+                                  <span class="button__body uppercase">dla zakochanych</span>
+                                </button>
+                                <button class="stack__item button">
+                                  <span class="button__body uppercase">dla dzieci</span>
+                                </button>
+                                <button class="stack__item button">
+                                  <span class="button__body uppercase">na urodziny</span>
+                                </button>
+                                <button class="stack__item button">
+                                  <span class="button__body uppercase">wielkanoc</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                      </div>
+                      <div class="scrollbox__outer">
+                        <div class="scrollbox">
+                          <div class="scrollbox__container">
+                            <ul class="print-list">
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
                               </li>
-                              <li class="option selected">
-                                <p class="option__text">najpopularniejsze</p>
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-3-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print.png" alt="print">
                               </li>
-                              <li class="option selected">
-                                <p class="option__text">najpopularniejsze</p>
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-5-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print.png" alt="print">
                               </li>
-                              <li class="option selected">
-                                <p class="option__text">najpopularniejsze</p>
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-4-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
+                              </li>
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
+                              </li>
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-3-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print.png" alt="print">
+                              </li>
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-5-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print.png" alt="print">
+                              </li>
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-4-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
+                              </li>
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
+                              </li>
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-3-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print.png" alt="print">
+                              </li>
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-5-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print.png" alt="print">
+                              </li>
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-4-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
+                              </li>
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
+                              </li>
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-3-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print.png" alt="print">
+                              </li>
+                              <li class="print-list__item">
+                                <input type="checkbox">
+                                <span class="marker material-icons"></span>
+                                <img class="print-list__image" src="../../assets/images/conf-5-modified.png" alt="print">
+                                <img class="print-list__image_print" src="../../assets/images/print.png" alt="print">
                               </li>
                             </ul>
                           </div>
+                          <button class="scrollbox__arrow up inactive">
+                            <span class="material-icons">north</span>
+                          </button>
+                          <button class="scrollbox__arrow down">
+                            <span class="material-icons">south</span>
+                          </button>
                         </div>
-                        <button class="filter__button button button-outlined button_size_s"> wyberz </button>
                       </div>
-                    </div>
-                    <p class="print-choice__copy paragraph"> Najczęściej wybierane kategorie: </p>
-                    <div class="tagbar">
-                      <div class="stack stack--horizontal">
-                        <button type="button" value="" name="" class="stack__item button">
-                          <span class="button__body uppercase">dzień mamy</span>
-                        </button>
-                        <button class="stack__item button">
-                          <span class="button__body uppercase">dzień taty</span>
-                        </button>
-                        <button class="stack__item button">
-                          <span class="button__body uppercase">dla zakochanych</span>
-                        </button>
-                        <button class="stack__item button">
-                          <span class="button__body uppercase">dla dzieci</span>
-                        </button>
-                        <button class="stack__item button">
-                          <span class="button__body uppercase">na urodziny</span>
-                        </button>
-                        <button class="stack__item button">
-                          <span class="button__body uppercase">wielkanoc</span>
-                        </button>
+                      <div class="print-choice__footer">
+                        <a href="step-3-1.html" class="print-choice__button button button-outlined button_size_l">dodaj swój nadruk</a>
+                        <a href="step-4.html" class="print-choice__button button button-outlined button_size_l">GOTOWE! PRZEJDŹ DALEJ</a>
                       </div>
                     </div>
                   </div>
-                  <div class="print-choice__scrollbox">
-                    <div class="scrollbox">
-                      <div class="scrollbox__container">
-                        <ul class="print-list print-variants">
-                          <li class="print-list__item">
-                            <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
-                            <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                            <span class="marker">+</span>
-                          </li>
-                          <li class="print-list__item">
-                            <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
-                            <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                            <span class="marker">+</span>
-                          </li>
-                          <li class="print-list__item">
-                            <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
-                            <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                            <span class="marker">+</span>
-                          </li>
-                          <li class="print-list__item">
-                            <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
-                            <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                            <span class="marker">+</span>
-                          </li>
-                          <li class="print-list__item">
-                            <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
-                            <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                            <span class="marker">+</span>
-                          </li>
-                          <li class="print-list__item">
-                            <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
-                            <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                            <span class="marker">+</span>
-                          </li>
-                          <li class="print-list__item">
-                            <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
-                            <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                            <span class="marker">+</span>
-                          </li>
-                          <li class="print-list__item">
-                            <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
-                            <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                            <span class="marker">+</span>
-                          </li>
-                          <li class="print-list__item">
-                            <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
-                            <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                            <span class="marker">+</span>
-                          </li>
-                          <li class="print-list__item">
-                            <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
-                            <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                            <span class="marker">+</span>
-                          </li>
-                          <li class="print-list__item">
-                            <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
-                            <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                            <span class="marker">+</span>
-                          </li>
-                          <li class="print-list__item">
-                            <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
-                            <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                            <span class="marker">+</span>
-                          </li>
-                          <li class="print-list__item">
-                            <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
-                            <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                            <span class="marker">+</span>
-                          </li>
-                          <li class="print-list__item">
-                            <img class="print-list__image" src="../../assets/images/conf-1-modified.png" alt="print">
-                            <img class="print-list__image_print" src="../../assets/images/print-2.png" alt="print">
-                            <span class="marker">+</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <button class="scrollbox__arrow up inactive">
-                        <span class="material-icons">north</span>
-                      </button>
-                      <button class="scrollbox__arrow down">
-                        <span class="material-icons">south</span>
-                      </button>
-                    </div>
-                  </div>
-                </section>
-                <div class="print-choice__footer">
-                  <button class="print-choice__button button button-outlined button_size_l">dodaj swój nadruk</button>
-                  <a href="step-4.html" class="print-choice__button button button-outlined button_size_l">GOTOWE! PRZEJDŹ DALEJ</a>
                 </div>
               </div>
             </div>
@@ -553,7 +478,7 @@
             <a href="../konfigurator/index.html" class="footer-nav__link active">twoja kompozycja</a>
           </li>
           <li class="footer-nav__item">
-            <a href="../alergeny/index.html" class="footer-nav__link">alergeny</a>
+            <a href="../../alergeny/index.html" class="footer-nav__link">alergeny</a>
           </li>
           <li class="footer-nav__item">
             <a href="../faq/index.html" class="footer-nav__link">faq</a>
@@ -592,15 +517,6 @@
           }
         }
       });
-
-      const inputFileFake = document.querySelector('.input-file_fake span');
-      const inputFileTrue = document.querySelector('.input-file');
-      let getFileName = () => inputFileFake.textContent = inputFileTrue.files[0].name;
-      let resetFileName = () => {
-        inputFileFake.textContent = 'Nie wybrano pliku';
-        inputFileTrue.value = '';
-      };
-
     </script>
   </body>
 </html>

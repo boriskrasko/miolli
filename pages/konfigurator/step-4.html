@@ -193,11 +193,11 @@
     <main>
       <div class="configurator">
         <div class="configurator__content">
-           <nav class="breadcrumb" aria-label="Breadcrumb">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
             <ul class="breadcrumb__list uppercase">
               <li class="breadcrumb__item">
                 <span class="breadcrumb__icon material-icons">west</span>
-                <a class="breadcrumb__link" href="step-3.html">wróc</a>
+                <a class="breadcrumb__link paragraph_upper" href="step-3.html">wróc</a>
               </li>
             </ul>
           </nav>
@@ -233,34 +233,44 @@
             </ul>
           </div>
           <div class="configurator__body">
-            <div class="configurator__asside">
-              <div class="cookie-box"></div>
-            </div>
-            <div class="quantity_choice">
-              <div class="quantity_choice__heading">
-                <h4 class="paragraph_upper_l">Super!</h4>
-                <p class="paragraph">Skonfigurowałeś swoje pierwsze pudełko!</p>
-                <p class="paragraph">Ile takich pudełek potrzebujesz?</p>
-                <div class="quantity box-count">
-                  <input id="boxSize" name="boxSize" type="text" readonly value="2">
-                  <p class="smth">szt.</p>
-                  <div class="quantity__btns">
-                    <button class="button">
-                      <span class="material-icons">arrow_drop_up</span>
-                    </button>
-                    <button class="button">
-                      <span class="material-icons">arrow_drop_down</span>
-                    </button>
+            <div class="configurator-app">
+              <div class="configurator-app__body">
+                <div>
+                  <div class="configurator-app__cookie-box"></div>
+                </div>
+                <div>
+                  <div class="configurator-app__content step-4">
+                    <div class="quantity_choice">
+                      <div class="quantity_choice__heading">
+                        <h4 class="paragraph_upper_l">Super!</h4>
+                        <p class="paragraph">Skonfigurowałeś swoje pierwsze pudełko!</p>
+                        <p class="paragraph">Ile takich pudełek potrzebujesz?</p>
+                        <label class="quantity box-count">
+                          <input id="boxCount" name="boxCount" type="number" readonly value="1" min="1">
+                          <span class="smth paragraph">szt.</span>
+                          <div class="quantity__btns">
+                            <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp(); this.parentNode.children[1].style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 1) ? '#000' : '#999';" type="button" class="button">
+                              <span class="material-icons">arrow_drop_up</span>
+                            </button>
+                            <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown(); this.style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 1) ? '#000' : '#999';" type="button" class="button">
+                              <span class="material-icons">arrow_drop_down</span>
+                            </button>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="quantity_choice__footer">
+                        <p class="paragraph">Chcesz skonfigurować kolejne pudełko?</p>
+                        <a href="index.html" class="quantity_choice__button button button-outlined button_size_l">tak</a>
+                        <a href="../koszyk/index.html" class="quantity_choice__button button button-outlined button_size_l">nie, idę do koszyka</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="quantity_choice__footer">
-                <p class="paragraph">Chcesz skonfigurować kolejne pudełko?</p>
-                <a href="index.html" class="quantity_choice__button button button-outlined button_size_l">tak</a>
-                <a href="../koszyk/index.html" class="quantity_choice__button button button-outlined button_size_l">nie, idę do koszyka</a>
-              </div>
             </div>
           </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <nav class="footer-nav" aria-label="footnav">
