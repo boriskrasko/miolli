@@ -41,3 +41,13 @@
   font-family: BasierCircle-SemiBoldItalic;
   src: url(../fonts/BasierCircle/BasierCircle-SemiBoldItalic.otf);
 }
+
+@font-face {
+  font-family: Beluga;
+  src: url(../fonts/Beluga/beluga-lt-regular.ttf);
+}
+
+@font-face {
+  font-family: Herattine;
+  src: url(../fonts/herattine/Herattine.ttf);
+}
