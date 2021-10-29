@@ -508,7 +508,7 @@ fieldset {
 .delivery__method_coffeehouse {
   max-width: 522px;
   min-width: 260px;
-  min-height: 40px;
+  min-height: 41px;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -538,7 +538,7 @@ fieldset {
   min-height: 32px;
   padding-left: 21px;
   padding-right: 21px;
-  margin: 10px 0 1px;
+  margin: 10px 0 0;
   align-self: flex-end;
 }
 
@@ -587,7 +587,6 @@ fieldset {
 
 .pay__methods {
   width: 100%;
-  /*max-width: 825px;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

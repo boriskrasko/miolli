@@ -488,6 +488,9 @@ main {
     line-height: 14px;
     letter-spacing: 0.05em;
   }
+  .configurator-app__cookie-box {
+    border-image-outset: 14.5rem;
+  }
 }
 
 .flavor-choice__body {

@@ -299,13 +299,13 @@
                   <fieldset class="adding-print-image">
                     <div class="custom-print__image-color">
                       <p class="paragraph">Wybierz rodzaj nadruku</p>
-                      <label class="container select-color__item">
+                      <label class="container select-color__item" onclick="document.querySelector('.print-modal__print-image').style.filter = 'grayscale(100%)'">
                         <span class="color-box"></span>
                         <span class="paragraph_upper" for="blackColor">czarny</span>
                         <input id="blackColor" type="radio" name="color">
                         <span class="checkmark"></span>
                       </label>
-                      <label class="container select-color__item">
+                      <label class="container select-color__item" onclick="document.querySelector('.print-modal__print-image').style.filter = 'grayscale(0)'">
                         <span class="color-box color-box_fullColor"></span>
                         <span class="paragraph_upper" for="fullColor">full kolor</span>
                         <input id="fullColor" type="radio" name="color">
