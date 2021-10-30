@@ -900,7 +900,7 @@
       }
 
       headerMenuToggle.addEventListener('change', () => {
-        document.body.style.overflow = (headerMenuToggle.checked && window.innerWidth <= 501) ? 'hidden' : 'auto' ;
+        document.body.style.overflow = (headerMenuToggle.checked && (window.innerWidth <= 501 || window.screen <= 501)) ? 'hidden' : 'auto' ;
       })
     </script>
   </body>
