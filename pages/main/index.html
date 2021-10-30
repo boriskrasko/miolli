@@ -127,7 +127,7 @@
                     <img class="topnav__link_icon" src="../../assets/icons/user.svg" alt="user">
                   </a>
                 </li>
-                <li class="topnav__item topnav__item_hasChild">
+                <li class="topnav__item topnav__item_hasChild desktop-only">
                   <a href="../nadruki/index.html" class="topnav__link">makaroniki&nbsp;z nadrukiem <span class="material-icons thin">south</span>
                   </a>
                   <div class="printing">
@@ -163,10 +163,10 @@
                     </nav>
                   </div>
                 </li>
-                <li class="topnav__item">
+                <li class="topnav__item desktop-only">
                   <a href="../zestawy/index.html" class="topnav__link">gotowe sety makaroników</a>
                 </li>
-                <li class="topnav__item">
+                <li class="topnav__item desktop-only">
                   <a href="../konfigurator/index.html" class="topnav__link">twoja kompozycja</a>
                 </li>
               </ul>
@@ -203,7 +203,7 @@
               </li>
             </ul>
           </nav>
-          <a class="button_business-offer button button-contained button-contained_dark-vanilla" href="../biznes/index.html">miolli <br>dla biznesu <span class="material-icons">north_east</span>
+          <a class="button_business-offer button button-contained" href="../biznes/index.html">miolli <br>dla biznesu <span class="material-icons">north_east</span>
           </a>
         </div>
       </div>
@@ -879,14 +879,12 @@
         let i = 0;
         arrowButton[1].addEventListener('click', () => {
           if (i < cardSet.length - 4) {
-            setBlockCurrentNum.innerHTML = i + 1;
             cardSet[i].style.display = 'none';
             i++;
           }
         })
         arrowButton[0].addEventListener('click', () => {
           if (i > 0) {
-            setBlockCurrentNum.innerHTML = i - 1;
             i--;
             cardSet[i].style.display = 'block';
           }
@@ -900,6 +898,10 @@
       headerMenu.onclick = e => {
         headerMenuToggle.checked = (e.target == e.currentTarget) ? false : true;
       }
+
+      headerMenuToggle.addEventListener('change', () => {
+        document.body.style.overflow = (headerMenuToggle.checked && window.innerWidth <= 501) ? 'hidden' : 'auto' ;
+      })
     </script>
   </body>
 </html>
