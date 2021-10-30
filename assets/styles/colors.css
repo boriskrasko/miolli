@@ -65,13 +65,18 @@
 }
 
 .dark-vanilla.button-contained:hover {
-  background-color: #99817A;
+  background-color: #E7C4B9;
   color: #fff;
 }
 
 .dark-vanilla.button-outlined {
   border-color: var(--dark-vanilla);
   color: var(--dark-vanilla);
+}
+
+.dark-vanilla.thin {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--dark-vanilla);
 }
 
 .pastel-pink {

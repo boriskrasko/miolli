@@ -1,51 +1,81 @@
-@import '../../assets/styles/main.css';
-
-
-body {
-  overflow-x: hidden;
-}
-
+@import "../../assets/styles/main.css";
 
 main {
-  position: relative;
-  top: 78px;
+  padding: 4.875rem 0 0;
 }
 
-.breadcrumbs {
-  font-family: var(--contentFont);
-  font-size: 10px;
-  position: relative;
+main > * {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.breadcrumb {
   width: 100%;
-  padding: 0 50px;
-  text-transform: uppercase;
-  color: var(--dark-xs);
+  max-width: calc(var(--content) - 78px);
+  margin: 1.8rem auto;
+  padding: 0 11px;
 }
 
-.breadcrumbs>* {
-  margin: 0 10px;
-}
-
-
-/**/
-
-.start-screen {
+.breadcrumb__list {
+  display: flex;
   width: 100%;
-  height: 456px;
-  padding: 36px 0;
-  background-color: #ccc;
-  background-image: url(../../assets/images/business-start-screen.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  flex-wrap: wrap;
+}
+
+.breadcrumb__item {
+  display: flex;
+  margin: 0.25rem 0.5rem;
+  align-items: center;
+}
+
+.breadcrumb__item > * {
+  margin: 0 0.25rem;
+}
+
+.breadcrumb__icon.material-icons {
+  font-size: 1rem;
+  color: var(--outer-space);
+}
+
+.breadcrumb__link {
+  font: normal 0.625rem/12px var(--contentFont);
+  letter-spacing: 0.1em;
+  color: var(--outer-space);
+}
+
+.breadcrumb__link:hover {
+  color: var(--dark-vanilla);
+}
+
+.breadcrumb__item:last-child,
+.isDisabled {
+  opacity: 0.5;
+}
+
+.breadcrumb__item:last-child > a,
+.isDisabled > a {
+  color: currentColor;
+  pointer-events: none;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {
   .breadcrumbs {
     padding: 0 2%;
   }
-  .start-screen {
-    height: 361px;
-  }
+}
+
+/**/
+
+.start-screen {
+  padding: 0.1px;
+  width: 100%;
+  height: 456px;
+  background-color: #cccccc;
+  background-image: url(../../assets/images/business-start-screen.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
 }
 
 .greeting__content {
@@ -53,7 +83,7 @@ main {
   flex-direction: column;
   max-width: 953px;
   min-height: 368px;
-  margin: 0 auto;
+  margin: 0 auto 78px;
   justify-content: space-between;
   align-items: center;
 }
@@ -65,19 +95,6 @@ main {
   text-align: center;
   justify-content: center;
   align-items: center;
-}
-
-.greeting__title {
-  font-family: var(--titleFont);
-  font-size: 40px;
-  color: var(--dark-xs);
-}
-
-.greeting__subtitle {
-  font-family: var(--contentFont);
-  font-size: 16px;
-  letter-spacing: .1em;
-  color: var(--dark-xs);
 }
 
 .underline {
@@ -101,7 +118,7 @@ main {
   font-family: var(--contentFont);
   font-size: 16px;
   text-align: center;
-  letter-spacing: .025em;
+  letter-spacing: 0.025em;
   text-transform: lowercase;
   color: var(--dark-xs);
 }
@@ -114,7 +131,7 @@ main {
 
 .benefits__content {
   max-width: 1062px;
-  margin: 0 auto;
+  margin: 0 auto 78px;
 }
 
 .benefits__heading {
@@ -125,16 +142,11 @@ main {
   margin: 30px 0;
 }
 
-.benefits__title {
-  font-family: var(--titleFont);
-  font-size: 94px;
-  color: var(--pastel-pink);
-}
-
 .list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  list-style: none;
 }
 
 .list__item {
@@ -154,15 +166,12 @@ main {
   width: 217px;
   height: 217px;
   border-radius: 100%;
-  background: #eee;
+  background: #eeeeee;
 }
 
 .item__name {
-  font-family: var(--contentFont);
-  font-size: 16px;
   text-align: center;
-  letter-spacing: .1em;
-  color: var(--dark-xs);
+  letter-spacing: 0.1em;
 }
 
 @media screen and (max-width: 1062px) {
@@ -175,7 +184,7 @@ main {
   width: 100%;
   height: 456px;
   padding: 36px 0;
-  background-color: #ccc;
+  background-color: #cccccc;
   background-image: url(../../assets/images/cookie-table.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -189,13 +198,11 @@ main {
   padding: 30px 0;
 }
 
-.print__heading>* {
+.print__heading > * {
   margin: 30px;
 }
 
 .print__heading h3 {
-  font-size: 73px;
-  line-height: 73px;
   text-align: center;
   color: var(--pastel-pink);
 }
@@ -203,18 +210,12 @@ main {
 .print .advantages {
   max-width: 500px;
   margin: 100px auto;
+  list-style: none;
 }
 
 .advantages__item {
-  font-family: var(--contentFont);
-  font-size: 16px;
-  font-weight: lighter;
-  line-height: 25px;
   margin: 30px 0;
   text-align: center;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--dark-xs);
 }
 
 .print__variants {
@@ -228,67 +229,57 @@ main {
   margin: 0 0 30px;
 }
 
-.print__variant h3 {
+.print__variant .h5 {
   font-size: 45px;
   line-height: 45px;
   text-align: center;
-  letter-spacing: .025em;
+  letter-spacing: 0.025em;
 }
 
 .print__variant p {
-  font-size: 16px;
-  line-height: 24px;
   margin: 25px 0;
   text-align: center;
-  text-transform: lowercase;
 }
 
 .economic-indicator__content {
   max-width: 1002px;
   min-height: 600px;
-  margin: 0 auto;
+  margin: 0 auto 78px;
   padding: 30px 0;
 }
 
-.economic-indicator__heading>* {
+.economic-indicator__heading > * {
   margin: 30px;
 }
 
-.economic-indicator__heading h3 {
+.economic-indicator__heading h4 {
   font-size: 73px;
   line-height: 73px;
   text-align: center;
-  color: var(--pastel-pink);
 }
 
 .procent-card {
   width: 279px;
   min-height: 300px;
+  margin: 0 20px;
 }
 
-.procent-card>div {
+.procent-card > div {
   margin: 30px 0;
 }
 
 .procent-card__top h2 {
-  font-family: var(--titleFont);
-  font-size: 94px;
   text-align: center;
   color: var(--pastel-pink);
 }
 
-.procent-card__bottom h4 {
-  line-height: 24px;
+.procent-card__bottom h5 {
+  font-weight: bold;
   text-align: center;
-  letter-spacing: .1em;
-  text-transform: uppercase;
 }
 
 .procent-card__bottom p {
-  line-height: 16px;
-  line-height: 25px;
   text-align: center;
-  text-transform: lowercase;
 }
 
 .economic-indicator--procent-card {
@@ -301,7 +292,7 @@ main {
   display: flex;
   flex-direction: row-reverse;
   max-width: 1062px;
-  margin: 0 auto;
+  margin: 0 auto 78px;
   padding: 40px 0;
   justify-content: space-between;
   align-items: flex-start;
@@ -313,7 +304,7 @@ main {
   margin: 0 auto;
 }
 
-.proposal__content>div {
+.proposal__content > div {
   max-width: 537px;
   margin: 0 auto;
 }
@@ -321,6 +312,7 @@ main {
 .proposal .advantages {
   max-width: 500px;
   margin: 20px auto;
+  list-style: none;
 }
 
 .proposal .advantages__item {
@@ -330,12 +322,13 @@ main {
 
 .proposal .proposal--advantages h3 {
   font-size: 45px;
-  letter-spacing: .025em;
+  letter-spacing: 0.025em;
 }
 
 .block__content {
   display: flex;
   flex-direction: column;
+  margin: 0 auto 78px;
 }
 
 .block__heading h3 {
@@ -361,6 +354,7 @@ main {
 
 .ordered-list p {
   text-align: center;
+  margin: 20px auto;
 }
 
 .block img {
@@ -371,7 +365,7 @@ main {
 
 .benefits-2__content {
   max-width: 1062px;
-  margin: 0 auto;
+  margin: 0 auto 78px;
 }
 
 .benefits-2__heading {
@@ -391,3 +385,78 @@ main {
   color: var(--pastel-pink);
 }
 
+.economic-indicator__heading {
+  text-align: center;
+}
+
+.contact-form {
+  padding: 78px 0 78px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--dark-vanilla);
+  color: #ffffff;
+}
+
+.contact-form__title {
+  color: #ffffff;
+}
+
+.fields {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  display: inline-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: transparent;
+  color: #ffffff;
+}
+
+.field {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 324px;
+}
+
+.field__input,
+.field__textarea {
+  height: 65px;
+  border: 1px solid #ffffff;
+  outline-color: #ffffff;
+  font: 16px/25px var(--contentFont);
+  padding: 5px 30px;
+  background: transparent;
+  color: #ffffff;
+}
+
+.field__textarea {
+  width: 100%;
+  max-width: 700px;
+  height: 200px;
+}
+
+.field__label {
+  margin: 26px 30px 15px;
+}
+
+.contact-form_button_submit {
+  margin: 35px 0;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+@media (max-width: 760px) {
+  .field {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .field__label {
+    margin: 26px 0 15px;
+  }
+  .field,
+  .field_short {
+    min-width: 90%;
+  }
+}

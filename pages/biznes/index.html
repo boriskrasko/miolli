@@ -12,8 +12,8 @@
       <input type="checkbox">
       <button class="chat__button">
         <i class="chat__icon">
-        <span></span>
-        <span></span>
+          <span></span>
+          <span></span>
         </i>
       </button>
       <div class="chat-popup" id="chatForm">
@@ -22,14 +22,16 @@
           <h5>porozmawiaj z miolli</h5>
         </div>
         <div class="chat-popup__history">
-          <p><span class="paragraph_upper">Obecnie nie jesteśmy dostępni on-line</span><br>
+          <p>
+            <span class="paragraph_upper">Obecnie nie jesteśmy dostępni on-line</span>
+            <br>
             <span class="paragraph">Zostaw nam wiadomość lub zadzwoń pod numer XXX XXX XXX</span>
           </p>
         </div>
         <form action="/" class="chat-popup__form">
           <textarea class="chat-popup__textarea" placeholder="Wpisz swoją wiadomość" name="meassege"></textarea>
           <button type="submit" class="chat__button_submit button-contained_dark-vanilla">
-          <img src="../../assets/icons/send.svg" alt="send">
+            <img src="../../assets/icons/send.svg" alt="send">
           </button>
         </form>
       </div>
@@ -38,9 +40,9 @@
       <div class="header-menu">
         <input class="checkbox-toggle-menu" type="checkbox">
         <button class="button button-toggle-menu">
-        <span></span>
-        <span></span>
-        <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
         <div class="header-menu_inner">
           <div class="topbar">
@@ -56,8 +58,8 @@
               <ul class="topnav__list">
                 <li class="topnav__item_cart topnav__item_hasChild">
                   <a href="../koszyk/index.html" class="topnav__link">
-                  <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
-                  <span class="topnav__item_cart_counter inner">14</span>
+                    <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
+                    <span class="topnav__item_cart_counter inner">14</span>
                   </a>
                   <div class="cart-preview">
                     <div class="cart-preview__item">
@@ -69,9 +71,12 @@
                           <h6 class="cart-preview__name h6">set na lato</h6>
                         </div>
                         <ul class="cart-preview__description">
-                          <li class="cart-preview__description-item">ilość:<span class="cart-preview__quantity">2</span></li>
-                          <li class="cart-preview__description-item">cena:<span class="cart-preview__price">27</span></li>
-                          <li class="cart-preview__description-item">suma:<span class="cart-preview__cost">54</span></li>
+                          <li class="cart-preview__description-item">ilość: <span class="cart-preview__quantity">2</span>
+                          </li>
+                          <li class="cart-preview__description-item">cena: <span class="cart-preview__price">27</span>
+                          </li>
+                          <li class="cart-preview__description-item">suma: <span class="cart-preview__cost">54</span>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -84,26 +89,28 @@
                           <h6 class="cart-preview__name h6">set na lato</h6>
                         </div>
                         <ul class="cart-preview__description">
-                          <li class="cart-preview__description-item">ilość:<span class="cart-preview__quantity">2</span></li>
-                          <li class="cart-preview__description-item">cena:<span class="cart-preview__price">27</span></li>
-                          <li class="cart-preview__description-item">suma:<span class="cart-preview__cost">54</span></li>
+                          <li class="cart-preview__description-item">ilość: <span class="cart-preview__quantity">2</span>
+                          </li>
+                          <li class="cart-preview__description-item">cena: <span class="cart-preview__price">27</span>
+                          </li>
+                          <li class="cart-preview__description-item">suma: <span class="cart-preview__cost">54</span>
+                          </li>
                         </ul>
                       </div>
                     </div>
                     <div class="cart-preview__footer">
-                      <a href="../koszyk/index.html" class="cart-preview__remainder">i jeszcze <span class="rest">1</span> ...</a>
+                      <a href="../koszyk/index.html" class="cart-preview__remainder">i jeszcze <span class="rest">1</span> ... </a>
                       <a href="../koszyk/index.html" class="cart-preview__button button button-contained button-contained_dark-vanilla button_size_m">przejdź do koszyka</a>
                     </div>
                   </div>
                 </li>
                 <li class="topnav__item_user">
                   <a href="../user/index.html" class="topnav__link">
-                  <img class="topnav__link_icon" src="../../assets/icons/user.svg" alt="user">
+                    <img class="topnav__link_icon" src="../../assets/icons/user.svg" alt="user">
                   </a>
                 </li>
                 <li class="topnav__item topnav__item_hasChild">
-                  <a href="../nadruki/index.html" class="topnav__link">makaroniki&nbsp;z nadrukiem
-                  <span class="material-icons">south</span>
+                  <a href="../nadruki/index.html" class="topnav__link">makaroniki&nbsp;z nadrukiem <span class="material-icons">south</span>
                   </a>
                   <div class="printing">
                     <figure class="printing__figure">
@@ -178,69 +185,70 @@
               </li>
             </ul>
           </nav>
-          <a class="button_business-offer button button-contained button-contained_dark-vanilla" href="../biznes/index.html">miolli<br>dla biznesu
-          <span class="material-icons">north_east</span>
+          <a class="button_business-offer button button-contained button-contained_dark-vanilla" href="../biznes/index.html">miolli <br>dla biznesu <span class="material-icons">north_east</span>
           </a>
         </div>
       </div>
     </header>
     <main>
       <section class="start-screen">
-        <div class="breadcrumbs">
-          <img src="../../assets/icons/home.svg" alt="home">
-          <a href="../main/index.html">strona główna</a>
-          <img src="../../assets/icons/arrow-right-s.svg" alt="&#8594;">
-          <a href="">oferta dla biznesu</a>
-        </div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ul class="breadcrumb__list uppercase">
+            <li class="breadcrumb__item">
+              <img src="../../assets/icons/home.svg" alt="&#8962;">
+              <a class="breadcrumb__link" href="../main/index.html">strona główna</a>
+            </li>
+            <li class="breadcrumb__item">
+              <span class="breadcrumb__icon material-icons">east</span>
+              <a class="breadcrumb__link" href="#">oferta dla biznesu</a>
+            </li>
+          </ul>
+        </nav>
       </section>
       <section class="greeting">
         <div class="greeting__content">
           <div class="greeting__heading">
-            <h1 class="greeting__title h1">MIOLLI DLA BIZNESU</h1>
+            <h1 class="greeting__title h4">MIOLLI DLA BIZNESU</h1>
             <span class="underline"></span>
-            <h4 class="h4 greeting__subtitle">ZOSTAŃ NASZYM PRZEDSTAWICIELEM</h4>
+            <p class="greeting__subtitle paragraph_upper">ZOSTAŃ NASZYM PRZEDSTAWICIELEM</p>
           </div>
           <div class="greeting__text">
-            <p class="greeting__paragraph">
-              to marka najwyższej jakości makaroników premium,która rozkocha w sobie Twoich klientów wspaniałymi smakami i bogactwem pięknych kolorów.
-            </p>
-            <p class="greeting__paragraph">
-              Wersja z nadrukiem to wspaniały pomysł na prezent lub oryginalne uświetnienie ważnej dla twojego klienta uroczystości.
-            </p>
+            <p class="greeting__paragraph paragraph"> to marka najwyższej jakości makaroników premium,która rozkocha w sobie Twoich klientów wspaniałymi smakami i bogactwem pięknych kolorów. </p>
+            <p class="greeting__paragraph"> Wersja z nadrukiem to wspaniały pomysł na prezent lub oryginalne uświetnienie ważnej dla twojego klienta uroczystości. </p>
           </div>
         </div>
       </section>
       <section class="benefits">
         <div class="benefits__content">
           <div class="benefits__heading">
-            <h2 class="h2 benefits__title">miolli – smak inspiracji</h2>
-            <h4 class="h4 benefits__subtitle">jakie są nasze makaroniki?</h4>
+            <h2 class="h2 benefits__title pastel-pink">miolli – smak inspiracji</h2>
+            <p class="benefits__subtitle paragraph_upper">jakie są nasze makaroniki?</p>
           </div>
           <div class="benefits--list">
             <ul class="list">
-              <li class="list__item" >
-                 <img class="item__image" src="../../assets/images/1.png" alt="">
-                <h4 class="h4 item__name">klasyczna technologia wytworzenia</h4>
+              <li class="list__item">
+                <img class="item__image" src="../../assets/images/1.png" alt="">
+                <p class=" item__name paragraph_upper">klasyczna technologia wytworzenia</p>
               </li>
-              <li class="list__item" >
-                 <img class="item__image" src="../../assets/images/1.png" alt="">
-                <h4 class="h4 item__name">klasyczna technologia wytworzenia</h4>
+              <li class="list__item">
+                <img class="item__image" src="../../assets/images/1.png" alt="">
+                <p class=" item__name paragraph_upper">klasyczna technologia wytworzenia</p>
               </li>
-              <li class="list__item" >
-                 <img class="item__image" src="../../assets/images/1.png" alt="">
-                <h4 class="h4 item__name">klasyczna technologia wytworzenia</h4>
+              <li class="list__item">
+                <img class="item__image" src="../../assets/images/1.png" alt="">
+                <p class=" item__name paragraph_upper">klasyczna technologia wytworzenia</p>
               </li>
-              <li class="list__item" >
-                 <img class="item__image" src="../../assets/images/1.png" alt="">
-                <h4 class="h4 item__name">klasyczna technologia wytworzenia</h4>
+              <li class="list__item">
+                <img class="item__image" src="../../assets/images/1.png" alt="">
+                <p class=" item__name paragraph_upper">klasyczna technologia wytworzenia</p>
               </li>
-              <li class="list__item" >
-                 <img class="item__image" src="../../assets/images/1.png" alt="">
-                <h4 class="h4 item__name">klasyczna technologia wytworzenia</h4>
+              <li class="list__item">
+                <img class="item__image" src="../../assets/images/1.png" alt="">
+                <p class=" item__name paragraph_upper">klasyczna technologia wytworzenia</p>
               </li>
-              <li class="list__item" >
-                 <img class="item__image" src="../../assets/images/1.png" alt="">
-                <h4 class="h4 item__name">klasyczna technologia wytworzenia</h4>
+              <li class="list__item">
+                <img class="item__image" src="../../assets/images/1.png" alt="">
+                <p class=" item__name paragraph_upper">klasyczna technologia wytworzenia</p>
               </li>
             </ul>
           </div>
@@ -250,23 +258,23 @@
         <div class="cookie-table"></div>
         <div class="print__content">
           <div class="print__heading">
-            <h3>unikatowe makaroniki z możliwością nadruku dostępne w Twojej placówce</h3>
+            <h3 class="print__title h4 pastel-pink">unikatowe makaroniki z możliwością nadruku dostępne w Twojej placówce</h3>
             <div cclass="print--advantages">
               <ul class="advantages">
-                <li class="advantages__item">bezpieczna, zdrowa technologia i materiały</li>
-                <li class="advantages__item">wysoka estetyka nadruku</li>
-                <li class="advantages__item">oryginalność, kreatywność, inspiracja</li>
+                <li class="advantages__item paragraph_upper">bezpieczna, zdrowa technologia i materiały</li>
+                <li class="advantages__item paragraph_upper">wysoka estetyka nadruku</li>
+                <li class="advantages__item paragraph_upper">oryginalność, kreatywność, inspiracja</li>
               </ul>
             </div>
           </div>
           <div class="print__variants">
             <div class="print__variant">
-              <h3>nadruki spersonalizowane</h3>
-              <p>małe i duże ilości na specjalne zamówienie realizowane przez producenta online</p>
+              <h5 class="h5">nadruki spersonalizowane</h5>
+              <p class="paragraph">małe i duże ilości na specjalne zamówienie realizowane przez producenta online</p>
             </div>
             <div class="print__variant">
-              <h3>nadruki standardowe</h3>
-              <p>na różne okoliczności, np. urodziny, Dzień Mamy itp. dostępny od ręki w małych ilościach w placówce Partnera</p>
+              <h5 class="h5">nadruki standardowe</h5>
+              <p class="paragraph">na różne okoliczności, np. urodziny, Dzień Mamy itp. dostępny od ręki w małych ilościach w placówce Partnera</p>
             </div>
           </div>
         </div>
@@ -274,25 +282,27 @@
       <section class="economic-indicator">
         <div class="economic-indicator__content">
           <div class="economic-indicator__heading">
-            <h3>pomysł na długoterminowy biznes i konkretny sposób na dodatkowy przychód</h3>
+            <h4 class="h4 pastel-pink">pomysł na długoterminowy biznes i konkretny sposób na dodatkowy przychód</h4>
           </div>
           <div class="economic-indicator--procent-card">
             <div class="procent-card">
               <div class="procent-card__top">
-                <h2>85%</h2>
+                <h2 class="h2">85%</h2>
               </div>
               <div class="procent-card__bottom">
-                <h4>wysoka marża handlowa</h4>
-                <p>na produktach standardowych dostępnych od ręki w placówce Partnera (ok. 85%)</p>
+                <h5 class="paragraph_upper">wysoka marża handlowa</h5>
+                <br>
+                <p class="paragraph">na produktach standardowych dostępnych od ręki w placówce Partnera (ok. 85%)</p>
               </div>
             </div>
             <div class="procent-card">
               <div class="procent-card__top">
-                <h2>3%</h2>
+                <h2 class="h2">3%</h2>
               </div>
               <div class="procent-card__bottom">
-                <h4>atrakcyjny procent</h4>
-                <p>atrakcyjny procent od zrealizowanych przez producenta zamówień online</p>
+                <h5 class="paragraph_upper">atrakcyjny procent</h5>
+                <br>
+                <p class="paragraph">atrakcyjny procent od zrealizowanych przez producenta zamówień online</p>
               </div>
             </div>
           </div>
@@ -301,67 +311,63 @@
       <section class="proposal">
         <div class="proposal__content">
           <div class="proposal__image">
-            <img src="../../assets/images/exhibit-product.png" alt="exhibit"> 
+            <img src="../../assets/images/exhibit-product.png" alt="exhibit">
           </div>
           <div class="proposal--advantages">
-            <h3>wizerunek premium Twojej oferty</h3>
+            <h3 class="h3">wizerunek premium <br>Twojej oferty </h3>
             <ul class="advantages">
-                <li class="advantages__item">najwyższa estetyka wyglądu makaroników</li>
-                <li class="advantages__item">bogaty asortyment smaków i kolorów</li>
-                <li class="advantages__item">trakcyjne rozwiązania ekspozycyjne</li>
-                <li class="advantages__item">efektownie wykonane opakowania</li>
-                <li class="advantages__item">eleganckie i funkcjonalne materiały informacyjne i promocyjne</li>
-                <li class="advantages__item">stylowa komunikacja marki na zewnątrz i wewnątrz placówki</li>
-              </ul>
+              <li class="advantages__item paragraph_upper">najwyższa estetyka wyglądu makaroników</li>
+              <li class="advantages__item paragraph_upper">bogaty asortyment smaków i kolorów</li>
+              <li class="advantages__item paragraph_upper">trakcyjne rozwiązania ekspozycyjne</li>
+              <li class="advantages__item paragraph_upper">efektownie wykonane opakowania</li>
+              <li class="advantages__item paragraph_upper">eleganckie i funkcjonalne materiały informacyjne i promocyjne</li>
+              <li class="advantages__item paragraph_upper">stylowa komunikacja marki na zewnątrz i wewnątrz placówki</li>
+            </ul>
           </div>
         </div>
       </section>
       <section class="block">
         <div class="block__content">
           <div class="block__heading">
-            <h3>Twoje wymierne korzyści </h3>
+            <h3 class="h3 pastel-pink">Twoje wymierne korzyści </h3>
           </div>
           <div class="block--ordered-list">
             <ul class="ordered-list">
               <li class="ordered-list__item">
-                <span class="like-h3">01.</span>
-                <p>wysokiej jakości produkt premium, jedyny na rynku makaronik wykonany w 100% z mąki migdałowej</p>
+                <span class="h3">01.</span>
+                <p class="paragraph_upper">wysokiej jakości produkt premium, jedyny na rynku makaronik wykonany w 100% z mąki migdałowej</p>
               </li>
               <li class="ordered-list__item">
-                <span class="like-h3">02.</span>
-                <p>unikatowa usługa nadruku – limituje nas tylko kreatywność konsumenta</p>
+                <span class="h3">02.</span>
+                <p class="paragraph_upper">unikatowa usługa nadruku – limituje nas tylko kreatywność konsumenta</p>
               </li>
               <li class="ordered-list__item">
-                <span class="like-h3">03.</span>
-                <p>ciągle wzbogacany asortyment o nowe smaki, kolory i standardowe nadruki okolicznościowe</p>
+                <span class="h3">03.</span>
+                <p class="paragraph_upper">ciągle wzbogacany asortyment o nowe smaki, kolory i standardowe nadruki okolicznościowe</p>
               </li>
               <li class="ordered-list__item">
-                <span class="like-h3">04.</span>
-                <p>zadowolenie Twoich klientów, przywiązanie i ruch powracający konsumentów</p>
+                <span class="h3">04.</span>
+                <p class="paragraph_upper">zadowolenie Twoich klientów, przywiązanie i ruch powracający konsumentów</p>
               </li>
               <li class="ordered-list__item">
-                <span class="like-h3">05.</span>
-                <p>atrakcyjne, ekstra przychody</p>
+                <span class="h3">05.</span>
+                <p class="paragraph_upper">atrakcyjne, ekstra przychody</p>
               </li>
               <li class="ordered-list__item">
-                <span class="like-h3">06.</span>
-                <p>wzmocnienie Twojej oferty i wizerunku Twojej placówki</p>
+                <span class="h3">06.</span>
+                <p class="paragraph_upper">wzmocnienie Twojej oferty i wizerunku Twojej placówki</p>
               </li>
               <li class="ordered-list__item">
-                <span class="like-h3">07.</span>
-                <p>podniesienie kompetencji Twojego zespołu poprzez szkolenia branżowe i produktowe realizowane przez MIOLLI</p>
+                <span class="h3">07.</span>
+                <p class="paragraph_upper">podniesienie kompetencji Twojego zespołu poprzez szkolenia branżowe i produktowe realizowane przez MIOLLI</p>
               </li>
               <li class="ordered-list__item">
-                <span class="like-h3">08.</span>
-                <p>aktywne promowanie punktów partnerskich przez właściciela marki MIOLLI</p>
+                <span class="h3">08.</span>
+                <p class="paragraph_upper">aktywne promowanie punktów partnerskich przez właściciela marki MIOLLI</p>
               </li>
-               <!-- <li class="ordered-list__item ordered-list__item_9">
-                <span class="like-h3">09.</span>
-                <p>stała, długofalowa, perspektywiczna współpraca</p>
-              </li> -->
             </ul>
-        </div>
-         <img src="../../assets/images/makaroniki-pozostale.png" alt="makaroniki"> 
+          </div>
+          <img src="../../assets/images/makaroniki-pozostale.png" alt="makaroniki">
       </section>
       <section class="benefits-2">
         <div class="benefits-2__content">
@@ -370,29 +376,29 @@
           </div>
           <div class="benefits-2--list">
             <ul class="list">
-              <li class="list__item" >
-                 <img class="item__image" src="../../assets/images/1.png" alt="">
-                <h4 class="h4 item__name">klasyczna technologia wytworzenia</h4>
+              <li class="list__item">
+                <img class="item__image" src="../../assets/images/1.png" alt="">
+                <h4 class="item__name paragraph_upper">klasyczna technologia wytworzenia</h4>
               </li>
-              <li class="list__item" >
-                 <img class="item__image" src="../../assets/images/1.png" alt="">
-                <h4 class="h4 item__name">klasyczna technologia wytworzenia</h4>
+              <li class="list__item">
+                <img class="item__image" src="../../assets/images/1.png" alt="">
+                <h4 class="item__name paragraph_upper">klasyczna technologia wytworzenia</h4>
               </li>
-              <li class="list__item" >
-                 <img class="item__image" src="../../assets/images/1.png" alt="">
-                <h4 class="h4 item__name">klasyczna technologia wytworzenia</h4>
+              <li class="list__item">
+                <img class="item__image" src="../../assets/images/1.png" alt="">
+                <h4 class="item__name paragraph_upper">klasyczna technologia wytworzenia</h4>
               </li>
-              <li class="list__item" >
-                 <img class="item__image" src="../../assets/images/1.png" alt="">
-                <h4 class="h4 item__name">klasyczna technologia wytworzenia</h4>
+              <li class="list__item">
+                <img class="item__image" src="../../assets/images/1.png" alt="">
+                <h4 class="item__name paragraph_upper">klasyczna technologia wytworzenia</h4>
               </li>
-              <li class="list__item" >
-                 <img class="item__image" src="../../assets/images/1.png" alt="">
-                <h4 class="h4 item__name">klasyczna technologia wytworzenia</h4>
+              <li class="list__item">
+                <img class="item__image" src="../../assets/images/1.png" alt="">
+                <h4 class="item__name paragraph_upper">klasyczna technologia wytworzenia</h4>
               </li>
-              <li class="list__item" >
-                 <img class="item__image" src="../../assets/images/1.png" alt="">
-                <h4 class="h4 item__name">klasyczna technologia wytworzenia</h4>
+              <li class="list__item">
+                <img class="item__image" src="../../assets/images/1.png" alt="">
+                <h4 class="item__name paragraph_upper">klasyczna technologia wytworzenia</h4>
               </li>
             </ul>
           </div>
@@ -401,45 +407,64 @@
       <section class="economic-indicator">
         <div class="economic-indicator__content">
           <div class="economic-indicator__heading">
-            <h3>bezpieczeństwo Twojego biznesu</h3>
+            <h3 class="economic-indicator__title h3 pastel-pink">bezpieczeństwo Twojego biznesu</h3>
           </div>
           <div class="economic-indicator--procent-card">
             <div class="procent-card">
               <div class="procent-card__top">
-                <h2>6</h2>
+                <h2 class="h2">6</h2>
               </div>
               <div class="procent-card__bottom">
-                <h4>miesięcy</h4>
-                <p>dostarczamy Ci produkt w postaci mrożonej z 6-miesięcznym terminem przechowywania (w temperaturze -18 st.) – brak ryzyka strat</p>
+                <p class="paragraph_upper">miesięcy</p>
+                <p class="paragraph">dostarczamy Ci produkt w postaci mrożonej z 6-miesięcznym terminem przechowywania (w temperaturze -18 st.) – brak ryzyka strat</p>
               </div>
             </div>
             <div class="procent-card">
               <div class="procent-card__top">
-                <h2>1.5</h2>
+                <h2 class="h2">1.5</h2>
               </div>
               <div class="procent-card__bottom">
-                <h4>godziny</h4>
-                <p>godziny makaroniki nadają się do sprzedaży już 1,5 godziny po wyjęciu  z zamrażarki (rozmrażanie w lodówce w temperaturze +4 – +6 st. przez 1,5 godz.)</p>
+                <p class="paragraph_upper">godziny</p>
+                <p class="paragraph">godziny makaroniki nadają się do sprzedaży już 1,5 godziny po wyjęciu z zamrażarki (rozmrażanie w lodówce w temperaturze +4 – +6 st. przez 1,5 godz.)</p>
               </div>
             </div>
             <div class="procent-card">
               <div class="procent-card__top">
-                <h2>7</h2>
+                <h2 class="h2">7</h2>
               </div>
               <div class="procent-card__bottom">
-                <h4>dni</h4>
-                <p>zakupione przez klienta zachowują świeżość i są zdatne do spożycia przez 7 dni</p>
+                <p class="paragraph_upper">dni</p>
+                <p class="paragraph">zakupione przez klienta zachowują świeżość i są zdatne do spożycia przez 7 dni</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <form action="#" class="contact-form" class="paragraph_upper">
+        <h2 class="h2">napisz do nas</h2>
+        <fieldset class="fields">
+          <label class="field paragraph_upper">
+            <span class="field__label" for="firstname">Imię:</span>
+            <input class="field__input" type="text" id="firstname" value="">
+          </label>
+          <label class="field paragraph_upper">
+            <span class="field__label" for="email">Email:</span>
+            <input class="field__input" type="text" id="email">
+          </label>
+          <label class="field paragraph_upper">
+            <span class="field__label" for="message">wiadomość</span>
+            <textarea class="field__textarea" id="message" name="message" rows="4" cols="80"></textarea>
+          </label>
+        </fieldset>
+        <input type="submit" value="Submit" class="button button-outlined button-outlined_dark-vanilla button_size_m contact-form_button_submit">
+      </form>
+      </form>
     </main>
-   <footer class="footer">
+    <footer class="footer">
       <nav class="footer-nav" aria-label="footnav">
         <ul class="footer-nav__list">
           <li class="footer-nav__item">
-            <a href="../biznes/index.html" class="footer-nav__link">dla biznesu</a>
+            <a href="../biznes/index.html" class="footer-nav__link active">dla biznesu</a>
           </li>
           <li class="footer-nav__item">
             <a href="../zestawy/index.html" class="footer-nav__link">gotowe sety</a>
@@ -454,7 +479,7 @@
             <a href="../konfigurator/index.html" class="footer-nav__link">twoja kompozycja</a>
           </li>
           <li class="footer-nav__item">
-            <a href="../alergeny/index.html" class="footer-nav__link active">alergeny</a>
+            <a href="../alergeny/index.html" class="footer-nav__link">alergeny</a>
           </li>
           <li class="footer-nav__item">
             <a href="../faq/index.html" class="footer-nav__link">faq</a>
