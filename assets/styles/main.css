@@ -184,14 +184,6 @@ a {
     max-height: 3rem;
     padding: 0.9375rem 1.0625rem;
   }
-  /*.button_size_s {
-    font: normal 0.75rem/1.0625rem var(--contentFont);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    max-height: 1.5rem;
-    min-width: 6.125rem;
-    padding: 0.3125rem 0.5625rem;
-  }*/
 }
 
 .button_rounded {
@@ -283,6 +275,7 @@ a {
 .uppercase {
   text-transform: uppercase;
 }
+
 .lowercase {
   text-transform: lowercase;
 }
@@ -805,6 +798,10 @@ z nadrukiem of topbar menu*/
   background: #ffffff;
 }
 
+.checkbox-toggle-menu:hover ~ .button-toggle-menu {
+  border-color: transparent;
+}
+
 .checkbox-toggle-menu:checked ~ .button-toggle-menu span:first-child {
   transform: rotate(45deg) translate(0.4375rem, 0.4375rem);
   opacity: 1;
@@ -846,7 +843,6 @@ z nadrukiem of topbar menu*/
 .header-menu {
   width: 100%;
   height: auto;
-  background: #eeeeee;
   position: relative;
 }
 

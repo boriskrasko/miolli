@@ -11,10 +11,10 @@
     <div class="chat">
       <input type="checkbox">
       <button class="chat__button">
-        <i class="chat__icon">
+        <span class="chat__icon">
           <span></span>
           <span></span>
-        </i>
+        </span>
       </button>
       <div class="chat-popup" id="chatForm">
         <div class="chat-popup__heading">
@@ -118,7 +118,7 @@
                     </div>
                     <div class="cart-preview__footer">
                       <a href="../koszyk/index.html" class="cart-preview__remainder">i jeszcze <span class="rest">1</span> ... </a>
-                      <a href="../koszyk/index.html" class="cart-preview__button button button-contained dark-vanilla button_size_m">przejdź do koszyka</a>
+                      <a href="../koszyk/index.html" class="cart-preview__button button button-contained dark-vanilla  button_size_m">przejdź do koszyka</a>
                     </div>
                   </div>
                 </li>
@@ -894,6 +894,12 @@
       }
       sliderOne();
       sliderTwo();
+
+      const headerMenu = document.querySelector('.header-menu_inner');
+      const headerMenuToggle = document.querySelector('.checkbox-toggle-menu');
+      headerMenu.onclick = e => {
+        headerMenuToggle.checked = (e.target == e.currentTarget) ? false : true;
+      }
     </script>
   </body>
 </html>

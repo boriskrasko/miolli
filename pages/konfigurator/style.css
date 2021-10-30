@@ -495,7 +495,6 @@ main {
 
 .flavor-choice__body {
   max-width: 37.5rem;
-  padding-right: 10px;
 }
 
 .scrollbox__heading {
@@ -594,7 +593,7 @@ main {
 }
 
 .flavor-choice__button {
-  margin: 20px 0;
+  margin: 20px;
   width: 100%;
   max-width: 326px;
 }
