@@ -210,14 +210,16 @@
     </header>
     <main class="main">
       <div class="start-screen">
+        <div class="background-mask-2 inner"></div>
+        <div class="background-mask inner"></div>
         <div class="brand-container">
           <img class="brand-name" src="../../assets/icons/miolli.svg" alt="miolli">
           <span class="brand-tagline uppercase">smak inspiracji</span>
         </div>
-        <button class="button_sticky button button-contained dark-coral button_rounded desktop-only">
+        <!-- <button class="button_sticky button button-contained dark-coral button_rounded desktop-only">
           <img class="heart-icon" src="../../assets/icons/heart.svg" alt="heart"> pamiętasz? niedługo dzień ...! <span class="button_sticky__call-to-action">zamów zestaw</span>
           <span class="material-icons">east</span>
-        </button>
+        </button> -->
         <a href="#inspiration" class="button button-swipe">
           <span class="button-swipe__item dot"></span>
           <span class="button-swipe__item dot"></span>
@@ -902,6 +904,13 @@
       headerMenuToggle.addEventListener('change', () => {
         document.body.style.overflow = (headerMenuToggle.checked && (window.innerWidth <= 501 || window.screen <= 501)) ? 'hidden' : 'auto' ;
       })
+
+      const backgroundMask = document.querySelector('.background-mask');
+      const backgroundMask2 = document.querySelector('.background-mask-2');
+
+      setInterval(() => backgroundMask.style.backgroundImage = 'url(../../assets/images/film.png)', 10000);
+      setInterval(() => backgroundMask.style.backgroundImage = 'url(../../assets/images/diana-polekhina-startscreen.png)', 20000);
+      setTimeout(() => backgroundMask2.style.visibility = 'visible', 5000)
     </script>
   </body>
 </html>
