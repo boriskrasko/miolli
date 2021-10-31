@@ -210,14 +210,15 @@
     </header>
     <main class="main">
       <div class="start-screen">
+        <div class="background-mask inner"></div>
         <div class="brand-container">
           <img class="brand-name" src="../../assets/icons/miolli.svg" alt="miolli">
           <span class="brand-tagline uppercase">smak inspiracji</span>
         </div>
-        <button class="button_sticky button button-contained dark-coral button_rounded desktop-only">
+        <!-- <button class="button_sticky button button-contained dark-coral button_rounded desktop-only">
           <img class="heart-icon" src="../../assets/icons/heart.svg" alt="heart"> pamiętasz? niedługo dzień ...! <span class="button_sticky__call-to-action">zamów zestaw</span>
           <span class="material-icons">east</span>
-        </button>
+        </button> -->
         <a href="#inspiration" class="button button-swipe">
           <span class="button-swipe__item dot"></span>
           <span class="button-swipe__item dot"></span>
@@ -677,6 +678,10 @@
         </a>
       </section>
       <div>
+        <!--  <video style="width: 100%; height: 600px; object-fit: cover; object-position: center;" autoplay muted loop>
+          <source src="../../assets/images/test.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video> -->
         <img style="width: 100%; min-height: 400px; object-fit: cover; object-position: center;" src="../../assets/images/film.png" alt="">
       </div>
       <div class="causes">
@@ -900,8 +905,21 @@
       }
 
       headerMenuToggle.addEventListener('change', () => {
-        document.body.style.overflow = (headerMenuToggle.checked && (window.innerWidth <= 501 || window.screen <= 501)) ? 'hidden' : 'auto' ;
-      })
+        document.body.style.overflow = (headerMenuToggle.checked && (window.innerWidth <= 501 || window.clientWidth <= 501)) ? 'hidden' : 'initial' ;
+      });
+
+      const backgroundMask = document.querySelector('.background-mask');
+      let x = 1;
+      let max = 2;
+      setInterval(() => {
+        if(x < max) {
+           backgroundMask.style.backgroundImage = `url(../../assets/images/b${x++}.png)`;
+        } else {
+          backgroundMask.style.backgroundImage = `url(../../assets/images/b${x--}.png)`;
+          x = 0;
+        }
+      }, 5000);
+
     </script>
   </body>
 </html>

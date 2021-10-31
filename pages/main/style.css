@@ -50,6 +50,13 @@
   width: 100%;
   max-width: var(--max);
   height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background-mask {
+  position: absolute;
   background-color: #cccccc;
   background-image: url(../../assets/images/diana-polekhina-startscreen.png);
   background-repeat: no-repeat;
@@ -57,6 +64,14 @@
   background-size: cover;
   justify-content: center;
   align-items: center;
+  transform: scale(1.2);
+  animation: example 5s infinite alternate;
+  transition: 0.7s background ease-in-out;
+}
+
+@keyframes example {
+  0% {transform: scale(1.2)}
+  100% {transform: scale(1)}
 }
 
 .brand-container {
