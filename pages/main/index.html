@@ -210,7 +210,6 @@
     </header>
     <main class="main">
       <div class="start-screen">
-        <div class="background-mask-2 inner"></div>
         <div class="background-mask inner"></div>
         <div class="brand-container">
           <img class="brand-name" src="../../assets/icons/miolli.svg" alt="miolli">
@@ -679,6 +678,10 @@
         </a>
       </section>
       <div>
+        <!--  <video style="width: 100%; height: 600px; object-fit: cover; object-position: center;" autoplay muted loop>
+          <source src="../../assets/images/test.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video> -->
         <img style="width: 100%; min-height: 400px; object-fit: cover; object-position: center;" src="../../assets/images/film.png" alt="">
       </div>
       <div class="causes">
@@ -902,15 +905,21 @@
       }
 
       headerMenuToggle.addEventListener('change', () => {
-        document.body.style.overflow = (headerMenuToggle.checked && (window.innerWidth <= 501 || window.screen <= 501)) ? 'hidden' : 'auto' ;
-      })
+        document.body.style.overflow = (headerMenuToggle.checked && (window.innerWidth <= 501 || window.clientWidth <= 501)) ? 'hidden' : 'initial' ;
+      });
 
       const backgroundMask = document.querySelector('.background-mask');
-      const backgroundMask2 = document.querySelector('.background-mask-2');
+      let x = 1;
+      let max = 2;
+      setInterval(() => {
+        if(x < max) {
+           backgroundMask.style.backgroundImage = `url(../../assets/images/b${x++}.png)`;
+        } else {
+          backgroundMask.style.backgroundImage = `url(../../assets/images/b${x--}.png)`;
+          x = 0;
+        }
+      }, 5000);
 
-      setInterval(() => backgroundMask.style.backgroundImage = 'url(../../assets/images/film.png)', 10000);
-      setInterval(() => backgroundMask.style.backgroundImage = 'url(../../assets/images/diana-polekhina-startscreen.png)', 20000);
-      setTimeout(() => backgroundMask2.style.visibility = 'visible', 5000)
     </script>
   </body>
 </html>

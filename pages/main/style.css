@@ -50,7 +50,6 @@
   width: 100%;
   max-width: var(--max);
   height: 100vh;
-  /*background-color: #eeeeee;*/
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -65,33 +64,14 @@
   background-size: cover;
   justify-content: center;
   align-items: center;
-  transform: scale(1.1);
+  transform: scale(1.2);
   animation: example 5s infinite alternate;
+  transition: 0.7s background ease-in-out;
 }
 
 @keyframes example {
-  0% {transform: scale(1.1); opacity: 0;}
-  60% {opacity: 1;}
-  100% {transform: scale(1); opacity: 1;}
-}
-
-.background-mask-2 {
-  position: absolute;
-  background-color: #cccccc;
-  background-image: url(../../assets/images/film.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
-  transform: scale(1.1);
-  visibility: hidden;
-  animation: example2 5s infinite alternate;
-}
-
-@keyframes example2 {
-  0% {transform: scale(1.1);}
-  100% {transform: scale(1);}
+  0% {transform: scale(1.2)}
+  100% {transform: scale(1)}
 }
 
 .brand-container {
