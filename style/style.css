@@ -837,6 +837,10 @@
   color: var(--pastel-pink);
 }
 
+.sub__title.section__title {
+  color: #222;
+}
+
 .section__title ~ hr,
 .title ~ hr  {
   width: 197px;
@@ -3167,12 +3171,12 @@ input[type=file] {
 }
 
 .main_user {
+  width: calc(100% - 64px);
+  margin: calc(78px + 32px) auto 32px;
   background-color: #FFECE6;
   background-image: url(../images/mask.png);
   background-position: -1000px -700px;
   background-size: cover;
-  width: calc(100% - 64px);
-  margin: calc(78px + 32px) auto 32px;
 }
 
 .user {
@@ -3183,7 +3187,7 @@ input[type=file] {
   flex-direction: column;
   align-items: center;
   transition: 0.4s background-color;
-  padding: 82px 5% 41px;
+  padding: 41px 5%;
 }
 
 .user__title {
@@ -3193,11 +3197,85 @@ input[type=file] {
   margin: 0 auto;
 }
 
+.breadcrumb_user {
+  margin: 0;
+}
+
 .tabs {
+  position: relative;
+  margin-top: 50px;
+  width: 1000px;
+}
+
+.tabs_start {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 24px;
 }
 
-.breadcrumb_user {
-  margin: 0;
+.tabs_start .tab__name {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  border: 0;
+  outline: 2px solid #444;
+}
+
+.tab__name {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #444;
+  transition: 0.2s all;
+  z-index: 1;
+}
+
+.tabs input[type="radio"] {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  opacity: 0;
+  z-index: 9;
+  border: 0;
+  border-radius: 0;
+}
+
+.tabs_start input[type="radio"] {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 9;
+  border-radius: 0;
+}
+
+.tabs input[type="radio"]:checked {
+  z-index: 0;
+}
+
+.tabs input[type="radio"]:checked ~ .tab__name {
+  color: #fff;
+  background-color: #222;
+}
+
+.tab__content {
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+}
+
+.tab input[type="radio"]:checked ~ .tab__content {
+  position: absolute;
+  visibility: visible;
+  left: 350px;
+  top: 0;
+  width: 600px;
+  min-height: 400px;
+  display: flex;
+  outline: 2px solid #444;
+  transition: 0.1s all;
 }
