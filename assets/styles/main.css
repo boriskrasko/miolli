@@ -177,11 +177,10 @@ a {
   padding: 0.875rem 0.5625rem;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 500px) {
   .button_size_l, .button_size_m {
-    font: normal 0.75rem/1.25rem var(--contentFont);
+    font: normal 0.875rem/1.25rem var(--contentFont);
     max-height: 50px;
-    max-height: 3rem;
     padding: 0.9375rem 1.0625rem;
   }
 }
@@ -236,7 +235,7 @@ a {
   }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 500px) {
   .h1, .h2, .h3 {
     font: normal 50px/50px var(--titleFont);
   }
@@ -263,12 +262,12 @@ a {
   letter-spacing: 0.025em;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 500px) {
   .paragraph_upper_l {
     font: normal 1rem/25px var(--contentFont);
   }
   .paragraph_upper, .paragraph {
-    font: normal 0.90625rem/25px var(--contentFont);
+    font: normal 0.85rem/25px var(--contentFont);
   }
 }
 
@@ -749,7 +748,7 @@ z nadrukiem of topbar menu*/
   align-items: center;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 500px) {
   .topbar__logo {
     min-width: 4.875rem;
     padding: 0 0.9375rem;
@@ -1086,7 +1085,7 @@ z nadrukiem of topbar menu*/
   margin-top: 0.1875rem;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 500px) {
   .chat-popup {
     min-height: 15.625rem;
   }
