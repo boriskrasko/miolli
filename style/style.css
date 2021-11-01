@@ -3288,3 +3288,20 @@ input[type=file] {
   display: flex;
   background-color: rgb(214, 181, 172);
 }
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.article__image{
+  margin: 40px;
+}
+
+.article__content {
+  max-width: 500px;
+  font: 16px/25px var(--contentFont);
+  letter-spacing: 0.1em;
+  margin: 40px;
+}

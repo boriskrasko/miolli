@@ -2,7 +2,7 @@
 <html lang="pl">
   <head>
     <meta charset='utf-8'>
-    <title>Miolli | Gotowe sety</title>
+    <title>Miolli | Alergeny</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' type='text/css' media='screen' href='style/colors.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/fonts.css'>
@@ -29,7 +29,7 @@
           <li class="topnav__item">
             <a class="topnav__link" href="configurator.html">twoja kompozycja</a>
           </li>
-          <li class="topnav__item disabled">
+          <li class="topnav__item">
             <a class="topnav__link" href="sets.html">gotowe sety makaroników</a>
           </li>
           <li class="topnav__item hasChild">
@@ -121,11 +121,11 @@ teraz:
           <li class="sidenav__item">
             <a class="sidenav__link" href="faq.html">faq</a>
           </li>
-          <li class="sidenav__item">
+          <li class="sidenav__item disabled">
             <a class="sidenav__link" href="allergen.html">alergeny</a>
           </li>
-          <li class="sidenav__item mobile-only disabled">
-            <a class="sidenav__link" href="#">gotowe sety</a>
+          <li class="sidenav__item mobile-only">
+            <a class="sidenav__link" href="sets.html">gotowe sety</a>
           </li>
           <li class="sidenav__item mobile-only">
             <a class="sidenav__link" href="prints.html">makaroniki z nadrukiem</a>
@@ -190,184 +190,64 @@ teraz:
             <svg class="breadcrumb__arrow">
               <use href="#breadcrumbArrow"></use>
             </svg>
-            <a class="breadcrumb__link" href="#" aria-current="location">gotowe sety makaroników</a>
+            <a class="breadcrumb__link" href="#" aria-current="location">alergeny</a>
           </li>
         </ul>
       </nav>
-      <input id="sortBtn" type="checkbox">
-      <label class="sort-switch" for="sortBtn">
-        <svg>
-          <use href="#sort"></use>
-        </svg>
-      </label>
-      <div class="filter">
-        <div class="filter__list">
-          <input id="id1" type="checkbox">
-          <label for="id1" class="filter__item">dzień mamy</label>
-          <input id="id2" type="checkbox">
-          <label for="id2" class="filter__item">dla zakochanych</label>
-          <input id="id3" type="checkbox">
-          <label for="id3" class="filter__item">dla dzieci</label>
-          <input id="id4" type="checkbox">
-          <label for="id4" class="filter__item">na urodziny</label>
-          <input id="id5" type="checkbox">
-          <label for="id5" class="filter__item">wielkanoc</label>
-          <input id="id6" type="checkbox">
-          <label for="id6" class="filter__item">dzień taty</label>
-        </div>
-        <div class="dropdown dropdown_sort">
-          <p>Filtruj:</p>
-          <div class="dropdown__select">
-            <div class="dropdown__item-current">
-              <p class="dropdown__text-current">najpopularniejsze</p>
-              <button class="arrow"></button>
-            </div>
-            <ul class="options">
-              <li class="option selected">
-                <p class="option__text">najpopularniejsze</p>
-              </li>
-              <li class="option">
-                <p class="option__text">po cene</p>
-              </li>
-              <li class="option">
-                <p class="option__text">po nazwie</p>
-              </li>
-            </ul>
+      <section class="section">
+        <h2 class="section__title">składniki i alergeny</h2>
+        <hr>
+        <article class="article">
+          <aside class="article__image">
+            <img src="images/article-image.png" alt="Pink macaron">
+          </aside>
+          <div class="article__content">
+            <p></p>Makaroniki, znane również jako makaroniki francuskie, to delikatne ciasteczka migdałowe o przyjemnej konsystencji i intensywnym smaku. Ich składniki są dość proste, ale kluczowe dla uzyskania idealnej tekstury i smaku. Oto podstawowe składniki potrzebne do przygotowania makaroników:
+
+Migdały:
+
+W postaci mąki migdałowej. Migdały nadają makaronikom charakterystyczny smak i delikatność.
+Cukier puder:
+
+Dodawany do mąki migdałowej i utrwalający słodki smak ciasteczek.
+Białka jaj:
+
+Są niezbędne do uzyskania odpowiedniej konsystencji ciasta, a także do utworzenia charakterystycznej "nóżki" (fr. pied) podczas pieczenia.
+Cukier granulowany:
+
+Wykorzystywany do przygotowania bezy, która stanowi jedną z warstw wewnętrznych makaroników.
+Barwnik spożywczy:
+
+Dodawany dla nadania makaronikom różnych kolorów. Może to być pasta lub żel spożywczy.
+Smakowe wypełnienie:
+
+Na przykład, krem masłowy, ganache czekoladowe, dżem, lub inne smaki, które nadają dodatkowy smak ciasteczkom.
+            Alergeny w makaronikach są głównie związane z migdałami i jajkami, więc osoby uczulone na te składniki powinny być ostrożne. Warto również sprawdzić składniki używane do wypełnienia, szczególnie jeśli zawierają mleko, orzechy lub inne potencjalnie alergenne substancje.
+            W przypadku konkretnych informacji o alergenach zawsze zaleca się dokładne czytanie etykiet produktów lub pytać o składniki u producenta lub cukiernika. Warto również pamiętać, że receptury mogą się różnić, więc istotne jest uzyskanie informacji bezpośrednio od źródła, w którym makaroniki zostały przygotowane.
+          </p>
           </div>
-        </div>
-      </div>
-      <div class="cards-grid">
-        <div class="card-set">
-          <img class="card-set__image" src="images/set_small-1.png" width="260" height="405" alt="set na lato">
-          <h4 class="card-set__name">set na lato</h4>
-          <p class="card-set__text">2xlimonka, 3xcytryna
-            i mięta, 1xtruskawka,
-            3xszczaw</p>
-          <p class="card-set__cost">34,-</p>
-          <a class="card-set__button button button_size_m button_width_x2 button_outlined_primary" href="set.html">kup</a>
-        </div>
-        <div class="card-set">
-          <img class="card-set__image" src="images/set_small-2.png" width="260" height="405" alt="set na lato">
-          <h4 class="card-set__name">set na lato</h4>
-          <p class="card-set__text">2xlimonka, 3xcytryna
-            i mięta, 1xtruskawka,
-            3xszczaw</p>
-          <p class="card-set__cost">34,-</p>
-          <a class="card-set__button button button_size_m button_width_x2 button_outlined_primary" href="set.html">kup</a>
-        </div>
-        <div class="card-set">
-          <img class="card-set__image" src="images/set_small-3.png" width="260" height="405" alt="set na lato">
-          <h4 class="card-set__name">set na lato</h4>
-          <p class="card-set__text">2xlimonka, 3xcytryna
-            i mięta, 1xtruskawka,
-            3xszczaw</p>
-          <p class="card-set__cost">34,-</p>
-          <a class="card-set__button button button_size_m button_width_x2 button_outlined_primary" href="set.html">kup</a>
-        </div>
-        <div class="card-set">
-          <img class="card-set__image" src="images/set_small-4.png" width="260" height="405" alt="set na lato">
-          <h4 class="card-set__name">set na lato</h4>
-          <p class="card-set__text">2xlimonka, 3xcytryna
-            i mięta, 1xtruskawka,
-            3xszczaw</p>
-          <p class="card-set__cost">34,-</p>
-          <a class="card-set__button button button_size_m button_width_x2 button_outlined_primary" href="set.html">kup</a>
-        </div>
-        <div class="card-set">
-          <img class="card-set__image" src="images/set_small-1.png" width="260" height="405" alt="set na lato">
-          <h4 class="card-set__name">set na lato</h4>
-          <p class="card-set__text">2xlimonka, 3xcytryna
-            i mięta, 1xtruskawka,
-            3xszczaw</p>
-          <p class="card-set__cost">34,-</p>
-          <a class="card-set__button button button_size_m button_width_x2 button_outlined_primary" href="set.html">kup</a>
-        </div>
-        <div class="card-set">
-          <img class="card-set__image" src="images/set_small-2.png" width="260" height="405" alt="set na lato">
-          <h4 class="card-set__name">set na lato</h4>
-          <p class="card-set__text">2xlimonka, 3xcytryna
-            i mięta, 1xtruskawka,
-            3xszczaw</p>
-          <p class="card-set__cost">34,-</p>
-          <a class="card-set__button button button_size_m button_width_x2 button_outlined_primary" href="set.html">kup</a>
-        </div>
-        <div class="card-set">
-          <img class="card-set__image" src="images/set_small-3.png" width="260" height="405" alt="set na lato">
-          <h4 class="card-set__name">set na lato</h4>
-          <p class="card-set__text">2xlimonka, 3xcytryna
-            i mięta, 1xtruskawka,
-            3xszczaw</p>
-          <p class="card-set__cost">34,-</p>
-          <a class="card-set__button button button_size_m button_width_x2 button_outlined_primary" href="set.html">kup</a>
-        </div>
-        <div class="card-set">
-          <img class="card-set__image" src="images/set_small-4.png" width="260" height="405" alt="set na lato">
-          <h4 class="card-set__name">set na lato</h4>
-          <p class="card-set__text">2xlimonka, 3xcytryna
-            i mięta, 1xtruskawka,
-            3xszczaw</p>
-          <p class="card-set__cost">34,-</p>
-          <a class="card-set__button button button_size_m button_width_x2 button_outlined_primary" href="set.html">kup</a>
-        </div>
-      </div>
-      <div class="pagination">
-        <ul class="pagination__list">
-          <i class="pagination__btn pagination__btn_prev disabled"><</i>
-          <li class="pagination__item">
-            <a href="#" class="pagination__link disabled">1</a>
-          </li>
-          <li class="pagination__item">
-            <a href="#" class="pagination__link">2</a>
-          </li>
-          <li class="pagination__item">
-            <a href="#" class="pagination__link">3</a>
-          </li>
-          <i class="pagination__btn pagination__btn_next">></i>
-        </ul>
-      </div>
-    </main>
-    <section class="box">
-      <div class="box__content">
-        <h2 class="box__title">skomponuj
-          swoje pudełko</h2>
-          <ul class="box__list">
-            <li class="box__item">wybierz rozmiar (6/12/24szt)</li>
-            <li class="box__item">wybierz ulubione smaki</li>
-            <li class="box__item">dodaj nadruk z naszej bazy
-              albo swój własny
-              to może być napis lub pełnokolorowy
-              wydruk (np. Twoje logo)</li>
-          </ul>
-          <p class="box__text">proste? To do dzieła!
-            Smacznego!</p>
-          <img class="box__logo" src="icons/miolli-logo-small.svg" alt="miolli logo">
-      </div>
-      <div class="box__box">
-        <img src="images/box.png" alt="miolli box">
-      </div>
-      <div class="box__button">
-        <a class="button button_size_l button_outlined" href="">stwórz swoją kompozycję</a>
-      </div>
-    </section>
+        </article>
+      </section>
+    </main>  
     <footer class="footer">
       <nav>
         <ul class="footer__list">
           <li class="footer__item">
             <a href="" class="footer__link">dla biznesu</a>
           </li>
-          <li class="footer__item disabled">
-            <a href="#" class="footer__link">gotowe sety</a>
+          <li class="footer__item">
+            <a href="sets.html" class="footer__link">gotowe sety</a>
           </li>
           <li class="footer__item">
             <a href="" class="footer__link">o nas</a>
           </li>
           <li class="footer__item">
-            <a href="" class="footer__link">makaroniki z nadrukiem</a>
+            <a href="prints.html" class="footer__link">makaroniki z nadrukiem</a>
           </li>
           <li class="footer__item">
            <a href="configurator.html " class="footer__link">twoja kompozycja</a>
           </li>
-          <li class="footer__item">
+          <li class="footer__item disabled">
             <a href="allergen.html" class="footer__link">alergeny</a>
           </li>
           <li class="footer__item">
@@ -418,6 +298,9 @@ teraz:
       </symbol>
       <symbol id="sort" viewBox="0 0 1024 1024">
         <path d="M128 768h256v-85.333333H128v85.333333z m0-512v85.333333h768v-85.333333H128z m0 298.666667h512v-85.333334H128v85.333334z" />
+      </symbol>
+      <symbol id="like" viewBox="-4 0 32 32">
+        <path d="M18.188 6.094c5.188 0 6.906 6 5.094 9.281-2.781 5.094-11.281 10.5-11.281 10.5s-8.531-5.406-11.281-10.5c-1.813-3.281-0.125-9.281 5.094-9.281 4.813 0 6.031 4.156 6.188 4.781 0.156-0.625 1.375-4.781 6.188-4.781z"/>
       </symbol>
       
     </svg>
@@ -538,34 +421,7 @@ teraz:
           sendMessage();
         }
       });
-
-      // Dropdown
-      for (const dropdown of document.querySelectorAll('.dropdown')) {
-        dropdown.addEventListener('click', function () {
-          this.querySelector('.dropdown__select').classList.toggle('opened');
-        })
-      }
-      for (const option of document.querySelectorAll('.option')) {
-        option.addEventListener('click', function () {
-          if (!this.classList.contains('selected')) {
-            this.parentNode.querySelector('.option.selected').classList.remove('selected');
-            this.classList.add('selected');
-            this.closest('.dropdown__select').querySelector('.dropdown__item-current p').textContent = this.textContent;
-            changeMap(document.querySelector('.selected').dataset.location.split(', '));
-          }
-        })
-      }
-      window.addEventListener('click', function (e) {
-        for (const select of document.querySelectorAll('.dropdown__select')) {
-          if (!select.contains(e.target)) {
-            select.classList.remove('opened');
-          }
-        }
-      });
-
-      document.querySelector('#switch').addEventListener('change', () => {
-        document.querySelector('#switch').checked ? document.body.classList.add('open') : document.body.classList.remove('open');
-      })
+    
     </script>
   </body>
 </html>

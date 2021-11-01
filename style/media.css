@@ -186,6 +186,9 @@
   .main .sets {
     justify-content: center;
   }
+  .article > * {
+    margin: 5%;
+  }
 }
 
 @media screen and (max-width: 500px) {
