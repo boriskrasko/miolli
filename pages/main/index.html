@@ -905,7 +905,7 @@
       }
 
       headerMenuToggle.addEventListener('change', () => {
-        document.body.style.overflow = (headerMenuToggle.checked && (window.innerWidth <= 501 || window.clientWidth <= 501)) ? 'hidden' : 'initial' ;
+        document.body.style.overflow = (headerMenuToggle.checked && (window.innerWidth <= 501 || window.clientWidth <= 1000)) ? 'hidden' : 'initial' ;
       });
 
       const backgroundMask = document.querySelector('.background-mask');
