@@ -2,7 +2,7 @@
 <html lang="pl">
   <head>
     <meta charset='utf-8'>
-    <title>Miolli | Makaroniki z nadrukiem</title>
+    <title>Miolli | Pyszny blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' type='text/css' media='screen' href='style/colors.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/fonts.css'>
@@ -32,8 +32,8 @@
           <li class="topnav__item">
             <a class="topnav__link" href="sets.html">gotowe sety makaroników</a>
           </li>
-          <li class="topnav__item hasChild disabled">
-            <a class="topnav__link" href="">makaroniki z nadrukiem
+          <li class="topnav__item hasChild">
+            <a class="topnav__link" href="prints.html">makaroniki z nadrukiem
               <svg class="arrow">
                 <use href="#bottom"></use>
               </svg>
@@ -115,7 +115,7 @@ teraz:
           <li class="sidenav__item">
             <a class="sidenav__link" href="">o nas</a>
           </li>
-          <li class="sidenav__item">
+          <li class="sidenav__item disabled">
             <a class="sidenav__link" href="blog.html">blog</a>
           </li>
           <li class="sidenav__item">
@@ -127,8 +127,8 @@ teraz:
           <li class="sidenav__item mobile-only">
             <a class="sidenav__link" href="sets.html">gotowe sety</a>
           </li>
-          <li class="sidenav__item mobile-only disabled">
-            <a class="sidenav__link" href="#">makaroniki z nadrukiem</a>
+          <li class="sidenav__item mobile-only">
+            <a class="sidenav__link" href="prints.html">makaroniki z nadrukiem</a>
           </li>
           <li class="sidenav__item">
             <a class="sidenav__link" href="configurator.html">konfigurator on-line</a>
@@ -190,188 +190,137 @@ teraz:
             <svg class="breadcrumb__arrow">
               <use href="#breadcrumbArrow"></use>
             </svg>
-            <a class="breadcrumb__link" href="#" aria-current="location">makaroniki z nadrukiem</a>
+            <a class="breadcrumb__link" href="#" aria-current="location">blog</a>
           </li>
         </ul>
       </nav>
-      <input id="sortBtn" type="checkbox">
-      <label class="sort-switch" for="sortBtn">
-        <svg>
-          <use href="#sort"></use>
-        </svg>
-      </label>
-      <div class="filter">
-        <div class="filter__list">
-          <input id="id1" type="checkbox">
-          <label for="id1" class="filter__item">dzień mamy</label>
-          <input id="id2" type="checkbox">
-          <label for="id2" class="filter__item">dla zakochanych</label>
-          <input id="id3" type="checkbox">
-          <label for="id3" class="filter__item">dla dzieci</label>
-          <input id="id4" type="checkbox">
-          <label for="id4" class="filter__item">na urodziny</label>
-          <input id="id5" type="checkbox">
-          <label for="id5" class="filter__item">wielkanoc</label>
-          <input id="id6" type="checkbox">
-          <label for="id6" class="filter__item">dzień taty</label>
-        </div>
-        <div class="dropdown dropdown_sort">
-          <p>Filtruj:</p>
-          <div class="dropdown__select">
-            <div class="dropdown__item-current">
-              <p class="dropdown__text-current">najpopularniejsze</p>
-              <button class="arrow"></button>
+      <section class="section blog">
+        <h2 class="section__title">pyszny blog</h2>
+        <hr>
+        <p class="section__subtitle">CZYLI WSZYSTKO CO POWINIENEŚ WIEDZIEĆ <br>O MAKARONIKACH I NIE TYLKO!</p>
+        <div class="article-cards">
+          <article class="article-card">
+            <div class="article-card__header">
+              <figure class="article-card__figure">
+                <img src="images/article-image.png" alt="">
+              </figure>
             </div>
-            <ul class="options">
-              <li class="option selected">
-                <p class="option__text">najpopularniejsze</p>
-              </li>
-              <li class="option">
-                <p class="option__text">po cene</p>
-              </li>
-              <li class="option">
-                <p class="option__text">po nazwie</p>
-              </li>
-            </ul>
-          </div>
+            <div class="article-card__body">
+              <h2 class="article-card__title h5">Czysty skład to dobry skład</h2>
+              <p class="article-card__copy paragraph">
+                O tym, czym charakteryzują się makaroniki najlepszej jakości.
+              </p>
+            </div>
+            <footer class="article-card__footer">
+              <div class="article-card__actions">
+                <a href="article.html" class="article-card__button button button_size_m button_width_x2 button_outlined_primary">
+                  Czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
+          <article class="article-card">
+            <div class="article-card__header">
+              <figure class="article-card__figure">
+                <img src="images/article-image-2.png" alt="">
+              </figure>
+            </div>
+            <div class="article-card__body">
+              <h2 class="article-card__title h5">Tradycja ma znaczenie</h2>
+              <p class="article-card__copy paragraph">
+                O tym, czym charakteryzują się makaroniki najlepszej jakości.
+              </p>
+            </div>
+            <footer class="article-card__footer">
+              <div class="article-card__actions">
+                <a href="article.html" class="article-card__button button button_size_m button_width_x2 button_outlined_primary">
+                  Czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
+          <article class="article-card">
+            <div class="article-card__header">
+              <figure class="article-card__figure">
+                <img src="images/article-image-3.png" alt="">
+              </figure>
+            </div>
+            <div class="article-card__body">
+              <h2 class="article-card__title h5">Czy większe znaczy lepsze?</h2>
+              <p class="article-card__copy paragraph">
+                O tym, czym charakteryzują się makaroniki najlepszej jakości.
+              </p>
+            </div>
+            <footer class="article-card__footer">
+              <div class="article-card__actions">
+                <a href="article.html" class="article-card__button button button_size_m button_width_x2 button_outlined_primary">
+                  Czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
+          <article class="article-card">
+            <div class="article-card__header">
+              <figure class="article-card__figure">
+                <img src="images/article-image.png" alt="">
+              </figure>
+            </div>
+            <div class="article-card__body">
+              <h2 class="article-card__title h5">Czysty skład to dobry skład</h2>
+              <p class="article-card__copy paragraph">
+                O tym, czym charakteryzują się makaroniki najlepszej jakości.
+              </p>
+            </div>
+            <footer class="article-card__footer">
+              <div class="article-card__actions">
+                <a href="article.html" class="article-card__button button button_size_m button_width_x2 button_outlined_primary">
+                  Czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
+          <article class="article-card">
+            <div class="article-card__header">
+              <figure class="article-card__figure">
+                <img src="images/article-image-2.png" alt="">
+              </figure>
+            </div>
+            <div class="article-card__body">
+              <h2 class="article-card__title h5">Tradycja ma znaczenie</h2>
+              <p class="article-card__copy paragraph">
+                O tym, czym charakteryzują się makaroniki najlepszej jakości.
+              </p>
+            </div>
+            <footer class="article-card__footer">
+              <div class="article-card__actions">
+                <a href="article.html" class="article-card__button button button_size_m button_width_x2 button_outlined_primary">
+                  Czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
+          <article class="article-card">
+            <div class="article-card__header">
+              <figure class="article-card__figure">
+                <img src="images/article-image-3.png" alt="">
+              </figure>
+            </div>
+            <div class="article-card__body">
+              <h2 class="article-card__title h5">Czy większe znaczy lepsze?</h2>
+              <p class="article-card__copy paragraph">
+                O tym, czym charakteryzują się makaroniki najlepszej jakości.
+              </p>
+            </div>
+            <footer class="article-card__footer">
+              <div class="article-card__actions">
+                <a href="article.html" class="article-card__button button button_size_m button_width_x2 button_outlined_primary">
+                  Czytaj
+                </a>
+              </div>
+            </footer>
+          </article>
         </div>
-      </div>
-      <div class="cards-grid cards-grid_print">
-        <div class="card-print">
-          <aside>
-            <img class="card__print" src="icons/miolli-logo.svg" alt="">
-            <img class="card__image" src="images/czekolada-wisnia.png" alt="czekolada
-          i wiśnia">
-          </aside>
-          <h4 class="card__name">i love you</h4>
-          <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
-            <input id="favorite1" type="checkbox" checked>
-            <label for="favorite1" class="card__button card__button_like button_outlined_primary">
-              <svg class="like">
-                <use href="#like"></use>
-              </svg>
-            </label>
-          </div>
-        </div>
-        <div class="card-print">
-          <aside>
-            <img class="card__print" src="icons/miolli-logo.svg" alt="">
-            <img class="card__image" src="images/pistacja-z-limonka.png" alt="pistacja
-          z limonkąl">
-          </aside>
-          <h4 class="card__name">i love you</h4>
-          <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
-            <input id="favorite2" type="checkbox">
-            <label for="favorite2" class="card__button card__button_like button_outlined_primary">
-              <svg class="like">
-                <use href="#like"></use>
-              </svg>
-            </label>
-          </div>
-        </div>
-        <div class="card-print">
-          <aside>
-            <img class="card__print" src="icons/miolli-logo.svg" alt="">
-            <img class="card__image" src="images/slony-karmel.png" alt="slony karmel">
-          </aside>
-          <h4 class="card__name">i love you</h4>
-          <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
-            <input id="favorite3" type="checkbox">
-            <label for="favorite3" class="card__button card__button_like button_outlined_primary">
-              <svg class="like">
-                <use href="#like"></use>
-              </svg>
-            </label>
-          </div>
-        </div>
-        <div class="card-print">
-          <aside>
-            <img class="card__print" src="icons/miolli-logo.svg" alt="">
-            <img class="card__image" src="images/pistacja-z-limonka.png" alt="pistacja
-          z limonkąl">
-          </aside>
-          <h4 class="card__name">i love you</h4>
-          <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
-            <input id="favorite4" type="checkbox">
-            <label for="favorite4" class="card__button card__button_like button_outlined_primary">
-              <svg class="like">
-                <use href="#like"></use>
-              </svg>
-            </label>
-          </div>
-        </div>
-        <div class="card-print">
-          <aside>
-            <img class="card__print" src="icons/miolli-logo.svg" alt="">
-            <img class="card__image" src="images/czekolada-wisnia.png" alt="czekolada
-          i wiśnia">
-          </aside>
-          <h4 class="card__name">i love you</h4>
-          <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
-            <input id="favorite5" type="checkbox">
-            <label for="favorite5" class="card__button card__button_like button_outlined_primary">
-              <svg class="like">
-                <use href="#like"></use>
-              </svg>
-            </label>
-          </div>
-        </div>
-        <div class="card-print">
-          <aside>
-            <img class="card__print" src="icons/miolli-logo.svg" alt="">
-            <img class="card__image" src="images/pistacja-z-limonka.png" alt="pistacja
-          z limonkąl">
-          </aside>
-          <h4 class="card__name">i love you</h4>
-          <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
-            <input id="favorite6" type="checkbox">
-            <label for="favorite6" class="card__button card__button_like button_outlined_primary">
-              <svg class="like">
-                <use href="#like"></use>
-              </svg>
-            </label>
-          </div>
-        </div>
-        <div class="card-print">
-          <aside>
-            <img class="card__print" src="icons/miolli-logo.svg" alt="">
-            <img class="card__image" src="images/slony-karmel.png" alt="slony karmel">
-          </aside>
-          <h4 class="card__name">i love you</h4>
-          <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
-            <input id="favorite7" type="checkbox">
-            <label for="favorite7" class="card__button card__button_like button_outlined_primary">
-              <svg class="like">
-                <use href="#like"></use>
-              </svg>
-            </label>
-          </div>
-        </div>
-        <div class="card-print">
-          <aside>
-            <img class="card__print" src="icons/miolli-logo.svg" alt="">
-            <img class="card__image" src="images/pistacja-z-limonka.png" alt="pistacja
-          z limonkąl">
-          </aside>
-          <h4 class="card__name">i love you</h4>
-          <div>
-            <a href="print.html" class="card__button button button_size_s button_outlined_primary">Zamów</a>
-            <input id="favorite8" type="checkbox">
-            <label for="favorite8" class="card__button card__button_like button_outlined_primary">
-              <svg class="like">
-                <use href="#like"></use>
-              </svg>
-            </label>
-          </div>
-        </div>
-      </div>
+      </section>
       <div class="pagination">
         <ul class="pagination__list">
           <i class="pagination__btn pagination__btn_prev disabled"><</i>
@@ -387,30 +336,7 @@ teraz:
           <i class="pagination__btn pagination__btn_next">></i>
         </ul>
       </div>
-    </main>
-    <section class="box">
-      <div class="box__content">
-        <h2 class="box__title">skomponuj
-          swoje pudełko</h2>
-          <ul class="box__list">
-            <li class="box__item">wybierz rozmiar (6/12/24szt)</li>
-            <li class="box__item">wybierz ulubione smaki</li>
-            <li class="box__item">dodaj nadruk z naszej bazy
-              albo swój własny
-              to może być napis lub pełnokolorowy
-              wydruk (np. Twoje logo)</li>
-          </ul>
-          <p class="box__text">proste? To do dzieła!
-            Smacznego!</p>
-          <img class="box__logo" src="icons/miolli-logo-small.svg" alt="miolli logo">
-      </div>
-      <div class="box__box">
-        <img src="images/box.png" alt="miolli box">
-      </div>
-      <div class="box__button">
-        <a class="button button_size_l button_outlined" href="">stwórz swoją kompozycję</a>
-      </div>
-    </section>
+    </main>  
     <footer class="footer">
       <nav>
         <ul class="footer__list">
@@ -423,8 +349,8 @@ teraz:
           <li class="footer__item">
             <a href="" class="footer__link">o nas</a>
           </li>
-          <li class="footer__item disabled">
-            <a href="" class="footer__link">makaroniki z nadrukiem</a>
+          <li class="footer__item">
+            <a href="prints.html" class="footer__link">makaroniki z nadrukiem</a>
           </li>
           <li class="footer__item">
            <a href="configurator.html " class="footer__link">twoja kompozycja</a>
@@ -435,7 +361,7 @@ teraz:
           <li class="footer__item">
             <a href="faq.html" class="footer__link">faq</a>
           </li>
-          <li class="footer__item">
+          <li class="footer__item disabled">
             <a href="blog.html" class="footer__link">blog</a>
           </li>
           <li class="footer__item">
@@ -603,34 +529,7 @@ teraz:
           sendMessage();
         }
       });
-
-      // Dropdown
-      for (const dropdown of document.querySelectorAll('.dropdown')) {
-        dropdown.addEventListener('click', function () {
-          this.querySelector('.dropdown__select').classList.toggle('opened');
-        })
-      }
-      for (const option of document.querySelectorAll('.option')) {
-        option.addEventListener('click', function () {
-          if (!this.classList.contains('selected')) {
-            this.parentNode.querySelector('.option.selected').classList.remove('selected');
-            this.classList.add('selected');
-            this.closest('.dropdown__select').querySelector('.dropdown__item-current p').textContent = this.textContent;
-            changeMap(document.querySelector('.selected').dataset.location.split(', '));
-          }
-        })
-      }
-      window.addEventListener('click', function (e) {
-        for (const select of document.querySelectorAll('.dropdown__select')) {
-          if (!select.contains(e.target)) {
-            select.classList.remove('opened');
-          }
-        }
-      });
-
-      document.querySelector('#switch').addEventListener('change', () => {
-        document.querySelector('#switch').checked ? document.body.classList.add('open') : document.body.classList.remove('open');
-      })
+    
     </script>
   </body>
 </html>
