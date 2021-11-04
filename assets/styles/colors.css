@@ -24,8 +24,16 @@
   --dark-coral: #CE5445;
 }
 
+.gray {
+  color: var(--outer-space);
+}
+
 .white-chocolate {
   color: var(--white-chocolate);
+}
+
+.white-chocolate-fill {
+  background-color: var(--white-chocolate);
 }
 
 .desert-sand {
