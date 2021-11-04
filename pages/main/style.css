@@ -808,16 +808,9 @@
 
 @media (max-width: 640px) {
   .causes-card__number {
-    font: 587px/587px var(--titleFont);
+    font: 527px/527px var(--titleFont);
   }
 }
-
-@media (max-width: 450px) {
-  .causes-card__number {
-    font: 487px/487px var(--titleFont);
-  }
-}
-
 
 @media (max-width: 490px) {
   .causes__aside.top .causes__figure_circle {
@@ -825,6 +818,19 @@
     min-height: 21.875rem;
   }
 }
+
+@media (max-width: 450px) {
+  .causes-card__number {
+    font: 387px/387px var(--titleFont);
+  }
+}
+
+@media (max-width: 370px) {
+  .causes-card__number {
+    font: 347px/347px var(--titleFont);
+  }
+}
+
 
 
 /***/

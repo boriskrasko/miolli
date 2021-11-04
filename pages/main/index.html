@@ -924,7 +924,15 @@
                     </li>
                   </ul>
                 </div>
-                <div class="uk-visible">
+                <div class="uk-hidden@s" style="display: flex; width: 120px; justify-content: space-around;">
+                  <button  onclick="document.querySelector('.causes-card__number span').textContent = document.querySelector('.uk-active article').id" class="uk-position-out" uk-slider-item="previous">
+                  <span class="material-icons pastel-pink thin">west</span>
+                  </button>
+                  <button  onclick="document.querySelector('.causes-card__number span').textContent = document.querySelector('.uk-active article').id" class="uk-position-out" uk-slider-item="next">
+                  <span class="material-icons pastel-pink thin">east</span>
+                  </button>
+                </div>
+                <div class="uk-visible@s">
                   <button class="inspiration__button_arrow uk-position-center-left-out" uk-slider-item="previous">
                   <span class="material-icons pastel-pink thin">west</span>
                   </button>
