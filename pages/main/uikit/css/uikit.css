@@ -233,10 +233,10 @@ h6,
 .uk-heading-large,
 .uk-heading-xlarge,
 .uk-heading-2xlarge {
-  margin: 0 0 20px 0;
+  /*margin: 0 0 20px 0;*/
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: normal;
-  color: #333;
+  /*color: #333;*/
   text-transform: none;
 }
 /* Add margin if adjacent element */
@@ -262,7 +262,7 @@ h6,
 /*
  * Sizes
  */
-h1,
+/*h1,
 .uk-h1 {
   font-size: 2.23125rem;
   line-height: 1.2;
@@ -302,7 +302,7 @@ h6,
   .uk-h2 {
     font-size: 2rem;
   }
-}
+}*/
 /* Lists
  ========================================================================== */
 ul,
@@ -418,8 +418,8 @@ pre code {
 }
 /* 2 */
 :focus:not([tabindex^='-']) {
-  outline: 2px dotted #333;
-  outline-offset: 1px;
+  /*outline: 2px dotted #333;*/
+  /*outline-offset: 1px;*/
 }
 /* 3 */
 :focus:not(:focus-visible) {
@@ -427,7 +427,7 @@ pre code {
 }
 /* 4 */
 :focus-visible {
-  outline: 2px dotted #333;
+  /*outline: 2px dotted #333;*/
 }
 /* Selection pseudo-element
  ========================================================================== */

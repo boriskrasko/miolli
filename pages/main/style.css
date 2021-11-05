@@ -559,6 +559,10 @@
   margin: 0.625em 0;
 }
 
+.box-composing__body > div:nth-child(4) .box-composing__copy {
+  font-size: 18px;
+}
+
 .box-composing__point {
   font: 1.125em/1.5625em var(--contentFont);
   display: flex;
@@ -570,6 +574,16 @@
   border-radius: 100%;
   justify-content: center;
   align-items: center;
+}
+
+.box-composing__button:before {
+  content: "stwórz swoją kompozycję";
+}
+
+@media (max-width: 370px) {
+  .box-composing__button:before {
+    content: "stwórz kompozycję";
+  }
 }
 
 @media (max-width: 1062px) {
@@ -619,8 +633,11 @@
   .box-composing__body > div:nth-child(1), .box-composing__body > div:nth-child(2) {
     padding: 39px 6% 19px;
   }
-  .box-composing__body > div:nth-child(3), .box-composing__body > div:nth-child(4) {
+  .box-composing__body > div:nth-child(4) {
     padding: 0 6% 19px;
+  }
+  .box-composing__body > div:nth-child(3) {
+    padding: 19px 0 0;
   }
 }
 
