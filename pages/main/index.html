@@ -792,7 +792,7 @@
           <div class="section__heading">
             <h2 class="h2 pastel-pink">słodkie inspiracje</h2>
             <hr class="underline uk-visible@s">
-            <p class="paragraph uppercase gray"> czyli jakie smaki dostępne są dziś w miolli </p>
+            <p class="paragraph uppercase gray"> czyli jakie smaki<br class="uk-hidden@s"> dostępne są dziś w miolli </p>
           </div>
           <div class="section__body">
             <button type="button" class="inspiration__button_rounded button button-contained desert-sand button_rounded desktop-only">
@@ -801,7 +801,7 @@
             <div uk-slider class="uk-slider">
               <div class="uk-position-relative">
                 <div class="uk-slider-container">
-                  <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-1@se uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-child-width-1-5@xl">
+                  <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-2@se uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-child-width-1-5@xl">
                     <li>
                       <div class="card-flavor">
                         <div class="card-flavor__figure">
@@ -809,7 +809,7 @@
                         </div>
                         <div class="card-flavor__body">
                           <hr class="underline">
-                          <h4 class="paragraph uppercase gray">czekolada i wiśnia</h4>
+                          <h4 class="card-flavor__name gray paragraph uppercase">czekolada i wiśnia</h4>
                         </div>
                         <a class="card-flavor__link overlay" href="../nasze-smaki/index.html"></a>
                       </div>
@@ -821,7 +821,7 @@
                         </div>
                         <div class="card-flavor__body">
                           <hr class="underline">
-                          <h4 class="paragraph uppercase gray">whisky i wanilia</h4>
+                          <h4 class="card-flavor__name gray paragraph uppercase">whisky i wanilia</h4>
                         </div>
                         <a class="card-flavor__link overlay" href="../nasze-smaki/index.html"></a>
                       </div>
@@ -833,7 +833,7 @@
                         </div>
                         <div class="card-flavor__body">
                           <hr class="underline">
-                          <h4 class="paragraph uppercase">pistacja z limonką</h4>
+                          <h4 class="card-flavor__name gray paragraph uppercase">pistacja z limonką</h4>
                         </div>
                         <a class="card-flavor__link overlay" href="../nasze-smaki/index.html"></a>
                       </div>
@@ -845,7 +845,7 @@
                         </div>
                         <div class="card-flavor__body">
                           <hr class="underline">
-                          <h4 class="paragraph uppercase">różowa róża</h4>
+                          <h4 class="card-flavor__name gray paragraph uppercase">różowa róża</h4>
                         </div>
                         <a class="card-flavor__link overlay" href="../nasze-smaki/index.html"></a>
                       </div>
@@ -857,7 +857,7 @@
                         </div>
                         <div class="card-flavor__body">
                           <hr class="underline">
-                          <h4 class="paragraph uppercase">whisky wanilia</h4>
+                          <h4 class="card-flavor__name gray paragraph uppercase">whisky wanilia</h4>
                         </div>
                         <a class="card-flavor__link overlay" href="../nasze-smaki/index.html"></a>
                       </div>
@@ -869,7 +869,7 @@
                         </div>
                         <div class="card-flavor__body">
                           <hr class="underline">
-                          <h4 class="paragraph uppercase">czekolada i wiśnia</h4>
+                          <h4 class="card-flavor__name gray paragraph uppercase">czekolada i wiśnia</h4>
                         </div>
                         <a class="card-flavor__link overlay" href="../nasze-smaki/index.html"></a>
                       </div>
@@ -881,7 +881,7 @@
                         </div>
                         <div class="card-flavor__body">
                           <hr class="underline">
-                          <h4 class="paragraph uppercase">whisky wanilia</h4>
+                          <h4 class="card-flavor__name gray paragraph uppercase">whisky wanilia</h4>
                         </div>
                         <a class="card-flavor__link overlay" href="../nasze-smaki/index.html"></a>
                       </div>
@@ -893,7 +893,7 @@
                         </div>
                         <div class="card-flavor__body">
                           <hr class="underline">
-                          <h4 class="paragraph uppercase">pistacja z limonką</h4>
+                          <h4 class="card-flavor__name gray paragraph uppercase">pistacja z limonką</h4>
                         </div>
                         <a class="card-flavor__link overlay" href="../nasze-smaki/index.html"></a>
                       </div>
@@ -905,7 +905,7 @@
                         </div>
                         <div class="card-flavor__body">
                           <hr class="underline">
-                          <h4 class="paragraph uppercase">różowa róża</h4>
+                          <h4 class="card-flavor__name gray paragraph uppercase">różowa róża</h4>
                         </div>
                         <a class="card-flavor__link overlay" href="../nasze-smaki/index.html"></a>
                       </div>
@@ -917,21 +917,23 @@
                         </div>
                         <div class="card-flavor__body">
                           <hr class="underline">
-                          <h4 class="paragraph uppercase">whisky wanilia</h4>
+                          <h4 class="card-flavor__name gray paragraph uppercase">whisky wanilia</h4>
                         </div>
                         <a class="card-flavor__link overlay" href="../nasze-smaki/index.html"></a>
                       </div>
                     </li>
                   </ul>
                 </div>
-                <div class="uk-hidden@s" style="display: flex; width: 120px; justify-content: space-around;">
-                  <button  onclick="document.querySelector('.causes-card__number span').textContent = document.querySelector('.uk-active article').id" class="uk-position-out" uk-slider-item="previous">
+                <div class="uk-hidden@s inspiration__arrows">
+                  <button class="uk-position-out" uk-slider-item="previous">
                   <span class="material-icons pastel-pink thin">west</span>
                   </button>
-                  <button  onclick="document.querySelector('.causes-card__number span').textContent = document.querySelector('.uk-active article').id" class="uk-position-out" uk-slider-item="next">
+                  <button  class="uk-position-out" uk-slider-item="next">
                   <span class="material-icons pastel-pink thin">east</span>
                   </button>
                 </div>
+                <div class="uk-position-center-left-out shadow-box"></div>
+                <div class="uk-position-center-right-out shadow-box"></div>
                 <div class="uk-visible@s">
                   <button class="inspiration__button_arrow uk-position-center-left-out" uk-slider-item="previous">
                   <span class="material-icons pastel-pink thin">west</span>
@@ -944,7 +946,7 @@
             </div>
           </div>
           <footer class="section__footer">
-            <a href="../konfigurator/index.html" class="inspiration__button button button-outlined parrot-pink button_size_l">stwórz swoją kompozycję</a>
+            <a href="../konfigurator/index.html" class="inspiration__button button button-outlined parrot-pink button_size_l"></a>
           </footer>
         </div>
       </section>
@@ -952,11 +954,11 @@
         <div class="section__content">
           <header class="section__heading">
             <h2 class="h2 pastel-pink">spróbuj <br>czegoś nowego!</h2>
-            <hr class="underline">
-            <h3 class="paragraph uppercase">mamy dla Ciebie 5 kompozycji smakowych, <br>możesz kupić je w całości, skonfigurować smaki i dodaj dedykowany nadruk </h3>
+            <hr class="underline uk-visible@s">
+            <h3 class="paragraph uppercase">mamy dla Ciebie 5 kompozycji smakowych, <br>możesz kupić je w całości, skonfigurować smaki <br class="uk-hidden@s"> i dodaj dedykowany nadruk </h3>
           </header>
           <div class="section__body">
-            <input class="viewer-toggle uk-visible@s" type="checkbox">
+            <input onclick="document.querySelector('.composition h2').scrollIntoView()" class="viewer-toggle uk-visible@s" type="checkbox">
             <button class="composition__button_rounded button button-contained parrot-pink button_rounded viewer-toggle uk-visible@s">
             <span>KLIKNIJ <br> BY ZMIENIĆ WIDOK </span>
             <span class="material-icons"></span>
@@ -968,12 +970,12 @@
                     <ul class="uk-slideshow-items uk-child-width-1-1">
                       <li>
                         <div class="set-block__figure">
-                          <img src="../../assets/images/composition.png" alt="" class="set-block__image">
+                          <img src="../../assets/images/composition.png" title="set na lato" alt="" class="set-block__image">
                         </div>
                       </li>
                       <li>
                         <div class="set-block__figure">
-                          <img src="../../assets/images/composition-2.png" alt="" class="set-block__image">
+                          <img src="../../assets/images/composition-2.png" title="dla ukochanej" alt="" class="set-block__image">
                         </div>
                       </li>
                     </ul>
@@ -992,27 +994,27 @@
                     </button>
                   </div>
                   <div class="uk-visible@xs">
-                    <button class="inspiration__button_arrow uk-position-center-left-out" uk-slideshow-item="previous">
+                    <button onclick='getSetName()' class="composition__button_arrow uk-position-center-left-out" uk-slideshow-item="previous">
                     <span class="material-icons pastel-pink thin">west</span>
                     </button>
-                    <button class="inspiration__button_arrow uk-position-center-right-out" uk-slideshow-item="next">
+                    <button onclick='getSetName()' class="composition__button_arrow uk-position-center-right-out" uk-slideshow-item="next">
                     <span class="material-icons pastel-pink thin">east</span>
                     </button>
                   </div>
                 </div>
               </div>
-              <div class="set-block__body">
+              <div class="set-block__body gray">
                 <div class="set-block__counter uk-visible@xs">
                   <span class="set-card__current-number">1</span>
                   <span class="set-card__сounter-delimiter">/</span>
                   <span class="set-card__total-count">5</span>
                 </div>
-                <h2 class="set-block__title uppercase">set na lato</h2>
-                <p class="set-block__copy uppercase"> a w nim makaroniki różane, truskawkowe, jagodowe i pomarańczowe idealne do porannej mimozy </p>
-                <p class="set-block__copy price uppercase"> 34,- </p>
+                <h2 class="set-block__title h4 uppercase">set na lato</h2>
+                <p class="set-block__copy paragraph uppercase"> a w nim makaroniki różane, truskawkowe, jagodowe i pomarańczowe idealne do porannej mimozy </p>
+                <p class="set-block__copy price"> 34,- </p>
               </div>
               <footer class="set-block__footer">
-                <a href="../zestaw/index.html" class="set-block__button button button-outlined button-outlined_parrot-pink button_size_l"> zamów set </a>
+                <a href="../zestaw/index.html" class="set-block__button button button-outlined parrot-pink button_size_l"> zamów set </a>
               </footer>
             </div>
             <div uk-slider class="uk-slider">
@@ -1025,9 +1027,9 @@
                           <img src="../../assets/images/set-1.png" alt="" class="card__image">
                         </div>
                         <div class="set-card__body">
-                          <h2 class="set-card__title uppercase">set na lato</h2>
-                          <p class="set-card__copy uppercase"> 2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw </p>
-                          <p class="set-card__copy price uppercase"> 34,- </p>
+                          <h2 class="set-card__title">set na lato</h2>
+                          <p class="set-card__copy"> 2xLIMONKA, 3xCYTRYNA i MIĘTA, 1xTRUSKAWKA, 3xSZCZAW</p>
+                          <p class="set-card__copy price"> 34,- </p>
                         </div>
                         <div class="set-card__footer">
                           <a href="../zestaw/index.html" class="set-card__button button button-outlined parrot-pink button_size_s"> kup </a>
@@ -1040,9 +1042,9 @@
                           <img src="../../assets/images/set-2.png" alt="" class="card__image">
                         </div>
                         <div class="set-card__body">
-                          <h2 class="set-card__title uppercase">set na lato</h2>
-                          <p class="set-card__copy uppercase"> 2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw </p>
-                          <p class="set-card__copy price uppercase"> 34,- </p>
+                          <h2 class="set-card__title">set na lato</h2>
+                          <p class="set-card__copy"> 2xLIMONKA, 3xCYTRYNA i MIĘTA, 1xTRUSKAWKA, 3xSZCZAW</p>
+                          <p class="set-card__copy price"> 34,- </p>
                         </div>
                         <div class="set-card__footer">
                           <a href="../zestaw/index.html" class="set-card__button button button-outlined parrot-pink button_size_s"> kup </a>
@@ -1055,9 +1057,9 @@
                           <img src="../../assets/images/set-3.png" alt="" class="card__image">
                         </div>
                         <div class="set-card__body">
-                          <h2 class="set-card__title uppercase">set na lato</h2>
-                          <p class="set-card__copy uppercase"> 2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw </p>
-                          <p class="set-card__copy price uppercase"> 34,- </p>
+                          <h2 class="set-card__title">set na lato</h2>
+                          <p class="set-card__copy"> 2xLIMONKA, 3xCYTRYNA i MIĘTA, 1xTRUSKAWKA, 3xSZCZAW</p>
+                          <p class="set-card__copy price"> 34,- </p>
                         </div>
                         <div class="set-card__footer">
                           <a href="../zestaw/index.html" class="set-card__button button button-outlined parrot-pink button_size_s"> kup </a>
@@ -1070,9 +1072,9 @@
                           <img src="../../assets/images/set-4.png" alt="" class="card__image">
                         </div>
                         <div class="set-card__body">
-                          <h2 class="set-card__title uppercase">set na lato</h2>
-                          <p class="set-card__copy uppercase"> 2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw </p>
-                          <p class="set-card__copy price uppercase"> 34,- </p>
+                          <h2 class="set-card__title">set na lato</h2>
+                          <p class="set-card__copy"> 2xLIMONKA, 3xCYTRYNA i MIĘTA, 1xTRUSKAWKA, 3xSZCZAW</p>
+                          <p class="set-card__copy price"> 34,- </p>
                         </div>
                         <div class="set-card__footer">
                           <a href="../zestaw/index.html" class="set-card__button button button-outlined parrot-pink button_size_s"> kup </a>
@@ -1085,9 +1087,9 @@
                           <img src="../../assets/images/set-1.png" alt="" class="card__image">
                         </div>
                         <div class="set-card__body">
-                          <h2 class="set-card__title uppercase">set na lato</h2>
-                          <p class="set-card__copy uppercase"> 2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw </p>
-                          <p class="set-card__copy price uppercase"> 34,- </p>
+                          <h2 class="set-card__title">set na lato</h2>
+                          <p class="set-card__copy"> 2xLIMONKA, 3xCYTRYNA i MIĘTA, 1xTRUSKAWKA, 3xSZCZAW</p>
+                          <p class="set-card__copy price"> 34,- </p>
                         </div>
                         <div class="set-card__footer">
                           <a href="../zestaw/index.html" class="set-card__button button button-outlined parrot-pink button_size_s"> kup </a>
@@ -1100,9 +1102,9 @@
                           <img src="../../assets/images/set-2.png" alt="" class="card__image">
                         </div>
                         <div class="set-card__body">
-                          <h2 class="set-card__title uppercase">set na lato</h2>
-                          <p class="set-card__copy uppercase"> 2xlimonka, 3xcytryna i mięta, 1xtruskawka, 3xszczaw </p>
-                          <p class="set-card__copy price uppercase"> 34,- </p>
+                          <h2 class="set-card__title">set na lato</h2>
+                          <p class="set-card__copy"> 2xLIMONKA, 3xCYTRYNA i MIĘTA, 1xTRUSKAWKA, 3xSZCZAW</p>
+                          <p class="set-card__copy price"> 34,- </p>
                         </div>
                         <div class="set-card__footer">
                           <a href="../zestaw/index.html" class="set-card__button button button-outlined parrot-pink button_size_s"> kup </a>
@@ -1112,7 +1114,7 @@
                   </ul>
                 </div>
                 <div class="uk-hidden@xs uk-hide" style="top: 410px;">
-                  <button class="uk-position-out uk-position-small" uk-slider-item="previous">
+                  <button class="composition__button_arrow uk-position-out uk-position-small" uk-slider-item="previous">
                   <span class="material-icons pastel-pink thin">west</span>
                   </button>
                   <div class="set-card__counter">
@@ -1120,15 +1122,15 @@
                     <span class="set-card__сounter-delimiter">/</span>
                     <span class="set-card__total-count">5</span>
                   </div>
-                  <button class="uk-position-out uk-position-small" uk-slider-item="next">
+                  <button class="composition__button_arrow uk-position-out uk-position-small" uk-slider-item="next">
                   <span class="material-icons pastel-pink thin">east</span>
                   </button>
                 </div>
                 <div class="uk-visible@xs">
-                  <button class="inspiration__button_arrow uk-position-center-left-out uk-position-small" uk-slider-item="previous">
+                  <button class="composition__button_arrow uk-position-center-left-out uk-position-small" uk-slider-item="previous">
                   <span class="material-icons pastel-pink thin">west</span>
                   </button>
-                  <button class="inspiration__button_arrow uk-position-center-right-out uk-position-small" uk-slider-item="next">
+                  <button class=" composition__button_arrow uk-position-center-right-out uk-position-small" uk-slider-item="next">
                   <span class="material-icons pastel-pink thin">east</span>
                   </button>
                 </div>
@@ -1186,7 +1188,7 @@
         </div>
         <div class="uniqueness__body">
           <hr class="uniqueness__underline underline">
-          <p class="uniqueness__copy paragraph_upper"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam, diam ut maximus suscipit, lectus enim interdum turpis, et scelerisque neque est in diam. Aliquam gravida dapibus urna sit amet bibendum. Pellentesque tristique massa dictum quam mattis, at laoreet augue gravida. Duis eget dapibus sem. </p>
+          <p class="uniqueness__copy paragraph_upper gray"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam, diam ut maximus suscipit, lectus enim interdum turpis, et scelerisque neque est in diam. Aliquam gravida dapibus urna sit amet bibendum. Pellentesque tristique massa dictum quam mattis, at laoreet augue gravida. Duis eget dapibus sem. </p>
         </div>
         <footer class="uniqueness__footer">
           <div class="uniqueness__actions">
@@ -1200,11 +1202,11 @@
         </a>
       </section>
       <div class="video-section">
-        <video autoplay muted loop>
+        <video autoplay muted loop poster="../../assets/images/film.png">
           <source src="../../assets/images/test.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
-        <h2 class="video-section__title h2">Film</h2>
+        <h2 class="video-section__title h2">film</h2>
       </div>
       <div class="causes">
         <aside class="causes__aside top">
@@ -1231,7 +1233,7 @@
                       <article class="causes-card" id="1">
                         <div class="causes-card__content">
                           <h4 class="causes-card__title">Receptura najlepszych rosyjskich cukierników </h4>
-                          <p class="causes-card__copy paragraph_upper"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sapiente harum soluta excepturi ut temporibus, at amet corporis id asperiores.</p>
+                          <p class="causes-card__copy paragraph_upper">nasze receptury coś tam tekst… Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pharetra nisl non. Repellendus sapiente harum soluta excepturi ut temporibus, at amet corporis id asperiores. </p>
                         </div>
                       </article>
                     </li>
@@ -1239,7 +1241,7 @@
                       <article class="causes-card" id="2">
                         <div class="causes-card__content">
                           <h4 class="causes-card__title">Receptura najlepszych rosyjskich cukierników </h4>
-                          <p class="causes-card__copy paragraph_upper"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sapiente harum soluta excepturi ut temporibus, at amet corporis id asperiores. </p>
+                          <p class="causes-card__copy paragraph_upper"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis deleniti ab possimus ut?</p>
                         </div>
                       </article>
                     </li>
@@ -1247,7 +1249,7 @@
                       <article class="causes-card" id="3">
                         <div class="causes-card__content">
                           <h4 class="causes-card__title">Receptura najlepszych rosyjskich cukierników </h4>
-                          <p class="causes-card__copy paragraph_upper"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sapiente harum soluta excepturi ut temporibus, at amet corporis id asperiores. </p>
+                          <p class="causes-card__copy paragraph_upper">Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                       </article>
                     </li>
@@ -1255,7 +1257,7 @@
                       <article class="causes-card" id="4">
                         <div class="causes-card__content">
                           <h4 class="causes-card__title">Receptura najlepszych rosyjskich cukierników </h4>
-                          <p class="causes-card__copy paragraph_upper"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sapiente harum soluta excepturi ut temporibus, at amet corporis id asperiores. </p>
+                          <p class="causes-card__copy paragraph_upper"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sapiente harum soluta excepturi ut temporibus, at amet corporis id asperiores. </p>
                         </div>
                       </article>
                     </li>
@@ -1263,14 +1265,14 @@
                       <article class="causes-card" id="5">
                         <div class="causes-card__content">
                           <h4 class="causes-card__title">Receptura najlepszych rosyjskich cukierników </h4>
-                          <p class="causes-card__copy paragraph_upper"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sapiente harum soluta excepturi ut temporibus, at amet corporis id asperiores.</p>
+                          <p class="causes-card__copy paragraph_upper"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint perspiciatis deleniti ab possimus ut? Ducimus fugiat hic velit necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                       </article>
                     </li>
                   </ul>
                 </div>
-                <div class="uk-hidden@xs" style="display: flex; width: 120px; justify-content: space-around; z-index: 10;">
-                  <button  onclick="document.querySelector('.causes-card__number span').textContent = document.querySelector('.uk-active article').id" class="uk-position-out" uk-slider-item="previous">
+                <div class="uk-hidden@xs causes-card__control">
+                  <button  onclick="document.querySelector('.causes-card__number span').textContent = document.querySelector('.uk-active article').id" class="causes__button_arrow uk-position-out" uk-slider-item="previous">
                   <span class="material-icons">west</span>
                   </button>
                   <div class="causes-card__counter">
@@ -1278,7 +1280,7 @@
                     <span class="causes-card__сounter-delimiter">/</span>
                     <span class="causes-card__total-count">5</span>
                   </div>
-                  <button  onclick="document.querySelector('.causes-card__number span').textContent = document.querySelector('.uk-active article').id" class="uk-position-out" uk-slider-item="next">
+                  <button  onclick="document.querySelector('.causes-card__number span').textContent = document.querySelector('.uk-active article').id" class="causes__button_arrow uk-position-out" uk-slider-item="next">
                   <span class="material-icons">east</span>
                   </button>
                 </div>
@@ -1294,7 +1296,7 @@
             </div>
           </div>
           <div class="causes__footer section__footer">
-            <a href="../?/index.html" class="causes-card__button button button-outlined button_size_l">dowiedz się więcej</a>
+            <a href="../?/index.html" class="causes__button button button-outlined button_size_l">dowiedz się więcej</a>
           </div>
         </div>
       </div>
@@ -1325,7 +1327,7 @@
                 <li class="coffeehouse coffeehouse3"><a href=""><img src="../../assets/icons/logo-min.svg"></a></li>
                 <li class="coffeehouse coffeehouse4"><a href=""><img src="../../assets/icons/logo-min.svg"></a></li>
                 <li class="miolli-point miolli-point1">
-                  <img src="../../assets/icons/coffeehouse-item.svg">
+                  <img src="../../assets/icons/coffeehouse-item.svg" alt="">
                   <div class="miolli-point__description">
                     <p class="paragraph_upper title">punkt miolli</p>
                     <h6 class="h6 name">kawiarnia fabryczna</h6>
@@ -1336,7 +1338,7 @@
             </div>
           </div>
           <div class="map__body">
-            <h2 class="map__title">zamów online <br> odbierz w ulubionej kawiarni! </h2>
+            <h2 class="map__title">zamów online <br class="uk-visible@l"> odbierz w ulubionej kawiarni! </h2>
             <div class="location">
               <div class="location__body">
                 <h4 class="location__label">wybrane miasto:</h4>
@@ -1585,9 +1587,7 @@
       headerMenu.onclick = e => {
         headerMenuToggle.checked = (e.target == e.currentTarget) ? false : true;
       }
-      headerMenuToggle.addEventListener('change', () => {
-        document.body.style.overflow = (headerMenuToggle.checked && (window.innerWidth <= 501 || window.clientWidth <= 1000)) ? 'hidden' : 'initial';
-      });
+      headerMenuToggle.addEventListener('change', () => document.body.style.overflow = (headerMenuToggle.checked && window.innerWidth <= 501) ? 'hidden' : 'initial');
       const backgroundMask = document.querySelector('.background-mask');
       let x = 1;
       let max = 2;
@@ -1599,6 +1599,13 @@
           x = 0;
         }
       }, 5000);
+      let setName = document.querySelector('.set-block__title');
+      const getSetName = () => {
+        setName.textContent = null;
+        setTimeout(() => {
+          setName.textContent = document.querySelector('.set-block .uk-active img').title;
+        }, 1000);
+      }
     </script>
   </body>
 </html>

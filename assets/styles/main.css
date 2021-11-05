@@ -14,8 +14,8 @@
   --basicFont: "Roboto", sans-serif;
 
   /* Width, margins & paddings */
-  --max: 1366px;
-  --content: 1366px;
+  --max: 1920px;
+  --content: 1800px;
   --min: 320px;
   --border: 1px solid #ddd;
 
@@ -208,8 +208,6 @@ a {
 /*titles*/
 .h1, .h2 {
   font: normal 94px/94px var(--titleFont);
-  text-align: center;
-  vertical-align: middle;
 }
 
 .h3 {
@@ -1234,6 +1232,12 @@ z nadrukiem of topbar menu*/
   align-items: center;
 }
 
+@media (max-width: 450px) {
+  .uk-position-relative{
+    width: 100%;
+  }
+}
+
 .uk-slider-container {
   width: 100%;
 }
@@ -1282,5 +1286,11 @@ z nadrukiem of topbar menu*/
 @media (max-width: 640px) {
   .section__content {
     padding: 39px 16px 14px;
+  }
+}
+
+@media (max-width: 370px) {
+  .not-iphone-se {
+    display: none;
   }
 }
