@@ -993,7 +993,8 @@ z nadrukiem of topbar menu*/
 }
 
 .chat-popup__textarea {
-  font: normal 0.75rem/1.5625rem var(--contentFont);
+  font: normal 1rem/1.5625rem var(--contentFont);
+  font-weight: lighter;
   min-width: 13.25rem;
   height: 2.25rem;
   padding: 0.3125rem;
