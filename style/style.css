@@ -3548,6 +3548,11 @@ article {
   cursor: pointer;
 }
 
+.cart__button {
+  max-width: 185px;
+  margin: 22px auto 44px;
+}
+
 @media (max-width: 700px) {
   .cart__item-module {
     margin: 0 0 11px;
