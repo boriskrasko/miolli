@@ -724,15 +724,17 @@ z nadrukiem of topbar menu*/
 }
 
 .topnav__link_icon {
+  position: absolute;
   width: 1.1875rem;
   height: 2.125rem;
   transition: 0.1s opacity;
 }
 
 .topnav__item_cart_counter {
+  position: absolute;
   font: 0.875rem/0 'Monument Grotesk', sans-serif;
-  display: inline-flex;
-  /*padding: 1.8rem 0 2rem;*/
+  display: flex;
+  padding: 1.8rem 0 2rem;
   color: #ffffff;
   justify-content: center;
   align-items: center;
