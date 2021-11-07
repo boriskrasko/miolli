@@ -2,7 +2,7 @@
 @import "fonts.css";
 
 * {
-  border: var(--border);
+  /*border: var(--border);*/
 }
 
 :root {
@@ -725,7 +725,6 @@ z nadrukiem of topbar menu*/
 }
 
 .topnav__link_icon {
-  position: absolute;
   width: 1.1875rem;
   height: 2.125rem;
   transition: 0.1s opacity;
@@ -735,7 +734,6 @@ z nadrukiem of topbar menu*/
   position: absolute;
   font: 0.875rem/1rem 'Monument Grotesk', sans-serif;
   display: inline-flex;
-  bottom: 30px;
   color: #ffffff;
   justify-content: center;
   align-items: center;
