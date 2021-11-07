@@ -727,7 +727,8 @@ z nadrukiem of topbar menu*/
   position: absolute;
   width: 1.1875rem;
   height: 2.125rem;
-  margin: 19.5px 0 25px;
+  top: 19px;
+  bottom: 25.5px;
   transition: 0.1s opacity;
 }
 
