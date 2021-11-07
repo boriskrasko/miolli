@@ -3170,13 +3170,21 @@ input[type=file] {
  padding: 0 6px;
 }
 
-.main_user {
+main.main_user {
   width: calc(100% - 64px);
   margin: calc(78px + 32px) auto 32px;
   background-color: #FFECE6;
   background-image: url(../images/mask.png);
   background-position: -1000px -700px;
   background-size: cover;
+}
+
+@media screen and (max-width: 500px) {
+  main.main_user {
+    width: calc(100% - 32px);
+    margin: calc(78px + 16px) auto 16px;
+    padding: 16px;
+  }
 }
 
 .user {
@@ -3563,7 +3571,7 @@ article {
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 500px) {
   .main_cart {
     padding: 16px;
   }
