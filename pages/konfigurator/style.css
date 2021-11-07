@@ -134,7 +134,7 @@ main {
   flex-direction: column;
   max-width: var(--content);
   min-height: 368px;
-  margin: 0 auto 78px;
+  margin: 0 auto;
   background-color: var(--limen);
   background-image: url(../../assets/images/conf-bg.png);
   background-repeat: no-repeat;

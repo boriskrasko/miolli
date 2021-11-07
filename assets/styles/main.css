@@ -742,7 +742,7 @@ z nadrukiem of topbar menu*/
   color: #ffffff;
 }*/
 
-.topnav__item_cart_counter {
+/*.topnav__item_cart_counter {
   position: absolute;
   font: 0.875rem/1.125rem 'Monument Grotesk', sans-serif;
   display: flex;
@@ -751,7 +751,7 @@ z nadrukiem of topbar menu*/
   color: #ffffff;
   justify-content: center;
   align-items: center;
-}
+}*/
 
 .topbar {
   position: relative;

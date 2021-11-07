@@ -412,6 +412,7 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--outer-space);
+  margin: 0 auto 1rem;
 }
 
 .set-card__copy {
