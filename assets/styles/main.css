@@ -724,13 +724,14 @@ z nadrukiem of topbar menu*/
 }
 
 .topnav__link_icon {
+  position: absolute;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 1.1875rem;
   height: 2.125rem;
- /* top: 19px;
-  bottom: 25.5px;*/
+  top: 19px;
+  bottom: 25.5px;
   transition: 0.1s opacity;
 }
 
