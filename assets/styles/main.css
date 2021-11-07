@@ -670,7 +670,6 @@ z nadrukiem of topbar menu*/
   color: #3c3c3c;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 .topnav__link:hover {
@@ -725,15 +724,18 @@ z nadrukiem of topbar menu*/
 }
 
 .topnav__link_icon {
+  position: absolute;
   width: 1.1875rem;
   height: 2.125rem;
+  margin: 19.5px 0 25px;
   transition: 0.1s opacity;
 }
 
 .topnav__item_cart_counter {
   position: absolute;
-  font: 0.875rem/1rem 'Monument Grotesk', sans-serif;
-  display: inline-flex;
+  font: 0.875rem/1.125rem 'Monument Grotesk', sans-serif;
+  display: flex;
+  padding: 27px 0 37px;
   color: #ffffff;
   justify-content: center;
   align-items: center;
