@@ -2,7 +2,7 @@
 @import "fonts.css";
 
 * {
-  /*border: var(--border);*/
+  border: var(--border);
 }
 
 :root {
@@ -670,6 +670,7 @@ z nadrukiem of topbar menu*/
   color: #3c3c3c;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .topnav__link:hover {
@@ -732,9 +733,9 @@ z nadrukiem of topbar menu*/
 
 .topnav__item_cart_counter {
   position: absolute;
-  font: 0.875rem/0 'Monument Grotesk', sans-serif;
-  display: flex;
-  padding: 1.8rem 0 2rem;
+  font: 0.875rem/1rem 'Monument Grotesk', sans-serif;
+  display: inline-flex;
+  bottom: 30px;
   color: #ffffff;
   justify-content: center;
   align-items: center;
