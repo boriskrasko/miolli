@@ -2,15 +2,14 @@
 
 .main {
   width: 100%;
-  max-width: var(--max);
-  padding: 4.875rem 0 0;
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 4.875rem 22px 0;
 }
 
 .breadcrumb {
-  width: 100%;
-  max-width: calc(var(--content) - 78px);
+  max-width: var(--content);
   margin: 1.8rem auto;
-  padding: 0 11px;
 }
 
 .breadcrumb__list {
@@ -21,12 +20,12 @@
 
 .breadcrumb__item {
   display: flex;
-  margin: 0.25rem 0.5rem;
+  margin: 0.25rem 1rem 0 0;
   align-items: center;
 }
 
 .breadcrumb__item > * {
-  margin: 0 0.25rem;
+  margin: 0 0.5rem 0 0;
 }
 
 .breadcrumb__icon.material-icons {
@@ -70,7 +69,6 @@
 .set-card__nav-control {
   font: 1rem/1.5625rem var(--contentFont);
   display: flex;
-  width: 110px;
   min-height: 1.25rem;
   margin: 0.625rem auto;
   justify-content: space-around;
@@ -89,12 +87,15 @@
 }
 
 .set-block__aside {
-  align-items: center;
+  max-width: 432px;
+  height: 100%;
 }
 
 .set-block__image {
   width: 100%;
-  max-width: 453px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .set-block__heading {
@@ -122,6 +123,11 @@
   text-transform: uppercase;
 }
 
+.set-block__button {
+  min-width: 241px;
+  max-height: 51px
+}
+
 .list__item span {
   text-transform: uppercase;
 }
@@ -130,16 +136,33 @@
   padding: 0 16px;
 }
 
+.price-tag-fixed-container {
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 87px;
+  max-height: 180px;
+  z-index: 98;
+}
+
+.price-tag-fixed-container > div {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  position: relative;
+}
+
 .price-tag {
   position: absolute;
-  top: 0;
   right: 0;
   display: flex;
   flex-direction: column;
-  max-height: 140px;
+  max-height: 180px;
   padding: 4px 8px;
   justify-content: space-between;
   align-items: flex-start;
+  background: #fffd;
+  border-radius: 6px;
 }
 
 .price-tag .price {
@@ -155,6 +178,7 @@
 }
 
 @media (max-width: 940px) {
+  .price-tag-fixed-container,
   .price-tag {
     position: static;
     flex-direction: row;
@@ -332,9 +356,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 194px;
+  width: 200px;
   min-height: 293px;
-  margin: 9px;
+  margin: 5px 0;
   justify-content: space-between;
 }
 
@@ -411,18 +435,16 @@
 }
 
 .uniqueness {
+  position: relative;
   max-width: var(--max);
   background: #ffece6;
   background-image: url(../../assets/images/brooke-lark.png);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  position: relative;
 }
 
-.uniqueness__header,
-.uniqueness__body,
-.uniqueness__footer {
+.uniqueness__header, .uniqueness__body, .uniqueness__footer {
   width: 100%;
   max-width: 1048px;
   margin: 0 auto;
@@ -447,12 +469,23 @@
   width: 197px;
   height: 3px;
   margin: 35px 0;
-  background: #000;
+  background: #000000;
 }
 
 .uniqueness__footer {
   position: relative;
   padding-bottom: 78px;
+}
+
+.uniqueness__button {
+  min-width: 340px;
+}
+
+@media (max-width: 1062px) {
+  .uniqueness__header, .uniqueness__body, .uniqueness__footer {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
 }
 
 @media screen and (max-width: 770px) {
@@ -463,10 +496,21 @@
     display: none;
   }
   .uniqueness__title {
-    padding: 3rem 0 1rem;
+    padding: 100px 0 1rem;
   }
+}
+
+@media screen and (max-width: 640px) {
   .uniqueness {
-    display: none;
+    min-height: 1000px;
+    background-size: auto;
+    background-position: center 290px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .uniqueness {
+    min-height: 1200px;
   }
 }
 

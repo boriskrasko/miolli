@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miolli | Article</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="uikit/css/uikit.css">
+    <script src="uikit/js/uikit.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <div class="chat">
@@ -184,8 +186,7 @@
         </div>
       </div>
     </header>
-    <main class="main">
-      <div class="start-screen">
+    <div class="start-screen">
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <ul class="breadcrumb__list uppercase">
             <li class="breadcrumb__item">
@@ -199,6 +200,7 @@
           </ul>
         </nav>
       </div>
+    <main class="main">
       <article class="blog-article">
         <header class="blog-article__header">
           <h2 class="blog-article__title h2 parrot-pink">miolli, to jakość</h2>
@@ -224,52 +226,81 @@
       </article>
       <section class="blog">
         <div class="blog__heading">
-          <h1 class="blog__title h1 txt-color_pastel-pink">Miolli, to ludzie</h1>
+          <h2 class="blog__title h2 pastel-pink">Miolli, to ludzie</h2>
           <h4 class="blog__subtitle paragraph">
             terdum non metus. Cras imperdiet posuere ex nec dictum. Curabitur pretium, risus at pellentesque feugiat, purus odio gravida lacus, non molestie ex nisl at felis. Nulla egestas at velit nec molestie. Nulla et aliquam massa. Quisque dignissim dapibus nunc, eget tempor metus ullamcorper sit amet. Donec venenatis libero blandit dignissim tincidunt. Proin rhoncus sodales tellus ut aliquamposuere sit amet.
           </h4>
         </div>
-        <div class="blog__body articles">         
-          <article class="article">
-            <div class="article__header">
-              <figure class="article__figure">
-                <img src="../../assets/images/austin-wade.png" alt="">
-              </figure>
+        <div class="blog__body articles">   
+          <div uk-slider class="uk-slider">
+            <div class="uk-position-relative">
+              <div class="uk-slider-container">
+                <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-3@l uk-child-width-1-3@xl">
+                  <li>
+                     <article class="article">
+                      <figure class="article__figure">
+                        <img src="../../assets/images/austin-wade.png" alt="">
+                      </figure>
+                      <div class="article__body">
+                        <h5 class="article__title h5 uppercase">Anatol</h5>
+                        <p class="article__copy paragraph_upper">
+                        mistrz zarządzania i kreacji
+                        </p>
+                      </div>
+                    </article>
+                  </li>
+                  <li>
+                    <article class="article">
+                      <figure class="article__figure">
+                        <img src="../../assets/images/houcine.png" alt="">
+                      </figure>
+                      <div class="article__body">
+                        <h5 class="article__title h5 uppercase">Nikita</h5>
+                        <p class="article__copy paragraph_upper">
+                        światowej klasy cukiernik
+                        </p>
+                      </div>
+                    </article>
+                  </li>
+                  <li>
+                    <article class="article">
+                      <figure class="article__figure">
+                        <img src="../../assets/images/stefan-stefancik.png" alt="">
+                      </figure>
+                      <div class="article__body">
+                        <h5 class="article__title h5 uppercase">Ola</h5>
+                        <p class="article__copy paragraph_upper">
+                        matka sukcesu i czołowy mikolog smaków
+                        </p>
+                      </div>
+                    </article>
+                  </li>
+                </ul>
+              </div>
+              <div class="uk-hidden@m uk-hide articles-control">
+                <button class="uk-position-out uk-position-small" uk-slider-item="previous">
+                <span class="material-icons pastel-pink thin">west</span>
+                </button>
+                <div class="people__counter">
+                  <span class="set-card__current-number">1</span>
+                  <span class="set-card__сounter-delimiter">/</span>
+                  <span class="set-card__total-count">3</span>
+                </div>
+                <button class="uk-position-out uk-position-small" uk-slider-item="next">
+                <span class="material-icons pastel-pink thin">east</span>
+                </button>
+              </div>
+              <div class="uk-visible@m">
+                <button class="uk-position-center-left-out uk-position-small" uk-slider-item="previous">
+                <span class="material-icons pastel-pink thin">west</span>
+                </button>
+                <button class="uk-position-center-right-out uk-position-small" uk-slider-item="next">
+                <span class="material-icons pastel-pink thin">east</span>
+                </button>
+              </div>
             </div>
-            <div class="article__body">
-              <h2 class="article__title h5 uppercase">Anatol</h2>
-              <p class="article__copy paragraph_upper">
-              mistrz zarządzania i kreacji
-              </p>
-            </div>
-          </article>
-          <article class="article">
-            <div class="article__header">
-              <figure class="article__figure">
-                <img src="../../assets/images/houcine.png" alt="">
-              </figure>
-            </div>
-            <div class="article__body">
-              <h2 class="article__title h5 uppercase">Nikita</h2>
-              <p class="article__copy paragraph_upper">
-              światowej klasy cukiernik
-              </p>
-            </div>
-          </article>
-          <article class="article">
-            <div class="article__header">
-              <figure class="article__figure">
-                <img src="../../assets/images/stefan-stefancik.png" alt="">
-              </figure>
-            </div>
-            <div class="article__body">
-              <h2 class="article__title h5 uppercase">Ola</h2>
-              <p class="article__copy paragraph_upper">
-              matka sukcesu i czołowy mikolog smaków
-              </p>
-            </div>
-          </article>
-        </div>
+          </div>  
+        </div>    
       </section>
       <article class="blog-article">
         <header class="blog-article__header">
@@ -288,18 +319,18 @@
           </p>
         </div>
       </article>
-      <div class="more">
+    </main>
+    <div class="more">
         <a class="instagram-link paragraph_upper" href="https://instagram.com">więcej na @miolli</a><br>
-        <div class="more__images">
-          <img src="../../assets/images/diana-polekhina.png" alt="">
-          <img src="../../assets/images/diana-polekhina.png" alt="">
-          <img src="../../assets/images/diana-polekhina.png" alt="">
-          <img src="../../assets/images/diana-polekhina.png" alt="">
-          <img src="../../assets/images/diana-polekhina.png" alt="">
+        <div class="uk-slider-items uk-flex uk-flex-nowrap uk-overflow-hidden uk-child-width-1-3 uk-child-width-1-3@s uk-child-width-1-4@m uk-child-width-1-5@l uk-child-width-1-6@xl">
+          <img src="../../assets/images/more-1.png" alt="">
+          <img src="../../assets/images/more-2.png" alt="">
+          <img src="../../assets/images/more-3.png" alt="">
+          <img src="../../assets/images/more-4.png" alt="">
+          <img src="../../assets/images/more-5.png" alt="">
         </div>
         <img src="../../assets/images/film.png" alt="">
       </div>
-    </main>
     <footer class="footer">
       <nav class="footer-nav" aria-label="footnav">
         <ul class="footer-nav__list">

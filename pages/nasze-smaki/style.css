@@ -1,21 +1,15 @@
 @import "../../assets/styles/main.css";
 
-main {
-  position: relative;
-  padding: 78px 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.main {
+  width: 100%;
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 4.875rem 22px 0;
 }
 
 .breadcrumb {
-  width: 100%;
-  max-width: calc(var(--content) - 78px);
+  max-width: var(--content);
   margin: 1.8rem auto;
-  padding: 0 11px;
 }
 
 .breadcrumb__list {
@@ -26,12 +20,12 @@ body {
 
 .breadcrumb__item {
   display: flex;
-  margin: 0.25rem 0.5rem;
+  margin: 0.25rem 1rem 0 0;
   align-items: center;
 }
 
 .breadcrumb__item > * {
-  margin: 0 0.25rem;
+  margin: 0 0.5rem 0 0;
 }
 
 .breadcrumb__icon.material-icons {
@@ -62,18 +56,39 @@ body {
 }
 
 .our-flavors {
-  /*position: relative;*/
   z-index: 4;
   display: flex;
   width: 100%;
   min-height: 900px;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 104px;
 }
 
 .our-flavors__container {
   display: flex;
   justify-content: center;
+}
+
+.stiky {
+  position: absolute;
+  right: 5%;
+  width: 100%;
+  max-width: 111px;
+  height: 100vh;
+  max-height: 111px;
+  padding: 20px;
+  background: var(--desert-sand);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font: 12px/18px var(--contentFont);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 1;
 }
 
 .our-flavors__container > div {
@@ -87,6 +102,10 @@ body {
 
 .our-flavors__image {
   position: relative;
+}
+
+.our-flavors__image img {
+ width: 100%;
 }
 
 .our-flavors__content {
@@ -128,6 +147,11 @@ body {
   color: #fff;
   border: 1px solid #b6c5a8;
   background: #b6c5a8;
+  transition: 0.2s all;
+}
+
+.our-flavors__button:hover {
+  filter: brightness(110%);
 }
 
 .our-flavors__button_arow {
@@ -137,14 +161,19 @@ body {
   min-height: 490px;
   max-height: 685px;
   color: #b6c5a8;
-  z-index: 99;
+  z-index: 9;
   justify-content: center;
   align-items: center;
+  transition: 0.2s all;
 }
 
 .our-flavors__button_arow span {
   color: #b6c5a8;
   font-size: 40px;
+}
+
+.our-flavors__button_arow:hover {
+ filter: brightness(110%);
 }
 
 .number {
@@ -181,6 +210,18 @@ body {
   .number span {
     font-size: 300px;
   }
+
+  .our-flavors__button {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .our-flavors__heading{
+    max-width: 500px;
+  }
+  .our-flavors {
+    margin-bottom: 104px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -189,7 +230,7 @@ body {
     height: auto;
   }
   .our-flavors__heading h3 {
-    font-size: 53px;
+    font-size: 56px;
   }
   .our-flavors__heading {
     max-width: 70%;
@@ -197,11 +238,6 @@ body {
   }
   .breadcrumbs {
     padding: 0 2%;
-  }
-
-  .our-flavors__button {
-    position: relative;
-    margin: 0 auto;
   }
 }
 @media screen and (max-width: 412px) {

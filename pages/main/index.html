@@ -564,34 +564,38 @@
     </script>
   </head>
   <body>
-    <div class="chat">
-      <input type="checkbox">
-      <button class="chat__button">
-      <span class="chat__icon">
-      <span></span>
-      <span></span>
-      </span>
-      </button>
-      <div class="chat-popup" id="chatForm">
-        <div class="chat-popup__heading">
-          <img class="chat-popup__logo" src="../../assets/icons/logo-min.svg" alt="logo">
-          <h5>porozmawiaj z miolli</h5>
-        </div>
-        <div class="chat-popup__history">
-          <p>
-            <span class="paragraph_upper">Obecnie nie jesteśmy dostępni on-line</span>
-            <br>
-            <span class="paragraph">Zostaw nam wiadomość lub zadzwoń pod numer XXX XXX XXX</span>
-          </p>
-        </div>
-        <form action="/" class="chat-popup__form">
-          <textarea class="chat-popup__textarea" placeholder="Wpisz swoją wiadomość" name="meassege"></textarea>
-          <button type="submit" class="chat__button_submit button-contained dark-vanilla">
-          <img src="../../assets/icons/send.svg" alt="send">
+   <div class="chat-fixed-container">
+     <div>
+        <div class="chat">
+          <input type="checkbox">
+          <button class="chat__button">
+            <span class="chat__icon">
+            <span></span>
+            <span></span>
+          </span>
           </button>
-        </form>
-      </div>
-    </div>
+          <div class="chat-popup" id="chatForm">
+            <div class="chat-popup__heading">
+              <img class="chat-popup__logo" src="../../assets/icons/logo-min.svg" alt="logo">
+              <h5>porozmawiaj z miolli</h5>
+            </div>
+            <div class="chat-popup__history">
+              <p>
+                <span class="paragraph_upper">Obecnie nie jesteśmy dostępni on-line</span>
+                <br>
+                <span class="paragraph">Zostaw nam wiadomość lub zadzwoń pod numer XXX XXX XXX</span>
+              </p>
+            </div>
+            <form action="/" class="chat-popup__form">
+              <textarea class="chat-popup__textarea" placeholder="Wpisz swoją wiadomość" name="meassege"></textarea>
+              <button type="submit" class="chat__button_submit button-contained dark-vanilla">
+              <img src="../../assets/icons/send.svg" alt="send">
+              </button>
+            </form>
+          </div>
+        </div>
+     </div>
+   </div>
     <header class="header">
       <div class="header-menu">
         <input class="checkbox-toggle-menu" type="checkbox">
@@ -614,8 +618,10 @@
               <ul class="topnav__list">
                 <li class="topnav__item_cart topnav__item_hasChild">
                   <a href="../koszyk/index.html" class="topnav__link">
-                  <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
-                  <span class="topnav__item_cart_counter inner">4</span>
+                  <span>
+                    <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
+                    <span class="topnav__item_cart_counter inner">4</span>
+                  </span>
                   </a>
                   <div class="cart-preview">
                     <div class="cart-preview__item">
@@ -777,10 +783,10 @@
           <img class="brand-name" src="../../assets/icons/miolli.svg" alt="miolli">
           <span class="brand-tagline uppercase">smak inspiracji</span>
         </div>
-        <button class="button_sticky button button-contained dark-coral button_rounded desktop-only">
+        <a href="../zestaw/index.html" class="button_sticky button button-contained dark-coral button_rounded desktop-only">
         <img class="heart-icon" src="../../assets/icons/heart.svg" alt="heart"> pamiętasz? niedługo dzień ...<span class="button_sticky__call-to-action">zamów zestaw</span>
         <span class="material-icons">east</span>
-        </button>
+        </a>
         <a href="#inspiration" class="button button-swipe">
         <span class="button-swipe__item dot"></span>
         <span class="button-swipe__item dot"></span>
@@ -1000,10 +1006,10 @@
                     </button>
                   </div>
                   <div class="uk-visible@xs">
-                    <button onclick='getSetName()' class="composition__button_arrow uk-position-center-left-out" uk-slideshow-item="previous">
+                    <button class="composition__button_arrow uk-position-center-left-out" uk-slideshow-item="previous">
                     <span class="material-icons pastel-pink thin">west</span>
                     </button>
-                    <button onclick='getSetName()' class="composition__button_arrow uk-position-center-right-out" uk-slideshow-item="next">
+                    <button class="composition__button_arrow uk-position-center-right-out" uk-slideshow-item="next">
                     <span class="material-icons pastel-pink thin">east</span>
                     </button>
                   </div>
@@ -1023,14 +1029,14 @@
                 <a href="../zestaw/index.html" class="set-block__button button button-outlined parrot-pink button_size_l"> zamów set </a>
               </footer>
             </div>
-            <div uk-slider class="uk-slider">
+            <div uk-slider class="uk-slider set-cards">
               <div class="uk-position-relative">
                 <div class="uk-slider-container">
                   <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-child-width-1-4@xl">
                     <li>
                       <div class="set-card">
                         <div class="set-card__figure">
-                          <img src="../../assets/images/set-1.png" alt="" class="card__image">
+                          <img src="../../assets/images/set-1.png" alt="" class="set-card__image">
                         </div>
                         <div class="set-card__body">
                           <h2 class="set-card__title">set na lato</h2>
@@ -1045,7 +1051,7 @@
                     <li>
                       <div class="set-card">
                         <div class="set-card__figure">
-                          <img src="../../assets/images/set-2.png" alt="" class="card__image">
+                          <img src="../../assets/images/set-2.png" alt="" class="set-card__image">
                         </div>
                         <div class="set-card__body">
                           <h2 class="set-card__title">set na lato</h2>
@@ -1060,7 +1066,7 @@
                     <li>
                       <div class="set-card">
                         <div class="set-card__figure">
-                          <img src="../../assets/images/set-3.png" alt="" class="card__image">
+                          <img src="../../assets/images/set-3.png" alt="" class="set-card__image">
                         </div>
                         <div class="set-card__body">
                           <h2 class="set-card__title">set na lato</h2>
@@ -1075,7 +1081,7 @@
                     <li>
                       <div class="set-card">
                         <div class="set-card__figure">
-                          <img src="../../assets/images/set-4.png" alt="" class="card__image">
+                          <img src="../../assets/images/set-4.png" alt="" class="set-card__image">
                         </div>
                         <div class="set-card__body">
                           <h2 class="set-card__title">set na lato</h2>
@@ -1090,7 +1096,7 @@
                     <li>
                       <div class="set-card">
                         <div class="set-card__figure">
-                          <img src="../../assets/images/set-1.png" alt="" class="card__image">
+                          <img src="../../assets/images/set-1.png" alt="" class="set-card__image">
                         </div>
                         <div class="set-card__body">
                           <h2 class="set-card__title">set na lato</h2>
@@ -1105,7 +1111,7 @@
                     <li>
                       <div class="set-card">
                         <div class="set-card__figure">
-                          <img src="../../assets/images/set-2.png" alt="" class="card__image">
+                          <img src="../../assets/images/set-2.png" alt="" class="set-card__image">
                         </div>
                         <div class="set-card__body">
                           <h2 class="set-card__title">set na lato</h2>
@@ -1119,20 +1125,20 @@
                     </li>
                   </ul>
                 </div>
-                <div class="uk-hidden@xs uk-hide" style="top: 410px;">
-                  <button class="composition__button_arrow uk-position-out uk-position-small" uk-slider-item="previous">
+                <div class="uk-hidden@xs uk-hide" style="top: 400px;">
+                  <button class="uk-position-out uk-position-small" uk-slider-item="previous">
                   <span class="material-icons pastel-pink thin">west</span>
                   </button>
-                  <div class="set-card__counter">
+                  <div class="set-card__counter counter">
                     <span class="set-card__current-number">1</span>
                     <span class="set-card__сounter-delimiter">/</span>
                     <span class="set-card__total-count">5</span>
                   </div>
-                  <button class="composition__button_arrow uk-position-out uk-position-small" uk-slider-item="next">
+                  <button class="uk-position-out uk-position-small" uk-slider-item="next">
                   <span class="material-icons pastel-pink thin">east</span>
                   </button>
                 </div>
-                <div class="uk-visible@xs">
+                <div class="uk-visible@xs sets">
                   <button class="composition__button_arrow uk-position-center-left-out uk-position-small" uk-slider-item="previous">
                   <span class="material-icons pastel-pink thin">west</span>
                   </button>
