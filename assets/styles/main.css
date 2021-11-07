@@ -735,19 +735,19 @@ z nadrukiem of topbar menu*/
   transition: 0.1s opacity;
 }
 
-.topnav__link_cart:after {
+/*.topnav__link_cart:after {
   content: "4";
   position: absolute;
   font: 0.875rem/1.125rem 'Monument Grotesk', sans-serif;
   color: #ffffff;
-  z-index: 9;
-}
+}*/
 
 .topnav__item_cart_counter {
   position: absolute;
   font: 0.875rem/1.125rem 'Monument Grotesk', sans-serif;
   display: flex;
-  padding: 27px 0 37px;
+  top:27px;
+  bottom: 37px;
   color: #ffffff;
   justify-content: center;
   align-items: center;
