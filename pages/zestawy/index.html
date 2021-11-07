@@ -8,48 +8,52 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
-    <div class="chat">
-      <input type="checkbox">
-      <button class="chat__button">
-        <i class="chat__icon">
-          <span></span>
-          <span></span>
-        </i>
-      </button>
-      <div class="chat-popup" id="chatForm">
-        <div class="chat-popup__heading">
-          <img class="chat-popup__logo" src="../../assets/icons/logo-min.svg" alt="logo">
-          <h5>porozmawiaj z miolli</h5>
-        </div>
-        <div class="chat-popup__history">
-          <p>
-            <span class="paragraph_upper">Obecnie nie jesteśmy dostępni on-line</span>
-            <br>
-            <span class="paragraph">Zostaw nam wiadomość lub zadzwoń pod numer XXX XXX XXX</span>
-          </p>
-        </div>
-        <form action="/" class="chat-popup__form">
-          <textarea class="chat-popup__textarea" placeholder="Wpisz swoją wiadomość" name="meassege"></textarea>
-          <button type="submit" class="chat__button_submit button-contained_dark-vanilla">
-            <img src="../../assets/icons/send.svg" alt="send">
+    <div class="chat-fixed-container">
+     <div>
+        <div class="chat">
+          <input type="checkbox">
+          <button class="chat__button">
+            <span class="chat__icon">
+            <span></span>
+            <span></span>
+          </span>
           </button>
-        </form>
-      </div>
-    </div>
+          <div class="chat-popup" id="chatForm">
+            <div class="chat-popup__heading">
+              <img class="chat-popup__logo" src="../../assets/icons/logo-min.svg" alt="logo">
+              <h5>porozmawiaj z miolli</h5>
+            </div>
+            <div class="chat-popup__history">
+              <p>
+                <span class="paragraph_upper">Obecnie nie jesteśmy dostępni on-line</span>
+                <br>
+                <span class="paragraph">Zostaw nam wiadomość lub zadzwoń pod numer XXX XXX XXX</span>
+              </p>
+            </div>
+            <form action="/" class="chat-popup__form">
+              <textarea class="chat-popup__textarea" placeholder="Wpisz swoją wiadomość" name="meassege"></textarea>
+              <button type="submit" class="chat__button_submit button-contained dark-vanilla">
+              <img src="../../assets/icons/send.svg" alt="send">
+              </button>
+            </form>
+          </div>
+        </div>
+     </div>
+   </div>
     <header class="header">
       <div class="header-menu">
         <input class="checkbox-toggle-menu" type="checkbox">
         <button class="button button-toggle-menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         </button>
         <div class="header-menu_inner">
           <div class="topbar">
             <div class="topbar__logo">
               <a href="../main/index.html" title="Miolli">
                 <picture>
-                  <source srcset="../../assets/icons/logo.svg" media="(min-width: 320px)">
+                  <source srcset="../../assets/icons/logo.svg" media="(min-width: 380px)">
                   <img src="../../assets/icons/logo-min.svg" alt="logo">
                 </picture>
               </a>
@@ -57,9 +61,8 @@
             <nav class="topnav" aria-label="Topnav">
               <ul class="topnav__list">
                 <li class="topnav__item_cart topnav__item_hasChild">
-                  <a href="../koszyk/index.html" class="topnav__link">
+                  <a href="../koszyk/index.html" class="topnav__link topnav__link_cart">
                     <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
-                    <span class="topnav__item_cart_counter inner">14</span>
                   </a>
                   <div class="cart-preview">
                     <div class="cart-preview__item">
@@ -69,6 +72,24 @@
                       <div class="cart-preview__body">
                         <div class="cart-preview__heading">
                           <h6 class="cart-preview__name h6">set na lato</h6>
+                        </div>
+                        <ul class="cart-preview__description">
+                          <li class="cart-preview__description-item">ilość: <span class="cart-preview__quantity">2</span>
+                          </li>
+                          <li class="cart-preview__description-item">cena: <span class="cart-preview__price">27</span>
+                          </li>
+                          <li class="cart-preview__description-item">suma: <span class="cart-preview__cost">54</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="cart-preview__item">
+                      <figure class="cart-preview__figure">
+                        <img class="cart-preview__image" src="../../assets/images/set-01.png" alt="set">
+                      </figure>
+                      <div class="cart-preview__body">
+                        <div class="cart-preview__heading">
+                          <h6 class="cart-preview__name h6">set na zimu</h6>
                         </div>
                         <ul class="cart-preview__description">
                           <li class="cart-preview__description-item">ilość: <span class="cart-preview__quantity">2</span>
@@ -100,22 +121,22 @@
                     </div>
                     <div class="cart-preview__footer">
                       <a href="../koszyk/index.html" class="cart-preview__remainder">i jeszcze <span class="rest">1</span> ... </a>
-                      <a href="../koszyk/index.html" class="cart-preview__button button button-contained button-contained_dark-vanilla button_size_m">przejdź do koszyka</a>
+                      <a href="../koszyk/index.html" class="cart-preview__button button button-contained dark-vanilla  button_size_m">przejdź do koszyka</a>
                     </div>
                   </div>
                 </li>
                 <li class="topnav__item_user">
                   <a href="../user/index.html" class="topnav__link">
-                    <img class="topnav__link_icon" src="../../assets/icons/user.svg" alt="user">
+                  <img class="topnav__link_icon" src="../../assets/icons/user.svg" alt="user">
                   </a>
                 </li>
-                <li class="topnav__item topnav__item_hasChild">
-                  <a href="../nadruki/index.html" class="topnav__link">makaroniki&nbsp;z nadrukiem <span class="material-icons">south</span>
+                <li class="topnav__item topnav__item_hasChild desktop-only">
+                  <a href="../nadruki/index.html" class="topnav__link">makaroniki&nbsp;z nadrukiem <span class="material-icons thin">south</span>
                   </a>
                   <div class="printing">
                     <figure class="printing__figure">
-                      <img src="https://satyr.io/200x200?text=IMAGE" alt="" class="printing__image">
-                      <img src="https://satyr.io/100x100?text=print" alt="" class="printing__image_print" style="opacity: 0.5">
+                      <img src="../../assets/images/slony-karmel.png" alt="" class="printing__image">
+                      <img src="../../assets/icons/logo.svg" alt="" class="printing__image_print">
                     </figure>
                     <span class="printing__vertical-border"></span>
                     <nav class="printing__nav" aria-label="Printing">
@@ -139,16 +160,16 @@
                         </li>
                         <li class="printing__item printing__item_underline">
                           <a href="../nadruki/index.html" class="printing__link">dedykowany nadruk</a>
-                          <span class="material-icons">east</span>
+                          <span class="material-icons thin">east</span>
                         </li>
                       </ul>
                     </nav>
                   </div>
                 </li>
-                <li class="topnav__item">
-                  <a href="../zestawy/index.html" class="topnav__link active">gotowe sety makaroników</a>
+                <li class="topnav__item desktop-only">
+                  <a href="../zestawy/index.html" class="topnav__link">gotowe sety makaroników</a>
                 </li>
-                <li class="topnav__item">
+                <li class="topnav__item desktop-only">
                   <a href="../konfigurator/index.html" class="topnav__link">twoja kompozycja</a>
                 </li>
               </ul>
@@ -160,7 +181,7 @@
                 <a href="../konfigurator/index.html" class="main-nav__link ">twoja kompozycja</a>
               </li>
               <li class="main-nav__item hidden">
-                <a href="../zestawy/index.html" class="main-nav__link active">gotowe sety makaroników</a>
+                <a href="../zestawy/index.html" class="main-nav__link">gotowe sety makaroników</a>
               </li>
               <li class="main-nav__item hidden">
                 <a href="../nadruki/index.html" class="main-nav__link">makaroniki z nadrukiem</a>
@@ -185,7 +206,7 @@
               </li>
             </ul>
           </nav>
-          <a class="button_business-offer button button-contained button-contained_dark-vanilla" href="../biznes/index.html">miolli <br>dla biznesu <span class="material-icons">north_east</span>
+          <a class="button_business-offer button button-contained" href="../biznes/index.html">miolli <br>dla biznesu <span class="material-icons">north_east</span>
           </a>
         </div>
       </div>
