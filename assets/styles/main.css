@@ -732,7 +732,7 @@ z nadrukiem of topbar menu*/
 .topnav__item_cart_counter {
   font: 0.875rem/0 'Monument Grotesk', sans-serif;
   display: inline-flex;
-  padding: 1.8rem 0 2rem;
+  /*padding: 1.8rem 0 2rem;*/
   color: #ffffff;
   justify-content: center;
   align-items: center;
