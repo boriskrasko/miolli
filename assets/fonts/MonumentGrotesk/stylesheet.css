@@ -1,8 +1,6 @@
 @font-face {
     font-family: 'Monument Grotesk';
-    src: url('MonumentGrotesk-Bold.eot');
-    src: local('Monument Grotesk Bold'), local('MonumentGrotesk-Bold'),
-        url('MonumentGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+    src:
         url('MonumentGrotesk-Bold.woff2') format('woff2'),
         url('MonumentGrotesk-Bold.woff') format('woff'),
         url('MonumentGrotesk-Bold.ttf') format('truetype');
@@ -12,9 +10,7 @@
 
 @font-face {
     font-family: 'Monument Grotesk';
-    src: url('MonumentGrotesk-Italic.eot');
-    src: local('Monument Grotesk Italic'), local('MonumentGrotesk-Italic'),
-        url('MonumentGrotesk-Italic.eot?#iefix') format('embedded-opentype'),
+    src:
         url('MonumentGrotesk-Italic.woff2') format('woff2'),
         url('MonumentGrotesk-Italic.woff') format('woff'),
         url('MonumentGrotesk-Italic.ttf') format('truetype');
@@ -24,9 +20,7 @@
 
 @font-face {
     font-family: 'Monument Grotesk';
-    src: url('MonumentGrotesk-Medium.eot');
-    src: local('Monument Grotesk Medium'), local('MonumentGrotesk-Medium'),
-        url('MonumentGrotesk-Medium.eot?#iefix') format('embedded-opentype'),
+    src: 
         url('MonumentGrotesk-Medium.woff2') format('woff2'),
         url('MonumentGrotesk-Medium.woff') format('woff'),
         url('MonumentGrotesk-Medium.ttf') format('truetype');
@@ -36,9 +30,7 @@
 
 @font-face {
     font-family: 'Monument Grotesk Semi-Mono';
-    src: url('MonumentGrotesk-Semi-Mono.eot');
-    src: local('Monument Grotesk Semi-Mono'), local('MonumentGrotesk-Semi-Mono'),
-        url('MonumentGrotesk-Semi-Mono.eot?#iefix') format('embedded-opentype'),
+    src:
         url('MonumentGrotesk-Semi-Mono.woff2') format('woff2'),
         url('MonumentGrotesk-Semi-Mono.woff') format('woff'),
         url('MonumentGrotesk-Semi-Mono.ttf') format('truetype');
@@ -48,9 +40,7 @@
 
 @font-face {
     font-family: 'Monument Grotesk';
-    src: url('MonumentGrotesk-Regular.eot');
-    src: local('Monument Grotesk Regular'), local('MonumentGrotesk-Regular'),
-        url('MonumentGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+    src: 
         url('MonumentGrotesk-Regular.woff2') format('woff2'),
         url('MonumentGrotesk-Regular.woff') format('woff'),
         url('MonumentGrotesk-Regular.ttf') format('truetype');
@@ -60,9 +50,7 @@
 
 @font-face {
     font-family: 'Monument Grotesk Mono';
-    src: url('MonumentGrotesk-Mono.eot');
-    src: local('Monument Grotesk Mono'), local('MonumentGrotesk-Mono'),
-        url('MonumentGrotesk-Mono.eot?#iefix') format('embedded-opentype'),
+    src:
         url('MonumentGrotesk-Mono.woff2') format('woff2'),
         url('MonumentGrotesk-Mono.woff') format('woff'),
         url('MonumentGrotesk-Mono.ttf') format('truetype');
@@ -72,9 +60,7 @@
 
 @font-face {
     font-family: 'Monument Grotesk';
-    src: url('MonumentGrotesk-BoldItalic.eot');
-    src: local('Monument Grotesk Bold Italic'), local('MonumentGrotesk-BoldItalic'),
-        url('MonumentGrotesk-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    src:
         url('MonumentGrotesk-BoldItalic.woff2') format('woff2'),
         url('MonumentGrotesk-BoldItalic.woff') format('woff'),
         url('MonumentGrotesk-BoldItalic.ttf') format('truetype');
@@ -84,9 +70,7 @@
 
 @font-face {
     font-family: 'Monument Grotesk';
-    src: url('MonumentGrotesk-MediumItalic.eot');
-    src: local('Monument Grotesk Medium Italic'), local('MonumentGrotesk-MediumItalic'),
-        url('MonumentGrotesk-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    src:
         url('MonumentGrotesk-MediumItalic.woff2') format('woff2'),
         url('MonumentGrotesk-MediumItalic.woff') format('woff'),
         url('MonumentGrotesk-MediumItalic.ttf') format('truetype');
