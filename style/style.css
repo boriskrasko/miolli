@@ -3339,8 +3339,16 @@ article {
   justify-content: space-around;
 }
 
-.article__image{
-  margin: 40px;
+.article {
+  width: 100%;
+}
+
+.article .article__image {
+  margin: 36px 0;
+}
+
+.article__image img {
+  width: 100%;
 }
 
 .article__content {
