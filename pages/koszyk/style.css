@@ -630,14 +630,13 @@ fieldset {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 2px;
+  padding: 0 0 0 4px;
   transition: 0.5s all;
   border: 1px solid #444444;
 }
 
 
 .quantity input {
-  font: normal 18px/25px var(--contentFont);
   width: 22px;
   text-align: center;
   color: #000000;
@@ -655,7 +654,7 @@ fieldset {
 
 .quantity__btns .button {
   overflow: hidden;
-  height: 20px;
+  height: 15px;
   min-width: 15px;
 }
 

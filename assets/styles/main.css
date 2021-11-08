@@ -1133,6 +1133,15 @@ z nadrukiem of topbar menu*/
   }
 }
 
+@media (max-width: 370px) {
+  .chat-popup {
+    min-height: 12.625rem;
+  }
+  .chat-popup__history {
+    min-height: 12rem;
+  }
+}
+
 .inner, .overlay {
   position: absolute;
   top: 0;
