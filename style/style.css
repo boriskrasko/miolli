@@ -3594,3 +3594,27 @@ article {
     font: 21px/20px var(--titleFont);
   }
 }
+
+.main.main_about {
+  min-height: 80vh;
+  background-image: url('../images/makaroniki-stylizowane.png');
+  background-size: 2100px auto;
+  background-position: center -100px;
+  background-repeat: no-repeat;
+}
+
+.main.main_about .breadcrumb {
+  margin-top: 78px;
+  padding-top: 32px;
+  margin-bottom: 400px;
+}
+
+.main.main_about .article {
+ max-width: 1000px;
+}
+
+.article__paragraph {
+  font: 16px/25px var(--contentFont);
+  letter-spacing: 0.1em;
+  margin: 40px;
+}
