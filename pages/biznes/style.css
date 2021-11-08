@@ -2,9 +2,10 @@
 
 main > * {
   width: 100%;
-  max-width: var(--content);
+  max-width: var(--max);
   margin: 0 auto;
-  padding: 4.875rem 22px 0;
+  padding: 60px 22px 0;
+  color: var(--outer-space);
 }
 
 .breadcrumb {
@@ -79,7 +80,7 @@ main > * {
   flex-direction: column;
   max-width: 953px;
   min-height: 368px;
-  margin: 0 auto 78px;
+  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
 }
@@ -87,7 +88,6 @@ main > * {
 .greeting__heading {
   display: flex;
   flex-direction: column;
-  padding: 30px;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -101,13 +101,13 @@ main > * {
   background: var(--white-chocolate);
 }
 
-.greeting__heading *,
-.greeting__paragraph {
-  margin: 20px;
+.greeting__heading * {
+  margin: 0 auto 40px ;
 }
 
 .greeting__text {
-  width: 640px;
+  width: 630px;
+  margin: 40px auto;
 }
 
 .greeting__paragraph {
@@ -115,18 +115,18 @@ main > * {
   font-size: 16px;
   text-align: center;
   letter-spacing: 0.025em;
-  text-transform: lowercase;
-  color: var(--dark-xs);
+  text-transform: none;
+  color: var(--outer-space);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .greeting__text {
     width: 100%;
   }
 }
 
 .benefits__content {
-  max-width: 1062px;
+  max-width: var(--content);
   margin: 0 auto 78px;
 }
 
@@ -135,13 +135,15 @@ main > * {
 }
 
 .benefits__heading * {
-  margin: 30px 0;
+  margin: 0 auto 60px;
 }
 
 .list {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
 }
 
@@ -150,6 +152,7 @@ main > * {
   flex-direction: column;
   width: 279px;
   min-height: 320px;
+  margin: 50px;
   justify-content: space-around;
   align-items: center;
 }
@@ -161,7 +164,7 @@ main > * {
 .item__image {
   width: 217px;
   height: 217px;
-  border-radius: 100%;
+  border-radius: 50%;
   background: #eeeeee;
 }
 
@@ -179,7 +182,6 @@ main > * {
 .cookie-table {
   width: 100%;
   height: 456px;
-  padding: 36px 0;
   background-color: #cccccc;
   background-image: url(../../assets/images/cookie-table.png);
   background-repeat: no-repeat;
@@ -191,11 +193,14 @@ main > * {
   max-width: 1002px;
   min-height: 600px;
   margin: 0 auto;
-  padding: 30px 0;
 }
 
 .print__heading > * {
-  margin: 30px;
+  margin: 30px auto;
+}
+
+.print__title {
+  text-align: center;
 }
 
 .print__heading h3 {
@@ -205,7 +210,7 @@ main > * {
 
 .print .advantages {
   max-width: 500px;
-  margin: 100px auto;
+  margin: 100px auto 40px;
   list-style: none;
 }
 
@@ -221,8 +226,8 @@ main > * {
 }
 
 .print__variant {
+  margin: 16px auto;
   max-width: 400px;
-  margin: 0 0 30px;
 }
 
 .print__variant .h5 {
@@ -237,15 +242,28 @@ main > * {
   text-align: center;
 }
 
+@media screen and (max-width: 700px) {
+  .print__variant,
+  .print .advantages {
+    width: 100%;
+    max-width: 100%;
+  }
+  .print__variant br {
+    display: none;
+  }
+  .print .advantages {
+    margin: 50px auto 20px;
+  }
+}
+
 .economic-indicator__content {
   max-width: 1002px;
   min-height: 600px;
-  margin: 0 auto 78px;
-  padding: 30px 0;
+  margin: 48px auto 48px;
 }
 
 .economic-indicator__heading > * {
-  margin: 30px;
+  margin: 30px auto;
 }
 
 .economic-indicator__heading h4 {
@@ -265,6 +283,8 @@ main > * {
 }
 
 .procent-card__top h2 {
+  font-size: 94px;
+  line-height: 94px;
   text-align: center;
   color: var(--pastel-pink);
 }
@@ -289,20 +309,24 @@ main > * {
   flex-direction: row-reverse;
   max-width: 1062px;
   margin: 0 auto 78px;
-  padding: 40px 0;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
+.proposal__title {
+  line-height: 51px;
+  margin: 10px 0 0;
+}
+
 .proposal__image img {
   width: 100%;
-  display: block;
   margin: 0 auto;
 }
 
 .proposal__content > div {
-  max-width: 537px;
+  width: 100%;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -325,7 +349,7 @@ main > * {
 .block__content {
   display: flex;
   flex-direction: column;
-  margin: 0 auto 78px;
+  margin: 0 auto;
 }
 
 .block__heading h3 {
@@ -335,9 +359,11 @@ main > * {
 
 .ordered-list {
   display: flex;
+  max-width: 1140px;
   width: 100%;
+  margin: 0 auto;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .ordered-list__item {
@@ -355,18 +381,18 @@ main > * {
 }
 
 .block img {
-  width: 90%;
+  width: 100%;
   margin: 50px 0;
   align-self: center;
 }
 
 .benefits-2__content {
-  max-width: 1062px;
-  margin: 0 auto 78px;
+  max-width: var(--content);
+  margin: 0 auto;
 }
 
 .benefits-2__heading {
-  max-width: 620px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
@@ -386,6 +412,12 @@ main > * {
   text-align: center;
 }
 
+.economic-indicator__content_2 {
+  max-width: var(--content);
+  min-height: 600px;
+  margin: 48px auto 48px;
+}
+
 @media (max-width: 500px) {
   .economic-indicator__title {
     font-size: 40px;
@@ -393,7 +425,7 @@ main > * {
 }
 
 .contact-form {
-  padding: 78px 0 78px;
+  padding: 78px 0;
   display: flex;
   flex-direction: column;
   align-items: center;

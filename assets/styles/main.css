@@ -14,7 +14,7 @@
   --basicFont: "Roboto", sans-serif;
 
   /* Width, margins & paddings */
-  --max: 1366px;
+  --max: 1440px;
   --content: calc(var(--max) - (11.4% - 44px));
   --min: 320px;
   --border: 1px solid #ddd;
@@ -224,7 +224,7 @@ a {
 }
 
 .h5 {
-  font: normal 2.5rem/2.8125rem var(--titleFont);
+  font: normal 40px/2.8125rem var(--titleFont);
 }
 
 .h6 {
