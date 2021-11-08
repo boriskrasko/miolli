@@ -3340,6 +3340,7 @@ article {
 }
 
 .article {
+  max-width: 966px;
   width: 100%;
 }
 
