@@ -434,6 +434,14 @@
   }
 }
 
+@media (max-width: 370px) {
+  .flavor.card {
+    width: 128px;
+    min-height: 212px;
+    margin: 1px;
+  }
+}
+
 .uniqueness {
   position: relative;
   max-width: var(--max);
@@ -559,6 +567,7 @@
   border: 20px solid var(--dark-vanilla);
   background: #fff;
   position: relative;
+  overflow: hidden;
 }
 
 .modal__header {
@@ -580,8 +589,8 @@
 
 .modal__close.button {
   position: absolute;
-  right: 1.4rem;
-  top: 1.4rem;
+  right: 0;
+  top: 1rem;
 }
 
 .modal__close.button:hover {
@@ -639,6 +648,10 @@
   }
   .flavor-list__copy {
     margin: 0 0.75rem;
+  }
+
+  .modal__title {
+    font: normal 54px/54px var(--titleFont);
   }
 }
 
