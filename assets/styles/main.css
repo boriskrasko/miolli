@@ -173,7 +173,7 @@ a {
   font: normal 1rem/1.6875rem var(--contentFont);
   min-width: 6.125rem;
   max-height: 2.5rem;
-  padding: 0.875rem 0.5625rem;
+  padding: 0.175rem 0.5625rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -183,6 +183,10 @@ a {
     font: normal 0.875rem/1.25rem var(--contentFont);
     max-height: 50px;
     padding: 0.9375rem 1.0625rem;
+  }
+  .button_size_s {
+    font: normal 0.875rem/1.25rem var(--contentFont);
+    max-height: 30px;
   }
 }
 
