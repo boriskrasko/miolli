@@ -9,13 +9,13 @@
   </head>
   <body>
     <div class="chat-fixed-container">
-     <div>
+      <div>
         <div class="chat">
           <input type="checkbox">
           <button class="chat__button">
-            <span class="chat__icon">
-            <span></span>
-            <span></span>
+          <span class="chat__icon">
+          <span></span>
+          <span></span>
           </span>
           </button>
           <div class="chat-popup" id="chatForm">
@@ -38,8 +38,8 @@
             </form>
           </div>
         </div>
-     </div>
-   </div>
+      </div>
+    </div>
     <header class="header">
       <div class="header-menu">
         <input class="checkbox-toggle-menu" type="checkbox">
@@ -62,7 +62,7 @@
               <ul class="topnav__list">
                 <li class="topnav__item_cart topnav__item_hasChild">
                   <a href="../koszyk/index.html" class="topnav__link topnav__link_cart">
-                    <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
+                  <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
                   </a>
                   <div class="cart-preview">
                     <div class="cart-preview__item">
@@ -212,60 +212,63 @@
       </div>
     </header>
     <main>
-     <form class="cart">
-      <section class="delivery-form">
-        <h2 class="delivery-form__title h2 dark-vanilla">sposób dostawy</h2>
-        <hr class="underline underline_heading fill_dark-vanilla">
+      <form class="cart">
+        <section class="delivery-form">
+          <h2 class="delivery-form__title h2 dark-vanilla">sposób dostawy</h2>
+          <hr class="underline desktop-only">
           <fieldset class="delivery__methods">
-            <legend class="paragraph_upper">wybierz sposób dostawy</legend>
-              <p class="delivery__method paragraph_upper">
+            <legend class="paragraph_upper gray">wybierz sposób dostawy</legend>
+            <p class="delivery__method paragraph_upper container">
               <input id="impost" type="radio" name="delivery-method" value="impost">
+              <span class="checkmark"></span>
               <label for="impost">paczkomaty impost</label>
               <span class="price">12, 90</span>
             </p>
-            <p class="delivery__method paragraph_upper">
+            <p class="delivery__method paragraph_upper container">
               <input id="dpi" type="radio" name="delivery-method" value="dpi">
+              <span class="checkmark"></span>
               <label for="dpi">kurier dpi</label>
               <span class="price">20, 00</span>
             </p>
-            <p class="delivery__method paragraph_upper">
+            <p class="delivery__method paragraph_upper container">
               <input id="coffeehouse" type="radio" name="delivery-method" value="kawiarnia">
+              <span class="checkmark"></span>
               <label for="coffeehouse">odbiór w kawiarni</label>
               <span class="price">00, 00</span>
             </p>
           </fieldset>
           <fieldset class="coffeehouse-select">
+            <legend class="paragraph_upper hidden">wybierz kawiarnu</legend>
             <div class="coffeehouse__map">
               <img src="../../assets/images/map-min.png" alt="map">
             </div>
             <div class="coffeehouse__container">
               <p>
                 <label class="paragraph_upper" for="coffeehouse-search">sklepy blisko:</label>
-                <input class="coffeehouse__search" type="search" id="site-coffeehouse-search" name="" aria-label="Search coffeehouse" placeholder="twój adres">
-                <legend class="paragraph_upper hidden">wybierz kawiarnu</legend>
+                <input class="coffeehouse__search" type="search" id="coffeehouse-search" aria-label="Search coffeehouse" placeholder="twój adres">
               </p>
-             <ol class="coffeehouse__list">
+              <ol class="coffeehouse__list">
                 <li class="delivery__method_coffeehouse paragraph_upper">
                   <input class="button_size_s" id="coffeehouse_1" type="radio" name="coffeehouse" value="kawiarnia_1">
                   <label for="coffeehouse_1">
-                    <span class="coffeehouse__place">Kawiarnia A </span>
-                    <span class="coffeehouse__address">address example 918 Wines Lane 34 00-224</span>
+                  <span class="coffeehouse__place">Kawiarnia A </span>
+                  <span class="coffeehouse__address">address example 918 Wines Lane 34 00-224</span>
                   </label>
                   <button class="button button-outlined button_size_s"></button>
                 </li>
                 <li class="delivery__method_coffeehouse paragraph_upper">
                   <input class="button_size_s" id="coffeehouse_2" type="radio" name="coffeehouse" value="kawiarnia_2">
                   <label for="coffeehouse_2">
-                    <span class="coffeehouse__place">Kawiarnia A </span>
-                    <span class="coffeehouse__address">address example 918 Wines Lane 34 00-224</span>
+                  <span class="coffeehouse__place">Kawiarnia A </span>
+                  <span class="coffeehouse__address">address example 918 Wines Lane 34 00-224</span>
                   </label>
                   <button class="button button-outlined button_size_s"></button>
                 </li>
                 <li class="delivery__method_coffeehouse paragraph_upper">
                   <input class="button_size_s" id="coffeehouse_3" type="radio" name="coffeehouse" value="kawiarnia_3">
                   <label for="coffeehouse_3">
-                    <span class="coffeehouse__place">Kawiarnia A </span>
-                    <span class="coffeehouse__address">address example 918 Wines Lane 34 00-224</span>
+                  <span class="coffeehouse__place">Kawiarnia A </span>
+                  <span class="coffeehouse__address">address example 918 Wines Lane 34 00-224</span>
                   </label>
                   <button class="button button-outlined button_size_s"></button>
                 </li>
@@ -273,7 +276,7 @@
             </div>
           </fieldset>
         </section>
-        <a href="pay.html" class="delivery-form_button_submit button button-outlined button-outlined_dark-vanilla button_size_m">dalej</a>
+        <a href="pay.html" class="cart__button delivery-form_button_submit button button-outlined dark-vanilla button_size_m">dalej</a>
       </form>
     </main>
     <footer class="footer">
@@ -312,5 +315,15 @@
         </ul>
       </nav>
     </footer>
+    <script>
+      const deliveryMethod = document.querySelectorAll('.delivery__method input');
+      const coffeehouseInput = document.getElementById('coffeehouse');
+      const coffeehouseSection = document.querySelector('.coffeehouse-select');
+      for (let i = 0; i < deliveryMethod.length; i++) {
+        deliveryMethod[i].addEventListener('change', () => {
+        coffeehouseSection.style.display = (coffeehouseInput.checked) ? 'flex' : 'none';
+      })
+      }
+    </script>
   </body>
 </html>

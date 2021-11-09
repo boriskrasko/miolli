@@ -9,13 +9,13 @@
   </head>
   <body>
     <div class="chat-fixed-container">
-     <div>
+      <div>
         <div class="chat">
           <input type="checkbox">
           <button class="chat__button">
-            <span class="chat__icon">
-            <span></span>
-            <span></span>
+          <span class="chat__icon">
+          <span></span>
+          <span></span>
           </span>
           </button>
           <div class="chat-popup" id="chatForm">
@@ -38,8 +38,8 @@
             </form>
           </div>
         </div>
-     </div>
-   </div>
+      </div>
+    </div>
     <header class="header">
       <div class="header-menu">
         <input class="checkbox-toggle-menu" type="checkbox">
@@ -62,7 +62,7 @@
               <ul class="topnav__list">
                 <li class="topnav__item_cart topnav__item_hasChild">
                   <a href="../koszyk/index.html" class="topnav__link topnav__link_cart">
-                    <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
+                  <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
                   </a>
                   <div class="cart-preview">
                     <div class="cart-preview__item">
@@ -240,21 +240,21 @@
                       <div class="account__data">
                         <form class="user-data-form">
                           <div class="fields paragraph_upper">
-                            <label class="field">
-                            <span class="field__label" for="firstname">Imię i nazwisko:</span>
-                            <input class="field__input" type="text" id="firstname" value="">
-                            </label>
-                            <label class="field">
-                            <span class="field__label" for="email">Email:</span>
-                            <input class="field__input" type="text" id="email">
-                            </label>
-                            <label class="field">
-                            <span class="field__label" for="lastname">Hasło</span>
-                            <input class="field__input" type="password" id="password" value="">
-                            </label>
+                            <p class="field">
+                              <label class="field__label" for="firstname">Imię i nazwisko:</label>
+                              <input class="field__input" type="text" id="firstname" value="">
+                            </p>
+                            <p class="field">
+                              <label class="field__label" for="email">E-mail:</label>
+                              <input class="field__input" type="text" id="email">
+                            </p>
+                            <p class="field">
+                              <label class="field__label" for="password">Hasło</label>
+                              <input class="field__input" type="password" id="password" value="">
+                            </p>
                           </div>
                           <button class="change-pass paragraph_upper">zmień hasło</button>
-                          <button type="button" class="button button-outlined button_size_m">zapisz</button>
+                          <button type="button" class="user-data-form_button button button-outlined button_size_m">zapisz</button>
                         </form>
                       </div>
                     </div>
@@ -263,7 +263,7 @@
                 <li class="tabs__item" role="presentation">
                   <input class="tabs__input" type="radio" name="tab">
                   <a href="#B" class="tabs__link" id="tab-B" role="tab" aria-controls="B" aria-selected="false" tabindex="-1">adresy</a>
-                  <section id="B" class="tabs__section" role="tabpanel" aria-labelledby="tab-B" aria-hidden="true">
+                  <div id="B" class="tabs__section" role="tabpanel" aria-labelledby="tab-B" aria-hidden="true">
                     <div class="tabs__body">
                       <div class="account__data">
                         <form class="user-data-form">
@@ -283,50 +283,50 @@ kod i miasto
                         </form>
                       </div>
                     </div>
-                  </section>
+                  </div>
                 </li>
                 <li class="tabs__item" role="presentation">
                   <input class="tabs__input" type="radio" name="tab">
                   <a href="#C" class="tabs__link" id="tab-C" role="tab" aria-controls="C" aria-selected="false" tabindex="-1">archiwum zamówień</a>
-                  <section id="C" class="tabs__section" role="tabpanel" aria-labelledby="tab-C" aria-hidden="true">
+                  <div id="C" class="tabs__section" role="tabpanel" aria-labelledby="tab-C" aria-hidden="true">
                     <div class="tabs__body">
                       Content of section C
                     </div>
-                  </section>
+                  </div>
                 </li>
                 <li class="tabs__item" role="presentation">
                   <input class="tabs__input" type="radio" name="tab">
                   <a href="#D" class="tabs__link" id="tab-D" role="tab" aria-controls="D" aria-selected="false" tabindex="-1">kody rabatowe</a>
-                  <section id="D" class="tabs__section" role="tabpanel" aria-labelledby="tab-D" aria-hidden="true">
+                  <div id="D" class="tabs__section" role="tabpanel" aria-labelledby="tab-D" aria-hidden="true">
                     <div class="tabs__body">
                       Content of section D
                     </div>
-                  </section>
+                  </div>
                 </li>
                 <li class="tabs__item" role="presentation">
                   <input class="tabs__input" type="radio" name="tab">
                   <a href="#E" class="tabs__link" id="tab-E" role="tab" aria-controls="E" aria-selected="false" tabindex="-1">ulubione</a>
-                  <section id="E" class="tabs__section" role="tabpanel" aria-labelledby="tab-E" aria-hidden="true">
+                  <div id="E" class="tabs__section" role="tabpanel" aria-labelledby="tab-E" aria-hidden="true">
                     <div class="tabs__body">
                       Content of section E
                     </div>
-                  </section>
+                  </div>
                 </li>
                 <li class="tabs__item" role="presentation">
                   <input class="tabs__input" type="radio" name="tab">
                   <a href="#F" class="tabs__link" id="tab-F" role="tab" aria-controls="F" aria-selected="false" tabindex="-1">faktury</a>
-                  <section id="F" class="tabs__section" role="tabpanel" aria-labelledby="tab-F" aria-hidden="true">
+                  <div id="F" class="tabs__section" role="tabpanel" aria-labelledby="tab-F" aria-hidden="true">
                     <div class="tabs__body">
                       Content of section F
                     </div>
-                  </section>
+                  </div>
                 </li>
               </ul>
             </div>
-            <a href="../koszyk/login.html" type="button" class="button sign-out">wyloguj</a>
+            <a href="../koszyk/login.html" class="button sign-out">wyloguj</a>
           </div>
         </div>
-      </div> 
+      </div>
     </main>
     <footer class="footer">
       <nav class="footer-nav" aria-label="footnav">
@@ -370,11 +370,13 @@ kod i miasto
       const tabsInput = document.querySelectorAll('.tabs__item input');
       const breadcrumbLink = document.querySelector('.breadcrumb__link_start');
       const signOut = document.querySelector('.sign-out');
-
+      
       for (let i = 0; i < tabsItem.length; i++) {
         tabsItem[i].addEventListener('click', () => {
           tabsList.classList.remove('tabs__list_start');
-          signOut.style.display = 'none';
+          if( window.innerWidth >= 490) {
+            signOut.style.display = 'none';
+          }
         })
       }
       breadcrumbLink.addEventListener('click', () => {

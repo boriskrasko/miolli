@@ -1172,6 +1172,9 @@ z nadrukiem of topbar menu*/
   .desktop-only {
     display: none;
   }
+  .desktop-hidden {
+    display: block;
+  }
   .main-nav {
     overflow-y: scroll;
   }

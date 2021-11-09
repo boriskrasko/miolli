@@ -68,8 +68,8 @@
   padding: 27px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   column-gap: 4%;
+  position: relative;
 }
 
 .contact__title {
@@ -79,13 +79,62 @@
 .contact > * {
   width: 100%;
   max-width: 454px;
-  margin-top: 39px;
+}
+
+.map {
+  position: relative;
 }
 
 .map img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.coffeehouse {
+  position: absolute;
+  display: block;
+  display: flex;
+  min-width: 94px;
+  height: 94px;
+  transition: 0.2s all;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  justify-content: center;
+  align-items: center;
+}
+
+.coffeehouse:before {
+  position: absolute;
+  z-index: 1;
+  bottom: -12px;
+  width: 0;
+  height: 0;
+  content: '';
+  transition: 0.2s all;
+  border-top: 1.5rem solid #ffffff;
+  border-right: 1.5rem solid transparent;
+  border-left: 1.5rem solid transparent;
+}
+
+.coffeehouse:hover {
+  background-color: var(--dark-vanilla);
+}
+
+.coffeehouse:hover:before {
+  border-top-color: var(--dark-vanilla);
+}
+
+.coffeehouse1 {
+  top: 150px;
+  right: 100px;
+}
+
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
 }
 
 address {
@@ -149,5 +198,22 @@ address {
   .field,
   .field_short {
     min-width: 90%;
+  }
+  .contact {
+    flex-wrap: wrap;
+  }
+  .contact__title {
+    align-self: center;
+    position: absolute;
+    top: 0;
+  }
+  .contact > * {
+    margin-top: 78px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact > * {
+    margin-top: 59px;
   }
 }

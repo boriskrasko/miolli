@@ -9,13 +9,13 @@
   </head>
   <body>
     <div class="chat-fixed-container">
-     <div>
+      <div>
         <div class="chat">
           <input type="checkbox">
           <button class="chat__button">
-            <span class="chat__icon">
-            <span></span>
-            <span></span>
+          <span class="chat__icon">
+          <span></span>
+          <span></span>
           </span>
           </button>
           <div class="chat-popup" id="chatForm">
@@ -38,8 +38,8 @@
             </form>
           </div>
         </div>
-     </div>
-   </div>
+      </div>
+    </div>
     <header class="header">
       <div class="header-menu">
         <input class="checkbox-toggle-menu" type="checkbox">
@@ -62,7 +62,7 @@
               <ul class="topnav__list">
                 <li class="topnav__item_cart topnav__item_hasChild">
                   <a href="../koszyk/index.html" class="topnav__link topnav__link_cart">
-                    <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
+                  <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
                   </a>
                   <div class="cart-preview">
                     <div class="cart-preview__item">
@@ -214,8 +214,8 @@
     <main>
       <div class="cart">
         <div class="cart__header">
-          <h2 class="h2 txt-color_dark-vanilla">twój koszyk</h2>
-          <hr class="underline underline_heading fill_dark-vanilla">
+          <h2 class="h2 dark-vanilla">twój koszyk</h2>
+          <hr class="underline dark-vanilla-fill desktop-only">
           <a class="cart__header-link paragraph_upper" href="../main/index.html">wróć do sklepu</a>
         </div>
         <div class="cart__body">
@@ -225,159 +225,154 @@
               <div class="cart__aside">
                 <img src="../../assets/images/set-1.png" class="cart__item-image" alt="set">
               </div>
-              <div class="cart__item-body">
-                <h5 class="cart__item-name h5 uppercase">set na lato</h5>
+              <div class="cart__item-body gray">
+                <h6 class="cart__item-name h6 uppercase">set na lato</h6>
                 <div class="cart__item-description paragraph_upper">
                   <div class="cart__item-quantity">
-                    <span>iłość: </span>
+                    <b>ilość: </b>
                     <label class="quantity box-size">
-                      <span class="smth">6x</span>
-                      <input class="paragraph_upper" id="boxSize" name="boxSize" type="number" readonly value="2" min="1" max="99">
+                    <span class="smth">6x</span>
+                    <input class="paragraph_upper" name="boxSize" type="number" readonly value="2" min="1" max="99">
                     </label>
                     <div class="quantity__btns">
                       <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp(); this.parentNode.children[1].style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 1) ? '#000' : '#999'; this.parentNode.parentNode.parentNode.querySelector('.cost').textContent = this.parentNode.parentNode.querySelector('input[type=number]').value * document.querySelector('.price').textContent" type="button" class="button">
-                        <span class="material-icons">arrow_drop_up</span>
+                      <span class="material-icons gray">arrow_drop_up</span>
                       </button>
                       <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown(); this.style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 1) ? '#000' : '#999';this.parentNode.parentNode.parentNode.querySelector('.cost').textContent = this.parentNode.parentNode.querySelector('input[type=number]').value * document.querySelector('.price').textContent" type="button" class="button">
-                        <span class="material-icons">arrow_drop_down</span>
+                      <span class="material-icons gray">arrow_drop_down</span>
                       </button>
                     </div>
                   </div>
                   <div class="cart__item-price">
-                    <span>cena:</span>
+                    <b>cena:</b>
                     <span class="price">34</span> ,-
                   </div>
                   <div class="cart__item-cost">
-                    <span>suma</span>
+                    <b>suma</b>
                     <span class="cost">68</span> ,-
                   </div>
-                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'; document.querySelector('.topnav__item_cart_counter').textContent -= 1; checkCartCount()" class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
+                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'" class="cart__item-clear paragraph_upper gray">
+                  <b>usuń</b>
+                  <span class="material-icons">clear</span>
                   </button>
                 </div>
-                </h4>
-              </div>
-            </li>
-            <li class="cart__item">
-              <div class="cart__aside">
-                <img src="../../assets/images/set-4.png" class="cart__item-image" alt="set">
-              </div>
-              <div class="cart__item-body">
-                <h5 class="cart__item-name h5 uppercase">set na lato</h5>
-                <div class="cart__item-description paragraph_upper">
-                  <div class="cart__item-quantity">
-                    <span>iłość: </span>
-                    <label class="quantity box-size">
-                      <span class="smth">6x</span>
-                      <input class="paragraph_upper" id="boxSize" name="boxSize" type="number" readonly value="2" min="1" max="99">
-                    </label>
-                    <div class="quantity__btns">
-                      <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp(); this.parentNode.children[1].style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 1) ? '#000' : '#999'; this.parentNode.parentNode.parentNode.querySelector('.cost').textContent = this.parentNode.parentNode.querySelector('input[type=number]').value * document.querySelector('.price').textContent" type="button" class="button">
-                        <span class="material-icons">arrow_drop_up</span>
-                      </button>
-                      <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown(); this.style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 1) ? '#000' : '#999';this.parentNode.parentNode.parentNode.querySelector('.cost').textContent = this.parentNode.parentNode.querySelector('input[type=number]').value * document.querySelector('.price').textContent" type="button" class="button">
-                        <span class="material-icons">arrow_drop_down</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="cart__item-price">
-                    <span>cena:</span>
-                    <span class="price">34</span> ,-
-                  </div>
-                  <div class="cart__item-cost">
-                    <span>suma</span>
-                    <span class="cost">68</span> ,-
-                  </div>
-                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'; document.querySelector('.topnav__item_cart_counter').textContent -= 1; checkCartCount()" class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
-                  </button>
-                </div>
-                </h4>
               </div>
             </li>
             <li class="cart__item">
               <div class="cart__aside">
                 <img src="../../assets/images/set-2.png" class="cart__item-image" alt="set">
               </div>
-              <div class="cart__item-body">
-                <h5 class="cart__item-name h5 uppercase">set na lato</h5>
+              <div class="cart__item-body gray">
+                <h6 class="cart__item-name h6 uppercase">set na lato</h6>
                 <div class="cart__item-description paragraph_upper">
                   <div class="cart__item-quantity">
-                    <span>iłość: </span>
+                    <b>ilość: </b>
                     <label class="quantity box-size">
-                      <span class="smth">6x</span>
-                      <input class="paragraph_upper" id="boxSize" name="boxSize" type="number" readonly value="2" min="1" max="99">
+                    <span class="smth">6x</span>
+                    <input class="paragraph_upper" name="boxSize" type="number" readonly value="2" min="1" max="99">
                     </label>
                     <div class="quantity__btns">
                       <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp(); this.parentNode.children[1].style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 1) ? '#000' : '#999'; this.parentNode.parentNode.parentNode.querySelector('.cost').textContent = this.parentNode.parentNode.querySelector('input[type=number]').value * document.querySelector('.price').textContent" type="button" class="button">
-                        <span class="material-icons">arrow_drop_up</span>
+                      <span class="material-icons gray">arrow_drop_up</span>
                       </button>
                       <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown(); this.style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 1) ? '#000' : '#999';this.parentNode.parentNode.parentNode.querySelector('.cost').textContent = this.parentNode.parentNode.querySelector('input[type=number]').value * document.querySelector('.price').textContent" type="button" class="button">
-                        <span class="material-icons">arrow_drop_down</span>
+                      <span class="material-icons gray">arrow_drop_down</span>
                       </button>
                     </div>
                   </div>
                   <div class="cart__item-price">
-                    <span>cena:</span>
+                    <b>cena:</b>
                     <span class="price">34</span> ,-
                   </div>
                   <div class="cart__item-cost">
-                    <span>suma</span>
+                    <b>suma</b>
                     <span class="cost">68</span> ,-
                   </div>
-                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'; document.querySelector('.topnav__item_cart_counter').textContent -= 1; checkCartCount()" class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
+                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'" class="cart__item-clear paragraph_upper gray">
+                  <b>usuń</b>
+                  <span class="material-icons">clear</span>
                   </button>
                 </div>
-                </h4>
               </div>
             </li>
             <li class="cart__item">
               <div class="cart__aside">
                 <img src="../../assets/images/set-3.png" class="cart__item-image" alt="set">
               </div>
-              <div class="cart__item-body">
-                <h5 class="cart__item-name h5 uppercase">set na lato</h5>
+              <div class="cart__item-body gray">
+                <h6 class="cart__item-name h6 uppercase">set na lato</h6>
                 <div class="cart__item-description paragraph_upper">
                   <div class="cart__item-quantity">
-                    <span>iłość: </span>
-                    <label class="quantity box-count">
-                      <span class="smth">6x</span>
-                      <input class="paragraph_upper" id="boxCount" name="boxCount" type="number" readonly value="2" min="1" max="99">
+                    <b>ilość: </b>
+                    <label class="quantity box-size">
+                    <span class="smth">6x</span>
+                    <input class="paragraph_upper" name="boxSize" type="number" readonly value="2" min="1" max="99">
                     </label>
                     <div class="quantity__btns">
                       <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp(); this.parentNode.children[1].style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 1) ? '#000' : '#999'; this.parentNode.parentNode.parentNode.querySelector('.cost').textContent = this.parentNode.parentNode.querySelector('input[type=number]').value * document.querySelector('.price').textContent" type="button" class="button">
-                        <span class="material-icons">arrow_drop_up</span>
+                      <span class="material-icons gray">arrow_drop_up</span>
                       </button>
                       <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown(); this.style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 1) ? '#000' : '#999';this.parentNode.parentNode.parentNode.querySelector('.cost').textContent = this.parentNode.parentNode.querySelector('input[type=number]').value * document.querySelector('.price').textContent" type="button" class="button">
-                        <span class="material-icons">arrow_drop_down</span>
+                      <span class="material-icons gray">arrow_drop_down</span>
                       </button>
                     </div>
                   </div>
                   <div class="cart__item-price">
-                    <span>cena:</span>
+                    <b>cena:</b>
                     <span class="price">34</span> ,-
                   </div>
                   <div class="cart__item-cost">
-                    <span>suma</span>
+                    <b>suma</b>
                     <span class="cost">68</span> ,-
                   </div>
-                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'; document.querySelector('.topnav__item_cart_counter').textContent -= 1; checkCartCount()" class="cart__item-clear">
-                    <span class="paragraph_upper">usuń</span>
-                    <span class="material-icons">clear</span>
+                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'" class="cart__item-clear paragraph_upper gray">
+                  <b>usuń</b>
+                  <span class="material-icons">clear</span>
                   </button>
                 </div>
-                </h4>
+              </div>
+            </li>
+            <li class="cart__item">
+              <div class="cart__aside">
+                <img src="../../assets/images/set-4.png" class="cart__item-image" alt="set">
+              </div>
+              <div class="cart__item-body gray">
+                <h6 class="cart__item-name h6 uppercase">set na lato</h6>
+                <div class="cart__item-description paragraph_upper">
+                  <div class="cart__item-quantity">
+                    <b>ilość: </b>
+                    <label class="quantity box-size">
+                    <span class="smth">6x</span>
+                    <input class="paragraph_upper" name="boxSize" type="number" readonly value="2" min="1" max="99">
+                    </label>
+                    <div class="quantity__btns">
+                      <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp(); this.parentNode.children[1].style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 1) ? '#000' : '#999'; this.parentNode.parentNode.parentNode.querySelector('.cost').textContent = this.parentNode.parentNode.querySelector('input[type=number]').value * document.querySelector('.price').textContent" type="button" class="button">
+                      <span class="material-icons gray">arrow_drop_up</span>
+                      </button>
+                      <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown(); this.style.color = (this.parentNode.parentNode.querySelector('input[type=number]').value > 1) ? '#000' : '#999';this.parentNode.parentNode.parentNode.querySelector('.cost').textContent = this.parentNode.parentNode.querySelector('input[type=number]').value * document.querySelector('.price').textContent" type="button" class="button">
+                      <span class="material-icons gray">arrow_drop_down</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="cart__item-price">
+                    <b>cena:</b>
+                    <span class="price">34</span> ,-
+                  </div>
+                  <div class="cart__item-cost">
+                    <b>suma</b>
+                    <span class="cost">68</span> ,-
+                  </div>
+                  <button onclick="this.parentNode.parentNode.parentNode.style.display = 'none'" class="cart__item-clear paragraph_upper gray">
+                  <b>usuń</b>
+                  <span class="material-icons">clear</span>
+                  </button>
+                </div>
               </div>
             </li>
           </ul>
         </div>
         <div class="cart__footer">
-          <a href="login.html" class="button button-outlined button-outlined_dark-vanilla button_size_m">zamów</a>
-          <a href="../zestawy/index.html" class="button button-outlined button-outlined_dark-vanilla button_size_m">dodaj</a>
+          <a href="login.html" class="cart__button button button-outlined dark-vanilla button_size_m">zamów</a>
         </div>
       </div>
     </main>
@@ -417,15 +412,5 @@
         </ul>
       </nav>
     </footer>
-    <script>
-      document.querySelector('.cart__footer').children[1].style.display = 'none';
-      let checkCartCount = () => {
-        if (document.querySelector('.topnav__item_cart_counter').textContent == '0') {
-          document.querySelector('.topnav__item_cart_counter').textContent = '';
-          document.querySelector('.cart__footer').children[0].style.display = 'none';
-          document.querySelector('.cart__footer').children[1].style.display = 'inline-flex';
-        }
-      }
-    </script>
   </body>
 </html>
