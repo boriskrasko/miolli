@@ -84,6 +84,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 78px;
 }
 
 .article__figure {
@@ -115,11 +116,16 @@
 
 .article__title {
   text-align: center;
+  text-transform: uppercase;
 }
 
 .article__copy {
   text-align: center;
   font-size: 14px;
+}
+
+.article__button {
+  min-width: 186px;
 }
 
 .blog__footer {
@@ -213,6 +219,9 @@
   }
   .article:nth-child(odd) {
     display: none;
+  }
+  .article__button {
+    max-height: 41px;
   }
 }
 

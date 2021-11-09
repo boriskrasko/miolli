@@ -1,10 +1,9 @@
 @import '../../assets/styles/main.css';
-
 .main {
   width: 100%;
   max-width: var(--content);
   margin: 0 auto;
-  padding: 4.875rem 0 0;
+  padding: 4.875rem 22px 0;
 }
 
 .breadcrumb {
@@ -56,7 +55,7 @@
   flex-direction: column;
   max-width: var(--content);
   min-height: calc(100vh - 78px);
-  margin: 0 auto 78px;
+  margin: 0 auto;
   background-color: var(--limen);
   background-image: url(../../assets/images/account-mask.png);
   background-repeat: no-repeat;
@@ -66,8 +65,8 @@
 }
 
 .account__content nav {
+  margin: 1.8rem;
   align-self: flex-start;
-  margin: 1.8rem
 }
 
 .account__header {
@@ -85,16 +84,16 @@
 }
 
 .account__menu {
+  display: flex;
   max-width: 1000px;
   margin: 0 auto;
-  display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .account__menu_open {
-  max-width: 400px;
   display: flex;
+  max-width: 400px;
   justify-content: center;
   flex-wrap: wrap;
   align-self: flex-start;
@@ -102,37 +101,36 @@
 
 .menu__item {
   font: 25px/35px var(--contentFont);
+  display: flex;
   width: 275px;
   height: 168px;
-  border: 1px solid gray;
   margin: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   text-transform: uppercase;
+  border: 1px solid gray;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu__item_open {
   font: 25px/35px var(--contentFont);
+  display: flex;
   width: 320px;
   height: 68px;
-  border-bottom: 1px solid gray;
   margin: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   text-transform: uppercase;
+  border-bottom: 1px solid gray;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu__item_open_active {
   width: 275px;
   height: 168px;
-  background: #000000;
   color: #ffffff;
+  background: #000000;
 }
-
 
 @media (max-width: 500px) {
   .account__header {
@@ -140,30 +138,34 @@
   }
 }
 
-
 .user-data-form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   margin: 0 auto;
+  align-items: flex-start;
 }
 
 .user-data-form .button {
-  align-self: flex-start;
   margin: 40px 0;
+  align-self: flex-start;
 }
 
 .change-pass {
-  align-self: flex-start;
   margin: 20px 30px;
   text-decoration: underline;
+  color: #444444;
+  align-self: flex-start;
+}
+
+.change-pass:hover {
+  color: #000000;
 }
 
 .fields {
-  width: 100%;
-  margin: 0 auto;
   display: inline-flex;
   flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -176,12 +178,12 @@
 }
 
 .field__input {
+  font: 16px/25px var(--contentFont);
   height: 65px;
+  margin-bottom: 26px;
+  padding: 0 30px;
   border: 1px solid #000000;
   outline-color: var(--dark-vanilla);
-  font: 16px/25px var(--contentFont);
-  padding: 0 30px;
-  margin-bottom: 26px;
   background: transparent;
 }
 
@@ -189,12 +191,8 @@
   margin: 0 30px 15px;
 }
 
-
-@media (max-width: 400px) {
-  .field {
-    min-width: 100%;
-    width: 100%;
-  }
+.user-data-form_button {
+  min-width: 146px;
 }
 
 .account__menu {
@@ -202,14 +200,14 @@
 }
 
 .tabs {
-  width: 100%;
   position: relative;
+  width: 100%;
   padding: 20px;
 }
 
 .tabs__list_start {
-  width: 100%;
   display: flex;
+  width: 100%;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -219,68 +217,47 @@
 }
 
 .tabs__item {
+  position: relative;
   display: flex;
   width: 100%;
-  position: relative;
 }
 
 .sign-out {
   font: 25px/35px var(--contentFont);
-  text-transform: uppercase;
   margin: 78px auto;
+  text-transform: uppercase;
   color: var(--quartz);
   border-bottom: 2px solid var(--quartz);
 }
 
-
 .tabs__link {
   font: 25px/35px var(--contentFont);
-  width: 275px;
-  height: 96px;
-  border-bottom: 2px solid #000000;
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: 0.2s all;
   text-align: center;
   text-transform: uppercase;
-  position: relative;
-  transition: 0.2s all;
   color: var(--quartz);
-  white-space: nowrap;
-}
-
-
-.tabs__list_start .tabs__link {
-  height: 168px;
-  border: 2px solid #000000;
-  white-space: pre-wrap;
-  margin: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .tabs__section {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  display: none;
   width: 50%;
   min-height: 96px;
-  position: absolute;
-  right: 0;
-  top: 0;
   margin: 0 20px;
-  display: none;
-  z-index: 9;
 }
 
 .tabs__input {
   position: absolute;
-  width: 275px;
-  height: 96px;
   z-index: 9;
-  opacity: 0;
   cursor: pointer;
-}
-
-.tabs__list_start .tabs__input {
-  top: 20px;
-  left: 20px;
-  height: 168px;
+  opacity: 0;
 }
 
 .tabs__input:checked ~ .tabs__section {
@@ -293,30 +270,94 @@
 
 .tabs__input:checked ~ .tabs__link {
   height: 168px;
-  background: #000000;
-  color: #ffece6;
   white-space: pre-wrap;
+  color: #ffece6;
+  background: #000000;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 760px) {
   .tabs__item {
     flex-direction: column;
     align-items: center;
   }
   .tabs__section {
-    max-width: 448px;
-    width: 100%;
-    margin: 40px auto;
     position: static;
+    width: 100%;
+    max-width: 448px;
+    margin: 40px auto;
   }
 }
 
-
-@media (max-width: 576px) {
+@media (min-width: 491px) {
   .tabs__list_start .tabs__link {
+    height: 168px;
+    margin: 20px;
+    white-space: pre-wrap;
+    border: 2px solid #000000;
+  }
+  .tabs__list_start .tabs__input {
+    top: 20px;
+    left: 20px;
+    height: 168px;
+  }
+  .tabs__link {
+    width: 275px;
     height: 96px;
-    border: none;
     white-space: nowrap;
     border-bottom: 2px solid #000000;
+    ;
+  }
+  .tabs__input {
+    width: 275px;
+    height: 96px;
+  }
+}
+
+@media (max-width: 490px) {
+  .tabs__list_start .tabs__link, .tabs__link {
+    width: 275px;
+    height: 80px;
+    margin: 10px auto;
+    white-space: pre-wrap;
+    border: 1px solid #000000;
+  }
+  .tabs__list_start .tabs__input {
+    height: 80px;
+  }
+  .tabs__list {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .tabs__item {
+    width: auto;
+  }
+  .tabs__input {
+    width: 283px;
+    height: 80px;
+  }
+  .tabs__input:checked ~ .tabs__link {
+    height: 80px;
+    color: #ffece6;
+    background: #000000;
+  }
+  .tabs__input:checked {
+    margin: 10px 0;
+  }
+  .sign-out {
+    margin: 0 auto 70px;
+  }
+  .user-data-form {
+    width: 100%;
+    max-width: 283px;
+  }
+  .field__label {
+    margin: 0 0 15px;
+  }
+  .change-pass {
+    margin: 0;
+    text-decoration: underline;
+    align-self: flex-start;
   }
 }

@@ -9,13 +9,13 @@
   </head>
   <body>
     <div class="chat-fixed-container">
-     <div>
+      <div>
         <div class="chat">
           <input type="checkbox">
           <button class="chat__button">
-            <span class="chat__icon">
-            <span></span>
-            <span></span>
+          <span class="chat__icon">
+          <span></span>
+          <span></span>
           </span>
           </button>
           <div class="chat-popup" id="chatForm">
@@ -38,8 +38,8 @@
             </form>
           </div>
         </div>
-     </div>
-   </div>
+      </div>
+    </div>
     <header class="header">
       <div class="header-menu">
         <input class="checkbox-toggle-menu" type="checkbox">
@@ -62,7 +62,7 @@
               <ul class="topnav__list">
                 <li class="topnav__item_cart topnav__item_hasChild">
                   <a href="../koszyk/index.html" class="topnav__link topnav__link_cart">
-                    <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
+                  <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
                   </a>
                   <div class="cart-preview">
                     <div class="cart-preview__item">
@@ -212,32 +212,35 @@
       </div>
     </header>
     <main>
-     <form class="cart">
-      <section class="delivery-form">
-        <h2 class="delivery-form__title h2 dark-vanilla">płatność</h2>
-        <hr class="underline underline_heading fill_dark-vanilla">
+      <form class="cart">
+        <section class="delivery-form">
+          <h2 class="delivery-form__title h2 dark-vanilla">płatność</h2>
+          <hr class="underline desktop-only">
           <fieldset class="pay__methods">
-            <legend class="paragraph_upper">wybierz metodę płatności</legend>
-              <p class="pay__method paragraph_upper">
+            <legend class="paragraph_upper gray">wybierz metodę płatności</legend>
+            <p class="pay__method paragraph_upper container">
               <input id="1" type="radio" name="pay-method" value="1">
+              <span class="checkmark"></span>
               <label for="1"></label>
             </p>
-            <p class="pay__method paragraph_upper">
+            <p class="pay__method paragraph_upper container">
               <input id="2" type="radio" name="pay-method" value="2">
+              <span class="checkmark"></span>
               <label for="2"></label>
             </p>
-            <p class="pay__method paragraph_upper">
+            <p class="pay__method paragraph_upper container">
               <input id="3" type="radio" name="pay-method" value="3">
+              <span class="checkmark"></span>
               <label for="3"></label>
             </p>
-            <p class="pay__method paragraph_upper">
+            <p class="pay__method paragraph_upper container">
               <input id="4" type="radio" name="pay-method" value="4">
+              <span class="checkmark"></span>
               <label for="4"></label>
             </p>
           </fieldset>
         </section>
-         <!-- <button type="submit" class="shipping-form_button_submit button button-outlined button-outlined_dark-vanilla button_size_m">dalej</button> -->
-          <a href="done.html" class="delivery-form_button_submit button button-outlined button-outlined_dark-vanilla button_size_m">dalej</a>
+        <a href="done.html" class="cart__button delivery-form_button_submit button button-outlined dark-vanilla button_size_m">dalej</a>
       </form>
     </main>
     <footer class="footer">
