@@ -3643,7 +3643,7 @@ article {
   margin: 40px;
 }
 
-.main.main_article .section__title {
+.main.main_article .article__title {
   font: 40px/36px var(--titleFont);
   letter-spacing: 0.1em;
   color: #222;
