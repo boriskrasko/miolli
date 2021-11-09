@@ -1329,6 +1329,7 @@ fieldset>* {
 input[type='color'] {
   -webkit-appearance: none;
   border: none;
+  font-size: 16px;
 }
 
 input[type='color']::-webkit-color-swatch-wrapper {
@@ -1347,7 +1348,7 @@ input[type='color']::-webkit-color-swatch {
 }
 
 .custom-print__font-color_button {
-  height: 41px;
+  min-height: 41px;
 }
 
 .custom-print__enter-text {
@@ -1381,7 +1382,7 @@ input[type='color']::-webkit-color-swatch {
 }
 
 .custom-print__enter-text_button {
-  height: 41px;
+  min-height: 41px;
 }
 
 .custom-print__select-font {
