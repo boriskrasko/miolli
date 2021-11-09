@@ -1554,7 +1554,7 @@ input[type=file]::file-selector-button {
 
 .input-file~.button {
   width: 160px;
-  height: 42px;
+  min-height: 42px;
   margin: 20px 0 0;
 }
 
