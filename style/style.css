@@ -3618,3 +3618,33 @@ article {
   letter-spacing: 0.1em;
   margin: 40px;
 }
+
+.main.main_article {
+  min-height: 80vh;
+  background-image: url('../images/article.png');
+  background-size: 2100px auto;
+  background-position: center -100px;
+  background-repeat: no-repeat;
+}
+
+.main.main_article .breadcrumb {
+  margin-top: 78px;
+  padding-top: 32px;
+  margin-bottom: 400px;
+}
+
+.main.main_article .article {
+ max-width: 1000px;
+}
+
+.article__article {
+  font: 16px/25px var(--contentFont);
+  letter-spacing: 0.1em;
+  margin: 40px;
+}
+
+.main.main_article .section__title {
+  font: 40px/36px var(--titleFont);
+  letter-spacing: 0.1em;
+  color: #222;
+}
