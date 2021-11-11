@@ -14,7 +14,7 @@
   --basicFont: "Roboto", sans-serif;
 
   /* Width, margins & paddings */
-  --max: 1440px;
+  --max: 1920px;
   --content: calc(var(--max) - (11.4% - 44px));
   --min: 320px;
   --border: 1px solid #ddd;
@@ -348,8 +348,14 @@ z nadrukiem of topbar menu*/
   align-items: center;
 }
 
+.printing__image {
+  width: 100%;
+}
+
 .printing__image_print {
   position: absolute;
+  left: 15%;  /*remove */
+  width: 50%;  /*remove */
 }
 
 .printing__vertical-border {
@@ -499,12 +505,12 @@ z nadrukiem of topbar menu*/
 }
 
 .cart-preview__description {
-  margin: 0.84375rem 0.84375rem 0;
+  margin: 0.84rem 0.84rem 0;
   list-style: none;
 }
 
 .cart-preview__description-item {
-  font: normal 1rem/1.3125rem var(--contentFont);
+  font: normal 0.84rem/1.3125rem var(--contentFont);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--outer-space);
@@ -600,7 +606,7 @@ z nadrukiem of topbar menu*/
 .main-nav::-webkit-scrollbar {
   position: relative;
   display: block;
-  width: 1px;
+  width: 0;
   background: transparent;
 }
 
@@ -1185,9 +1191,9 @@ z nadrukiem of topbar menu*/
 }
 
 ::-webkit-scrollbar {
-  position: relative;
+  position: absolute;
   display: block;
-  width: 2px;
+  width: 0;
   background: transparent;
 }
 
@@ -1220,7 +1226,6 @@ z nadrukiem of topbar menu*/
 .footer {
   position: relative;
   z-index: 0;
-  clear: both;
   width: 100%;
   background: #000000;
 }
@@ -1232,15 +1237,28 @@ z nadrukiem of topbar menu*/
 }
 
 .footer-nav__list {
-  display: flex;
   width: 100%;
-  margin: 20px auto 60px;
-  justify-content: center;
-  flex-wrap: wrap;
+  margin: 20px 40px 60px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));  
+}
+
+@media (max-width: 1280px) {
+    .footer-nav__list {
+    margin: 20px 20px 60px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+  }
+}
+
+@media (max-width: 500px) {
+    .footer-nav__list {
+    margin: 20px auto 60px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));  
+  }
 }
 
 .footer-nav__item {
-  min-width: 240px;
   height: 62px;
   margin: 4px 10px;
 }

@@ -20,7 +20,7 @@
 
 .breadcrumb__item {
   display: flex;
-  margin: 0.25rem 1rem 0 0;
+  margin: 0.25rem 0 0 0;
   align-items: center;
 }
 
@@ -156,7 +156,7 @@
 }
 
 .our-flavors__button_arrow {
-  display: flex;
+  display: inline-flex;
   width: 80px;
   height: calc(100vh - 78px);
   min-height: 490px;

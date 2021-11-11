@@ -260,32 +260,51 @@
                     </div>
                   </div>
                 </li>
-                <li class="tabs__item" role="presentation">
+                <li onclick="this.parentNode.scrollIntoView()" class="tabs__item" role="presentation">
                   <input class="tabs__input" type="radio" name="tab">
                   <a href="#B" class="tabs__link" id="tab-B" role="tab" aria-controls="B" aria-selected="false" tabindex="-1">adresy</a>
-                  <div id="B" class="tabs__section" role="tabpanel" aria-labelledby="tab-B" aria-hidden="true">
+                  <div id="B" class="tabs__section tabs__section_address" role="tabpanel" aria-labelledby="tab-B" aria-hidden="true">
                     <div class="tabs__body">
                       <div class="account__data">
-                        <form class="user-data-form">
-                          <pre class="paragraph_upper">
-adres domowy: 
-
-Umie nazwisko
-ulina
-kod i miasto
-
-adres domowy: 
-
-Umie nazwisko
-ulina
-kod i miasto
-                          </pre>
+                        <div class="account__data_address">
+                          <div class="account__data-saving paragraph_upper gray">
+                          <p>imie nazwisko: <span class="data-name">Marta Karol</span></p>
+                          <p>adres: <span class="data-name">Wilanowska 14a</span></p>
+                          <p>kod i miasto: <span>
+                            <span class="data-zipcode">00-422</span> <span class="data-city">Warsaw</span>
+                          </span></p>
+                          <button onclick="this.parentNode.style.display = 'none'" class="button-del paragraph_upper">usuń<span class="material-icons gray">close</span></button>
+                        </div>
+                        </div>
+                        <button onclick="this.nextElementSibling.style.display = 'flex';this.style.display = 'none'" class="button-add paragraph_upper">dodaj adres <span class="material-icons">add</span></button>
+                        <form class="user-data-form user-data-form_adress paragraph_upper gray"> 
+                        <p>
+                          <label for="name">Imię i nazwisko:</label>
+                          <input class="field__input" type="text" id="name" value="">
+                        </p>
+                        <p>
+                          <label for="address">Adres</label>
+                          <input class="field__input" type="text" id="address">
+                        </p>
+                        <p>
+                          <label for="zipcode">Kod pocztowy:</label>
+                          <input class="field__input" type="text" id="zipcode">
+                        </p>
+                        <p>
+                          <label for="city">Miejscowość:</label>
+                          <input class="field__input" type="text" id="city" value="">
+                        </p>
+                        <div>
+                          <button onclick="addNewAddress(); this.parentNode.parentNode.style.display = 'none';this.parentNode.parentNode.previousElementSibling.style.display = 'flex'" type="button" class="button button-outlined button_size_s paragraph_upper">dodaj</button>
+                          <button onclick="this.parentNode.parentNode.style.display = 'none'; this.parentNode.parentNode.previousElementSibling.style.display = 'flex'" type="button" class="button button-outlined button_size_s paragraph_upper">cofnij</button>
+                        </div>
+                          
                         </form>
                       </div>
                     </div>
                   </div>
                 </li>
-                <li class="tabs__item" role="presentation">
+                <li onclick="this.previousElementSibling.scrollIntoView()" class="tabs__item" role="presentation">
                   <input class="tabs__input" type="radio" name="tab">
                   <a href="#C" class="tabs__link" id="tab-C" role="tab" aria-controls="C" aria-selected="false" tabindex="-1">archiwum zamówień</a>
                   <div id="C" class="tabs__section" role="tabpanel" aria-labelledby="tab-C" aria-hidden="true">
@@ -323,7 +342,7 @@ kod i miasto
                 </li>
               </ul>
             </div>
-            <a href="../koszyk/login.html" class="button sign-out">wyloguj</a>
+            <a href="../koszyk/login.html" class="button sign-out">wyloguj <span class="material-icons">logout</span></a>
           </div>
         </div>
       </div>
@@ -369,23 +388,70 @@ kod i miasto
       const tabsItem = document.querySelectorAll('.tabs__item');
       const tabsInput = document.querySelectorAll('.tabs__item input');
       const breadcrumbLink = document.querySelector('.breadcrumb__link_start');
-      const signOut = document.querySelector('.sign-out');
+      // const signOut = document.querySelector('.sign-out');
       
       for (let i = 0; i < tabsItem.length; i++) {
         tabsItem[i].addEventListener('click', () => {
           tabsList.classList.remove('tabs__list_start');
-          if( window.innerWidth >= 490) {
-            signOut.style.display = 'none';
-          }
+          // if( window.innerWidth >= 490) {
+          //   signOut.style.display = 'none';
+          // }
         })
       }
       breadcrumbLink.addEventListener('click', () => {
         for (let i = 0; i < tabsInput.length; i++) {
           tabsInput[i].checked = false;
           tabsList.classList.add('tabs__list_start');
-          signOut.style.display = 'block';
+          // signOut.style.display = 'block';
         }
       })
+
+    const addNewAddress = () => {
+      const accountData = document.querySelector('.account__data_address');
+      const nameInput = document.getElementById('name');
+      const addressInput = document.getElementById('address');
+      const zipcodeInput = document.getElementById('zipcode');
+      const cityInput = document.getElementById('city');
+      const div_EexZa = document.createElement('div');
+      div_EexZa.classList.add('account__data-saving', 'paragraph_upper', 'gray');
+      accountData.appendChild(div_EexZa);
+      const p_hOhln = document.createElement('p');
+      div_EexZa.appendChild(p_hOhln);
+      p_hOhln.textContent += `imie nazwisko:`;
+      const span_uAMef = document.createElement('span');
+      span_uAMef.classList.add('data-name');
+      p_hOhln.appendChild(span_uAMef);
+      span_uAMef.textContent += nameInput.value;
+      const p_cysdP = document.createElement('p');
+      div_EexZa.appendChild(p_cysdP);
+      p_cysdP.textContent += `adres:`;
+      const span_yaCGe = document.createElement('span');
+      span_yaCGe.classList.add('data-name');
+      p_cysdP.appendChild(span_yaCGe);
+      span_yaCGe.textContent += addressInput.value;
+      const p_iHojw = document.createElement('p');
+      div_EexZa.appendChild(p_iHojw);
+      p_iHojw.textContent += `kod i miasto:`;
+      const span_rstzQ = document.createElement('span');
+      p_iHojw.appendChild(span_rstzQ);
+      const span_qlGrH = document.createElement('span');
+      span_qlGrH.classList.add('data-zipcode');
+      span_rstzQ.appendChild(span_qlGrH);
+      span_qlGrH.textContent += zipcodeInput.value;
+      const span_dorPn = document.createElement('span');
+      span_dorPn.classList.add('data-city');
+      span_rstzQ.appendChild(span_dorPn);
+      span_dorPn.textContent += cityInput.value;
+      const button_eoHxT = document.createElement('button');
+      button_eoHxT.classList.add('button-del', 'paragraph_upper');
+      button_eoHxT.setAttribute(`onclick`, `this.parentNode.style.display = 'none'`);
+      div_EexZa.appendChild(button_eoHxT);
+      button_eoHxT.textContent += `usuń`;
+      const span_fsbUT = document.createElement('span');
+      span_fsbUT.classList.add('material-icons', 'gray');
+      button_eoHxT.appendChild(span_fsbUT);
+      span_fsbUT.textContent += `close`;
+    }
     </script>
   </body>
 </html>
