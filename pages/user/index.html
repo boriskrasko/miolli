@@ -61,8 +61,9 @@
             <nav class="topnav" aria-label="Topnav">
               <ul class="topnav__list">
                 <li class="topnav__item_cart topnav__item_hasChild">
-                  <a href="../koszyk/index.html" class="topnav__link topnav__link_cart">
+                 <a href="../koszyk/index.html" class="topnav__link">
                   <img class="topnav__link_icon" src="../../assets/icons/cart.svg" alt="cart">
+                  <span class="topnav__item_cart_counter inner">4</span>
                   </a>
                   <div class="cart-preview">
                     <div class="cart-preview__item">
@@ -260,30 +261,30 @@
                     </div>
                   </div>
                 </li>
-                <li onclick="this.parentNode.scrollIntoView()" class="tabs__item" role="presentation">
-                  <input class="tabs__input" type="radio" name="tab">
+                <li class="tabs__item" role="presentation">
+                  <input onclick="this.parentNode.previousElementSibling.scrollIntoView()" class="tabs__input" type="radio" name="tab">
                   <a href="#B" class="tabs__link" id="tab-B" role="tab" aria-controls="B" aria-selected="false" tabindex="-1">adresy</a>
                   <div id="B" class="tabs__section tabs__section_address" role="tabpanel" aria-labelledby="tab-B" aria-hidden="true">
                     <div class="tabs__body">
                       <div class="account__data">
                         <div class="account__data_address">
                           <div class="account__data-saving paragraph_upper gray">
-                          <p>imie nazwisko: <span class="data-name">Marta Karol</span></p>
-                          <p>adres: <span class="data-name">Wilanowska 14a</span></p>
-                          <p>kod i miasto: <span>
+                          <p class="data-name">Marta Karol</p>
+                          <p class="data-address">Wilanowska 14a</p>
+                          <p>
                             <span class="data-zipcode">00-422</span> <span class="data-city">Warsaw</span>
-                          </span></p>
+                          </p>
                           <button onclick="this.parentNode.style.display = 'none'" class="button-del paragraph_upper">usuń<span class="material-icons gray">close</span></button>
                         </div>
                         </div>
-                        <button onclick="this.nextElementSibling.style.display = 'flex';this.style.display = 'none'" class="button-add paragraph_upper">dodaj adres <span class="material-icons">add</span></button>
+                        <button onclick="this.nextElementSibling.style.display = 'flex'" class="button-add paragraph_upper">dodaj adres <span class="material-icons">add</span></button>
                         <form class="user-data-form user-data-form_adress paragraph_upper gray"> 
                         <p>
                           <label for="name">Imię i nazwisko:</label>
                           <input class="field__input" type="text" id="name" value="">
                         </p>
                         <p>
-                          <label for="address">Adres</label>
+                          <label for="address">Adres:</label>
                           <input class="field__input" type="text" id="address">
                         </p>
                         <p>
@@ -295,10 +296,9 @@
                           <input class="field__input" type="text" id="city" value="">
                         </p>
                         <div>
-                          <button onclick="addNewAddress(); this.parentNode.parentNode.style.display = 'none';this.parentNode.parentNode.previousElementSibling.style.display = 'flex'" type="button" class="button button-outlined button_size_s paragraph_upper">dodaj</button>
-                          <button onclick="this.parentNode.parentNode.style.display = 'none'; this.parentNode.parentNode.previousElementSibling.style.display = 'flex'" type="button" class="button button-outlined button_size_s paragraph_upper">cofnij</button>
-                        </div>
-                          
+                          <button onclick="addNewAddress(); this.parentNode.parentNode.style.display = 'none';" type="button" class="button button-outlined button_size_s paragraph_upper">dodaj</button>
+                          <button onclick="this.parentNode.parentNode.style.display = 'none'" type="button" class="button button-outlined button_size_s paragraph_upper">cofnij</button>
+                        </div>   
                         </form>
                       </div>
                     </div>
@@ -413,44 +413,36 @@
       const zipcodeInput = document.getElementById('zipcode');
       const cityInput = document.getElementById('city');
       const div_EexZa = document.createElement('div');
-      div_EexZa.classList.add('account__data-saving', 'paragraph_upper', 'gray');
-      accountData.appendChild(div_EexZa);
-      const p_hOhln = document.createElement('p');
-      div_EexZa.appendChild(p_hOhln);
-      p_hOhln.textContent += `imie nazwisko:`;
-      const span_uAMef = document.createElement('span');
-      span_uAMef.classList.add('data-name');
-      p_hOhln.appendChild(span_uAMef);
-      span_uAMef.textContent += nameInput.value;
-      const p_cysdP = document.createElement('p');
-      div_EexZa.appendChild(p_cysdP);
-      p_cysdP.textContent += `adres:`;
-      const span_yaCGe = document.createElement('span');
-      span_yaCGe.classList.add('data-name');
-      p_cysdP.appendChild(span_yaCGe);
-      span_yaCGe.textContent += addressInput.value;
-      const p_iHojw = document.createElement('p');
-      div_EexZa.appendChild(p_iHojw);
-      p_iHojw.textContent += `kod i miasto:`;
-      const span_rstzQ = document.createElement('span');
-      p_iHojw.appendChild(span_rstzQ);
-      const span_qlGrH = document.createElement('span');
-      span_qlGrH.classList.add('data-zipcode');
-      span_rstzQ.appendChild(span_qlGrH);
-      span_qlGrH.textContent += zipcodeInput.value;
-      const span_dorPn = document.createElement('span');
-      span_dorPn.classList.add('data-city');
-      span_rstzQ.appendChild(span_dorPn);
-      span_dorPn.textContent += cityInput.value;
-      const button_eoHxT = document.createElement('button');
-      button_eoHxT.classList.add('button-del', 'paragraph_upper');
-      button_eoHxT.setAttribute(`onclick`, `this.parentNode.style.display = 'none'`);
-      div_EexZa.appendChild(button_eoHxT);
-      button_eoHxT.textContent += `usuń`;
-      const span_fsbUT = document.createElement('span');
-      span_fsbUT.classList.add('material-icons', 'gray');
-      button_eoHxT.appendChild(span_fsbUT);
-      span_fsbUT.textContent += `close`;
+      const div_epMXJ = document.createElement('div');
+      div_epMXJ.classList.add('account__data-saving', 'paragraph_upper', 'gray');
+      accountData.appendChild(div_epMXJ);
+      const p_BVyGo = document.createElement('p');
+      p_BVyGo.classList.add('data-name');
+      div_epMXJ.appendChild(p_BVyGo);
+      p_BVyGo.textContent += nameInput.value;
+      const p_xEOJP = document.createElement('p');
+      p_xEOJP.classList.add('data-address');
+      div_epMXJ.appendChild(p_xEOJP);
+      p_xEOJP.textContent += address.value;
+      const p_dQtjJ = document.createElement('p');
+      div_epMXJ.appendChild(p_dQtjJ);
+      const span_azSQy = document.createElement('span');
+      span_azSQy.classList.add('data-zipcode');
+      p_dQtjJ.appendChild(span_azSQy);
+      span_azSQy.textContent += zipcodeInput.value;
+      const span_nwuEi = document.createElement('span');
+      span_nwuEi.classList.add('data-city');
+      p_dQtjJ.appendChild(span_nwuEi);
+      span_nwuEi.textContent += cityInput.value;
+      const button_vSfoy = document.createElement('button');
+      button_vSfoy.classList.add('button-del', 'paragraph_upper');
+      button_vSfoy.setAttribute(`onclick`, `this.parentNode.style.display = 'none'`);
+      div_epMXJ.appendChild(button_vSfoy);
+      button_vSfoy.textContent += `usuń`;
+      const span_maNKB = document.createElement('span');
+      span_maNKB.classList.add('material-icons', 'gray');
+      button_vSfoy.appendChild(span_maNKB);
+      span_maNKB.textContent += `close`;
     }
     </script>
   </body>

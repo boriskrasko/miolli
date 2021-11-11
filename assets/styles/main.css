@@ -745,22 +745,21 @@ z nadrukiem of topbar menu*/
   transition: 0.1s opacity;
 }
 
-/*.topnav__link_cart:after {
+.topnav__link_cart:after {
   content: "4";
   position: absolute;
-  font: 0.875rem/1.125rem 'Monument Grotesk', sans-serif;
+  font: 0.875rem/0rem var(--contentFont);
   color: #ffffff;
-}*/
+  top: 40px;
+}
 
 /*.topnav__item_cart_counter {
-  position: absolute;
-  font: 0.875rem/1.125rem 'Monument Grotesk', sans-serif;
-  display: flex;
-  top:27px;
-  bottom: 37px;
-  color: #ffffff;
+  font: 0.875rem/0 'Monument Grotesk', sans-serif;
+  padding: 1.8rem 0 2rem;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  color: #ffffff;
 }*/
 
 .topbar {

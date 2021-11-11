@@ -232,8 +232,8 @@
       </nav>
       <div class="set-block">
         <div class="set-block__content">
-          <div uk-slider>
-            <div class="uk-position-relative">
+          <div uk-slider id="sliderBlock">
+            <div class="uk-position-relative"> 
               <div class="uk-slider-container">
                 <ul class="uk-slider-items uk-child-width-1-1">
                   <li>
@@ -257,7 +257,7 @@
                 <button class="set-block__arrow uk-position-out uk-position-small" uk-slider-item="previous">
                 <span class="material-icons pastel-pink thin">west</span>
                 </button>
-                <div class="set-card__counte counter">
+                <div class="set-card__counter counter">
                   <span class="set-card__current-number">1</span>
                   <span class="set-card__сounter-delimiter">/</span>
                   <span class="set-card__total-count">5</span>
@@ -643,6 +643,33 @@
       for (let i = 0; i < flavorItem.length; i++) {
         flavorItem[i].addEventListener('click', () => modalWindow.style.display = 'none');
       }
+
+      let setCardTotalCount = document.querySelector('.set-card__total-count');
+      let setCardCurrentNum = document.querySelector('.set-card__current-number');
+
+      let indexInParent = (node) => {
+        let children = node.parentNode.childNodes;
+        let num = 1;
+
+        for (let i = 0; i < children.length - 1; i++) {
+          if (children[i] == node) return num;
+          if (children[i].nodeType == 1) num++;
+        }
+      }
+      let getSlideCounter = (id, sliderClassName, totalSlideCount, currentSlideNumber, delay) => {
+        let items = document.getElementById(id).parentNode.getElementsByClassName(sliderClassName);
+        totalSlideCount.textContent = items[0].childElementCount;
+        setTimeout(() => {
+          let activeItem = items[0].getElementsByClassName('uk-active');
+          let index = indexInParent(activeItem[0]);
+          currentSlideNumber.textContent = index;
+        }, delay);
+      }
+
+      getSlideCounter('sliderBlock', 'uk-slider-items', setCardTotalCount, setCardCurrentNum, 200);
+
+      UIkit.util.on('#sliderBlock', 'itemshown', () => getSlideCounter('sliderBlock', 'uk-slider-items', setCardTotalCount, setCardCurrentNum, 20));
+
     </script>
   </body>
 </html>
