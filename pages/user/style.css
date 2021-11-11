@@ -105,11 +105,16 @@
   align-items: flex-start;
 }
 
-.account__data-saving > p span {
+.account__data-saving > p {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
   color: #000;
 }
 
-.account__data-saving > p span span {
+.account__data-saving > p span {
   margin: 0 4px 0 0;
 }
 
@@ -120,7 +125,10 @@
 .account__data-saving p,
 .user-data-form_adress p  {
   width: 100%;
-  display: flex;
+}
+
+.user-data-form_adress p  {
+  display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -137,7 +145,7 @@
 }
 
 .user-data-form_adress p > * {
-  min-width: 200px;
+  min-width: 180px;
   margin-right: 1rem
 }
 
@@ -416,5 +424,9 @@
     margin: 0;
     text-decoration: underline;
     align-self: flex-start;
+  }
+
+  .account__data-saving > p {
+    max-width: 280px;
   }
 }

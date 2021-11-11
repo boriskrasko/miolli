@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
-    <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="kVQ6F3aP"></script>
     <div class="chat-fixed-container">
       <div>
         <div class="chat">
@@ -227,7 +225,12 @@
             </div>
             <div class="login__body">
               <div class="login__socials">
-                <div style="border:1px solid #3b5998;" class=" login__button fb-login-button" data-width="200" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                <div  class="fb-btn login__button">
+                 <div class="fb-icon-wrapper">
+                    <img class="fb-icon" src="../../assets/icons/fb-icon.svg" alt="facebook log in">
+                  </div>
+                  <p class="btn-text"><b>Continue with facebook</b></p>
+                </div>
                 <div class="google-btn login__button">
                   <div class="google-icon-wrapper">
                     <img class="google-icon" src="../../assets/icons/google-icon.svg" alt="google log in">

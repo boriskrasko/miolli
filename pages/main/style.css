@@ -1094,7 +1094,6 @@
    background: #000;
  }
 
-
 .newsletter__form input {
   font: 16px/25px var(--contentFont);
   display: flex;
@@ -1102,6 +1101,7 @@
   min-width: 447px;
   height: 67px;
   padding-left: 64px;
+  padding-right: 32px;
   letter-spacing: 0.1em;
   border: 1px solid #444444;
   outline: none;
