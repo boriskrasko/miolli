@@ -783,6 +783,12 @@ main {
   text-transform: capitalize;
 }
 
+.filter__button {
+  height: 30px;
+  min-height: 30px;
+
+}
+
 .dropdown {
   user-select: none;
   background: transparent;

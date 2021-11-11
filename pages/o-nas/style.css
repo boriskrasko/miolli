@@ -24,7 +24,7 @@
 
 .breadcrumb__item {
   display: flex;
-  margin: 0.25rem 1rem 0 0;
+  margin: 0.25rem 0 0 0;
   align-items: center;
 }
 
@@ -261,11 +261,10 @@
   overflow: hidden;
 }
 
-.more__images img {
-  max-width: 273px;
-  max-height: 273px;
-}
-
 .more img {
   max-width: 100%;
+}
+
+.more__images img {
+  max-width: 273px;
 }
