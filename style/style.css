@@ -3349,6 +3349,7 @@ article {
 }
 
 .article__image img {
+  max-width: 360px;
   width: 100%;
 }
 
@@ -3357,6 +3358,12 @@ article {
   font: 16px/25px var(--contentFont);
   letter-spacing: 0.1em;
   margin: 40px;
+}
+
+.article__content .button {
+  margin: 0 auto;
+  display: flex;
+  max-width: 250px;
 }
 
 .article-cards {
@@ -3648,3 +3655,112 @@ article {
   letter-spacing: 0.1em;
   color: #222;
 }
+
+.orange-fill {
+  background-color: #E8AC5F;
+}
+
+.orange-text {
+  color: #E8AC5F;
+}
+
+.green-fill {
+  background-color: #B6C5A8;
+}
+
+.green-text {
+  color: #B6C5A8;
+}
+
+.flavor {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flavor__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 80vh;
+}
+
+.flavor__content::before {
+  content: attr(data-count);
+  position: absolute;
+  top: 100px;
+  font: 744px/744px var(--titleFont);
+  color: #ddd;
+  opacity: 0.5;
+  transition: 0.2s color;
+}
+
+.flavor__content.changed::before {
+  color: #eeee;
+}
+
+.flavor__slider {
+  width: 80%;
+  height: 100%;
+}
+
+.flavor__slider .uk-slideshow {
+  height: 800px
+}
+
+.flavor__slider .uk-slideshow-items {
+  height: 800px;
+}
+
+.flavor .article {
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 1200px) {
+  .flavor .article {
+    flex-wrap: wrap;
+  }
+  .flavor__slider .uk-slideshow {
+    height: 1280px
+  }
+  .flavor__slider .uk-slideshow-items {
+    height: 1280px;
+  }
+  .flavor__content::before {
+    content: attr(data-count);
+    position: absolute;
+    top: 500px;
+    font: 744px/744px var(--titleFont);
+    color: #e1e1e1;
+    opacity: 0.5;
+    transition: 0.2s color;
+  }
+}
+
+.flavor__slider p {
+  font: 16px/22px var(--contentFont);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+}
+
+.flavor__slider .arrow-icon {
+  stroke: #777;
+}
+
+.flavor__slider .button_arrow:hover .arrow-icon {
+  stroke: #555;
+}
+
+.flavor__slider .button_arrow:active .arrow-icon {
+  stroke: #111;
+}
+
+.flavor__slider .article__image {
+  margin-top: -100px;
+}
+
