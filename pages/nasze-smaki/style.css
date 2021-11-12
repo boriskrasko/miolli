@@ -59,7 +59,7 @@
   z-index: 4;
   display: flex;
   width: 100%;
-  min-height: 900px;
+  min-height: 1000px;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 104px;
@@ -68,6 +68,7 @@
 .our-flavors__container {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .stiky {
@@ -104,7 +105,15 @@
   position: relative;
 }
 
-.our-flavors__image img {
+.uk-position-relative img {
+  width: 100%;
+}
+
+.uk-position-relative button  {
+ z-index: 22;
+}
+
+.our-flavors__image ul  {
  width: 100%;
 }
 
@@ -115,14 +124,14 @@
 
 .our-flavors__heading {
   padding: 0 32px;
-  color: #b6c5a8;
+  color: var(--color-theme);
   align-self: flex-start;
 }
 
 .our-flavors__title {
   line-height: 100%;
   font-weight: lighter;
-  color: #b6c5a8;
+  color: var(--color-theme);
 }
 
 .our-flavors__paragraph {
@@ -146,8 +155,8 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #fff;
-  border: 1px solid #b6c5a8;
-  background: #b6c5a8;
+  border: 1px solid var(--color-theme);
+  background: var(--color-theme);
   transition: 0.2s all;
 }
 
@@ -161,19 +170,41 @@
   height: calc(100vh - 78px);
   min-height: 490px;
   max-height: 685px;
-  color: #b6c5a8;
+  color: var(--color-theme);
   z-index: 9;
   justify-content: center;
   align-items: center;
   transition: 0.2s all;
+  cursor: pointer;
 }
 
 .our-flavors__button_arrow span {
-  color: #b6c5a8;
+  color: var(--color-theme);
   font-size: 40px;
 }
 
-.our-flavors__button_arrow:hover {
+.slider__nav-control {
+  background: #fffd;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__counter {
+  color: #444;
+  z-index: 22;
+}
+
+.slider__arrow span {
+  color: var(--color-theme);
+  font-size: 28px;
+}
+
+.our-flavors__button_arrow:hover,
+.slider__arrow:hover {
  filter: brightness(110%);
 }
 
@@ -185,15 +216,16 @@
   width: 890px;
   height: 800px;
   justify-content: flex-end;
+  user-select: none;
 }
 
 .number span {
   font-family: var(--titleFont);
   font-size: 800px;
-  color: #b6c5a8;
+  color: var(--color-theme);
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #b6c5a8;
+  -webkit-text-stroke-color: var(--color-theme);
 }
 
 @media screen and (max-width: 1210px) {
@@ -241,7 +273,7 @@
     padding: 0 2%;
   }
   .our-flavors__button_arrow span {
-    color: #b6c5a8;
+    color: var(--color-theme);
     font-size: 32px;
   }
 .stiky {
@@ -269,7 +301,7 @@
     width: 90%;
   }
   .our-flavors__button_arrow span {
-    color: #b6c5a8;
+    color: var(--color-theme);
     font-size: 24px;
   }
 }

@@ -91,7 +91,6 @@
   flex-wrap: wrap;
 }
 
-
 @media (max-width: 500px) {
   .account__header {
     padding: 10px;
@@ -103,6 +102,10 @@
   flex-direction: column;
   margin: 0 auto;
   align-items: flex-start;
+}
+
+.account__data-saving > p:nth-last-child(-n+2) {
+  border-bottom: 1px solid #777;
 }
 
 .account__data-saving > p {
@@ -137,12 +140,6 @@
   align-items: center;
 }
 
-.account__data-saving > p > span {
-  display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 
 .user-data-form_adress p > * {
   min-width: 180px;
