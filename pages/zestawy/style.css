@@ -418,6 +418,22 @@
   color: currentColor;
 }
 
+.sort-toggle {
+  position: absolute;
+  right: 24px;
+  top: 100px;
+}
+
+.sort-toggle span {
+  font-size: 32px;
+  color: #444;
+  transition: 0.2s all;
+}
+
+.sort-toggle:hover span {
+  color: #000;
+}
+
 .tagbar .stack__item.button {
   font: normal 12px/17px var(--contentFont);
   overflow: hidden;
@@ -446,7 +462,7 @@
 .tagbar {
   max-width: var(--content);
   margin: 0 auto;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;

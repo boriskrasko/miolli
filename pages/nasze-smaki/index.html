@@ -6,6 +6,13 @@
     <title>Miolli | Nasze smaki</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="uikit/css/uikit.css">
+    <script src="uikit/js/uikit.min.js"></script>
+    <style>
+      :root {
+        --color-theme: #b6c5a8;
+      }
+    </style>
   </head>
   <body>
     <div class="chat-fixed-container">
@@ -225,13 +232,41 @@
         </ul>
       </nav>
       <section class="our-flavors">
-        <button class="our-flavors__button_arrow">
+        <a href="index-2.html" class="our-flavors__button_arrow">
           <span class="material-icons thin">west</span>
-        </button>
+        </a>
         <div class="our-flavors__container">
           <span class="stiky">smak sezonowy</span>
           <div class="our-flavors__image">
-            <img src="../../assets/images/pistacja-z-limonka-comp.png" alt="pistacja-z-limonka-composition">
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="sets: true" id="sliderBlock">
+              <ul class="uk-slider-items uk-child-width-1-1">
+                  <li>
+                      <img src="../../assets/images/pistacja-z-limonka-comp.png" alt="pistacja-z-limonka-composition">
+                  </li>
+                  <li>
+                      <img src="../../assets/images/pistacja-z-limonka-comp.png" alt="pistacja-z-limonka-composition">
+                  </li>
+                  <li>
+                      <img src="../../assets/images/pistacja-z-limonka-comp.png" alt="pistacja-z-limonka-composition">
+                  </li>
+                  <li>
+                      <img src="../../assets/images/pistacja-z-limonka-comp.png" alt="pistacja-z-limonka-composition">
+                  </li>
+              </ul>
+                <div class="slider__nav-control">
+                <button class="slider__arrow uk-position-out uk-position-small" uk-slider-item="previous">
+                <span class="material-icons thin">west</span>
+                </button>
+                <div class="slider__counter counter">
+                  <span class="slide__current-number">1</span>
+                  <span class="slide__сounter-delimiter">/</span>
+                  <span class="slide__total-count">5</span>
+                </div>
+                <button class="slider__arrow uk-position-out uk-position-small" uk-slider-item="next">
+                <span class="material-icons thin">east</span>
+                </button>
+              </div>
+            </div>
             <div class="number"><span>03</span></div>
           </div>
           <div class="our-flavors__content">
@@ -245,9 +280,9 @@
             <button class="our-flavors__button">dodaj do pudełka</button>
           </div>
         </div>
-        <button class="our-flavors__button_arrow">
+        <a href="index-2.html" class="our-flavors__button_arrow">
           <span class="material-icons thin">east</span>
-        </button>
+        </a>
       </section>
     </main>
     <footer class="footer">
@@ -286,5 +321,32 @@
         </ul>
       </nav>
     </footer>
+    <script type="text/javascript">
+      let slideTotalCount = document.querySelector('.slide__total-count');
+      let slideCurrentNum = document.querySelector('.slide__current-number');
+
+      let indexInParent = (node) => {
+        let children = node.parentNode.childNodes;
+        let num = 1;
+
+        for (let i = 0; i < children.length - 1; i++) {
+          if (children[i] == node) return num;
+          if (children[i].nodeType == 1) num++;
+        }
+      }
+      let getSlideCounter = (id, sliderClassName, totalSlideCount, currentSlideNumber, delay) => {
+        let items = document.getElementById(id).parentNode.getElementsByClassName(sliderClassName);
+        totalSlideCount.textContent = items[0].childElementCount;
+        setTimeout(() => {
+          let activeItem = items[0].getElementsByClassName('uk-active');
+          let index = indexInParent(activeItem[0]);
+          currentSlideNumber.textContent = index;
+        }, delay);
+      }
+
+      getSlideCounter('sliderBlock', 'uk-slider-items', slideTotalCount, slideCurrentNum, 200);
+
+      UIkit.util.on('#sliderBlock', 'itemshown', () => getSlideCounter('sliderBlock', 'uk-slider-items', slideTotalCount, slideCurrentNum, 20));
+    </script>
   </body>
 </html>
