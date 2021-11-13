@@ -2,13 +2,17 @@
 <html lang="pl">
   <head>
     <meta charset='utf-8'>
-    <title>Miolli | Alergeny</title>
+    <title>Miolli | Kontakt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="uikit/css/uikit.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href='style/colors.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/fonts.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/common.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/media.css'>
+    <script src="uikit/js/uikit.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
   </head>
   <body>
     <header class="header">
@@ -121,7 +125,7 @@ teraz:
           <li class="sidenav__item">
             <a class="sidenav__link" href="faq.html">faq</a>
           </li>
-          <li class="sidenav__item disabled">
+          <li class="sidenav__item">
             <a class="sidenav__link" href="allergen.html">alergeny</a>
           </li>
           <li class="sidenav__item mobile-only">
@@ -190,44 +194,49 @@ teraz:
             <svg class="breadcrumb__arrow">
               <use href="#breadcrumbArrow"></use>
             </svg>
-            <a class="breadcrumb__link" href="#" aria-current="location">alergeny</a>
+            <a class="breadcrumb__link" href="#" aria-current="location">kontakt</a>
           </li>
         </ul>
       </nav>
-      <section class="section">
-        <h2 class="section__title">składniki i alergeny</h2>
-        <hr>
-        <article class="article">
-          <aside class="article__image">
-            <img src="images/article-image.png" alt="Pink macaron">
+      <section class="section contact-section">
+        <article class="article contact-article">
+          <aside class="article__image contact-article__image">
+            <img src="images/map.png" alt="Map">
           </aside>
-          <div class="article__content">
-            <p></p>Makaroniki, znane również jako makaroniki francuskie, to delikatne ciasteczka migdałowe o przyjemnej konsystencji i intensywnym smaku. Ich składniki są dość proste, ale kluczowe dla uzyskania idealnej tekstury i smaku. Oto podstawowe składniki potrzebne do przygotowania makaroników:
-
-Migdały:
-
-W postaci mąki migdałowej. Migdały nadają makaronikom charakterystyczny smak i delikatność.
-Cukier puder:
-
-Dodawany do mąki migdałowej i utrwalający słodki smak ciasteczek.
-Białka jaj:
-
-Są niezbędne do uzyskania odpowiedniej konsystencji ciasta, a także do utworzenia charakterystycznej "nóżki" (fr. pied) podczas pieczenia.
-Cukier granulowany:
-
-Wykorzystywany do przygotowania bezy, która stanowi jedną z warstw wewnętrznych makaroników.
-Barwnik spożywczy:
-
-Dodawany dla nadania makaronikom różnych kolorów. Może to być pasta lub żel spożywczy.
-Smakowe wypełnienie:
-
-Na przykład, krem masłowy, ganache czekoladowe, dżem, lub inne smaki, które nadają dodatkowy smak ciasteczkom.
-            Alergeny w makaronikach są głównie związane z migdałami i jajkami, więc osoby uczulone na te składniki powinny być ostrożne. Warto również sprawdzić składniki używane do wypełnienia, szczególnie jeśli zawierają mleko, orzechy lub inne potencjalnie alergenne substancje.
-            W przypadku konkretnych informacji o alergenach zawsze zaleca się dokładne czytanie etykiet produktów lub pytać o składniki u producenta lub cukiernika. Warto również pamiętać, że receptury mogą się różnić, więc istotne jest uzyskanie informacji bezpośrednio od źródła, w którym makaroniki zostały przygotowane.
-          </p>
+          <div class="article__content contact-article__content">
+            <h1 class="section__title contact-section__title">kontakt</h1>
+            <address class="paragraph_upper gray contact-address">
+              <b>Siedziba Główna:</b> <br>
+              Lorem ipsum dolor sit amet, <br>
+              30-192 Warszawa<br>
+              <a href="tel:+48887675768">+48 887 675 768</a><br><br>
+              <b>Obsługa Klienta Biznesowego:</b><br><br>
+              <a href="mialto:kontakt@miolli.pl">kontakt@miolli.pl</a><br>
+              <a href="tel:+48887675768">+48 887 675 768</a>
+            </address>
           </div>
         </article>
       </section>
+      <form action="#" class="contact-form">
+        <h2 class="section__title contact-form__title">napisz do nas</h2>
+        <fieldset class="fields contact-fields">
+          <label class="field paragraph_upper contact-field">
+            <span class="field__label dark-vanilla contact-field__label" for="firstname">Imię: </span>
+            <input class="field__input contact-field__input" type="text" id="firstname" value="">
+          </label>
+      
+          <label class="field paragraph_upper contact-field">
+            <span class="field__label dark-vanilla contact-field__label" for="email">Email: </span>
+            <input class="field__input contact-field__input" type="text" id="email">
+          </label>
+      
+          <label class="field paragraph_upper contact-field">
+            <span class="field__label dark-vanilla contact-field__label" for="message">Wiadomość: </span>
+            <textarea class="field__textarea contact-field__textarea" id="message" name="message" rows="4" cols="80"></textarea>
+          </label>
+        </fieldset>
+        <input type="submit" value="Wyślij" class="reason__button button button_size_l button_outlined contact-form-submit">
+      </form>      
     </main>  
     <footer class="footer">
       <nav>
@@ -247,7 +256,7 @@ Na przykład, krem masłowy, ganache czekoladowe, dżem, lub inne smaki, które 
           <li class="footer__item">
            <a href="configurator.html " class="footer__link">twoja kompozycja</a>
           </li>
-          <li class="footer__item disabled">
+          <li class="footer__item">
             <a href="allergen.html" class="footer__link">alergeny</a>
           </li>
           <li class="footer__item">
@@ -256,7 +265,7 @@ Na przykład, krem masłowy, ganache czekoladowe, dżem, lub inne smaki, które 
           <li class="footer__item">
             <a href="blog.html" class="footer__link">blog</a>
           </li>
-          <li class="footer__item">
+          <li class="footer__item disabled">
             <a href="contact.html" class="footer__link">kontakt</a>
           </li>
           <li class="footer__item">
@@ -420,6 +429,18 @@ Na przykład, krem masłowy, ganache czekoladowe, dżem, lub inne smaki, które 
           event.preventDefault();
           sendMessage();
         }
+      });
+
+      const flavorContent = document.querySelector('.flavor__content');
+      UIkit.util.on('.flavor__slider [uk-slideshow]', 'beforeitemshow', () => {
+        flavorContent.classList.add('changed');
+      });
+      UIkit.util.on('.flavor__slider [uk-slideshow]', 'itemshown', () => {
+        flavorContent.querySelectorAll('.uk-slideshow-items li').forEach( (item, index) => {
+          item.classList.contains('uk-active') ?
+          flavorContent.dataset.count = index < 10 ? `0${++index}` : ++index : '';
+          flavorContent.classList.remove('changed');
+        })
       });
     
     </script>
