@@ -3016,6 +3016,8 @@ input.range[type="range"]::-moz-range-thumb:active {
   background-image: url(../images/flavor-4.png);
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
+  text-align: center;
 }
 
 .own-print__aside input {

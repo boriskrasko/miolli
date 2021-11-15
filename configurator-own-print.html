@@ -183,7 +183,7 @@ teraz:
     <div class="own-print">
       <aside class="own-print__aside">
         <label for="ownPrint">Dla ukochanego Tomka</label>
-        <input id="ownPrint" class="range" type="range" name="range">
+        <input id="ownPrint" class="range" type="range" name="range" min="40" value="40">
         <p class="own-print__text">tak wyglądać będzie twój makaronik</p>
       </aside>
       <div class="own-print__setting">
@@ -609,7 +609,37 @@ teraz:
 
       document.querySelector('#switch').addEventListener('change', () => {
         document.querySelector('#switch').checked ? document.body.classList.add('open') : document.body.classList.remove('open');
-      })
+      });
+
+      const ownPrint = document.querySelector('label[for="ownPrint"]');
+      const scale = document.querySelector('#ownPrint');
+      const color = document.querySelector('.color');
+      const text = document.querySelector('.own-print__input');
+      const fonts = document.querySelectorAll('input[name="font"]');
+
+      function addEventListener(element, event, callback) {
+        element.addEventListener(event, callback);
+      }
+
+      addEventListener(scale, 'change', () => {
+        ownPrint.style.fontSize = `${scale.value / 2.5}px`;
+        ownPrint.style.lineHeight = `${scale.value / 2}px`;
+      });
+
+      addEventListener(color, 'change', () => {
+        ownPrint.style.color = color.value;
+      });
+
+      addEventListener(text, 'change', () => {
+        ownPrint.textContent = text.value;
+      });
+      
+      fonts.forEach((font) => {
+        addEventListener(font, 'change', () => {
+          const newFont = document.querySelector(`label[for="${font.id}"]`);
+          ownPrint.style.fontFamily = newFont.style.fontFamily;
+        });
+      });
     </script>
   </body>
 </html>
