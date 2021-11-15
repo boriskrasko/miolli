@@ -3074,7 +3074,7 @@ input.color[type="color"] {
   -moz-appearance: none;
   appearance: none;
   width: var(--size, 1rem);
-  height: calc(var(--size, 1rem) / var(--aspect-ratio, 1.92));
+  height: calc(var(--size, 1rem) / var(--aspect-ratio, 1.92) + 2px);
   min-height: 30px;
   padding: 0;
   border: none;
