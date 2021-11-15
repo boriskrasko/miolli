@@ -2,7 +2,7 @@
 <html lang="pl">
   <head>
     <meta charset='utf-8'>
-    <title>Miolli | Online konstruktor</title>
+    <title>Miolli | Miolli dla biznesu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="uikit/css/uikit.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href='style/colors.css'>
@@ -11,6 +11,8 @@
     <link rel='stylesheet' type='text/css' media='screen' href='style/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style/media.css'>
     <script src="uikit/js/uikit.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
   </head>
   <body>
     <header class="header">
@@ -28,7 +30,7 @@
               <img src="icons/miolli-logo-small.svg" alt="miolli">
             </a>
           </li>
-          <li class="topnav__item disabled">
+          <li class="topnav__item">
             <a class="topnav__link" href="configurator.html">twoja kompozycja</a>
           </li>
           <li class="topnav__item">
@@ -132,7 +134,7 @@ teraz:
           <li class="sidenav__item mobile-only">
             <a class="sidenav__link" href="prints.html">makaroniki z nadrukiem</a>
           </li>
-          <li class="sidenav__item disabled">
+          <li class="sidenav__item">
             <a class="sidenav__link" href="configurator.html">konfigurator on-line</a>
           </li>
           <li class="sidenav__item disabled" >
@@ -179,40 +181,48 @@ teraz:
         </form>
       </div>
     </div>
-    <main class="main main_configurator">
-      <div class="configurator">
-        <h1 class="configurator__title">skomponuj swoje pudełko</h1>
-        <ul class="progressbar">
-          <li class="active">wybierz rozmiar</li>
-          <li>wybierz smaki</li>
-          <li>dodaj nadruk</li>
-          <li>dodaj do koszyka</li>
+    <main class="main main_business">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item">
+            <svg class="breadcrumb__home">
+              <use href="#home"></use>
+            </svg>
+            <a class="breadcrumb__link" href="index.html">strona główna</a>
+          </li>
+          <li class="breadcrumb__item">
+            <svg class="breadcrumb__arrow">
+              <use href="#breadcrumbArrow"></use>
+            </svg>
+            <a class="breadcrumb__link" href="#" aria-current="location">miolli dla biznesu</a>
+          </li>
         </ul>
-        <div class="progressbar_mobile">
-          <p>1/4</p>
-          <p>wybierz rozmiar</p>
-        </div>
-        <fieldset class="boxselect">
-          <p>
-            <input id="6" type="radio" name="boxsize">
-            <label for="6">6 szt</label>
-          </p>
-          <p>
-            <input id="12" type="radio" name="boxsize">
-            <label for="12">12 szt</label>
-          </p>
-          <p>
-            <input id="24" type="radio" name="boxsize">
-            <label for="24">24 szt</label>
-          </p>
+      </nav>
+      <form action="#" class="contact-form contact-form_business">
+        <h2 class="section__title contact-form__title">napisz do nas</h2>
+        <fieldset class="fields contact-fields">
+          <label class="field paragraph_upper contact-field">
+            <span class="field__label dark-vanilla contact-field__label" for="firstname">Imię: </span>
+            <input class="field__input contact-field__input" type="text" id="firstname" value="">
+          </label>
+      
+          <label class="field paragraph_upper contact-field">
+            <span class="field__label dark-vanilla contact-field__label" for="email">Email: </span>
+            <input class="field__input contact-field__input" type="text" id="email">
+          </label>
+      
+          <label class="field paragraph_upper contact-field">
+            <span class="field__label dark-vanilla contact-field__label" for="message">Wiadomość: </span>
+            <textarea class="field__textarea contact-field__textarea" id="message" name="message" rows="4" cols="80"></textarea>
+          </label>
         </fieldset>
-        <a class="configurator__button button button_size_m button_outlined" href="configurator-flavor.html">GOTOWE! PRZEJDŹ DALEJ</a>
-      </div>
-    </main>
+        <input type="submit" value="Wyślij" class="reason__button button button_size_l button_outlined contact-form-submit">
+      </form>      
+    </main>  
     <footer class="footer">
       <nav>
         <ul class="footer__list">
-          <li class="footer__item">
+          <li class="footer__item disabled">
             <a href="business.html" class="footer__link">dla biznesu</a>
           </li>
           <li class="footer__item">
@@ -224,7 +234,7 @@ teraz:
           <li class="footer__item">
             <a href="prints.html" class="footer__link">makaroniki z nadrukiem</a>
           </li>
-          <li class="footer__item disabled">
+          <li class="footer__item">
            <a href="configurator.html " class="footer__link">twoja kompozycja</a>
           </li>
           <li class="footer__item">
@@ -402,9 +412,18 @@ teraz:
         }
       });
 
-      document.querySelector('#switch').addEventListener('change', () => {
-        document.querySelector('#switch').checked ? document.body.classList.add('open') : document.body.classList.remove('open');
-      })
+      const flavorContent = document.querySelector('.flavor__content');
+      UIkit.util.on('.flavor__slider [uk-slideshow]', 'beforeitemshow', () => {
+        flavorContent.classList.add('changed');
+      });
+      UIkit.util.on('.flavor__slider [uk-slideshow]', 'itemshown', () => {
+        flavorContent.querySelectorAll('.uk-slideshow-items li').forEach( (item, index) => {
+          item.classList.contains('uk-active') ?
+          flavorContent.dataset.count = index < 10 ? `0${++index}` : ++index : '';
+          flavorContent.classList.remove('changed');
+        })
+      });
+    
     </script>
   </body>
 </html>

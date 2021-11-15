@@ -3859,3 +3859,17 @@ article {
     align-self: center;
   }
 }
+
+.main.main_business {
+  min-height: 80vh;
+  background-image: url('../images/business.png');
+  background-size: 2100px auto;
+  background-position: center -100px;
+  background-repeat: no-repeat;
+} 
+
+.main.main_business .breadcrumb {
+  margin-top: 78px;
+  padding-top: 32px;
+  margin-bottom: 400px;
+}
