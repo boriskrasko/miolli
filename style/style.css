@@ -751,21 +751,28 @@
   align-items: center;
   height: 100vh;
   background-color: rgb(210, 218, 220);
-  background-image: url(../images/diana-polekhina-startscreen.png);
+  /* background-image: url(../images/diana-polekhina-startscreen.png); */
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hero .main-visual {
+  z-index: 0 !important;
 }
 
 .hero__label {
   position: absolute;
   right: 50px;
   bottom: 60px;
+  z-index: 9;
 }
 
 .brand {
+  position: absolute;
   max-width: 540px;
   max-height: 320px;
   margin: 0 auto;
+  z-index: 9;
 }
 
 .brand__name {
