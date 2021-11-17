@@ -1243,6 +1243,15 @@ input.available-sets__viewer {
   background-size: cover;
 }
 
+.film video {
+  width: 100%;
+}
+
+.film button {
+  position: absolute;
+  z-index: 9;
+}
+
 .reason {
   position: relative;
   display: flex;
