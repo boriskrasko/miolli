@@ -1234,7 +1234,7 @@ input.available-sets__viewer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 807px;
+  height: 50vw;
   font: 201px/214px var(--titleFont);
   color: #FFFFFF;
   background-color:var(--peach-breeze);

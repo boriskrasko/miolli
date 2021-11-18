@@ -315,9 +315,6 @@
   .uno {
     min-height: 900px;
   }
-  .film {
-    min-height: 300px;
-  }
   .reason > img:nth-child(1) {
     min-width: 200px;
   }
