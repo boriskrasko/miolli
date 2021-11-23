@@ -155,7 +155,8 @@
 .uk-slideshow-nav li:hover,
 .uk-slideshow-nav li.uk-active {
   cursor: pointer;
-  border-color: var(--dark-vanilla);
+  border-color: #996B6B;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.32);
 }
 
 .button_sticky {
@@ -251,10 +252,6 @@
   min-height: 298px;
   margin: 0 auto;
   transition: 0.2s all;
-}
-
-.card-flavor:hover {
-  transform: translateY(-10px);
 }
 
 
@@ -570,13 +567,15 @@
 
 .box-composing {
   max-width: var(--max);
-  margin: 18.7rem auto 16px;
+  margin: 18.7rem auto 0;
   padding: 0 1.375rem;
   background: #ffece6;
   background-image: url(../../assets/images/mask-group-2.png);
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: right -50px;
   background-size: cover;
+  box-shadow: 0 0px 12px -1px #ffece6;
+  z-index: 1;
 }
 
 .box-composing__body {
@@ -668,6 +667,12 @@
 @media (max-width: 370px) {
   .box-composing__button:before {
     content: "stwórz kompozycję";
+  }
+}
+
+@media (min-width: 1500px) {
+  .box-composing {
+    background-position: center bottom;
   }
 }
 

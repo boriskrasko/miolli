@@ -1237,30 +1237,29 @@ z nadrukiem of topbar menu*/
 
 .footer-nav__list {
   width: 100%;
-  margin: 20px 40px 60px;
+  margin: 20px 20px 60px;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));  
-}
-
-@media (max-width: 1280px) {
-    .footer-nav__list {
-    margin: 20px 20px 60px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
-  }
-}
-
-@media (max-width: 500px) {
-    .footer-nav__list {
-    margin: 20px auto 60px;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));  
-  }
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
 }
 
 .footer-nav__item {
-  height: 62px;
+  height: 31px;
   margin: 4px 10px;
 }
+
+
+@media (max-width: 500px) {
+  .footer-nav__list {
+    margin: 20px auto 60px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));  
+  }
+  .footer-nav__item {
+    height: 62px;
+    margin: 4px 10px;
+  }
+}
+
 
 .footer-nav__link {
   font-family: var(--contentFont);
