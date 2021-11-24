@@ -1237,7 +1237,7 @@ z nadrukiem of topbar menu*/
 
 .footer-nav__list {
   width: 100%;
-  margin: 20px 20px 60px;
+  margin: 20px;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
