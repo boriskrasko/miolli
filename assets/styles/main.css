@@ -248,9 +248,6 @@ a {
   .h1, .h2, .h3 {
     font: normal 50px/50px var(--titleFont);
   }
-  .h5 {
-    /*font: normal 1.3125rem/25px var(--titleFont);*/
-  }
 }
 
 
