@@ -1,0 +1,252 @@
+@import "assets/styles/fonts.css";
+:root {
+  --slider: 1200px;
+
+  --primary-h: 0;
+  --primary-s: 45%;
+  --primary-b: 72%;
+
+  --secondary-h: 13;
+  --secondary-s: 34%;
+  --secondary-b: 76%;
+
+  --dark-h: 0;
+  --dark-s: 0%;
+  --dark-b: 0%;
+
+  --divider: #EEDEDE;
+
+  --contentFont: "BasierCircle-Regular", sans-serif;
+  --contentFontM: "BasierCircle-Medium", sans-serif;
+}
+
+* {
+  /*outline: 1px solid;*/
+}
+
+body {
+  font-size: 16px;
+  font-family: var(--contentFont);
+}
+
+a.button {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button {
+  --unit: 1rem;
+  padding: var(--unit);
+  color: currentColor;
+  font-size: 1em;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.button_size_s {
+  --unit: 0.6rem;
+  padding: var(--unit);
+}
+
+.button_size_l {
+  --unit: 1.3rem;
+  padding: var(--unit);
+}
+
+.button_round {
+  font-family: var(--contentFontM);
+  --size: 7rem;
+  width: var(--size);
+  height: var(--size);
+  font-size: calc(var(--size) * 0.09);
+  line-height: calc(var(--size) * 0.16);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.button_round > * {
+  margin: 0.5rem;
+}
+
+.button_outlined {
+  color: hsl(var(--dark-h), var(--dark-s), var(--dark-b));
+  border: 1px solid #000;
+  border-color: hsl(var(--dark-h), var(--dark-s), var(--dark-b));
+  background: none;
+  transition: background-color 0.2s ease-out, border 0.2s ease-out;
+}
+
+.button_outlined:hover {
+  --dark-b: 10%;
+  color: #fff;
+  background-color: hsl(var(--dark-h), var(--dark-s), var(--dark-b));
+}
+
+.button_outlined:active {
+  --dark-b: 20%;
+}
+
+.button_outlined_primary {
+  color: hsl(var(--primary-h), var(--primary-s), var(--primary-b));
+  border: 1px solid #000;
+  border-color: hsl(var(--primary-h), var(--primary-s), var(--primary-b));
+  background: none;
+  transition: background-color 0.2s ease-out, border 0.2s ease-out;
+}
+
+.button_outlined_primary:hover {
+  color: #fff;
+  background-color: hsl(var(--primary-h), var(--primary-s), var(--primary-b));
+}
+
+.button_outlined_primary:active {
+  --primary-b: 77%;
+}
+
+.button_primary {
+  color: #fff;
+  background-color: hsl(var(--primary-h), var(--primary-s), var(--primary-b));
+  transition: background-color 0.2s ease-out;
+}
+
+.button_primary:hover {
+  --primary-b: 67%;
+}
+
+.button_primary:active {
+  --primary-b: 77%;
+}
+
+.button_primary_dark {
+  color: #fff;
+  background-color: hsl(var(--dark-h), var(--dark-s), var(--dark-b));
+  transition: background-color 0.2s ease-out;
+}
+
+.button_primary_dark:hover {
+  --dark-b: 10%;
+}
+
+.button_primary_dark:active {
+  --dark-b: 20%;
+}
+
+.button_secondary {
+  color: #fff;
+  background-color: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-b));
+  transition: background-color 0.2s ease-out;
+}
+
+.button_secondary:hover {
+  --secondary-b: 71%;
+}
+
+.button_secondary:active {
+  --secondary-b: 81%;
+}
+
+.button_width_x2{
+  padding: var(--unit) calc(var(--unit) * 4);
+}
+
+.button_width_x2.button_size_l {
+  padding: var(--unit) calc(var(--unit) * 2);
+}
+
+.button_width_x2.button_size_s {
+  padding: var(--unit) calc(var(--unit) * 5);
+}
+
+.button_arrow {
+  --size: 2rem;
+  width: var(--size);
+  height: calc(var(--size) * 0.8);
+}
+
+.arrow-icon {
+  width: 100%;
+  height: 100%;
+  stroke: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-b));
+  fill: transparent;
+}
+
+.button_arrow:hover > .arrow-icon {
+  --secondary-b: 71%;
+}
+
+.button_arrow:active > .arrow-icon {
+  --secondary-b: 81%;
+}
+
+.grid-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: transparent;
+  fill: #fff;
+}
+
+.flavor  {
+  display: inline-block;
+  --size: 200px;
+  --unit: 0.5rem;
+  --aspect-ratio: 1.5;
+  width: var(--size);
+  min-height: calc(var(--size) * var(--aspect-ratio));
+  padding: var(--unit);
+  margin: var(--unit) calc(var(--unit) * 2) ;
+  text-decoration: none;
+}
+
+.flavor__image {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.flavor__divider {
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 0 auto;
+  background-color: var(--divider);
+}
+
+.flavor__name {
+  font-family: var(--contentFont);
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #484848;
+  padding: 0 1rem;
+  text-transform: uppercase;
+}
+
+.slider-container {
+  max-width: 1300px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.uk-position-relative {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 840px) {
+  html {font-size: 14px}
+}
+
+@media (max-width: 600px) {
+  html {font-size: 10px}
+  body {font-size: 14px}
+  .flavor {--size: 170px}
+  .button_round > span {display: none;}
+  .button_round > svg {width: 3rem; height: 3rem;}
+}
