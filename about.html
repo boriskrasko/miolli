@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset='utf-8'>
+    <title>Miolli | O nas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="uikit/css/uikit.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='style/colors.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/fonts.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/common.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/media.css'>
+    <script src="uikit/js/uikit.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  </head>
+  <body>
+    <header class="header">
+      <input id="switch" class="switch header__switch" type="checkbox">
+      <label for="switch">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav class="topnav">
+        <ul class="topnav__list">
+          <li class="topnav__logo">
+            <a class="topnav__link" href="index.html">
+              <img src="icons/miolli-logo.svg" alt="miolli">
+              <img src="icons/miolli-logo-small.svg" alt="miolli">
+            </a>
+          </li>
+          <li class="topnav__item">
+            <a class="topnav__link" href="configurator.html">twoja kompozycja</a>
+          </li>
+          <li class="topnav__item">
+            <a class="topnav__link" href="sets.html">gotowe sety makaroników</a>
+          </li>
+          <li class="topnav__item hasChild">
+            <a class="topnav__link" href="prints.html">makaroniki z nadrukiem
+              <svg class="arrow">
+                <use href="#bottom"></use>
+              </svg>
+            </a>
+            <div class="topnav__dropdown topnav-print">
+              <div class="topnav-print__block">
+                <a class="topnav-print__link" href="prints.html">wszystkie okazje</a>
+                najpopularniejsze<br>
+teraz:
+                <ul class="topnav-print__list">
+                  <li class="topnav-print__item">
+                    <a class="topnav-print__link" href="prints.html">dzień mamy</a>
+                  </li>
+                  <li class="topnav-print__item">
+                    <a class="topnav-print__link" href="prints.html">dzień dziecka</a>
+                  </li>
+                  <li class="topnav-print__item">
+                    <a class="topnav-print__link" href="prints.html">dzień taty</a>
+                  </li>
+                </ul>
+                <a class="topnav-print__link underline" href="configurator-print.html"><span>dedykowany nadruk</span> 
+                  <img src="icons/arrow-next_victoriana.svg" alt="arrow-next">
+                </a>
+              </div>
+              <div class="topnav-print__preview">
+                <img src="images/slony-karmel.png" alt="slony-karmel">
+                <img class="topnav-print__image" src="icons/miolli-logo-small.svg" alt="miolli logo">
+              </div>
+            </div>
+          </li>
+          <li class="topnav__item topnav__item_button">
+            <a class="topnav__link" href="user.html">
+              <img src="icons/user.svg" alt="user">
+            </a>
+          </li>
+          <li class="topnav__item topnav__item_button hasChild">
+            <a class="topnav__link" href="cart.html">
+              <img src="icons/cart.svg" alt="cart">
+            </a>
+            <span class="cart-count">24</span>
+            <div class="topnav__dropdown topnav-cart">
+              <ul class="topnav-cart__list">
+                <li class="topnav-cart__item">
+                  <img src="images/set_small-1.png" alt="set">
+                  <div class="topnav-cart__set">
+                    <h4>set na lato</h4>
+                    <p>ilość: <span>2x6</span></p>
+                    <p>cena: <span>68,-</span></p>
+                    <p>suma: <span>130,-</span></p>
+                  </div>
+                </li>
+                <li class="topnav-cart__item">
+                  <img src="images/set_small-2.png" alt="set">
+                  <div class="topnav-cart__set">
+                    <h4>set na lato</h4>
+                    <p>ilość: <span>2x6</span></p>
+                    <p>cena: <span>68,-</span></p>
+                    <p>suma: <span>130,-</span></p>
+                  </div>
+                </li>
+                <li class="topnav-cart__item">
+                  <img src="images/set_small-3.png" alt="set">
+                  <div class="topnav-cart__set">
+                    <h4>set na lato</h4>
+                    <p>ilość: <span>2x6</span></p>
+                    <p>cena: <span>68,-</span></p>
+                    <p>suma: <span>130,-</span></p>
+                  </div>
+                </li>
+                <a class="topnav-cart__link" href="">i jeszcze 1…</a>
+                <a class="topnav-cart__button button button_size_l button_secondary" href="cart.html">przejdź do koszyka</a>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <nav class="sidenav">
+        <ul class="sidenav__list">
+          <li class="sidenav__item disabled">
+            <a class="sidenav__link" href="about.html">o nas</a>
+          </li>
+          <li class="sidenav__item">
+            <a class="sidenav__link" href="blog.html">blog</a>
+          </li>
+          <li class="sidenav__item">
+            <a class="sidenav__link" href="faq.html">faq</a>
+          </li>
+          <li class="sidenav__item">
+            <a class="sidenav__link" href="allergen.html">alergeny</a>
+          </li>
+          <li class="sidenav__item mobile-only">
+            <a class="sidenav__link" href="sets.html">gotowe sety</a>
+          </li>
+          <li class="sidenav__item mobile-only">
+            <a class="sidenav__link" href="prints.html">makaroniki z nadrukiem</a>
+          </li>
+          <li class="sidenav__item">
+            <a class="sidenav__link" href="configurator.html">konfigurator on-line</a>
+          </li>
+          <li class="sidenav__item" >
+            <a class="sidenav__link" href="">oferta dla kawiarni</a>
+          </li>
+          <li class="sidenav__item">
+            <a class="sidenav__link" href="">oferta eventowa</a>
+          </li>
+          <li class="sidenav__item mobile-only">
+            <a class="sidenav__link" href="">miolli dla biznesu</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="business-offer">
+        <a class="business-offer__link button_secondary" href="">miolli dla biznesu
+          <img src="icons/arrow-up.svg" alt="arrow">
+        </a>
+      </div>
+    </header>
+    <div class="chat">
+      <input id="chat" type="checkbox">
+      <label for="chat" class="chat__icon">
+        <span></span>
+        <span></span>
+      </label>
+      <div class="chat__popup" id="chatForm">
+        <div class="chat__heading">
+          <img class="chat__logo" src="icons/miolli-logo-small.svg" alt="miolli">
+          <h5 class="chat__title">porozmawiaj z miolli</h5>
+          <span class="chat__close" onclick="document.querySelector('.chat input').checked = false"><img width="16" height="16" src="icons/close.svg" alt="close"></span>
+        </div>
+        <div class="chat__history">
+          <p>
+            <span class="uppercase">Obecnie nie jesteśmy dostępni on-line</span>
+            <br>
+            <span>Zostaw nam wiadomość lub zadzwoń pod numer <a class="chat__phone" href="tel:+48788100108">788 100 108</a></span>
+          </p>
+        </div>
+        <form action="/" class="chat__form">
+          <textarea spellcheck="false" class="chat__textarea" placeholder="Wpisz swoją wiadomość" name="message"></textarea>
+          <button type="button" class="chat__submit" onclick="sendMessage()">
+            <img src="icons/send.svg" alt="send">
+          </button>
+        </form>
+      </div>
+    </div>
+    <main class="main main_about">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item">
+            <svg class="breadcrumb__home">
+              <use href="#home"></use>
+            </svg>
+            <a class="breadcrumb__link" href="index.html">strona główna</a>
+          </li>
+          <li class="breadcrumb__item disabled">
+            <svg class="breadcrumb__arrow">
+              <use href="#breadcrumbArrow"></use>
+            </svg>
+            <a class="breadcrumb__link" href="#" aria-current="location">o nas</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="section">
+        <h2 class="section__title">miolli, to jakość</h2>
+        <hr>
+        <article class="article">
+          <div class="article__content">
+            <p>
+              Miolli to marka, która w świecie kulinariów kojarzy się z niezwykłą jakością i niepowtarzalnym smakiem makaroników. Każde opakowanie Miolli to zaproszenie do odkrywania subtelnych smaków, które sprawią, że nawet najbardziej wymagający smakosze będą zachwyceni.
+
+Makaroniki Miolli to nie tylko rozkosz dla podniebienia, ale także sztuka w każdym detalu. Starannie wyselekcjonowane składniki, najlepsze jakościowo migdały i precyzyjne wykonanie sprawiają, że każdy kęs to moment czystej przyjemności. Marka Miolli zadbała o to, aby każdy makaronik był małym dziełem sztuki kulinarnej, łącząc w sobie tradycję z nowoczesnością.
+
+Różnorodność smaków w ofercie Miolli zaspokoi nawet najbardziej wyrafinowane gusta. Od klasycznych kombinacji po odważne połączenia smakowe, każdy makaronik to podróż po świecie aromatów. Ponadto, Miolli dba o zrównoważony rozwój, korzystając z naturalnych składników, bez sztucznych dodatków.
+
+Makaroniki Miolli są nie tylko doskonałym wyborem dla miłośników słodkości, ale także idealnym prezentem czy eleganckim dodatkiem do wyjątkowych chwil. Wyróżniają się nie tylko smakiem, ale również pięknym opakowaniem, które sprawia, że są idealnym elementem podkreślającym wyjątkowość chwil.
+
+W każdym makaroniku Miolli kryje się historia pasji do doskonałego smaku i troski o każdy detal. Niech każdy kęs będzie wyjątkowym doświadczeniem kulinarnej przyjemności, a marka Miolli niech pozostanie synonimem doskonałości w świecie makaroników.
+            </p>
+          </div>
+          <aside class="article__image">
+            <img src="images/makaroniki-ozostałe.png" alt="Pink macaron">
+          </aside>
+          <p class="article__paragraph">
+            Miolli to marka, która w świecie kulinariów kojarzy się z niezwykłą jakością i niepowtarzalnym smakiem makaroników. Każde opakowanie Miolli to zaproszenie do odkrywania subtelnych smaków, które sprawią, że nawet najbardziej wymagający smakosze będą zachwyceni.
+
+Makaroniki Miolli to nie tylko rozkosz dla podniebienia, ale także sztuka w każdym detalu. Starannie wyselekcjonowane składniki, najlepsze jakościowo migdały i precyzyjne wykonanie sprawiają, że każdy kęs to moment czystej przyjemności. Marka Miolli zadbała o to, aby każdy makaronik był małym dziełem sztuki kulinarnej, łącząc w sobie tradycję z nowoczesnością.
+
+Różnorodność smaków w ofercie Miolli zaspokoi nawet najbardziej wyrafinowane gusta. Od klasycznych kombinacji po odważne połączenia smakowe, każdy makaronik to podróż po świecie aromatów. Ponadto, Miolli dba o zrównoważony rozwój, korzystając z naturalnych składników, bez sztucznych dodatków.
+
+Makaroniki Miolli są nie tylko doskonałym wyborem dla miłośników słodkości, ale także idealnym prezentem czy eleganckim dodatkiem do wyjątkowych chwil. Wyróżniają się nie tylko smakiem, ale również pięknym opakowaniem, które sprawia, że są idealnym elementem podkreślającym wyjątkowość chwil.
+
+W każdym makaroniku Miolli kryje się historia pasji do doskonałego smaku i troski o każdy detal. Niech każdy kęs będzie wyjątkowym doświadczeniem kulinarnej przyjemności, a marka Miolli niech pozostanie synonimem doskonałości w świecie makaroników.
+          </p>
+        </article>
+      </section>
+      <section class="section available-sets">
+        <h2 class="section__title">
+          miolli, to ludzie!
+        </h2>
+        <hr>
+        <p class="section__subtitle">
+          W świecie Miolli spotykają się różnorodne talenty, pomysły i historie. To miejsce, gdzie kreatywność i współpraca tworzą niezapomniane doświadczenia. Miolli nie jest jedynie zbiorem jednostek – to wspólnota, która ceni różnice i celebruje razem każdy sukces, każdą wygraną i każdą chwilę, która sprawia, że są wyjątkowi.
+        </p>
+        <div class="available-sets__slider">
+          <div uk-slider list>
+            <div class="uk-position-relative">
+              <div class="uk-slider-container">
+                <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-flex-center">
+                  <li class="uk-flex uk-flex-center">
+                    <div class="card-set">
+                        <img class="card-set__image" src="images/anatol.jpg" width="260" height="405" alt="" style="max-width: 270px;">
+                        <h4 class="card-set__name">Anatol</h4>
+                        <p class="card-set__text">mistrz zarządzaniai kreacji</p>
+                      </div>
+                  </li>
+                  <li class="uk-flex uk-flex-center">
+                    <div class="card-set">
+                      <img class="card-set__image" src="images/nikita.jpg" width="260" height="405" alt="" style="max-width: 270px;">
+                      <h4 class="card-set__name">Nikita</h4>
+                      <p class="card-set__text">światowej klasy cukiernik</p>
+                    </div>
+                  </li>
+                  <li class="uk-flex uk-flex-center">
+                    <div class="card-set">
+                      <img class="card-set__image" src="images/ola.jpg" width="260" height="405" alt="" style="max-width: 270px;">
+                      <h4 class="card-set__name">Ola</h4>
+                      <p class="card-set__text">matka sukcesu i mikolog smaków</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="uk-hidden@s available-sets__counter">
+                <a class="uk-position-out uk-position-small button_arrow" href="#" uk-slider-item="previous">
+                  <svg class="arrow-icon">
+                    <use href="#west"></use>
+                  </svg>
+                </a>
+                <a class="uk-position-out uk-position-small button_arrow" href="#" uk-slider-item="next">
+                  <svg class="arrow-icon">
+                    <use href="#east"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="uk-visible@s">
+                <a class="uk-position-center-left uk-position-small button_arrow" href="#" uk-slider-item="previous">
+                  <svg class="arrow-icon">
+                    <use href="#west"></use>
+                  </svg>
+                </a>
+                <a class="uk-position-center-right uk-position-small button_arrow" href="#" uk-slider-item="next">
+                  <svg class="arrow-icon">
+                    <use href="#east"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <h2 class="section__title">miolli,
+          to profesjonalizm</h2>
+        <hr>
+        <article class="article">
+          <aside class="article__image">
+            <img src="images/article-image-2.png" alt="Pink macaron">
+          </aside>
+          <div class="article__content">
+            <p>
+              Miolli to nie tylko nazwa, ale synonim profesjonalizmu. To miejsce, gdzie złożona wiedza, doświadczenie i pasja spotykają się w harmonii, tworząc atmosferę, w której profesjonalizm jest nie tylko standardem, ale także sposobem życia.
+
+W świecie Miolli profesjonalizm to nie tylko skrupulatność w pracy czy doskonałość w wykonaniu, to także podejście oparte na etyce i zaufaniu. Ludzie związani z Miolli nieustannie dążą do doskonałości, nie tylko dla siebie, ale także dla tych, z którymi współpracują.
+
+Miolli to nie tylko firma, ale społeczność profesjonalistów, dla których wspólna praca to nie tylko obowiązek, ale także przyjemność. Każdy projekt, każde wyzwanie to szansa na rozwój i pokazanie, że profesjonalizm to nie tylko umiejętności, ale także postawa.
+
+W Miolli profesjonalizm to nie tylko cecha, ale także wartość, którą pielęgnuje się na każdym etapie działalności. To miejsce, w którym ludzie są dumni z tego, co robią, i zawsze dążą do podniesienia poprzeczki. Bo dla Miolli profesjonalizm to nieustające dążenie do doskonałości we wszystkim, co robią.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section>
+        <img src="images/film.png" alt="film">
+      </section>
+    </main>  
+    <footer class="footer">
+      <nav>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="" class="footer__link">dla biznesu</a>
+          </li>
+          <li class="footer__item">
+            <a href="sets.html" class="footer__link">gotowe sety</a>
+          </li>
+          <li class="footer__item disabled">
+            <a href="about.html" class="footer__link">o nas</a>
+          </li>
+          <li class="footer__item">
+            <a href="prints.html" class="footer__link">makaroniki z nadrukiem</a>
+          </li>
+          <li class="footer__item">
+           <a href="configurator.html " class="footer__link">twoja kompozycja</a>
+          </li>
+          <li class="footer__item">
+            <a href="allergen.html" class="footer__link">alergeny</a>
+          </li>
+          <li class="footer__item">
+            <a href="faq.html" class="footer__link">faq</a>
+          </li>
+          <li class="footer__item">
+            <a href="blog.html" class="footer__link">blog</a>
+          </li>
+          <li class="footer__item">
+            <a href="contact.html" class="footer__link">kontakt</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" onclick="document.body.classList.toggle('test')">test</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <svg display="none">
+      <symbol id="west" viewBox="0 0 35.223 28.556">
+        <g transform="translate(359.784 86.675) rotate(180)">
+          <line x2="34.002" transform="translate(324.562 72.397)" stroke-miterlimit="10" stroke-width="1.726"/>
+          <path d="M350.442,58.729,364.11,72.4,350.442,86.065" transform="translate(-5.546)" stroke-miterlimit="10" stroke-width="1.726"/>
+        </g>
+      </symbol>
+      <symbol id="east" viewBox="0 0 35.223 28.556">
+        <g transform="translate(-324.562 -58.119)">
+          <line x2="34.002" transform="translate(324.562 72.397)" stroke-miterlimit="10" stroke-width="1.726"/>
+          <path d="M350.442,58.729,364.11,72.4,350.442,86.065" transform="translate(-5.546)" stroke-miterlimit="10" stroke-width="1.726"/>
+        </g>
+      </symbol>
+      <symbol id="bottom" viewBox="0 0 35.223 28.556">
+        <g transform="translate(78.678 -324.562) rotate(90)">
+          <line x2="24.374" transform="translate(324.562 68.527)" stroke-miterlimit="10" stroke-width="1"/>
+          <path d="M350.442,58.729l9.8,9.8-9.8,9.8" transform="translate(-11.304)" stroke-miterlimit="10" stroke-width="1"/>
+        </g>
+      </symbol>
+      <symbol id="home" viewBox="0 0 11 13">
+        <g transform="translate(-60 -94)">
+          <rect id="Rectangle_96" data-name="Rectangle 96" width="11" height="8" transform="translate(60 99)" fill="#3c3c3c"/>
+          <path id="Polygon_5" data-name="Polygon 5" d="M5.5,0,11,5H0Z" transform="translate(60 94)" fill="#3c3c3c"/>
+        </g>
+      </symbol>
+      <symbol id="breadcrumbArrow" viewBox="0 0 10.305 8.098">
+        <g transform="translate(-324.157 -58.376)">
+          <line x2="10" transform="translate(324.157 62.424)" fill="none" stroke="#484848" stroke-miterlimit="10" stroke-width="1"/>
+          <path d="M350.442,58.729l3.7,3.7-3.7,3.7" transform="translate(-20.383)" fill="none" stroke="#484848" stroke-miterlimit="10" stroke-width="1"/>
+        </g>
+      </symbol>
+      <symbol id="sort" viewBox="0 0 1024 1024">
+        <path d="M128 768h256v-85.333333H128v85.333333z m0-512v85.333333h768v-85.333333H128z m0 298.666667h512v-85.333334H128v85.333334z" />
+      </symbol>
+      <symbol id="like" viewBox="-4 0 32 32">
+        <path d="M18.188 6.094c5.188 0 6.906 6 5.094 9.281-2.781 5.094-11.281 10.5-11.281 10.5s-8.531-5.406-11.281-10.5c-1.813-3.281-0.125-9.281 5.094-9.281 4.813 0 6.031 4.156 6.188 4.781 0.156-0.625 1.375-4.781 6.188-4.781z"/>
+      </symbol>
+      
+    </svg>
+    <script>
+      // Chat
+      const chat = document.querySelector('.chat__history');
+      const message = document.querySelector('.chat__textarea');
+      const chatGreeting = document.querySelector('.chat__history p:not(.message)');
+      const sendBtn = document.querySelector('.chat__submit');
+
+      const messageIsNotEmpty  = message => message.value !== '' && message.value.length > 0;
+
+      const clear = message => message.value = '';
+
+      const currentTime = () => {
+        const data = new Date();
+        const currentHours = data.getHours();
+        const currentMinutes = data.getMinutes() > 9 ? data.getMinutes() : '0' + data.getMinutes();
+        return `${currentHours}:${currentMinutes}`;
+      }
+
+      const addCurrentTime = () => {
+        const time = document.createElement('span');
+        time.classList.add('time');
+        time.textContent = currentTime();
+        chat.append(time);
+      }
+
+      const createMessage = message => {
+        const userMessage = document.createElement('p');
+        userMessage.classList.add('message')
+        userMessage.textContent = message;
+        chat.append(userMessage);
+        chat.scrollTop = chat.scrollHeight;
+        addCurrentTime();
+      }
+
+      const createAnswer = (message, preload, delay) => {
+        setTimeout(() => {
+          const answerMessage = document.createElement('p');
+          answerMessage.classList.add('pre-answer');
+          answerMessage.textContent = '...';
+          chat.append(answerMessage);
+          chat.scrollTop = chat.scrollHeight;
+          setTimeout(() => {
+            answerMessage.classList.remove('pre-answer');
+            answerMessage.classList.add('answer');
+            answerMessage.textContent = message;
+            chat.scrollTop = chat.scrollHeight;
+          }, preload)   
+        }, delay)
+      }
+
+      const createYesOrNo = () => {
+        sendBtn.setAttribute('disabled', true);
+        setTimeout(() => {
+          const select = document.createElement('span');
+          select.classList.add('select');
+          const yes = document.createElement('i');
+          yes.textContent = 'Tak'
+          yes.classList.add('chat-btn');
+          const no = document.createElement('i');
+          no.textContent = 'Nie';
+          no.classList.add('chat-btn');
+          select.append(yes);
+          select.append(no);
+          chat.append(select);
+          chat.scrollTop = chat.scrollHeight;
+          no.addEventListener('click', () => {
+            createMessage('Nie');
+            chat.removeChild(select);
+            createAnswer('Zostaw swój numer telefonu lub e-mail, abyśmy mogli się z Tobą skontaktować', 1000, 500)
+        })
+          yes.addEventListener('click', () => {
+            createMessage('Tak');
+            chat.removeChild(select);
+            createAnswer('Świetnie!', 1000, 500);
+            createAnswer('Wkrótce z Tobą skontaktujemy się', 1000, 500);
+        })
+        sendBtn.removeAttribute('disabled');
+        }, 1500)
+      }
+
+      const checkEmail = message => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(message);
+
+      const checkPhoneNumber = message => /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/.test(message);
+
+      const sendMessage = () => {
+        switch (true) {
+          case document.querySelector('.select') && message.value.toLowerCase() == 'tak':
+            createAnswer('Świetnie!', 1000, 500);
+            createAnswer('Wkrótce z Tobą skontaktujemy się', 1000, 500);
+          break;
+          case document.querySelector('.select') && message.value.toLowerCase() == 'nie':
+            createAnswer('Zostaw swój numer telefonu lub e-mail, abyśmy mogli się z Tobą skontaktować', 1000, 500);
+          break;
+        }
+        document.querySelector('.select') && messageIsNotEmpty(message) ? chat.removeChild(chat.lastChild) : '';
+        messageIsNotEmpty(message) ? createMessage(message.value) : '';
+        switch (true) {
+          case (chat.children.length === 3): 
+            chatGreeting.style.display = 'none';
+            createAnswer('Hej!', 1000, 500);
+            createAnswer('Napisz swój numer lub e-mail, odpowiemy szczegółowo na Twoje pytania', 1000, 500);
+          break;
+          case (chat.children.length >= 5):
+            checkEmail(message.value) ? createAnswer('Czy to jest twój e-mail?', 1000, 500) : '';
+            checkPhoneNumber(message.value) ? createAnswer('Czy to jest twój numer?', 1000, 500) : '';
+            checkEmail(message.value) || checkPhoneNumber(message.value) ? createYesOrNo() : '';
+          break;
+        }
+        clear(message);
+      }
+
+      message.addEventListener('keypress', event => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          sendMessage();
+        }
+      });
+    
+    </script>
+  </body>
+</html>
