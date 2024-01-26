@@ -79,6 +79,30 @@
   }
 }
 
+@media (max-width: 860px) {
+  .tab {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .tab__name {
+    width: 100% !important;
+    height: 100px !important;
+  }
+  .tabs input[type="radio"] {
+    width: 100%;
+  }
+  .tab input[type="radio"]:checked ~ .tab__content {
+   position: static;
+   max-width: 100%;
+   width: 100%;
+  }
+  .main_user {
+    padding: 16px;
+  }
+}
+
 @media screen and (max-width: 760px) {
   .section__title, .print__title, .set__title, .configurator__title  {
     font: 64px/70px var(--titleFont);
@@ -161,6 +185,9 @@
   }
   .main .sets {
     justify-content: center;
+  }
+  .article > * {
+    margin: 5%;
   }
 }
 

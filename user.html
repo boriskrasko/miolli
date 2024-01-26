@@ -72,7 +72,7 @@ teraz:
             </a>
           </li>
           <li class="topnav__item topnav__item_button hasChild">
-            <a class="topnav__link" href="">
+            <a class="topnav__link" href="cart.html">
               <img src="icons/cart.svg" alt="cart">
             </a>
             <span class="cart-count">24</span>
@@ -106,7 +106,7 @@ teraz:
                   </div>
                 </li>
                 <a class="topnav-cart__link" href="">i jeszcze 1…</a>
-                <a class="topnav-cart__button button button_size_l button_secondary" href="">przejdź do koszyka</a>
+                <a class="topnav-cart__button button button_size_l button_secondary" href="cart.html">przejdź do koszyka</a>
               </ul>
             </div>
           </li>
@@ -118,13 +118,13 @@ teraz:
             <a class="sidenav__link" href="">o nas</a>
           </li>
           <li class="sidenav__item">
-            <a class="sidenav__link" href="">blog</a>
+            <a class="sidenav__link" href="blog.html">blog</a>
           </li>
           <li class="sidenav__item">
             <a class="sidenav__link" href="faq.html">faq</a>
           </li>
           <li class="sidenav__item">
-            <a class="sidenav__link" href="">alergeny</a>
+            <a class="sidenav__link" href="allergen.html">alergeny</a>
           </li>
           <li class="sidenav__item mobile-only">
             <a class="sidenav__link" href="sets.html">gotowe sety</a>
@@ -197,37 +197,43 @@ teraz:
         </ul>
       </nav>
       <div class="user">
-        <h1 class="user__title">Cześć Marta!</h1>
-        <div class="tabs">
-          <ul class="tabs__list" role="tablist">
-            <li class="tabs__item" role="presentation">
-              <a href="#A" class="tabs__link" id="tab-A" role="tab" aria-controls="A" aria-selected="true" tabindex="0">Section A</a>
-            </li>
-            <li class="tabs__item" role="presentation">
-              <a href="#B" class="tabs__link" id="tab-B" role="tab" aria-controls="B" aria-selected="false" tabindex="-1">Section B</a>
-            </li>
-            <li class="tabs__item" role="presentation">
-              <a href="#C" class="tabs__link" id="tab-C" role="tab" aria-controls="C" aria-selected="false" tabindex="-1">Section C</a>
-            </li>
-          </ul>
-          <div class="tabs__content">
-            <section id="A" class="tabs__section" role="tabpanel" aria-labelledby="tab-A" aria-hidden="false">
-              <div class="tabs__body">
-                Content of section A<br>
-              </div>
-            </section>
-          
-            <section id="B" class="tabs__section" role="tabpanel" aria-labelledby="tab-B" aria-hidden="true">
-              <div class="tabs__body">
-                Content of section B
-              </div>
-            </section>
-          
-            <section id="C" class="tabs__section" role="tabpanel" aria-labelledby="tab-C" aria-hidden="true">
-              <div class="tabs__body">
-                Content of section C
-              </div>
-            </section>
+        <h1 class="user__title">Cześć!</h1>
+        <div class="tabs tabs_start">
+          <div class="tab">
+            <input type="radio" name="tab">
+            <div class="tab__name">Twoje dane</div>
+            <div class="tab__content">Twoje dane
+            </div>
+          </div>
+          <div class="tab">
+            <input type="radio" name="tab">
+            <div class="tab__name">Adresy</div>
+            <div class="tab__content">Adresy
+            </div>
+          </div>
+          <div class="tab">
+            <input type="radio" name="tab">
+            <div class="tab__name">Archiwum <br>zamówień</div>
+            <div class="tab__content">Archiwum zamówień
+            </div>
+          </div>
+          <div class="tab">
+            <input type="radio" name="tab">
+            <div class="tab__name">Ulubione</div>
+            <div class="tab__content">Ulubione
+            </div>
+          </div>
+          <div class="tab">
+            <input type="radio" name="tab">
+            <div class="tab__name">Kody rabatowe</div>
+            <div class="tab__content">Kody rabatowe
+            </div>
+          </div>
+          <div class="tab">
+            <input type="radio" name="tab">
+            <div class="tab__name">Faktury</div>
+            <div class="tab__content">Faktury
+            </div>
           </div>
         </div>
         <a class="user__button button" href="">wyloguj</a>
@@ -252,7 +258,7 @@ teraz:
            <a href="configurator.html " class="footer__link">twoja kompozycja</a>
           </li>
           <li class="footer__item">
-            <a href="" class="footer__link">alergeny</a>
+            <a href="allergen.html" class="footer__link">alergeny</a>
           </li>
           <li class="footer__item">
             <a href="faq.html" class="footer__link">faq</a>
@@ -429,6 +435,15 @@ teraz:
       document.querySelector('#switch').addEventListener('change', () => {
         document.querySelector('#switch').checked ? document.body.classList.add('open') : document.body.classList.remove('open');
       })
+
+      const tabs = document.querySelector('.tabs');
+      const tab = document.querySelectorAll('.tab input');
+
+      for (let i = 0; i < tab.length; i++) {
+        tab[i].addEventListener('click', () => {
+          tabs.classList.remove('tabs_start');
+        })
+      }
     </script>
   </body>
 </html>
