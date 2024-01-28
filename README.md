@@ -2,7 +2,7 @@
 
 ## [miolli.pl](http://miolli.pl) 
 
-## [miolli.netlify.app](http://miollo.netlify.app) 
+## [miolli.netlify.app](http://miolli.netlify.app) 
 
 ## [buttons](http://miollo.netlify.app.buttons) 
 
