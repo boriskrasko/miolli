@@ -750,22 +750,29 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgb(210, 218, 220);
-  background-image: url(../images/diana-polekhina-startscreen.png);
+  background-color: rgb(229, 230, 232);
+  /* background-image: url(../images/diana-polekhina-startscreen.png); */
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hero .main-visual {
+  z-index: 0 !important;
 }
 
 .hero__label {
   position: absolute;
   right: 50px;
   bottom: 60px;
+  z-index: 9;
 }
 
 .brand {
+  position: absolute;
   max-width: 540px;
   max-height: 320px;
   margin: 0 auto;
+  z-index: 9;
 }
 
 .brand__name {
@@ -1227,13 +1234,22 @@ input.available-sets__viewer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 807px;
+  height: 50vw;
   font: 201px/214px var(--titleFont);
   color: #FFFFFF;
   background-color:var(--peach-breeze);
   background-image: url('../images/film.png');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.film video {
+  width: 100%;
+}
+
+.film button {
+  position: absolute;
+  z-index: 9;
 }
 
 .reason {
@@ -3009,6 +3025,8 @@ input.range[type="range"]::-moz-range-thumb:active {
   background-image: url(../images/flavor-4.png);
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
+  text-align: center;
 }
 
 .own-print__aside input {
@@ -3065,7 +3083,7 @@ input.color[type="color"] {
   -moz-appearance: none;
   appearance: none;
   width: var(--size, 1rem);
-  height: calc(var(--size, 1rem) / var(--aspect-ratio, 1.92));
+  height: calc(var(--size, 1rem) / var(--aspect-ratio, 1.92) + 2px);
   min-height: 30px;
   padding: 0;
   border: none;
@@ -3858,4 +3876,51 @@ article {
     transform: translateX(-50%);
     align-self: center;
   }
+}
+
+.main.main_business {
+  min-height: 80vh;
+  background-image: url('../images/business.png');
+  background-size: 2100px auto;
+  background-position: center -100px;
+  background-repeat: no-repeat;
+} 
+
+.main.main_business .breadcrumb {
+  margin-top: 78px;
+  padding-top: 32px;
+  margin-bottom: 400px;
+}
+
+.zs-bullets {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  z-index: 9;
+  text-decoration: none;
+}
+
+.zs-bullet {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 4px;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  border-radius: 100%;
+  background: transparent;
+  transition: 0.1s border-color ease-in-out;
+}
+
+.zs-bullet:hover {
+  cursor: pointer;
+  border-color: #996B6B;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.32);
+}
+
+.zs-bullet.active {
+  border-color: #996B6B;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.32);
 }
