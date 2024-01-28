@@ -2,7 +2,7 @@
 
 ## [miolli.pl](http://miolli.pl) 
 
-## [miolli.netlify.app](http://miolli.netlify.app) 
+## [Miolli develop deploy](boriskrasko.github.io/miolli/) 
 
 ## [buttons](http://miolli.netlify.app/buttons) 
 
