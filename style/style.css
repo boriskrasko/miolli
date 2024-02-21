@@ -751,9 +751,8 @@
   align-items: center;
   height: 100vh;
   background-color: rgb(229, 230, 232);
-  /* background-image: url(../images/diana-polekhina-startscreen.png); */
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .hero .main-visual {
@@ -3623,7 +3622,7 @@ article {
 .main.main_about {
   min-height: 80vh;
   background-image: url('../images/makaroniki-stylizowane.png');
-  background-size: 2100px auto;
+  background-size: 2600px 600px;
   background-position: center -100px;
   background-repeat: no-repeat;
 }
@@ -3637,6 +3636,8 @@ article {
 .main.main_about .article {
  max-width: 1000px;
 }
+
+.main.main_about .section
 
 .article__paragraph {
   font: 16px/25px var(--contentFont);
